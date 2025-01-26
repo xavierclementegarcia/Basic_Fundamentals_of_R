@@ -11,6 +11,17 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
+      - text: Content
+        menu: 
+          - href: Slides.qmd
+            text: Slides
+          - href: Documentation.qmd
+            text: Documentation
+          - href: Videos.qmd
+            text: Videos
+      - href: References.qmd
+        text: References
+          
     right: 
       - icon: twitter
         href: https://x.com/clementegarcC
