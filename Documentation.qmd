@@ -1,1 +1,6 @@
-
+---
+title: "Documentation"
+theme:
+  light: flatly
+  dark: darkly
+---

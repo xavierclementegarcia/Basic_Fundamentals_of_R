@@ -11,6 +11,34 @@
     "href": "index.html",
     "title": "Basic Fundamentals of R",
     "section": "",
-    "text": "Description"
+    "text": "Hola!\nEste curso inicialmente estará hecho en español, mi lenguaje natal. La idea es que pueda ser una forma más sencilla de explicar R, sin tanto texto y sin demasiadas horas.\nAquí podrás encontrar a toda hora y en cualquier momento pequeños ejemplos explicativos que pueden ayudarte en tu camino dentro de las Ciencias Biológicas con R. Buena suerte.\nEn el apartado de “Course” encontrará toda la información resumida en 6 diapositivas para que puedas aplicar el tidyverse, gráficos, tablas, pruebas estadísticas comunes en Biología y además en un futuro un material para usar R Markdown.\nHi!\nThis course start in Spanish, my native language. The idea is that be an easy form to R explain, without text and much hours.\nHere, you could find small explicative exercises that you can help in your way into of Biological Sciences with R. Good Luck.\nIn the field “course” you find six slides with all resumed information to you apply the tidyverse, graphs, tables, common statistical test in Biology and I will upload a material to use R markdown. Please, Be patient."
+  },
+  {
+    "objectID": "basic1.html#qué-es-r",
+    "href": "basic1.html#qué-es-r",
+    "title": "Introducción a R",
+    "section": "¿Qué es R?",
+    "text": "¿Qué es R?\nEs un entorno y lenguaje de programación con un enfoque en el análisis estadístico.\nR es parte del sistema GNU y se distribuye bajo la licencia GNU GPL. Es un lenguaje popular dentro del Machine learning, minería de datos, econometría, biología, bioinformática e inferencia estadística."
+  },
+  {
+    "objectID": "basic1.html#conceptos-claves",
+    "href": "basic1.html#conceptos-claves",
+    "title": "Introducción a R",
+    "section": "Conceptos claves",
+    "text": "Conceptos claves\nEn esta sesión miraremos los siguientes conceptos claves:\nplots: Son diagramas ejecutados por puntos en el espacio Boxplots: Representan la mediana muestral, permiten revisar datos típicos y atípicos\nBarplots: Son diagramas de barras que permiten revisar la tendencia de una muestra\nPie: Son diagramas circulares\nGgplot: Corresponde a la librería que contiene gráficos estilizados Dataframe: Permite el almacenamiento de datos"
+  },
+  {
+    "objectID": "basic1.html#aplicaciones-en-biología",
+    "href": "basic1.html#aplicaciones-en-biología",
+    "title": "Introducción a R",
+    "section": "Aplicaciones en Biología",
+    "text": "Aplicaciones en Biología\nEn Biología existen muchas aplicaciones que pueden llevarse acabo con R, por ejemplo:\n\nEstadística (Análisis de biodiversidad, comparaciones de muestra, homogeneidad de varianzas, etc)\nConteos de especies y desarrollo de mapas\nGráficas (dendogramas, clústers, diagramas)"
+  },
+  {
+    "objectID": "basic1.html#qué-tipo-de-pruebas-puedo-utilizar-en-r",
+    "href": "basic1.html#qué-tipo-de-pruebas-puedo-utilizar-en-r",
+    "title": "Introducción a R",
+    "section": "¿Qué tipo de pruebas puedo utilizar en R?",
+    "text": "¿Qué tipo de pruebas puedo utilizar en R?\nEn realidad existen muchas, con sus modificaciones y según los criterios de manejo. Sin embargo de acuerdo con mi experiencia las pruebas más utilizadas que podrías necesitar (paramétricas / no paramétricas) son: - Paramétricas"
   }
 ]

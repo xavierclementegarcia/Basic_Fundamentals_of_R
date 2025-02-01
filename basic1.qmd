@@ -1,0 +1,41 @@
+---
+title: "Introducción a R"
+subtitle: "Una introducción al lenguaje de programación"
+author: "Xavier Clemente García"
+format: revealjs
+
+---
+## ¿Qué es R?
+Es un entorno y lenguaje de programación con un enfoque en el análisis estadístico.
+
+R es parte del sistema GNU y se distribuye bajo la licencia GNU GPL. Es un lenguaje popular dentro del Machine learning, minería de datos, econometría, biología, bioinformática e inferencia estadística.
+
+![](images/clipboard-1944794224.png){fig-align="center"}
+
+## Conceptos claves
+En esta sesión miraremos los siguientes conceptos claves:
+
+
+plots: Son diagramas ejecutados por puntos en el espacio
+Boxplots: Representan la mediana muestral, permiten revisar datos típicos y atípicos 
+
+Barplots: Son diagramas de barras que permiten revisar la tendencia de una muestra
+
+Pie: Son diagramas circulares
+
+Ggplot: Corresponde a la librería que contiene gráficos estilizados Dataframe: Permite el almacenamiento de datos
+
+## Aplicaciones en Biología
+
+En Biología existen muchas aplicaciones que pueden llevarse acabo con R, por ejemplo:
+
+-   Estadística (Análisis de biodiversidad, comparaciones de muestra, homogeneidad de varianzas, etc)
+
+-   Conteos de especies y desarrollo de mapas
+
+-   Gráficas (dendogramas, clústers, diagramas)
+
+## ¿Qué tipo de pruebas puedo utilizar en R? 
+
+En realidad existen muchas, con sus modificaciones y según los criterios de manejo. Sin embargo de acuerdo con mi experiencia las pruebas más utilizadas que podrías necesitar (paramétricas / no paramétricas) son: 
+-   Paramétricas

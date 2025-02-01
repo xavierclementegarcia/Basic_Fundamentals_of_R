@@ -1,5 +1,22 @@
 ---
 title: "Basic Fundamentals of R"
+theme:
+  light: flatly
+  dark: darkly
 ---
 
-Description
+Hola!
+
+Este curso inicialmente estará hecho en español, mi lenguaje natal. La idea es que pueda ser una forma más sencilla de explicar R, sin tanto texto y sin demasiadas horas.
+
+Aquí podrás encontrar a toda hora y en cualquier momento pequeños ejemplos explicativos que pueden ayudarte en tu camino dentro de las Ciencias Biológicas con R. Buena suerte.
+
+En el apartado de "Course" encontrará toda la información resumida en 6 diapositivas para que puedas aplicar el tidyverse, gráficos, tablas, pruebas estadísticas comunes en Biología y además en un futuro un material para usar R Markdown.
+
+Hi!
+
+This course start in Spanish, my native language. The idea is that be an easy form to R explain, without text and much hours.
+
+Here, you could find small explicative exercises that you can help in your way into of Biological Sciences with R. Good Luck.
+
+In the field "course" you find six slides with all resumed information to you apply the tidyverse, graphs, tables, common statistical test in Biology and I will upload a material to use R markdown. Please, Be patient.

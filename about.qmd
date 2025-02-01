@@ -1,5 +1,8 @@
 ---
 title: "About"
+theme:
+  light: flatly
+  dark: darkly
 ---
 
 About this site
