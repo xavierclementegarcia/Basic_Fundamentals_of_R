@@ -1,1 +1,19 @@
+---
+title: "Introducción a R"
+subtitle: "Tidyverse y organización de datos"
+author: "Xavier Clemente García"
+format: revealjs
+echo: true
+---
 
+## ¿Qué es el Tidyverse? 
+
+## ¿Creación de tablas? 
+
+## Bases de datos
+
+## Introducción al data.frame
+
+## Otras funciones para tablas 
+
+## intro
