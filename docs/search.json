@@ -39,6 +39,48 @@
     "href": "basic1.html#qué-tipo-de-pruebas-puedo-utilizar-en-r",
     "title": "Introducción a R",
     "section": "¿Qué tipo de pruebas puedo utilizar en R?",
-    "text": "¿Qué tipo de pruebas puedo utilizar en R?\nEn realidad existen muchas, con sus modificaciones y según los criterios de manejo. Sin embargo de acuerdo con mi experiencia las pruebas más utilizadas que podrías necesitar (paramétricas / no paramétricas) son: - Paramétricas"
+    "text": "¿Qué tipo de pruebas puedo utilizar en R?\nSegún el criterio son muchas. Las pruebas más utilizadas que podrías necesitar (paramétricas / no paramétricas) son:\n\npruebas_n_parametricas&lt;-c(\"Kruskal Wallis\", \"U de Mann Withney\", \"Correlación de Spearman\", \"Prueba de Wilcoxon\", \"Prueba de Friedman\")\npruebas_parametricas&lt;-c(\"T de Student\", \"ANOVA 1 vía y 2 vías\", \"Correlación de Pearson\", \"Prueba T para muestras dependientes\", \"Prueba para muestras independientes\")\npp &lt;- data.frame(\n  pruebas_paramétricas = pruebas_parametricas, \n  pruebas_n_paramétricas = pruebas_n_parametricas)\npp\n\n                 pruebas_paramétricas  pruebas_n_paramétricas\n1                        T de Student          Kruskal Wallis\n2                ANOVA 1 vía y 2 vías       U de Mann Withney\n3              Correlación de Pearson Correlación de Spearman\n4 Prueba T para muestras dependientes      Prueba de Wilcoxon\n5 Prueba para muestras independientes      Prueba de Friedman"
+  },
+  {
+    "objectID": "basic1.html",
+    "href": "basic1.html",
+    "title": "Introducción a R",
+    "section": "",
+    "text": "Es un entorno y lenguaje de programación con un enfoque en el análisis estadístico.\nR es parte del sistema GNU y se distribuye bajo la licencia GNU GPL. Es un lenguaje popular dentro del Machine learning, minería de datos, econometría, biología, bioinformática e inferencia estadística."
+  },
+  {
+    "objectID": "basic1.html#interfaz-de-r",
+    "href": "basic1.html#interfaz-de-r",
+    "title": "Introducción a R",
+    "section": "Interfaz de R",
+    "text": "Interfaz de R\n\nFigura 1. Interfaz de R Studio"
+  },
+  {
+    "objectID": "basic1.html#algunas-consideraciones",
+    "href": "basic1.html#algunas-consideraciones",
+    "title": "Introducción a R",
+    "section": "Algunas consideraciones",
+    "text": "Algunas consideraciones\n\nFigura 2. Interfaz de R Studio"
+  },
+  {
+    "objectID": "basic1.html#diferencias-entre-usar-la-consola-y-la-zona-de-script",
+    "href": "basic1.html#diferencias-entre-usar-la-consola-y-la-zona-de-script",
+    "title": "Introducción a R",
+    "section": "Diferencias entre usar la consola y la zona de script",
+    "text": "Diferencias entre usar la consola y la zona de script\nCuando usas solo “console” no podrás guardar tu script pero obtendrás un resultado rápido. Al usar la zona de script el código se quedará ahí. Es util usar console si necesitas comprobar o sacar un resultado rápido.\n\n1+1\n\n[1] 2"
+  },
+  {
+    "objectID": "basic1.html#instalación-de-paquetes",
+    "href": "basic1.html#instalación-de-paquetes",
+    "title": "Introducción a R",
+    "section": "Instalación de paquetes",
+    "text": "Instalación de paquetes\n\n# Instalar un paquete\ninstall.packages(\"tidyverse\")\n\npackage 'tidyverse' successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\garci\\AppData\\Local\\Temp\\Rtmp0waMb0\\downloaded_packages\n\n# Cargar librería\nlibrary(\"tidyverse\")\n# La librería debería estar cargada. carguemos una de las librerías. Por defecto están las siguientes: \nlibrary(ggplot2)"
+  },
+  {
+    "objectID": "basic1.html#y-si-no-conozco-la-sintaxis-del-código",
+    "href": "basic1.html#y-si-no-conozco-la-sintaxis-del-código",
+    "title": "Introducción a R",
+    "section": "Y si no conozco la sintaxis del código?",
+    "text": "Y si no conozco la sintaxis del código?\n\n#Puede surgir la necesidad de buscar la sintaxis del código, pasa frecuentemente y espero no ser el único. Sin embargo esto puede solucionarse de la siguiente manera: \n\nEjemplo:\n\n# ?install.packages\n# A tu derecha en \"help\" se abrirá la ventana con las ayudas disponibles para el comando.\n\n# ?ggplot2\n#Lo mismo ocurriría con ggplo2. \n\n¿Y si necesito algo más específico?\n\n#Con ggplot2 puede ser así: Debe anteponerse \"?\"\n# ?geom_bar\n# ?geom_point"
   }
 ]

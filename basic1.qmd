@@ -3,9 +3,11 @@ title: "Introducción a R"
 subtitle: "Una introducción al lenguaje de programación"
 author: "Xavier Clemente García"
 format: revealjs
-
+echo: true
 ---
+
 ## ¿Qué es R?
+
 Es un entorno y lenguaje de programación con un enfoque en el análisis estadístico.
 
 R es parte del sistema GNU y se distribuye bajo la licencia GNU GPL. Es un lenguaje popular dentro del Machine learning, minería de datos, econometría, biología, bioinformática e inferencia estadística.
@@ -13,11 +15,10 @@ R es parte del sistema GNU y se distribuye bajo la licencia GNU GPL. Es un lengu
 ![](images/clipboard-1944794224.png){fig-align="center"}
 
 ## Conceptos claves
+
 En esta sesión miraremos los siguientes conceptos claves:
 
-
-plots: Son diagramas ejecutados por puntos en el espacio
-Boxplots: Representan la mediana muestral, permiten revisar datos típicos y atípicos 
+plots: Son diagramas ejecutados por puntos en el espacio Boxplots: Representan la mediana muestral, permiten revisar datos típicos y atípicos
 
 Barplots: Son diagramas de barras que permiten revisar la tendencia de una muestra
 
@@ -35,7 +36,71 @@ En Biología existen muchas aplicaciones que pueden llevarse acabo con R, por ej
 
 -   Gráficas (dendogramas, clústers, diagramas)
 
-## ¿Qué tipo de pruebas puedo utilizar en R? 
+## Interfaz de R
 
-En realidad existen muchas, con sus modificaciones y según los criterios de manejo. Sin embargo de acuerdo con mi experiencia las pruebas más utilizadas que podrías necesitar (paramétricas / no paramétricas) son: 
--   Paramétricas
+![Figura 1. Interfaz de R Studio](images/UI1.png){fig-align="center"}
+
+## Algunas consideraciones
+
+![Figura 2. Interfaz de R Studio](images/UI2.png){fig-align="center"}
+
+## Diferencias entre usar la consola y la zona de script
+
+Cuando usas solo "console" no podrás guardar tu script pero obtendrás un resultado rápido. Al usar la zona de script el código se quedará ahí. Es util usar console si necesitas comprobar o sacar un resultado rápido.
+
+```{r}
+1+1
+```
+
+
+```{r}
+#| echo: false
+options(repos = c(CRAN = "https://cran.rstudio.com/"))
+
+```
+
+## Instalación de paquetes
+
+```{r}
+# Instalar un paquete
+install.packages("tidyverse")
+# Cargar librería
+library("tidyverse")
+# La librería debería estar cargada. carguemos una de las librerías. Por defecto están las siguientes: 
+library(ggplot2)
+
+```
+
+
+## Y si no conozco la sintaxis del código? 
+```{r}
+#Puede surgir la necesidad de buscar la sintaxis del código, pasa frecuentemente y espero no ser el único. Sin embargo esto puede solucionarse de la siguiente manera: 
+```
+Ejemplo:
+```{r}
+# ?install.packages
+# A tu derecha en "help" se abrirá la ventana con las ayudas disponibles para el comando.
+
+# ?ggplot2
+#Lo mismo ocurriría con ggplo2. 
+```
+¿Y si necesito algo más específico?
+```{r}
+#Con ggplot2 puede ser así: Debe anteponerse "?"
+# ?geom_bar
+# ?geom_point
+
+```
+## ¿Qué tipo de pruebas puedo utilizar en R?
+
+Según el criterio son muchas. Las pruebas más utilizadas que podrías necesitar (paramétricas / no paramétricas) son:
+```{r}
+#| echoe: false
+pruebas_n_parametricas<-c("Kruskal Wallis", "U de Mann Withney", "Correlación de Spearman", "Prueba de Wilcoxon", "Prueba de Friedman")
+pruebas_parametricas<-c("T de Student", "ANOVA 1 vía y 2 vías", "Correlación de Pearson", "Prueba T para muestras dependientes", "Prueba para muestras independientes")
+pp <- data.frame(
+  pruebas_paramétricas = pruebas_parametricas, 
+  pruebas_n_paramétricas = pruebas_n_parametricas)
+pp
+```
+
