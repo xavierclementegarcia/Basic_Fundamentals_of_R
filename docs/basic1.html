@@ -210,14 +210,6 @@ Xavier Clemente García
 <p>R es parte del sistema GNU y se distribuye bajo la licencia GNU GPL. Es un lenguaje popular dentro del Machine learning, minería de datos, econometría, biología, bioinformática e inferencia estadística.</p>
 
 <img data-src="images/clipboard-1944794224.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="conceptos-claves" class="slide level2">
-<h2>Conceptos claves</h2>
-<p>En esta sesión miraremos los siguientes conceptos claves:</p>
-<p>plots: Son diagramas ejecutados por puntos en el espacio Boxplots: Representan la mediana muestral, permiten revisar datos típicos y atípicos</p>
-<p>Barplots: Son diagramas de barras que permiten revisar la tendencia de una muestra</p>
-<p>Pie: Son diagramas circulares</p>
-<p>Ggplot: Corresponde a la librería que contiene gráficos estilizados Dataframe: Permite el almacenamiento de datos</p>
-</section>
 <section id="aplicaciones-en-biología" class="slide level2">
 <h2>Aplicaciones en Biología</h2>
 <p>En Biología existen muchas aplicaciones que pueden llevarse acabo con R, por ejemplo:</p>
@@ -254,7 +246,7 @@ Xavier Clemente García
 <pre><code>package 'tidyverse' successfully unpacked and MD5 sums checked
 
 The downloaded binary packages are in
-    C:\Users\garci\AppData\Local\Temp\Rtmp0waMb0\downloaded_packages</code></pre>
+    C:\Users\garci\AppData\Local\Temp\RtmpCOXJEh\downloaded_packages</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="co"># Cargar librería</span></span>
 <span id="cb5-2"><a></a><span class="fu">library</span>(<span class="st">"tidyverse"</span>)</span>
@@ -285,13 +277,7 @@ The downloaded binary packages are in
 <section id="qué-tipo-de-pruebas-puedo-utilizar-en-r" class="slide level2">
 <h2>¿Qué tipo de pruebas puedo utilizar en R?</h2>
 <p>Según el criterio son muchas. Las pruebas más utilizadas que podrías necesitar (paramétricas / no paramétricas) son:</p>
-<div class="cell" data-echoe="false">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>pruebas_n_parametricas<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">"Kruskal Wallis"</span>, <span class="st">"U de Mann Withney"</span>, <span class="st">"Correlación de Spearman"</span>, <span class="st">"Prueba de Wilcoxon"</span>, <span class="st">"Prueba de Friedman"</span>)</span>
-<span id="cb9-2"><a></a>pruebas_parametricas<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">"T de Student"</span>, <span class="st">"ANOVA 1 vía y 2 vías"</span>, <span class="st">"Correlación de Pearson"</span>, <span class="st">"Prueba T para muestras dependientes"</span>, <span class="st">"Prueba para muestras independientes"</span>)</span>
-<span id="cb9-3"><a></a>pp <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb9-4"><a></a>  pruebas_paramétricas <span class="ot">=</span> pruebas_parametricas, </span>
-<span id="cb9-5"><a></a>  pruebas_n_paramétricas <span class="ot">=</span> pruebas_n_parametricas)</span>
-<span id="cb9-6"><a></a>pp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>                 pruebas_paramétricas  pruebas_n_paramétricas
 1                        T de Student          Kruskal Wallis
@@ -301,6 +287,45 @@ The downloaded binary packages are in
 5 Prueba para muestras independientes      Prueba de Friedman</code></pre>
 </div>
 </div>
+</section>
+<section id="conceptos-claves-para-la-próxima-clase" class="slide level2">
+<h2>Conceptos claves para la próxima clase</h2>
+<p>En esta sesión miraremos los siguientes conceptos claves:</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top">
+<caption>Conceptos importantes</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Conceptos</th>
+<th style="text-align: left;">Definiciones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Plots</td>
+<td style="text-align: left;">Diagramas básicos que vienen con R</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Barplots</td>
+<td style="text-align: left;">Observar tendencia de una muestra, frecuencias, etc</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Pie</td>
+<td style="text-align: left;">Diagramas circulares para ver proporciones</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ggplot</td>
+<td style="text-align: left;">Librería para gráficos estilizados</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="referencias" class="slide level2">
+<h2>Referencias</h2>
+<p><a href="https://melbournebioinformatics.github.io/r-intro-biologists"><em>Melbourne Bioinformatics. (2023) R for biologists GitHub</em></a></p>
 
 
 </section>

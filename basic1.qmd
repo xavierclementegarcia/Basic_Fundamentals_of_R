@@ -14,18 +14,6 @@ R es parte del sistema GNU y se distribuye bajo la licencia GNU GPL. Es un lengu
 
 ![](images/clipboard-1944794224.png){fig-align="center"}
 
-## Conceptos claves
-
-En esta sesión miraremos los siguientes conceptos claves:
-
-plots: Son diagramas ejecutados por puntos en el espacio Boxplots: Representan la mediana muestral, permiten revisar datos típicos y atípicos
-
-Barplots: Son diagramas de barras que permiten revisar la tendencia de una muestra
-
-Pie: Son diagramas circulares
-
-Ggplot: Corresponde a la librería que contiene gráficos estilizados Dataframe: Permite el almacenamiento de datos
-
 ## Aplicaciones en Biología
 
 En Biología existen muchas aplicaciones que pueden llevarse acabo con R, por ejemplo:
@@ -95,7 +83,7 @@ Ejemplo:
 
 Según el criterio son muchas. Las pruebas más utilizadas que podrías necesitar (paramétricas / no paramétricas) son:
 ```{r}
-#| echoe: false
+#| echo: false
 pruebas_n_parametricas<-c("Kruskal Wallis", "U de Mann Withney", "Correlación de Spearman", "Prueba de Wilcoxon", "Prueba de Friedman")
 pruebas_parametricas<-c("T de Student", "ANOVA 1 vía y 2 vías", "Correlación de Pearson", "Prueba T para muestras dependientes", "Prueba para muestras independientes")
 pp <- data.frame(
@@ -103,4 +91,20 @@ pp <- data.frame(
   pruebas_n_paramétricas = pruebas_n_parametricas)
 pp
 ```
+## Conceptos claves para la próxima clase
+En esta sesión miraremos los siguientes conceptos claves:
+```{r}
+#| echo: false
+library(knitr)
+conceptos<-c("Plots", "Barplots", "Pie", "ggplot")
+def<-c("Diagramas básicos que vienen con R", "Observar tendencia de una muestra, frecuencias, etc","Diagramas circulares para ver proporciones", "Librería para gráficos estilizados" )
+
+tab1<-data.frame(conceptos=conceptos, def=def)
+colnames(tab1)<-c("Conceptos", "Definiciones")
+kable(tab1, caption = "Conceptos importantes")
+#Tabla 1. Conceptos de importancia
+```
+
+## Referencias
+[*Melbourne Bioinformatics. (2023) R for biologists GitHub*](https://melbournebioinformatics.github.io/r-intro-biologists)
 

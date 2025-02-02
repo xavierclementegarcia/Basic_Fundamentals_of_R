@@ -25,7 +25,7 @@
     "href": "basic1.html#conceptos-claves",
     "title": "Introducción a R",
     "section": "Conceptos claves",
-    "text": "Conceptos claves\nEn esta sesión miraremos los siguientes conceptos claves:\nplots: Son diagramas ejecutados por puntos en el espacio Boxplots: Representan la mediana muestral, permiten revisar datos típicos y atípicos\nBarplots: Son diagramas de barras que permiten revisar la tendencia de una muestra\nPie: Son diagramas circulares\nGgplot: Corresponde a la librería que contiene gráficos estilizados Dataframe: Permite el almacenamiento de datos"
+    "text": "Conceptos claves\nEn esta sesión miraremos los siguientes conceptos claves:\n\n\n\n\n\nConceptos\nDefiniciones\n\n\n\n\nPlots\nDiagramas básicos que vienen con R\n\n\nBarplots\nObservar tendencia de una muestra, frecuencias, etc\n\n\nPie\nDiagramas circulares para ver proporciones\n\n\nggplot\nLibrería para gráficos estilizados"
   },
   {
     "objectID": "basic1.html#aplicaciones-en-biología",
@@ -39,7 +39,7 @@
     "href": "basic1.html#qué-tipo-de-pruebas-puedo-utilizar-en-r",
     "title": "Introducción a R",
     "section": "¿Qué tipo de pruebas puedo utilizar en R?",
-    "text": "¿Qué tipo de pruebas puedo utilizar en R?\nSegún el criterio son muchas. Las pruebas más utilizadas que podrías necesitar (paramétricas / no paramétricas) son:\n\npruebas_n_parametricas&lt;-c(\"Kruskal Wallis\", \"U de Mann Withney\", \"Correlación de Spearman\", \"Prueba de Wilcoxon\", \"Prueba de Friedman\")\npruebas_parametricas&lt;-c(\"T de Student\", \"ANOVA 1 vía y 2 vías\", \"Correlación de Pearson\", \"Prueba T para muestras dependientes\", \"Prueba para muestras independientes\")\npp &lt;- data.frame(\n  pruebas_paramétricas = pruebas_parametricas, \n  pruebas_n_paramétricas = pruebas_n_parametricas)\npp\n\n                 pruebas_paramétricas  pruebas_n_paramétricas\n1                        T de Student          Kruskal Wallis\n2                ANOVA 1 vía y 2 vías       U de Mann Withney\n3              Correlación de Pearson Correlación de Spearman\n4 Prueba T para muestras dependientes      Prueba de Wilcoxon\n5 Prueba para muestras independientes      Prueba de Friedman"
+    "text": "¿Qué tipo de pruebas puedo utilizar en R?\nSegún el criterio son muchas. Las pruebas más utilizadas que podrías necesitar (paramétricas / no paramétricas) son:\n\n\n                 pruebas_paramétricas  pruebas_n_paramétricas\n1                        T de Student          Kruskal Wallis\n2                ANOVA 1 vía y 2 vías       U de Mann Withney\n3              Correlación de Pearson Correlación de Spearman\n4 Prueba T para muestras dependientes      Prueba de Wilcoxon\n5 Prueba para muestras independientes      Prueba de Friedman"
   },
   {
     "objectID": "basic1.html",
@@ -74,7 +74,7 @@
     "href": "basic1.html#instalación-de-paquetes",
     "title": "Introducción a R",
     "section": "Instalación de paquetes",
-    "text": "Instalación de paquetes\n\n# Instalar un paquete\ninstall.packages(\"tidyverse\")\n\npackage 'tidyverse' successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\garci\\AppData\\Local\\Temp\\Rtmp0waMb0\\downloaded_packages\n\n# Cargar librería\nlibrary(\"tidyverse\")\n# La librería debería estar cargada. carguemos una de las librerías. Por defecto están las siguientes: \nlibrary(ggplot2)"
+    "text": "Instalación de paquetes\n\n# Instalar un paquete\ninstall.packages(\"tidyverse\")\n\npackage 'tidyverse' successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\garci\\AppData\\Local\\Temp\\RtmpCOXJEh\\downloaded_packages\n\n# Cargar librería\nlibrary(\"tidyverse\")\n# La librería debería estar cargada. carguemos una de las librerías. Por defecto están las siguientes: \nlibrary(ggplot2)"
   },
   {
     "objectID": "basic1.html#y-si-no-conozco-la-sintaxis-del-código",
@@ -82,5 +82,19 @@
     "title": "Introducción a R",
     "section": "Y si no conozco la sintaxis del código?",
     "text": "Y si no conozco la sintaxis del código?\n\n#Puede surgir la necesidad de buscar la sintaxis del código, pasa frecuentemente y espero no ser el único. Sin embargo esto puede solucionarse de la siguiente manera: \n\nEjemplo:\n\n# ?install.packages\n# A tu derecha en \"help\" se abrirá la ventana con las ayudas disponibles para el comando.\n\n# ?ggplot2\n#Lo mismo ocurriría con ggplo2. \n\n¿Y si necesito algo más específico?\n\n#Con ggplot2 puede ser así: Debe anteponerse \"?\"\n# ?geom_bar\n# ?geom_point"
+  },
+  {
+    "objectID": "basic1.html#conceptos-claves-para-la-próxima-clase",
+    "href": "basic1.html#conceptos-claves-para-la-próxima-clase",
+    "title": "Introducción a R",
+    "section": "Conceptos claves para la próxima clase",
+    "text": "Conceptos claves para la próxima clase\nEn esta sesión miraremos los siguientes conceptos claves:\n\n\n\nConceptos importantes\n\n\nConceptos\nDefiniciones\n\n\n\n\nPlots\nDiagramas básicos que vienen con R\n\n\nBarplots\nObservar tendencia de una muestra, frecuencias, etc\n\n\nPie\nDiagramas circulares para ver proporciones\n\n\nggplot\nLibrería para gráficos estilizados"
+  },
+  {
+    "objectID": "basic1.html#referencias",
+    "href": "basic1.html#referencias",
+    "title": "Introducción a R",
+    "section": "Referencias",
+    "text": "Referencias\nMelbourne Bioinformatics. (2023) R for biologists GitHub"
   }
 ]
