@@ -6,14 +6,15 @@ format: revealjs
 echo: true
 ---
 
-## ¿Qué es el Tidyverse? 
+## ¿Qué es el Tidyverse?
+Un paquete 
 
-## ¿Creación de tablas? 
+## ¿Creación de tablas?
 
 ## Bases de datos
 
 ## Introducción al data.frame
 
-## Otras funciones para tablas 
+## Otras funciones para tablas
 
 ## intro
