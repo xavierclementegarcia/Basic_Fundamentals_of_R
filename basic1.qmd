@@ -40,7 +40,6 @@ Cuando usas solo "console" no podrás guardar tu script pero obtendrás un resul
 1+1
 ```
 
-
 ```{r}
 #| echo: false
 options(repos = c(CRAN = "https://cran.rstudio.com/"))
@@ -59,12 +58,14 @@ library(ggplot2)
 
 ```
 
+## Y si no conozco la sintaxis del código?
 
-## Y si no conozco la sintaxis del código? 
 ```{r}
 #Puede surgir la necesidad de buscar la sintaxis del código, pasa frecuentemente y espero no ser el único. Sin embargo esto puede solucionarse de la siguiente manera: 
 ```
+
 Ejemplo:
+
 ```{r}
 # ?install.packages
 # A tu derecha en "help" se abrirá la ventana con las ayudas disponibles para el comando.
@@ -72,16 +73,20 @@ Ejemplo:
 # ?ggplot2
 #Lo mismo ocurriría con ggplo2. 
 ```
+
 ¿Y si necesito algo más específico?
+
 ```{r}
 #Con ggplot2 puede ser así: Debe anteponerse "?"
 # ?geom_bar
 # ?geom_point
 
 ```
+
 ## ¿Qué tipo de pruebas puedo utilizar en R?
 
 Según el criterio son muchas. Las pruebas más utilizadas que podrías necesitar (paramétricas / no paramétricas) son:
+
 ```{r}
 #| echo: false
 pruebas_n_parametricas<-c("Kruskal Wallis", "U de Mann Withney", "Correlación de Spearman", "Prueba de Wilcoxon", "Prueba de Friedman")
@@ -91,8 +96,11 @@ pp <- data.frame(
   pruebas_n_paramétricas = pruebas_n_parametricas)
 pp
 ```
+
 ## Conceptos claves para la próxima clase
+
 En esta sesión miraremos los siguientes conceptos claves:
+
 ```{r}
 #| echo: false
 library(knitr)
@@ -106,5 +114,5 @@ kable(tab1, caption = "Conceptos importantes")
 ```
 
 ## Referencias
-[*Melbourne Bioinformatics. (2023) R for biologists GitHub*](https://melbournebioinformatics.github.io/r-intro-biologists)
 
+[*Melbourne Bioinformatics. (2023) R for biologists GitHub*](https://melbournebioinformatics.github.io/r-intro-biologists)

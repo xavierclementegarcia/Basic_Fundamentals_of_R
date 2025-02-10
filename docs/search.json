@@ -96,5 +96,47 @@
     "title": "Introducción a R",
     "section": "Referencias",
     "text": "Referencias\nMelbourne Bioinformatics. (2023) R for biologists GitHub"
+  },
+  {
+    "objectID": "basic2.html#qué-es-el-tidyverse",
+    "href": "basic2.html#qué-es-el-tidyverse",
+    "title": "Tablas y organización de datos",
+    "section": "¿Qué es el Tidyverse?",
+    "text": "¿Qué es el Tidyverse?\nUn paquete"
+  },
+  {
+    "objectID": "basic2.html#creación-de-tablas",
+    "href": "basic2.html#creación-de-tablas",
+    "title": "Tablas y organización de datos",
+    "section": "¿Creación de tablas?",
+    "text": "¿Creación de tablas?"
+  },
+  {
+    "objectID": "basic2.html#bases-de-datos",
+    "href": "basic2.html#bases-de-datos",
+    "title": "Tablas y organización de datos",
+    "section": "Bases de datos",
+    "text": "Bases de datos"
+  },
+  {
+    "objectID": "basic2.html#introducción-al-data.frame",
+    "href": "basic2.html#introducción-al-data.frame",
+    "title": "Tablas y organización de datos",
+    "section": "Introducción al data.frame",
+    "text": "Introducción al data.frame"
+  },
+  {
+    "objectID": "basic2.html#otras-funciones-para-tablas",
+    "href": "basic2.html#otras-funciones-para-tablas",
+    "title": "Tablas y organización de datos",
+    "section": "Otras funciones para tablas",
+    "text": "Otras funciones para tablas"
+  },
+  {
+    "objectID": "basic2.html#intro",
+    "href": "basic2.html#intro",
+    "title": "Tablas y organización de datos",
+    "section": "intro",
+    "text": "intro"
   }
 ]

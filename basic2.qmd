@@ -1,6 +1,6 @@
 ---
-title: "Introducción a R"
-subtitle: "Tidyverse y organización de datos"
+title: "Tablas y organización de datos"
+subtitle: "Cómo ordenar tus datos sin morir en el intento"
 author: "Xavier Clemente García"
 format: revealjs
 echo: true

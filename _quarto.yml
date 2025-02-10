@@ -22,7 +22,7 @@ website:
           - href: basic1.qmd
             text: What's R?
           - href: basic2.qmd
-            text: Tables and more
+            text: Data organization and tables
           - href: basic3.qmd
             text: tidyverse
       - href: References.qmd
