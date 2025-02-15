@@ -102,14 +102,14 @@
     "href": "basic2.html#qué-es-el-tidyverse",
     "title": "Tablas y organización de datos",
     "section": "¿Qué es el Tidyverse?",
-    "text": "¿Qué es el Tidyverse?\nUn paquete"
+    "text": "¿Qué es el Tidyverse?\nEl paquete tidyverse es una colección de diferentes paqueterías útiles en la ciencia de datos.\n\n\n\n\n\n\n\nFigura 1. Introducción al Tidyverse. Tomado de Tidyverse.org\n\n\nEste paquete es fundamental porque entre otras cosas contiene “readr” y “ggplot2”. El primero se requiere para la lectura de tablas y bases de datos exportadas desde excel y el otro para la esquematización de gráficos."
   },
   {
     "objectID": "basic2.html#creación-de-tablas",
     "href": "basic2.html#creación-de-tablas",
     "title": "Tablas y organización de datos",
     "section": "¿Creación de tablas?",
-    "text": "¿Creación de tablas?"
+    "text": "¿Creación de tablas?\nLa creación de tablas puede ser un enfoque útil cuando necesitas esquematizar y organizar.Por ejemplo\n\n\n  nombres apellidos  carrera\n1  Xavier    García Biología\n2   Daine   Guevara Biología\n3  Alexis       Paz Biología\n4 Natalia  Quintero Biología\n\n\nSin embargo el código para una tabla como la anterior también podría complementarse cuantas veces sea necesario. Por ejemplo:\n\nespecies&lt;-c(\"Centruroides margaritatus\", \"Tityus pachyurus\", \"Tityus trivittatus\", \"centruroides gracilis\", \"centruroides suffusus\")\nambiente&lt;-c(\"luz\", \"luz\", \"luz\", \"sombra\", \"sombra\")\nMunicipio&lt;-c(\"Popayán\", \"Villa de Leyva\", \"Bogotá\", \"Argentina, Huila\", \"Inza\")\nDepartamento&lt;-c(\"Cauca\", \"Boyacá\", \"Cundinamarca\", \"Huila\", \"Cauca\")\ncantidad_de_individuos&lt;-c(2,4,3,4,5)\nframe_scorpions&lt;- data.frame(especies, ambiente, Municipio, Departamento, cantidad_de_individuos)\n\nEn este punto tendremos un “data.frame” organizado según nuestras variables. Podremos añadir n variables."
   },
   {
     "objectID": "basic2.html#bases-de-datos",
@@ -138,5 +138,61 @@
     "title": "Tablas y organización de datos",
     "section": "intro",
     "text": "intro"
+  },
+  {
+    "objectID": "basic2.html#section",
+    "href": "basic2.html#section",
+    "title": "Tablas y organización de datos",
+    "section": "",
+    "text": "especies\nambiente\nMunicipio\nDepartamento\ncantidad_de_individuos\n\n\n\n\nCentruroides margaritatus\nluz\nPopayán\nCauca\n2\n\n\nTityus pachyurus\nluz\nVilla de Leyva\nBoyacá\n4\n\n\nTityus trivittatus\nluz\nBogotá\nCundinamarca\n3\n\n\ncentruroides gracilis\nsombra\nArgentina, Huila\nHuila\n4\n\n\ncentruroides suffusus\nsombra\nInza\nCauca\n5\n\n\n\n\n\nHabremos obtenido nuestra tabla. Sin embargo ¿Queremos mantener esos nombres dados por las variables? NO,la respuesta es sencilla, pues no se ve bien y estético."
+  },
+  {
+    "objectID": "basic2.html#section-1",
+    "href": "basic2.html#section-1",
+    "title": "Tablas y organización de datos",
+    "section": "",
+    "text": "Para ello haremos lo siguiente:\n\ncolnames(frame_scorpions)&lt;-c(\"Especies\", \"Ambientes\",\"Municipio\", \"Departamento\", \"No. de Individuos\")\n\n¿Qué hemos hecho aquí? Hemos sustituído las leyendas de nuestras columnas. Usamos “colnames” función que permite introducir nuestra variable data.frame “frame_scorpions”. Por tanto nuestra tabla debería verse así para la siguiente diapositiva.\n\n\n\n\n\n\n\n\n\n\n\n\nEspecies\nAmbientes\nMunicipio\nDepartamento\nNo. de Individuos\n\n\n\n\nCentruroides margaritatus\nluz\nPopayán\nCauca\n2\n\n\nTityus pachyurus\nluz\nVilla de Leyva\nBoyacá\n4\n\n\nTityus trivittatus\nluz\nBogotá\nCundinamarca\n3\n\n\ncentruroides gracilis\nsombra\nArgentina, Huila\nHuila\n4\n\n\ncentruroides suffusus\nsombra\nInza\nCauca\n5"
+  },
+  {
+    "objectID": "basic2.html#section-2",
+    "href": "basic2.html#section-2",
+    "title": "Tablas y organización de datos",
+    "section": "",
+    "text": "Este es el resultado obtenido."
+  },
+  {
+    "objectID": "basic2.html#ejercicio-práctico-no.-1-.smaller",
+    "href": "basic2.html#ejercicio-práctico-no.-1-.smaller",
+    "title": "Tablas y organización de datos",
+    "section": "Ejercicio práctico No. 1 {.smaller}",
+    "text": "Ejercicio práctico No. 1 {.smaller}\nDirígete a “Documentation” en mi página y obtendrás la carpeta donde encontrarás el ejercicio propuesto. ¿No entiendes como hacerlo? Revisa mi vídeo."
+  },
+  {
+    "objectID": "basic2.html#ejercicio-práctico-no.-1-background-color806040",
+    "href": "basic2.html#ejercicio-práctico-no.-1-background-color806040",
+    "title": "Tablas y organización de datos",
+    "section": "Ejercicio práctico No. 1 {background-color=“#806040”}",
+    "text": "Ejercicio práctico No. 1 {background-color=“#806040”}\nDirígete a “Documentation” en mi página y obtendrás la carpeta donde encontrarás el ejercicio propuesto. ¿No entiendes como hacerlo? Revisa mi vídeo."
+  },
+  {
+    "objectID": "basic2.html#ejercicio-práctico-no.-1-background-color806040.smaller",
+    "href": "basic2.html#ejercicio-práctico-no.-1-background-color806040.smaller",
+    "title": "Tablas y organización de datos",
+    "section": "Ejercicio práctico No. 1 {background-color=“#806040”,.smaller}",
+    "text": "Ejercicio práctico No. 1 {background-color=“#806040”,.smaller}\nDirígete a “Documentation” en mi página y obtendrás la carpeta donde encontrarás el ejercicio propuesto. ¿No entiendes como hacerlo? Revisa mi vídeo."
+  },
+  {
+    "objectID": "basic2.html#ejercicio-práctico-no.-1-.smaller-style-background-color806040",
+    "href": "basic2.html#ejercicio-práctico-no.-1-.smaller-style-background-color806040",
+    "title": "Tablas y organización de datos",
+    "section": "Ejercicio práctico No. 1 {.smaller} {style= “background-color:#806040;”}",
+    "text": "Ejercicio práctico No. 1 {.smaller} {style= “background-color:#806040;”}\nDirígete a “Documentation” en mi página y obtendrás la carpeta donde encontrarás el ejercicio propuesto. ¿No entiendes como hacerlo? Revisa mi vídeo."
+  },
+  {
+    "objectID": "basic2.html#ejercicio-práctico-no.-1",
+    "href": "basic2.html#ejercicio-práctico-no.-1",
+    "title": "Tablas y organización de datos",
+    "section": "Ejercicio práctico No. 1",
+    "text": "Ejercicio práctico No. 1\nDirígete a documentación en mi página para obtener el ejercicio."
   }
 ]

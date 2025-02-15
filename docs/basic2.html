@@ -28,6 +28,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-bbe7401fe57d4b791b917637bb662036.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -139,18 +204,180 @@ Xavier Clemente García
 </div>
 
 </section>
-<section id="qué-es-el-tidyverse" class="slide level2">
+<section id="qué-es-el-tidyverse" class="slide level2 smaller">
 <h2>¿Qué es el Tidyverse?</h2>
-<p>Un paquete</p>
+<p>El paquete tidyverse es una colección de diferentes paqueterías útiles en la ciencia de datos.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://www.tidyverse.org/"><img data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRprxZquiGHsvvivkJ85FJu94iMUrZ37dI38w&amp;s.png" class="quarto-figure quarto-figure-center" width="351" alt="Figura 1. Introducción al Tidyverse. Tomado de Tidyverse.org"></a></p>
+</figure>
+</div>
+<figcaption>Figura 1. Introducción al Tidyverse. Tomado de Tidyverse.org</figcaption>
+</figure>
+</div>
+<p>Este paquete es fundamental porque entre otras cosas contiene “readr” y “ggplot2”. El primero se requiere para la lectura de tablas y bases de datos exportadas desde excel y el otro para la esquematización de gráficos.</p>
 </section>
-<section id="creación-de-tablas" class="slide level2">
+<section id="creación-de-tablas" class="slide level2 smaller">
 <h2>¿Creación de tablas?</h2>
+<p>La creación de tablas puede ser un enfoque útil cuando necesitas esquematizar y organizar.Por ejemplo</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>  nombres apellidos  carrera
+1  Xavier    García Biología
+2   Daine   Guevara Biología
+3  Alexis       Paz Biología
+4 Natalia  Quintero Biología</code></pre>
+</div>
+</div>
+<p>Sin embargo el código para una tabla como la anterior también podría complementarse cuantas veces sea necesario. Por ejemplo:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>especies<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">"Centruroides margaritatus"</span>, <span class="st">"Tityus pachyurus"</span>, <span class="st">"Tityus trivittatus"</span>, <span class="st">"centruroides gracilis"</span>, <span class="st">"centruroides suffusus"</span>)</span>
+<span id="cb2-2"><a></a>ambiente<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">"luz"</span>, <span class="st">"luz"</span>, <span class="st">"luz"</span>, <span class="st">"sombra"</span>, <span class="st">"sombra"</span>)</span>
+<span id="cb2-3"><a></a>Municipio<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">"Popayán"</span>, <span class="st">"Villa de Leyva"</span>, <span class="st">"Bogotá"</span>, <span class="st">"Argentina, Huila"</span>, <span class="st">"Inza"</span>)</span>
+<span id="cb2-4"><a></a>Departamento<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">"Cauca"</span>, <span class="st">"Boyacá"</span>, <span class="st">"Cundinamarca"</span>, <span class="st">"Huila"</span>, <span class="st">"Cauca"</span>)</span>
+<span id="cb2-5"><a></a>cantidad_de_individuos<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span>
+<span id="cb2-6"><a></a>frame_scorpions<span class="ot">&lt;-</span> <span class="fu">data.frame</span>(especies, ambiente, Municipio, Departamento, cantidad_de_individuos)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>En este punto tendremos un “data.frame” organizado según nuestras variables. Podremos añadir n variables.</p>
+</section>
+<section id="section" class="slide level2 smaller">
+<h2></h2>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top">
+<colgroup>
+<col style="width: 29%">
+<col style="width: 10%">
+<col style="width: 19%">
+<col style="width: 14%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">especies</th>
+<th style="text-align: left;">ambiente</th>
+<th style="text-align: left;">Municipio</th>
+<th style="text-align: left;">Departamento</th>
+<th style="text-align: right;">cantidad_de_individuos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Centruroides margaritatus</td>
+<td style="text-align: left;">luz</td>
+<td style="text-align: left;">Popayán</td>
+<td style="text-align: left;">Cauca</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Tityus pachyurus</td>
+<td style="text-align: left;">luz</td>
+<td style="text-align: left;">Villa de Leyva</td>
+<td style="text-align: left;">Boyacá</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Tityus trivittatus</td>
+<td style="text-align: left;">luz</td>
+<td style="text-align: left;">Bogotá</td>
+<td style="text-align: left;">Cundinamarca</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">centruroides gracilis</td>
+<td style="text-align: left;">sombra</td>
+<td style="text-align: left;">Argentina, Huila</td>
+<td style="text-align: left;">Huila</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">centruroides suffusus</td>
+<td style="text-align: left;">sombra</td>
+<td style="text-align: left;">Inza</td>
+<td style="text-align: left;">Cauca</td>
+<td style="text-align: right;">5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Habremos obtenido nuestra tabla. Sin embargo ¿Queremos mantener esos nombres dados por las variables? NO,la respuesta es sencilla, pues no se ve bien y estético.</p>
+</section>
+<section id="section-1" class="slide level2 smaller">
+<h2></h2>
+<p>Para ello haremos lo siguiente:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">colnames</span>(frame_scorpions)<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">"Especies"</span>, <span class="st">"Ambientes"</span>,<span class="st">"Municipio"</span>, <span class="st">"Departamento"</span>, <span class="st">"No. de Individuos"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>¿Qué hemos hecho aquí? Hemos sustituído las leyendas de nuestras columnas. Usamos “colnames” función que permite introducir nuestra variable data.frame “frame_scorpions”. Por tanto nuestra tabla debería verse así para la siguiente diapositiva.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 11%">
+<col style="width: 20%">
+<col style="width: 15%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Especies</th>
+<th style="text-align: left;">Ambientes</th>
+<th style="text-align: left;">Municipio</th>
+<th style="text-align: left;">Departamento</th>
+<th style="text-align: right;">No.&nbsp;de Individuos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Centruroides margaritatus</td>
+<td style="text-align: left;">luz</td>
+<td style="text-align: left;">Popayán</td>
+<td style="text-align: left;">Cauca</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Tityus pachyurus</td>
+<td style="text-align: left;">luz</td>
+<td style="text-align: left;">Villa de Leyva</td>
+<td style="text-align: left;">Boyacá</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Tityus trivittatus</td>
+<td style="text-align: left;">luz</td>
+<td style="text-align: left;">Bogotá</td>
+<td style="text-align: left;">Cundinamarca</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">centruroides gracilis</td>
+<td style="text-align: left;">sombra</td>
+<td style="text-align: left;">Argentina, Huila</td>
+<td style="text-align: left;">Huila</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">centruroides suffusus</td>
+<td style="text-align: left;">sombra</td>
+<td style="text-align: left;">Inza</td>
+<td style="text-align: left;">Cauca</td>
+<td style="text-align: right;">5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="ejercicio-práctico-no.-1" class="slide level2" data-background-color="#806040">
+<h2>Ejercicio práctico No.&nbsp;1</h2>
+<p>Dirígete a documentación en mi página para obtener el ejercicio.</p>
 </section>
 <section id="bases-de-datos" class="slide level2">
 <h2>Bases de datos</h2>
-</section>
-<section id="introducción-al-data.frame" class="slide level2">
-<h2>Introducción al data.frame</h2>
 </section>
 <section id="otras-funciones-para-tablas" class="slide level2">
 <h2>Otras funciones para tablas</h2>
@@ -163,7 +390,7 @@ Xavier Clemente García
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-
+<p><a href="https://xavierclementegarcia.github.io/Basic_Fundamentals_of_R/" target="_blank">Fundaments Basic R</a></p>
 </div>
 </div></div>
 
@@ -375,6 +602,82 @@ Xavier Clemente García
         ]
       });
     </script>
+    
+
+    <script>
+
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
+      // slide changes (different for each slide format).
+
+      (function () {
+
+        // dispatch for htmlwidgets
+
+        function fireSlideEnter() {
+
+          const event = window.document.createEvent("Event");
+
+          event.initEvent("slideenter", true, true);
+
+          window.document.dispatchEvent(event);
+
+        }
+
+    
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          fireSlideEnter();
+
+    
+
+          // dispatch for shiny
+
+          if (window.jQuery) {
+
+            if (previousSlide) {
+
+              window.jQuery(previousSlide).trigger("hidden");
+
+            }
+
+            if (currentSlide) {
+
+              window.jQuery(currentSlide).trigger("shown");
+
+            }
+
+          }
+
+        }
+
+    
+
+        // hookup for slidy
+
+        if (window.w3c_slidy) {
+
+          window.w3c_slidy.add_observer(function (slide_num) {
+
+            // slide_num starts at position 1
+
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
+          });
+
+        }
+
+    
+
+      })();
+
+    </script>
+
+    
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

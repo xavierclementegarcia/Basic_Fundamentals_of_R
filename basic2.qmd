@@ -2,18 +2,80 @@
 title: "Tablas y organización de datos"
 subtitle: "Cómo ordenar tus datos sin morir en el intento"
 author: "Xavier Clemente García"
-format: revealjs
+format: 
+  revealjs:
+    theme: default
+    footer: '<a href="https://xavierclementegarcia.github.io/Basic_Fundamentals_of_R/" target="_blank">Fundaments Basic R</a>'
 echo: true
 ---
 
-## ¿Qué es el Tidyverse?
-Un paquete 
+## ¿Qué es el Tidyverse?  {.smaller}
 
-## ¿Creación de tablas?
+El paquete tidyverse es una colección de diferentes paqueterías útiles en la ciencia de datos.
+
+[![Figura 1. Introducción al Tidyverse. Tomado de Tidyverse.org](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRprxZquiGHsvvivkJ85FJu94iMUrZ37dI38w&s){fig-align="center" width="351"}](https://www.tidyverse.org/)
+
+Este paquete es fundamental porque entre otras cosas contiene "readr" y "ggplot2". El primero se requiere para la lectura de tablas y bases de datos exportadas desde excel y el otro para la esquematización de gráficos.
+
+## ¿Creación de tablas? {.smaller}
+La creación de tablas puede ser un enfoque útil cuando necesitas esquematizar y organizar.Por ejemplo
+
+```{r}
+#| echo: false
+nombres<-c("Xavier", "Daine", "Alexis", "Natalia")
+apellidos<-c("García", "Guevara", "Paz", "Quintero")
+carrera<-c("Biología", "Biología", "Biología","Biología" )
+dataframe<-data.frame(nombres, apellidos, carrera)
+dataframe
+```
+Sin embargo el código para una tabla como la anterior también podría complementarse cuantas veces sea necesario. Por ejemplo: 
+```{r}
+#| echo: true
+especies<-c("Centruroides margaritatus", "Tityus pachyurus", "Tityus trivittatus", "centruroides gracilis", "centruroides suffusus")
+ambiente<-c("luz", "luz", "luz", "sombra", "sombra")
+Municipio<-c("Popayán", "Villa de Leyva", "Bogotá", "Argentina, Huila", "Inza")
+Departamento<-c("Cauca", "Boyacá", "Cundinamarca", "Huila", "Cauca")
+cantidad_de_individuos<-c(2,4,3,4,5)
+frame_scorpions<- data.frame(especies, ambiente, Municipio, Departamento, cantidad_de_individuos)
+
+
+```
+En este punto tendremos un "data.frame" organizado según nuestras variables. Podremos añadir n variables. 
+
+
+## {.smaller}
+```{r}
+#| echo: false
+library(knitr)
+kable(frame_scorpions)
+
+```
+Habremos obtenido nuestra tabla. Sin embargo ¿Queremos mantener esos nombres dados por las variables? NO,la respuesta es sencilla, pues no se ve bien y estético. 
+
+## {.smaller}
+
+Para ello haremos lo siguiente: 
+
+```{r}
+#| echo: true
+colnames(frame_scorpions)<-c("Especies", "Ambientes","Municipio", "Departamento", "No. de Individuos")
+```
+
+¿Qué hemos hecho aquí?
+Hemos sustituído las leyendas de nuestras columnas.
+Usamos "colnames" función que permite introducir nuestra variable data.frame "frame_scorpions". 
+Por tanto nuestra tabla debería verse así para la siguiente diapositiva.
+```{r}
+#| echo: false
+kable(frame_scorpions)
+```
+
+## Ejercicio práctico No. 1 {background-color="#806040"}
+
+Dirígete a documentación en mi página para obtener el ejercicio.  
+
 
 ## Bases de datos
-
-## Introducción al data.frame
 
 ## Otras funciones para tablas
 
