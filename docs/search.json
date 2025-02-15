@@ -74,7 +74,7 @@
     "href": "basic1.html#instalación-de-paquetes",
     "title": "Introducción a R",
     "section": "Instalación de paquetes",
-    "text": "Instalación de paquetes\n\n# Instalar un paquete\ninstall.packages(\"tidyverse\")\n\npackage 'tidyverse' successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\garci\\AppData\\Local\\Temp\\RtmpCOXJEh\\downloaded_packages\n\n# Cargar librería\nlibrary(\"tidyverse\")\n# La librería debería estar cargada. carguemos una de las librerías. Por defecto están las siguientes: \nlibrary(ggplot2)"
+    "text": "Instalación de paquetes\n\n# Instalar un paquete\ninstall.packages(\"tidyverse\")\n\npackage 'tidyverse' successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\garci\\AppData\\Local\\Temp\\RtmpC6L9U9\\downloaded_packages\n\n# Cargar librería\nlibrary(\"tidyverse\")\n# La librería debería estar cargada. carguemos una de las librerías. Por defecto están las siguientes: \nlibrary(ggplot2)"
   },
   {
     "objectID": "basic1.html#y-si-no-conozco-la-sintaxis-del-código",

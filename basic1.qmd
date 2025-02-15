@@ -2,7 +2,10 @@
 title: "Introducción a R"
 subtitle: "Una introducción al lenguaje de programación"
 author: "Xavier Clemente García"
-format: revealjs
+format: 
+  revealjs:
+    theme: default
+    footer: '<a href="https://xavierclementegarcia.github.io/Basic_Fundamentals_of_R/" target="_blank">Fundaments Basic R</a>'
 echo: true
 ---
 
