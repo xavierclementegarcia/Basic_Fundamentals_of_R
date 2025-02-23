@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "Basic Fundamentals of R",
     "section": "",
-    "text": "Hola!\nEste curso inicialmente estará hecho en español, mi lenguaje natal. La idea es que pueda ser una forma más sencilla de explicar R, sin tanto texto y sin demasiadas horas.\nAquí podrás encontrar a toda hora y en cualquier momento pequeños ejemplos explicativos que pueden ayudarte en tu camino dentro de las Ciencias Biológicas con R. Buena suerte.\nEn el apartado de “Course” encontrará toda la información resumida en 6 diapositivas para que puedas aplicar el tidyverse, gráficos, tablas, pruebas estadísticas comunes en Biología y además en un futuro un material para usar R Markdown.\nHi!\nThis course start in Spanish, my native language. The idea is that be an easy form to R explain, without text and much hours.\nHere, you could find small explicative exercises that you can help in your way into of Biological Sciences with R. Good Luck.\nIn the field “course” you find six slides with all resumed information to you apply the tidyverse, graphs, tables, common statistical test in Biology and I will upload a material to use R markdown. Please, Be patient."
+    "text": "Hola!\nEste curso inicialmente estará hecho en español, mi lenguaje natal. La idea es que pueda ser una forma más sencilla de explicar R, sin tanto texto y sin demasiadas horas.\nAquí podrás encontrar a toda hora y en cualquier momento pequeños ejemplos explicativos que pueden ayudarte en tu camino dentro de las Ciencias Biológicas con R. Buena suerte.\nEn el apartado de “Course” encontrará toda la información resumida en 6 diapositivas para que puedas aplicar el tidyverse, gráficos, tablas, pruebas estadísticas comunes en Biología y además en un futuro un material para usar R Markdown."
   },
   {
     "objectID": "basic1.html#qué-es-r",
@@ -411,5 +411,33 @@
     "title": "Tipos, estructuras y operadores de datos",
     "section": "",
     "text": "Vamos a familiarizarnos con el entorno de Rstudio y la sintaxis de R."
+  },
+  {
+    "objectID": "index.html#contenido-del-curso",
+    "href": "index.html#contenido-del-curso",
+    "title": "Basic Fundamentals of R",
+    "section": "Contenido del curso",
+    "text": "Contenido del curso\nPuedes acceder al contenido del curso en el apartado curso del menú\n\nIntroducción a R\nTipos, estructuras y operadores de datos\nTablas y organización de datos\nImportación y manejo de datos\nManipulación de datos con tidyverse\nIntroducción a pruebas estadísticas básicas\nCiencia reproducible (Introducción a R Markdown y Quarto)"
+  },
+  {
+    "objectID": "index.html#zona-de-descarga",
+    "href": "index.html#zona-de-descarga",
+    "title": "Basic Fundamentals of R",
+    "section": "Zona de descarga",
+    "text": "Zona de descarga\nAquí podrás descargar un documento .pdf del contenido de este curso."
+  },
+  {
+    "objectID": "Documentation.html",
+    "href": "Documentation.html",
+    "title": "Documentation",
+    "section": "",
+    "text": "La sección de documentación estará en desarrollo durante un buen tiempo y se irá liberando nueva información con el paso del tiempo. Podrás acceder a la documentación publicada en este github pages en cualquier momento.  La información por el momento solo estará disponible en idioma español."
+  },
+  {
+    "objectID": "Documentation.html#introducción-a-r",
+    "href": "Documentation.html#introducción-a-r",
+    "title": "Documentation",
+    "section": "Introducción a R",
+    "text": "Introducción a R\nLa idea de este curso es complementarlo según cuántas cosas nuevas vaya aprendiendo. Por ahora me centraré en lo que he dominado.  ¿Cuál es el objetivo de este curso?  Aprender juntos y funcionar como una herramienta básica para cualquier biólogo que desee una herramienta de fácil acceso para R. Los biólogos en la Universidad del Cauca a pesar de que tenemos un acercamiento importante a varios programas estadísticos no llegamos a tener un nivel de profundización en los lenguajes de programación, por ello, mi idea frente a ello nace con esta guía.\nDescargando R y RStudio - Primero accede al siguiente enlace “Descargar R” y “Descargar R Studio” \nSi no tienes Windows dirígete al siguiente enlace “Descargar R según la versión”  Para descargar Rstudio  “Descargar RStudio para otros SO”"
   }
 ]

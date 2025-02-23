@@ -4,3 +4,24 @@ theme:
   light: flatly
   dark: darkly
 ---
+
+La sección de documentación estará en desarrollo durante un buen tiempo y se irá liberando nueva información con el paso del tiempo. Podrás acceder a la documentación publicada en este github pages en cualquier momento. <br> La información por el momento solo estará disponible en idioma español.
+
+## Introducción a R {.smaller}
+
+La idea de este curso es complementarlo según cuántas cosas nuevas vaya aprendiendo. Por ahora me centraré en lo que he dominado. <br> **¿Cuál es el objetivo de este curso?** <br> Aprender juntos y funcionar como una herramienta básica para cualquier biólogo que desee una herramienta de fácil acceso para R. Los biólogos en la Universidad del Cauca a pesar de que tenemos un acercamiento importante a varios programas estadísticos no llegamos a tener un nivel de profundización en los lenguajes de programación, por ello, mi idea frente a ello nace con esta guía.
+
+**Descargando R y RStudio** - Primero accede al siguiente enlace ["Descargar R"](https://cran.r-project.org/bin/windows/base/R-4.4.2-win.exe) y ["Descargar R Studio"](https://download1.rstudio.org/electron/windows/RStudio-2024.12.1-563.exe)
+<br>
+
+**Si no tienes Windows dirígete al siguiente enlace**
+["Descargar R según la versión"](https://cran.r-project.org/)
+<br>
+Para descargar Rstudio
+<br>
+["Descargar RStudio para otros SO"](https://posit.co/download/rstudio-desktop/)
+
+
+## Diferencias entre usar la consola y la zona de script  {.smaller}
+
+

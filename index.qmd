@@ -13,10 +13,20 @@ Aquí podrás encontrar a toda hora y en cualquier momento pequeños ejemplos ex
 
 En el apartado de "Course" encontrará toda la información resumida en 6 diapositivas para que puedas aplicar el tidyverse, gráficos, tablas, pruebas estadísticas comunes en Biología y además en un futuro un material para usar R Markdown.
 
-Hi!
 
-This course start in Spanish, my native language. The idea is that be an easy form to R explain, without text and much hours.
+## Contenido del curso {.scrollable}
 
-Here, you could find small explicative exercises that you can help in your way into of Biological Sciences with R. Good Luck.
+**Puedes acceder al contenido del curso en el apartado curso del menú**
 
-In the field "course" you find six slides with all resumed information to you apply the tidyverse, graphs, tables, common statistical test in Biology and I will upload a material to use R markdown. Please, Be patient.
+-   Introducción a R
+-   Tipos, estructuras y operadores de datos
+-   Tablas y organización de datos
+-   Importación y manejo de datos
+-   Manipulación de datos con tidyverse
+-   Introducción a pruebas estadísticas básicas
+-   Ciencia reproducible (Introducción a R Markdown y Quarto)
+
+
+## Zona de descarga {.smaller}
+
+Aquí podrás descargar un documento .pdf del contenido de este curso.
