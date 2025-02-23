@@ -1,1 +1,90 @@
+---
+title: "Importación y manejo de datos"
+subtitle: "Una introducción al lenguaje de programación"
+author: "Xavier Clemente García"
+format: 
+  revealjs:
+    theme: default
+    footer: '<a href="https://xavierclementegarcia.github.io/Basic_Fundamentals_of_R/" target="_blank">Fundaments Basic R</a>'
+echo: true
+---
 
+## Objetivo {.smaller}
+
+Aprender a subir datasets, cargar datasets, usar librerías de datasets y modificar mediante Dplyr y comandos propios de R los datos. 
+
+## Algunas consideraciones antes de iniciar {.smaller}
+
+Para proceder con esta clase usaremos algunos datasets obtenidos desde librerías específicas en R <br> Haremos uso del siguiente script para importar nuestros datasets.
+
+```{r}
+#| echo: true
+#Librería con datos de crecimiento de plantas en diferentes grupos. 
+
+data("PlantGrowth")
+```
+
+Este paquete se incluye en R. <br> En esta clase se hará manejo de bases de datos.
+
+```{r}
+#| echo: false
+options(repos = c(CRAN = "https://cran.rstudio.com/"))
+install.packages("palmerpenguins")
+library(palmerpenguins)
+```
+
+##  {.smaller}
+
+
+```{r}
+#| echo: true
+install.packages("palmerpenguins")
+library(palmerpenguins)
+```
+
+Se puede visitar la página del creador en [Palmerpenguins](https://allisonhorst.github.io/palmerpenguins/index.html)
+
+[![](images/logo.png){width="165"}](https://allisonhorst.github.io/palmerpenguins/) <br> 
+"Palmerpenguins" incluye un dataset interesante. <br> 
+Para usar **Palmerpenguins** debe instalarse con las funciones de arriba
+
+
+## Importación de datos {.smaller}
+
+En esta librería existe un set de datos bastante amplio. Vamos a usar **Penguins**
+```{r}
+#| echo: true
+penguins
+```
+Como puedes ver la base de datos es bastante amplia e incluye 8 columnas. 
+
+## {.smaller}
+
+Según qué área te interese de este dataset podrás utilizarla a tu antojo. Existen algunos comandos que podrían ser de interés: 
+```{r}
+#| echo: false
+comands<-c("fix", "head", "summary", "split", "dim", "str", "tail")
+implication<-c("Modificar manualmente una secicón de los datos", "Muestra las primeras 6 filas de datos", "Genera un resumen estadístico del set de datos", "Puede cortar el set de datos según el orden específico", "Muestra número de filas y columnas", "Da la estructura del dataset", "Muestra las últimas filas del set de datos")
+structure_data<-data.frame(comands, implication)
+colnames(structure_data)<-c("Función", "Definición")
+library(knitr)
+kable(structure_data)
+
+
+```
+De esta forma, en la siguiente diapositiva verás algunos ejemplos prácticos con **penguins**
+
+## 
+
+
+## Exportación de datos
+
+## Introducción al Dplyr
+
+## Manipulación con Dplyr
+
+## Variables NA en R
+
+## Introducción al uso de na.omit()
+
+## Reemplazando NA con valores específicos.

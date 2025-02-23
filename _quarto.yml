@@ -21,12 +21,12 @@ website:
         menu:
           - href: basic1.qmd
             text: What's R?
-          - href: basic0.qmd
+          - href: basic0d.qmd
             text: Fundaments
           - href: basic2.qmd
             text: Data organization and tables
           - href: basic3.qmd
-            text: tidyverse
+            text: Manage & import data
       - href: References.qmd
         text: References
           

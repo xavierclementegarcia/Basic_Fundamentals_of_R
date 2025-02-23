@@ -17,8 +17,8 @@
     "objectID": "basic1.html#qué-es-r",
     "href": "basic1.html#qué-es-r",
     "title": "Introducción a R",
-    "section": "¿Qué es R?",
-    "text": "¿Qué es R?\nEs un entorno y lenguaje de programación con un enfoque en el análisis estadístico.\nR es parte del sistema GNU y se distribuye bajo la licencia GNU GPL. Es un lenguaje popular dentro del Machine learning, minería de datos, econometría, biología, bioinformática e inferencia estadística."
+    "section": "",
+    "text": "Es un entorno y lenguaje de programación con un enfoque en el análisis estadístico.\nR es parte del sistema GNU y se distribuye bajo la licencia GNU GPL. Es un lenguaje popular dentro del Machine learning, minería de datos, econometría, biología, bioinformática e inferencia estadística."
   },
   {
     "objectID": "basic1.html#conceptos-claves",
@@ -53,14 +53,14 @@
     "href": "basic1.html#interfaz-de-r",
     "title": "Introducción a R",
     "section": "Interfaz de R",
-    "text": "Interfaz de R\n\nFigura 1. Interfaz de R Studio"
+    "text": "Interfaz de R\n\n\n\nFigura 1. Interfaz de R Studio"
   },
   {
     "objectID": "basic1.html#algunas-consideraciones",
     "href": "basic1.html#algunas-consideraciones",
     "title": "Introducción a R",
     "section": "Algunas consideraciones",
-    "text": "Algunas consideraciones\n\nFigura 2. Interfaz de R Studio"
+    "text": "Algunas consideraciones\n\n\n\nFigura 2. Interfaz de R Studio"
   },
   {
     "objectID": "basic1.html#diferencias-entre-usar-la-consola-y-la-zona-de-script",
@@ -227,8 +227,8 @@
     "objectID": "basic0.html#objetivo",
     "href": "basic0.html#objetivo",
     "title": "Tipos, estructuras y operadores de datos",
-    "section": "Objetivo",
-    "text": "Objetivo\nVamos a familiarizarnos con el entorno de Rstudio y la sintaxis de R."
+    "section": "",
+    "text": "Vamos a familiarizarnos con el entorno de Rstudio y la sintaxis de R."
   },
   {
     "objectID": "basic0.html#asignación-de-variables",
@@ -320,5 +320,96 @@
     "title": "Tipos, estructuras y operadores de datos",
     "section": "¿Cómo acceder a estas presentaciones?",
     "text": "¿Cómo acceder a estas presentaciones?\nPodrán encontrarlas en mi github page. Pero no te adelantes y guarda calma.  Si necesitas más información no dudes en escribirme: xgarcia@unicauca.edu.co"
+  },
+  {
+    "objectID": "basic3.html#objetivo",
+    "href": "basic3.html#objetivo",
+    "title": "Importación y manejo de datos",
+    "section": "Objetivo",
+    "text": "Objetivo\nAprender a subir datasets, cargar datasets, usar librerías de datasets y modificar mediante Dplyr y comandos propios de R los datos."
+  },
+  {
+    "objectID": "basic3.html#algunas-consideraciones-antes-de-iniciar",
+    "href": "basic3.html#algunas-consideraciones-antes-de-iniciar",
+    "title": "Importación y manejo de datos",
+    "section": "Algunas consideraciones antes de iniciar",
+    "text": "Algunas consideraciones antes de iniciar\nPara proceder con esta clase usaremos algunos datasets obtenidos desde librerías específicas en R  Haremos uso del siguiente script para importar nuestros datasets.\n\n#Librería con datos de crecimiento de plantas en diferentes grupos. \n\ndata(\"PlantGrowth\")\n\nEste paquete se incluye en R.  En esta clase se hará manejo de bases de datos.\n\n\nInstalling package into 'C:/Users/garci/AppData/Local/R/win-library/4.4'\n(as 'lib' is unspecified)\n\n\npackage 'palmerpenguins' successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\garci\\AppData\\Local\\Temp\\RtmpcJqsEl\\downloaded_packages"
+  },
+  {
+    "objectID": "basic3.html#section",
+    "href": "basic3.html#section",
+    "title": "Importación y manejo de datos",
+    "section": "",
+    "text": "install.packages(\"palmerpenguins\")\n\nWarning: package 'palmerpenguins' is in use and will not be installed\n\nlibrary(palmerpenguins)\n\nSe puede visitar la página del creador en Palmerpenguins\n  “Palmerpenguins” incluye un dataset interesante.  Para usar Palmerpenguins debe instalarse con las funciones de arriba"
+  },
+  {
+    "objectID": "basic3.html#importación-de-datos",
+    "href": "basic3.html#importación-de-datos",
+    "title": "Importación y manejo de datos",
+    "section": "Importación de datos",
+    "text": "Importación de datos\nEn esta librería existe un set de datos bastante amplio. Vamos a usar Penguins\n\npenguins\n\n# A tibble: 344 × 8\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           NA            NA                  NA          NA\n 5 Adelie  Torgersen           36.7          19.3               193        3450\n 6 Adelie  Torgersen           39.3          20.6               190        3650\n 7 Adelie  Torgersen           38.9          17.8               181        3625\n 8 Adelie  Torgersen           39.2          19.6               195        4675\n 9 Adelie  Torgersen           34.1          18.1               193        3475\n10 Adelie  Torgersen           42            20.2               190        4250\n# ℹ 334 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;\n\n\nComo puedes ver la base de datos es bastante amplia e incluye 8 columnas."
+  },
+  {
+    "objectID": "basic3.html#exportación-de-datos",
+    "href": "basic3.html#exportación-de-datos",
+    "title": "Importación y manejo de datos",
+    "section": "Exportación de datos",
+    "text": "Exportación de datos"
+  },
+  {
+    "objectID": "basic3.html#introducción-al-dplyr",
+    "href": "basic3.html#introducción-al-dplyr",
+    "title": "Importación y manejo de datos",
+    "section": "Introducción al Dplyr",
+    "text": "Introducción al Dplyr"
+  },
+  {
+    "objectID": "basic3.html#manipulación-con-dplyr",
+    "href": "basic3.html#manipulación-con-dplyr",
+    "title": "Importación y manejo de datos",
+    "section": "Manipulación con Dplyr",
+    "text": "Manipulación con Dplyr"
+  },
+  {
+    "objectID": "basic3.html#variables-na-en-r",
+    "href": "basic3.html#variables-na-en-r",
+    "title": "Importación y manejo de datos",
+    "section": "Variables NA en R",
+    "text": "Variables NA en R"
+  },
+  {
+    "objectID": "basic3.html#introducción-al-uso-de-na.omit",
+    "href": "basic3.html#introducción-al-uso-de-na.omit",
+    "title": "Importación y manejo de datos",
+    "section": "Introducción al uso de na.omit()",
+    "text": "Introducción al uso de na.omit()"
+  },
+  {
+    "objectID": "basic3.html#reemplazando-na-con-valores-específicos.",
+    "href": "basic3.html#reemplazando-na-con-valores-específicos.",
+    "title": "Importación y manejo de datos",
+    "section": "Reemplazando NA con valores específicos.",
+    "text": "Reemplazando NA con valores específicos."
+  },
+  {
+    "objectID": "basic3.html#section-1",
+    "href": "basic3.html#section-1",
+    "title": "Importación y manejo de datos",
+    "section": "",
+    "text": "Según qué área te interese de este dataset podrás utilizarla a tu antojo. Existen algunos comandos que podrían ser de interés:\n\n\n\n\n\ncomands\nimplication\n\n\n\n\nfix\nModificar manualmente una secicón de los datos\n\n\nhead\nMuestra las primeras 6 filas de datos\n\n\nsummary\nGenera un resumen estadístico del set de datos\n\n\nsplit\nPuede cortar el set de datos según el orden específico\n\n\ndim\nMuestra número de filas y columnas\n\n\nstr\nDa la estructura del dataset\n\n\ntail\nMuestra las últimas filas del set de datos\n\n\n\n\n\nDe esta forma, en la siguiente diapositiva verás algunos ejemplos prácticos con penguins"
+  },
+  {
+    "objectID": "basic3.html",
+    "href": "basic3.html",
+    "title": "Importación y manejo de datos",
+    "section": "",
+    "text": "Aprender a subir datasets, cargar datasets, usar librerías de datasets y modificar mediante Dplyr y comandos propios de R los datos."
+  },
+  {
+    "objectID": "basic0.html",
+    "href": "basic0.html",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "",
+    "text": "Vamos a familiarizarnos con el entorno de Rstudio y la sintaxis de R."
   }
 ]

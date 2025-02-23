@@ -80,10 +80,9 @@ class(f)
 typeof(c)
 ```
 
-## Ejercicio 1 {background-color=#806040}
+## Ejercicio 1 {background-color="#806040"}
 
-En Rstudio van a escribir varios conjuntos de variables según el tipo de dato.
-Tienen 5 minutos!
+En Rstudio van a escribir varios conjuntos de variables según el tipo de dato. Tienen 5 minutos!
 
 ## Estructuras de datos {.smaller}
 
@@ -93,16 +92,18 @@ Tienen 5 minutos!
 -   Listas (list())
 -   Data frames (data.frame())
 
-
 ## Vectores {.smaller}
-Digamos que estás haciendo un trabajo en botánica y quieres hacer un listado de especies de Asteraceae. <br> **¿Qué herramienta usas?** <br>
-La lista, exacto...
+
+Digamos que estás haciendo un trabajo en botánica y quieres hacer un listado de especies de Asteraceae. <br> **¿Qué herramienta usas?** <br> La lista, exacto...
+
 ```{r}
 sp_asteraceae<-c("*Helianthus annuus*", "*Pterocaulon alopecuroides*", "*Senecio vulgaris*", "*Arnica montana*", "*Artemisa vulgaris*", "*Calendula officinallis*", "*Espeletia hartwegiana* ")
 #La lista se puede llamar bajo el mismo nombre. 
 sp_asteraceae
 ```
+
 En este punto solo tendrás una lista, pero puedes crear varias listas y volverlas una sola tabla. Por ejemplo si es para armar datos en una tabla sobre etnobotánica, podrías hacerlo así...
+
 ```{r}
 ncomunes<-c("Girasol", "Hierba del piojo o árnica de montaña", "Senecio común", "Árnica", "Ajenjo o artemisa", "Caléndula", "Frailejón")
 uso_medicinal<-c(3,4,2,5,6,5,1)
@@ -110,22 +111,26 @@ uso_alimenticio<-c(2,6,3,7,2,8,0)
 uso_ornamental<-c(2,6,7,8,4,2,0)
 ```
 
+##  {.smaller}
 
-## {.smaller}
+Si quisieramos armar una tabla para los siguientes datos ya podríamos hacerlo debido a que hemos creado propiamente muchas listas que pueden indexarse.
 
-Si quisieramos armar una tabla para los siguientes datos ya podríamos hacerlo debido a que hemos creado propiamente muchas listas que pueden indexarse. 
 ```{r}
 tabla_etno<- data.frame(sp_asteraceae, ncomunes, uso_medicinal,uso_alimenticio, uso_ornamental)
 #Debo hacer un arreglo en los nombres de columnas
 colnames(tabla_etno)<-c("Nombre científico", "Nombres comúnes", "Uso medicinal", "Uso alimenticion", "Uso ornamental")
 ```
+
 ```{r}
 #| echo: false
 library(knitr)
 kable(tabla_etno)
 ```
+
 ## Dataframes {.smaller}
+
 Miremos esta sintaxis para dataframes...
+
 ```{r}
 #| echo: true
 escorpiones <- data.frame(
@@ -139,7 +144,9 @@ escorpiones
 ```
 
 ## Listas {.smaller}
+
 Una lista puede almacenar distintos tipos de datos en una misma estructura
+
 ```{r}
 #| echo: true
 # Crear una lista con información sobre Drosophila melanogaster
@@ -154,17 +161,20 @@ drosophila <- list(
 
 ```
 
-## {.smaller}
+##  {.smaller}
+
 ```{r}
 drosophila
 ```
-**¿Qué pasó aquí?**<br> Simplemente una sola variable "Drosophila" ahora nos puede entregar diferentes características de una especie. Cómo una pokedex. 
+
+**¿Qué pasó aquí?**<br> Simplemente una sola variable "Drosophila" ahora nos puede entregar diferentes características de una especie. Cómo una pokedex.
 
 # Operadores de datos {.smaller}
 
 ## Operadores aritméticos {.smaller}
 
 Esperanza de vida de algunas especies de Asteraceae.
+
 ```{r}
 #| echo: true
 # Tiempo de vida en años de algunas especies
@@ -187,7 +197,9 @@ vida_potencia
 ```
 
 ## Operadores relacionales {.smaller}
+
 Longitudes en especies de escorpiones
+
 ```{r}
 #| echo: true
 # Longitudes en cm de dos especies
@@ -201,8 +213,8 @@ long_tityus != 10  # ¿Tityus NO mide 10 cm?
 
 ```
 
-
 ## Operadores lógicos {.smaller}
+
 Este sería un ejemplo con temperatura de hábitat en *Drosophila*
 
 ```{r}
@@ -220,7 +232,9 @@ temp_max <- 30
 ```
 
 ## Operadores de asignación {.smaller}
+
 Frecuencia de polinizadores en plantas de la familia Asteraceae
+
 ```{r}
 #| echo: true
 # Frecuencia de visitas por día
@@ -239,16 +253,14 @@ colibries
 
 ```
 
-## Ejercicio 2 {background-color=#806040}
-Elaborar un ejemplo de cada una de las estructuras de datos vistas en la clase. 
-Tienen el resto del día!
+## Ejercicio 2 {background-color="#806040"}
+
+Elaborar un ejemplo de cada una de las estructuras de datos vistas en la clase. Tienen el resto del día!
 
 # ¿Puedo acceder a estas presentaciones? {.smaller}
 
 ## ¿Cómo acceder a estas presentaciones? {.smaller}
 
-Podrán encontrarlas en mi github page.<br> Pero no te adelantes y guarda calma. 
-<br>
-Si necesitas más información no dudes en escribirme: **xgarcia@unicauca.edu.co**
+Podrán encontrarlas en mi github page.<br> Pero no te adelantes y guarda calma. <br> Si necesitas más información no dudes en escribirme: **xgarcia\@unicauca.edu.co**
 
 # *Muchas gracias* {.smaller}
