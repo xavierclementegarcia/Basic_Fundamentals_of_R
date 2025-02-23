@@ -24,4 +24,5 @@ Para descargar Rstudio
 
 ## Diferencias entre usar la consola y la zona de script  {.smaller}
 
+La consola es uno de los apartados en donde se escribe 
 
