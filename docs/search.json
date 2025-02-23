@@ -194,5 +194,131 @@
     "title": "Tablas y organización de datos",
     "section": "Ejercicio práctico No. 1",
     "text": "Ejercicio práctico No. 1\nDirígete a documentación en mi página para obtener el ejercicio."
+  },
+  {
+    "objectID": "basic0.html#section",
+    "href": "basic0.html#section",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "",
+    "text": "Si quisieramos armar una tabla para los siguientes datos ya podríamos hacerlo debido a que hemos creado propiamente muchas listas que pueden indexarse.\n\ntabla_etno&lt;- data.frame(sp_asteraceae, ncomunes, uso_medicinal,uso_alimenticio, uso_ornamental)\n#Debo hacer un arreglo en los nombres de columnas\ncolnames(tabla_etno)&lt;-c(\"Nombre científico\", \"Nombres comúnes\", \"Uso medicinal\", \"Uso alimenticion\", \"Uso ornamental\")\n\n\n\n\n\n\n\n\n\n\n\n\n\nNombre científico\nNombres comúnes\nUso medicinal\nUso alimenticion\nUso ornamental\n\n\n\n\nHelianthus annuus\nGirasol\n3\n2\n2\n\n\nPterocaulon alopecuroides\nHierba del piojo o árnica de montaña\n4\n6\n6\n\n\nSenecio vulgaris\nSenecio común\n2\n3\n7\n\n\nArnica montana\nÁrnica\n5\n7\n8\n\n\nArtemisa vulgaris\nAjenjo o artemisa\n6\n2\n4\n\n\nCalendula officinallis\nCaléndula\n5\n8\n2\n\n\nEspeletia hartwegiana\nFrailejón\n1\n0\n0"
+  },
+  {
+    "objectID": "basic0.html#tipos-de-datos",
+    "href": "basic0.html#tipos-de-datos",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "Tipos de datos",
+    "text": "Tipos de datos\nAl igual que en otros lenguajes de programación como python, java, perl, matlab…, en R tendremos algunas clases de datos:\n\n#Tipos de datos\nx&lt;- 5 #Numérico (int-float)\ny&lt;- \"Hola\" #Carácter (String)\nz&lt;- TRUE #Lógico (Booleano)\n\nLos tipos de dato numérico pueden ser int o float. ¿Qué signfica esto?\n\nx&lt; 5 #Entero (int)\n\n[1] FALSE\n\ny&lt;- 4.5 #Decimal o flotante (Float)\n\nExisten otros tipos de datos que deberías conocer, por ejemplo:\n\nc&lt;-3+2i \nf&lt;-factor(c(\"amarillo\", \"azul\", \"rojo\")) #Factor"
+  },
+  {
+    "objectID": "basic0.html#estructuras-de-datos",
+    "href": "basic0.html#estructuras-de-datos",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "Estructuras de datos",
+    "text": "Estructuras de datos\n\nVectores (c())\nFactores (factor())\nMatrices (matrix())\nListas (list())\nData frames (data.frame())"
+  },
+  {
+    "objectID": "basic0.html#operadores-de-datos",
+    "href": "basic0.html#operadores-de-datos",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "Operadores de datos",
+    "text": "Operadores de datos"
+  },
+  {
+    "objectID": "basic0.html#objetivo",
+    "href": "basic0.html#objetivo",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "Objetivo",
+    "text": "Objetivo\nVamos a familiarizarnos con el entorno de Rstudio y la sintaxis de R."
+  },
+  {
+    "objectID": "basic0.html#asignación-de-variables",
+    "href": "basic0.html#asignación-de-variables",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "Asignación de variables",
+    "text": "Asignación de variables\n¿Qué es una variable?  Puede definirse como un conjunto finito que almacena o implica información. Puede cambiarse, eliminarse o significar.\nEn el siguiente ejemplo verás una variable creada:\n\n1+1\n\n[1] 2\n\n\n¿Pero y si quiero que esa operación anterior sea una variable?\n\nsuma&lt;-1+1\nsuma\n\n[1] 2\n\n\nAhora tengo una variable llamada suma.  Es necesario entender que puedo asociar mis variables. Ejemplo:\n\nresta&lt;- 1-3\n#Asociar:\nresultado&lt;-suma*resta\nresultado\n\n[1] -4"
+  },
+  {
+    "objectID": "basic0.html#tip-sobre-datos",
+    "href": "basic0.html#tip-sobre-datos",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "Tip sobre datos",
+    "text": "Tip sobre datos\n¿Qué pasa si no conozco la naturaleza de mis datos?\n\nclass(x)\n\n[1] \"numeric\"\n\nclass(f)\n\n[1] \"factor\"\n\ntypeof(c)\n\n[1] \"complex\""
+  },
+  {
+    "objectID": "basic0.html#ejercicio-1",
+    "href": "basic0.html#ejercicio-1",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "Ejercicio 1",
+    "text": "Ejercicio 1\nEn Rstudio van a escribir varios conjuntos de variables según el tipo de dato. Tienen 5 minutos!"
+  },
+  {
+    "objectID": "basic0.html#section-1",
+    "href": "basic0.html#section-1",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "",
+    "text": "drosophila\n\n$Nombre_Cientifico\n[1] \"*Drosophila melanogaster*\"\n\n$Ciclo_Vida_Dias\n [1]  1  2  3  4  5  6  7  8  9 10\n\n$GenesImportantes\n[1] \"white\"    \"yellow\"   \"ebony\"    \"bithorax\"\n\n$Longitud_mm\n[1] 2.5\n\n$Modelo_Biologico\n[1] TRUE\n\n\n¿Qué pasó aquí? Simplemente una sola variable “Drosophila” ahora nos puede entregar diferentes características de una especie. Cómo una pokedex."
+  },
+  {
+    "objectID": "basic0.html#vectores",
+    "href": "basic0.html#vectores",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "Vectores",
+    "text": "Vectores\nDigamos que estás haciendo un trabajo en botánica y quieres hacer un listado de especies de Asteraceae.  ¿Qué herramienta usas?  La lista, exacto…\n\nsp_asteraceae&lt;-c(\"*Helianthus annuus*\", \"*Pterocaulon alopecuroides*\", \"*Senecio vulgaris*\", \"*Arnica montana*\", \"*Artemisa vulgaris*\", \"*Calendula officinallis*\", \"*Espeletia hartwegiana* \")\n#La lista se puede llamar bajo el mismo nombre. \nsp_asteraceae\n\n[1] \"*Helianthus annuus*\"         \"*Pterocaulon alopecuroides*\"\n[3] \"*Senecio vulgaris*\"          \"*Arnica montana*\"           \n[5] \"*Artemisa vulgaris*\"         \"*Calendula officinallis*\"   \n[7] \"*Espeletia hartwegiana* \"   \n\n\nEn este punto solo tendrás una lista, pero puedes crear varias listas y volverlas una sola tabla. Por ejemplo si es para armar datos en una tabla sobre etnobotánica, podrías hacerlo así…\n\nncomunes&lt;-c(\"Girasol\", \"Hierba del piojo o árnica de montaña\", \"Senecio común\", \"Árnica\", \"Ajenjo o artemisa\", \"Caléndula\", \"Frailejón\")\nuso_medicinal&lt;-c(3,4,2,5,6,5,1)\nuso_alimenticio&lt;-c(2,6,3,7,2,8,0)\nuso_ornamental&lt;-c(2,6,7,8,4,2,0)"
+  },
+  {
+    "objectID": "basic0.html#dataframes",
+    "href": "basic0.html#dataframes",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "Dataframes",
+    "text": "Dataframes\nMiremos esta sintaxis para dataframes…\n\nescorpiones &lt;- data.frame(\n  Especie = c(\"Tityus fuhrmanni\", \"Centruroides margaritatus\", \"Bothriurus coriaceus\", \"Buthus occitanus\"),\n  Longitud_mm = c(45, 65, 50, 75),\n  Veneno_Toxico = c(TRUE, TRUE, FALSE, TRUE)  \n)\n\nescorpiones\n\n                    Especie Longitud_mm Veneno_Toxico\n1          Tityus fuhrmanni          45          TRUE\n2 Centruroides margaritatus          65          TRUE\n3      Bothriurus coriaceus          50         FALSE\n4          Buthus occitanus          75          TRUE"
+  },
+  {
+    "objectID": "basic0.html#listas",
+    "href": "basic0.html#listas",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "Listas",
+    "text": "Listas\nUna lista puede almacenar distintos tipos de datos en una misma estructura\n\n# Crear una lista con información sobre Drosophila melanogaster\ndrosophila &lt;- list(\n  Nombre_Cientifico = \"*Drosophila melanogaster*\",\n  Ciclo_Vida_Dias = c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10),  # Ciclo de vida en días\n  GenesImportantes = c(\"white\", \"yellow\", \"ebony\", \"bithorax\"),\n  Longitud_mm = 2.5,\n  Modelo_Biologico = TRUE\n)"
+  },
+  {
+    "objectID": "basic0.html#operadores-aritméticos",
+    "href": "basic0.html#operadores-aritméticos",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "Operadores aritméticos",
+    "text": "Operadores aritméticos\nEsperanza de vida de algunas especies de Asteraceae.\n\n# Tiempo de vida en años de algunas especies\nvida_helianthus &lt;- 1    # Anual\nvida_arnica &lt;- 2        # Bianual\nvida_artemisia &lt;- 3     # Perenne\n\n# Operaciones\ntotal_vida &lt;- vida_helianthus + vida_arnica + vida_artemisia  # Suma\nvida_promedio &lt;- total_vida / 3   # Promedio de longevidad\nvida_doble_arnica &lt;- vida_arnica * 2  # Multiplicación\nvida_potencia &lt;- vida_artemisia^2   # Potencia\n\n# Mostrar resultados\ntotal_vida\n\n[1] 6\n\nvida_promedio\n\n[1] 2\n\nvida_doble_arnica\n\n[1] 4\n\nvida_potencia\n\n[1] 9"
+  },
+  {
+    "objectID": "basic0.html#operadores-relacionales",
+    "href": "basic0.html#operadores-relacionales",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "Operadores relacionales",
+    "text": "Operadores relacionales\nLongitudes en especies de escorpiones\n\n# Longitudes en cm de dos especies\nlong_pandinus &lt;- 10   # Pandinus imperator (Escorpión emperador)\nlong_tityus &lt;- 7      # Tityus pachyurus \n\n# Comparaciones\nlong_pandinus &gt; long_tityus   # ¿Pandinus es más grande?\n\n[1] TRUE\n\nlong_pandinus == long_tityus  # ¿Tienen la misma longitud?\n\n[1] FALSE\n\nlong_tityus != 10  # ¿Tityus NO mide 10 cm?\n\n[1] TRUE"
+  },
+  {
+    "objectID": "basic0.html#operadores-lógicos",
+    "href": "basic0.html#operadores-lógicos",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "Operadores lógicos",
+    "text": "Operadores lógicos\nEste sería un ejemplo con temperatura de hábitat en Drosophila\n\n# Rango de temperatura ideal en °C\ntemp_drosophila &lt;- 25\ntemp_min &lt;- 20\ntemp_max &lt;- 30\n\n# Evaluación de condiciones\n(temp_drosophila &gt;= temp_min) & (temp_drosophila &lt;= temp_max)  # ¿Está dentro del rango?\n\n[1] TRUE\n\n(temp_drosophila &lt; temp_min) | (temp_drosophila &gt; temp_max)  # ¿Fuera del rango?\n\n[1] FALSE\n\n! (temp_drosophila == 25)  # ¿No es exactamente 25°C?\n\n[1] FALSE"
+  },
+  {
+    "objectID": "basic0.html#operadores-de-asignación",
+    "href": "basic0.html#operadores-de-asignación",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "Operadores de asignación",
+    "text": "Operadores de asignación\nFrecuencia de polinizadores en plantas de la familia Asteraceae\n\n# Frecuencia de visitas por día\nabejas &lt;- 30\nmariposas &lt;- 12\nescarabajos = 8  # También se puede usar \"=\"\n\n# Alternativa de asignación derecha\n50 -&gt; colibries  \n\n# Mostrar variables\nabejas\n\n[1] 30\n\nmariposas\n\n[1] 12\n\nescarabajos\n\n[1] 8\n\ncolibries\n\n[1] 50"
+  },
+  {
+    "objectID": "basic0.html#ejercicio-2",
+    "href": "basic0.html#ejercicio-2",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "Ejercicio 2",
+    "text": "Ejercicio 2\nElaborar un ejemplo de cada una de las estructuras de datos vistas en la clase. Tienen el resto del día!"
+  },
+  {
+    "objectID": "basic0.html#cómo-acceder-a-estas-presentaciones",
+    "href": "basic0.html#cómo-acceder-a-estas-presentaciones",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "¿Cómo acceder a estas presentaciones?",
+    "text": "¿Cómo acceder a estas presentaciones?\nPodrán encontrarlas en mi github page. Pero no te adelantes y guarda calma.  Si necesitas más información no dudes en escribirme: xgarcia@unicauca.edu.co"
   }
 ]

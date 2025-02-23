@@ -1,0 +1,254 @@
+---
+title: "Tipos, estructuras y operadores de datos"
+subtitle: "Una introducción al lenguaje de programación"
+author: "Xavier Clemente García"
+format: 
+  revealjs:
+    theme: default
+    footer: '<a href="https://xavierclementegarcia.github.io/Basic_Fundamentals_of_R/" target="_blank">Fundaments Basic R</a>'
+echo: true
+---
+
+## Objetivo {.smaller}
+
+Vamos a familiarizarnos con el entorno de Rstudio y la sintaxis de R.
+
+## Asignación de variables {.smaller}
+
+**¿Qué es una variable?** <br> Puede definirse como un conjunto finito que almacena o implica información. Puede cambiarse, eliminarse o significar.
+
+En el siguiente ejemplo verás una variable creada:
+
+```{r}
+#| echo: true
+1+1
+```
+
+¿Pero y si quiero que esa operación anterior sea una variable?
+
+```{r}
+#| echo: true
+suma<-1+1
+suma
+```
+
+Ahora tengo una variable llamada suma. <br> Es necesario entender que puedo asociar mis variables. Ejemplo:
+
+```{r}
+#| echo: true
+resta<- 1-3
+#Asociar:
+resultado<-suma*resta
+resultado
+```
+
+## Tipos de datos {.smaller}
+
+Al igual que en otros lenguajes de programación como python, java, perl, matlab..., en R tendremos algunas clases de datos:
+
+```{r}
+#| echo: true
+#Tipos de datos
+x<- 5 #Numérico (int-float)
+y<- "Hola" #Carácter (String)
+z<- TRUE #Lógico (Booleano)
+```
+
+Los tipos de dato numérico pueden ser int o float. ¿Qué signfica esto?
+
+```{r}
+#| echo: true
+x< 5 #Entero (int)
+y<- 4.5 #Decimal o flotante (Float)
+
+```
+
+Existen otros tipos de datos que deberías conocer, por ejemplo:
+
+```{r}
+c<-3+2i 
+f<-factor(c("amarillo", "azul", "rojo")) #Factor 
+```
+
+## Tip sobre datos {.smaller}
+
+¿Qué pasa si no conozco la naturaleza de mis datos?
+
+```{r}
+class(x)
+class(f)
+typeof(c)
+```
+
+## Ejercicio 1 {background-color=#806040}
+
+En Rstudio van a escribir varios conjuntos de variables según el tipo de dato.
+Tienen 5 minutos!
+
+## Estructuras de datos {.smaller}
+
+-   Vectores (c())
+-   Factores (factor())
+-   Matrices (matrix())
+-   Listas (list())
+-   Data frames (data.frame())
+
+
+## Vectores {.smaller}
+Digamos que estás haciendo un trabajo en botánica y quieres hacer un listado de especies de Asteraceae. <br> **¿Qué herramienta usas?** <br>
+La lista, exacto...
+```{r}
+sp_asteraceae<-c("*Helianthus annuus*", "*Pterocaulon alopecuroides*", "*Senecio vulgaris*", "*Arnica montana*", "*Artemisa vulgaris*", "*Calendula officinallis*", "*Espeletia hartwegiana* ")
+#La lista se puede llamar bajo el mismo nombre. 
+sp_asteraceae
+```
+En este punto solo tendrás una lista, pero puedes crear varias listas y volverlas una sola tabla. Por ejemplo si es para armar datos en una tabla sobre etnobotánica, podrías hacerlo así...
+```{r}
+ncomunes<-c("Girasol", "Hierba del piojo o árnica de montaña", "Senecio común", "Árnica", "Ajenjo o artemisa", "Caléndula", "Frailejón")
+uso_medicinal<-c(3,4,2,5,6,5,1)
+uso_alimenticio<-c(2,6,3,7,2,8,0)
+uso_ornamental<-c(2,6,7,8,4,2,0)
+```
+
+
+## {.smaller}
+
+Si quisieramos armar una tabla para los siguientes datos ya podríamos hacerlo debido a que hemos creado propiamente muchas listas que pueden indexarse. 
+```{r}
+tabla_etno<- data.frame(sp_asteraceae, ncomunes, uso_medicinal,uso_alimenticio, uso_ornamental)
+#Debo hacer un arreglo en los nombres de columnas
+colnames(tabla_etno)<-c("Nombre científico", "Nombres comúnes", "Uso medicinal", "Uso alimenticion", "Uso ornamental")
+```
+```{r}
+#| echo: false
+library(knitr)
+kable(tabla_etno)
+```
+## Dataframes {.smaller}
+Miremos esta sintaxis para dataframes...
+```{r}
+#| echo: true
+escorpiones <- data.frame(
+  Especie = c("Tityus fuhrmanni", "Centruroides margaritatus", "Bothriurus coriaceus", "Buthus occitanus"),
+  Longitud_mm = c(45, 65, 50, 75),
+  Veneno_Toxico = c(TRUE, TRUE, FALSE, TRUE)  
+)
+
+escorpiones
+
+```
+
+## Listas {.smaller}
+Una lista puede almacenar distintos tipos de datos en una misma estructura
+```{r}
+#| echo: true
+# Crear una lista con información sobre Drosophila melanogaster
+drosophila <- list(
+  Nombre_Cientifico = "*Drosophila melanogaster*",
+  Ciclo_Vida_Dias = c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10),  # Ciclo de vida en días
+  GenesImportantes = c("white", "yellow", "ebony", "bithorax"),
+  Longitud_mm = 2.5,
+  Modelo_Biologico = TRUE
+)
+
+
+```
+
+## {.smaller}
+```{r}
+drosophila
+```
+**¿Qué pasó aquí?**<br> Simplemente una sola variable "Drosophila" ahora nos puede entregar diferentes características de una especie. Cómo una pokedex. 
+
+# Operadores de datos {.smaller}
+
+## Operadores aritméticos {.smaller}
+
+Esperanza de vida de algunas especies de Asteraceae.
+```{r}
+#| echo: true
+# Tiempo de vida en años de algunas especies
+vida_helianthus <- 1    # Anual
+vida_arnica <- 2        # Bianual
+vida_artemisia <- 3     # Perenne
+
+# Operaciones
+total_vida <- vida_helianthus + vida_arnica + vida_artemisia  # Suma
+vida_promedio <- total_vida / 3   # Promedio de longevidad
+vida_doble_arnica <- vida_arnica * 2  # Multiplicación
+vida_potencia <- vida_artemisia^2   # Potencia
+
+# Mostrar resultados
+total_vida
+vida_promedio
+vida_doble_arnica
+vida_potencia
+
+```
+
+## Operadores relacionales {.smaller}
+Longitudes en especies de escorpiones
+```{r}
+#| echo: true
+# Longitudes en cm de dos especies
+long_pandinus <- 10   # Pandinus imperator (Escorpión emperador)
+long_tityus <- 7      # Tityus pachyurus 
+
+# Comparaciones
+long_pandinus > long_tityus   # ¿Pandinus es más grande?
+long_pandinus == long_tityus  # ¿Tienen la misma longitud?
+long_tityus != 10  # ¿Tityus NO mide 10 cm?
+
+```
+
+
+## Operadores lógicos {.smaller}
+Este sería un ejemplo con temperatura de hábitat en *Drosophila*
+
+```{r}
+#| echo: true
+# Rango de temperatura ideal en °C
+temp_drosophila <- 25
+temp_min <- 20
+temp_max <- 30
+
+# Evaluación de condiciones
+(temp_drosophila >= temp_min) & (temp_drosophila <= temp_max)  # ¿Está dentro del rango?
+(temp_drosophila < temp_min) | (temp_drosophila > temp_max)  # ¿Fuera del rango?
+! (temp_drosophila == 25)  # ¿No es exactamente 25°C?
+
+```
+
+## Operadores de asignación {.smaller}
+Frecuencia de polinizadores en plantas de la familia Asteraceae
+```{r}
+#| echo: true
+# Frecuencia de visitas por día
+abejas <- 30
+mariposas <- 12
+escarabajos = 8  # También se puede usar "="
+
+# Alternativa de asignación derecha
+50 -> colibries  
+
+# Mostrar variables
+abejas
+mariposas
+escarabajos
+colibries
+
+```
+
+## Ejercicio 2 {background-color=#806040}
+Elaborar un ejemplo de cada una de las estructuras de datos vistas en la clase. 
+Tienen el resto del día!
+
+# ¿Puedo acceder a estas presentaciones? {.smaller}
+
+## ¿Cómo acceder a estas presentaciones? {.smaller}
+
+Podrán encontrarlas en mi github page.<br> Pero no te adelantes y guarda calma. 
+<br>
+Si necesitas más información no dudes en escribirme: **xgarcia@unicauca.edu.co**
+
+# *Muchas gracias* {.smaller}
