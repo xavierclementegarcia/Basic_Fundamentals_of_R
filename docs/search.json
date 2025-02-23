@@ -17,8 +17,8 @@
     "objectID": "basic1.html#qué-es-r",
     "href": "basic1.html#qué-es-r",
     "title": "Introducción a R",
-    "section": "",
-    "text": "Es un entorno y lenguaje de programación con un enfoque en el análisis estadístico.\nR es parte del sistema GNU y se distribuye bajo la licencia GNU GPL. Es un lenguaje popular dentro del Machine learning, minería de datos, econometría, biología, bioinformática e inferencia estadística."
+    "section": "¿Qué es R?",
+    "text": "¿Qué es R?\nEs un entorno y lenguaje de programación con un enfoque en el análisis estadístico.\nR es parte del sistema GNU y se distribuye bajo la licencia GNU GPL. Es un lenguaje popular dentro del Machine learning, minería de datos, econometría, biología, bioinformática e inferencia estadística."
   },
   {
     "objectID": "basic1.html#conceptos-claves",
@@ -53,14 +53,14 @@
     "href": "basic1.html#interfaz-de-r",
     "title": "Introducción a R",
     "section": "Interfaz de R",
-    "text": "Interfaz de R\n\n\n\nFigura 1. Interfaz de R Studio"
+    "text": "Interfaz de R\n\nFigura 1. Interfaz de R Studio"
   },
   {
     "objectID": "basic1.html#algunas-consideraciones",
     "href": "basic1.html#algunas-consideraciones",
     "title": "Introducción a R",
     "section": "Algunas consideraciones",
-    "text": "Algunas consideraciones\n\n\n\nFigura 2. Interfaz de R Studio"
+    "text": "Algunas consideraciones\n\nFigura 2. Interfaz de R Studio"
   },
   {
     "objectID": "basic1.html#diferencias-entre-usar-la-consola-y-la-zona-de-script",
@@ -74,7 +74,7 @@
     "href": "basic1.html#instalación-de-paquetes",
     "title": "Introducción a R",
     "section": "Instalación de paquetes",
-    "text": "Instalación de paquetes\n\n# Instalar un paquete\ninstall.packages(\"tidyverse\")\n\npackage 'tidyverse' successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\garci\\AppData\\Local\\Temp\\RtmpC6L9U9\\downloaded_packages\n\n# Cargar librería\nlibrary(\"tidyverse\")\n# La librería debería estar cargada. carguemos una de las librerías. Por defecto están las siguientes: \nlibrary(ggplot2)"
+    "text": "Instalación de paquetes\n\n# Instalar un paquete\ninstall.packages(\"tidyverse\")\n\npackage 'tidyverse' successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\garci\\AppData\\Local\\Temp\\RtmpiGFV0L\\downloaded_packages\n\n# Cargar librería\nlibrary(\"tidyverse\")\n# La librería debería estar cargada. carguemos una de las librerías. Por defecto están las siguientes: \nlibrary(ggplot2)"
   },
   {
     "objectID": "basic1.html#y-si-no-conozco-la-sintaxis-del-código",
@@ -227,8 +227,8 @@
     "objectID": "basic0.html#objetivo",
     "href": "basic0.html#objetivo",
     "title": "Tipos, estructuras y operadores de datos",
-    "section": "",
-    "text": "Vamos a familiarizarnos con el entorno de Rstudio y la sintaxis de R."
+    "section": "Objetivo",
+    "text": "Objetivo\nVamos a familiarizarnos con el entorno de Rstudio y la sintaxis de R."
   },
   {
     "objectID": "basic0.html#asignación-de-variables",
