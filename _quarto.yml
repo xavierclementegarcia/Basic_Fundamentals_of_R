@@ -19,10 +19,10 @@ website:
             text: Videos
       - text: Course
         menu:
-          - href: basic0.qmd
-            text: Fundaments
           - href: basic1.qmd
             text: What's R?
+          - href: basic0.qmd
+            text: Fundaments
           - href: basic2.qmd
             text: Data organization and tables
           - href: basic3.qmd
