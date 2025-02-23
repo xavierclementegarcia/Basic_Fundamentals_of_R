@@ -325,15 +325,15 @@
     "objectID": "basic3.html#objetivo",
     "href": "basic3.html#objetivo",
     "title": "Importación y manejo de datos",
-    "section": "Objetivo",
-    "text": "Objetivo\nAprender a subir datasets, cargar datasets, usar librerías de datasets y modificar mediante Dplyr y comandos propios de R los datos."
+    "section": "",
+    "text": "Aprender a subir datasets, cargar datasets, usar librerías de datasets y modificar mediante Dplyr y comandos propios de R los datos."
   },
   {
     "objectID": "basic3.html#algunas-consideraciones-antes-de-iniciar",
     "href": "basic3.html#algunas-consideraciones-antes-de-iniciar",
     "title": "Importación y manejo de datos",
     "section": "Algunas consideraciones antes de iniciar",
-    "text": "Algunas consideraciones antes de iniciar\nPara proceder con esta clase usaremos algunos datasets obtenidos desde librerías específicas en R  Haremos uso del siguiente script para importar nuestros datasets.\n\n#Librería con datos de crecimiento de plantas en diferentes grupos. \n\ndata(\"PlantGrowth\")\n\nEste paquete se incluye en R.  En esta clase se hará manejo de bases de datos.\n\n\nInstalling package into 'C:/Users/garci/AppData/Local/R/win-library/4.4'\n(as 'lib' is unspecified)\n\n\npackage 'palmerpenguins' successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\garci\\AppData\\Local\\Temp\\RtmpcJqsEl\\downloaded_packages"
+    "text": "Algunas consideraciones antes de iniciar\nPara proceder con esta clase usaremos algunos datasets obtenidos desde librerías específicas en R  Haremos uso del siguiente script para importar nuestros datasets.\n\n#Librería con datos de crecimiento de plantas en diferentes grupos. \n\ndata(\"PlantGrowth\")\n\nEste paquete se incluye en R.  En esta clase se hará manejo de bases de datos.\n\n\nInstalling package into 'C:/Users/garci/AppData/Local/R/win-library/4.4'\n(as 'lib' is unspecified)\n\n\npackage 'palmerpenguins' successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\garci\\AppData\\Local\\Temp\\RtmpOmQtyG\\downloaded_packages"
   },
   {
     "objectID": "basic3.html#section",
@@ -396,7 +396,7 @@
     "href": "basic3.html#section-1",
     "title": "Importación y manejo de datos",
     "section": "",
-    "text": "Según qué área te interese de este dataset podrás utilizarla a tu antojo. Existen algunos comandos que podrían ser de interés:\n\n\n\n\n\ncomands\nimplication\n\n\n\n\nfix\nModificar manualmente una secicón de los datos\n\n\nhead\nMuestra las primeras 6 filas de datos\n\n\nsummary\nGenera un resumen estadístico del set de datos\n\n\nsplit\nPuede cortar el set de datos según el orden específico\n\n\ndim\nMuestra número de filas y columnas\n\n\nstr\nDa la estructura del dataset\n\n\ntail\nMuestra las últimas filas del set de datos\n\n\n\n\n\nDe esta forma, en la siguiente diapositiva verás algunos ejemplos prácticos con penguins"
+    "text": "Según qué área te interese de este dataset podrás utilizarla a tu antojo. Existen algunos comandos que podrían ser de interés:\n\n\n\n\n\nFunción\nDefinición\n\n\n\n\nfix\nModificar manualmente una secicón de los datos\n\n\nhead\nMuestra las primeras 6 filas de datos\n\n\nsummary\nGenera un resumen estadístico del set de datos\n\n\nsplit\nPuede cortar el set de datos según el orden específico\n\n\ndim\nMuestra número de filas y columnas\n\n\nstr\nDa la estructura del dataset\n\n\ntail\nMuestra las últimas filas del set de datos\n\n\n\n\n\nDe esta forma, en la siguiente diapositiva verás algunos ejemplos prácticos con penguins"
   },
   {
     "objectID": "basic3.html",

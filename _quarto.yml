@@ -22,7 +22,7 @@ website:
           - href: basic1.qmd
             text: What's R?
           - href: basic0.qmd
-            text: Fundaments
+            text: Fundaments in R
           - href: basic2.qmd
             text: Data organization and tables
           - href: basic3.qmd
