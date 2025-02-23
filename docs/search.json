@@ -74,7 +74,7 @@
     "href": "basic1.html#instalación-de-paquetes",
     "title": "Introducción a R",
     "section": "Instalación de paquetes",
-    "text": "Instalación de paquetes\n\n# Instalar un paquete\ninstall.packages(\"tidyverse\")\n\npackage 'tidyverse' successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\garci\\AppData\\Local\\Temp\\RtmpiGFV0L\\downloaded_packages\n\n# Cargar librería\nlibrary(\"tidyverse\")\n# La librería debería estar cargada. carguemos una de las librerías. Por defecto están las siguientes: \nlibrary(ggplot2)"
+    "text": "Instalación de paquetes\n\n# Instalar un paquete\ninstall.packages(\"tidyverse\")\n\npackage 'tidyverse' successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\garci\\AppData\\Local\\Temp\\RtmpMB8T3G\\downloaded_packages\n\n# Cargar librería\nlibrary(\"tidyverse\")\n# La librería debería estar cargada. carguemos una de las librerías. Por defecto están las siguientes: \nlibrary(ggplot2)"
   },
   {
     "objectID": "basic1.html#y-si-no-conozco-la-sintaxis-del-código",
@@ -325,22 +325,22 @@
     "objectID": "basic3.html#objetivo",
     "href": "basic3.html#objetivo",
     "title": "Importación y manejo de datos",
-    "section": "",
-    "text": "Aprender a subir datasets, cargar datasets, usar librerías de datasets y modificar mediante Dplyr y comandos propios de R los datos."
+    "section": "Objetivo",
+    "text": "Objetivo\nAprender a subir datasets, cargar datasets, usar librerías de datasets y modificar mediante Dplyr y comandos propios de R los datos."
   },
   {
     "objectID": "basic3.html#algunas-consideraciones-antes-de-iniciar",
     "href": "basic3.html#algunas-consideraciones-antes-de-iniciar",
     "title": "Importación y manejo de datos",
     "section": "Algunas consideraciones antes de iniciar",
-    "text": "Algunas consideraciones antes de iniciar\nPara proceder con esta clase usaremos algunos datasets obtenidos desde librerías específicas en R  Haremos uso del siguiente script para importar nuestros datasets.\n\n#Librería con datos de crecimiento de plantas en diferentes grupos. \n\ndata(\"PlantGrowth\")\n\nEste paquete se incluye en R.  En esta clase se hará manejo de bases de datos.\n\n\nInstalling package into 'C:/Users/garci/AppData/Local/R/win-library/4.4'\n(as 'lib' is unspecified)\n\n\npackage 'palmerpenguins' successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\garci\\AppData\\Local\\Temp\\RtmpOmQtyG\\downloaded_packages"
+    "text": "Algunas consideraciones antes de iniciar\nPara proceder con esta clase usaremos algunos datasets obtenidos desde librerías específicas en R  Haremos uso del siguiente script para importar nuestros datasets.\n\n#Librería con datos de crecimiento de plantas en diferentes grupos. \n\ndata(\"PlantGrowth\")\n\nEste paquete se incluye en R.  En esta clase se hará manejo de bases de datos.\n\n\npackage 'palmerpenguins' successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\garci\\AppData\\Local\\Temp\\RtmpKu4aVx\\downloaded_packages"
   },
   {
     "objectID": "basic3.html#section",
     "href": "basic3.html#section",
     "title": "Importación y manejo de datos",
     "section": "",
-    "text": "install.packages(\"palmerpenguins\")\n\nWarning: package 'palmerpenguins' is in use and will not be installed\n\nlibrary(palmerpenguins)\n\nSe puede visitar la página del creador en Palmerpenguins\n  “Palmerpenguins” incluye un dataset interesante.  Para usar Palmerpenguins debe instalarse con las funciones de arriba"
+    "text": "install.packages(\"palmerpenguins\")\nlibrary(palmerpenguins)\n\nSe puede visitar la página del creador en Palmerpenguins\n  “Palmerpenguins” incluye un dataset interesante.  Para usar Palmerpenguins debe instalarse con las funciones de arriba"
   },
   {
     "objectID": "basic3.html#importación-de-datos",
