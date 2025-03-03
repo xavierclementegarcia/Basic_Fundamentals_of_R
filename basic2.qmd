@@ -77,7 +77,14 @@ kable(frame_scorpions)
 
 Dirígete a documentación en mi página para obtener el ejercicio.
 
-## Bases de datos
+## Bases de datos {.smaller}
+La base de datos que encontrarás está basada en el trabajo de (cita), y la forma
+de obtención de los datos está dada por (Cita). 
+<br>
+**Sobre el contexto**
+Es una base de datos del proyecto **GREIN**: GEO RNA-seq Experiments Interactive Navigator. 
+En esta webpage puede accederse a una amplia variedad de metadatos 
+
 
 ## Otras funciones para tablas
 
