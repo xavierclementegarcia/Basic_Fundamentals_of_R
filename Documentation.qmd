@@ -11,18 +11,24 @@ La sección de documentación estará en desarrollo durante un buen tiempo y se 
 
 La idea de este curso es complementarlo según cuántas cosas nuevas vaya aprendiendo. Por ahora me centraré en lo que he dominado. <br> **¿Cuál es el objetivo de este curso?** <br> Aprender juntos y funcionar como una herramienta básica para cualquier biólogo que desee una herramienta de fácil acceso para R. Los biólogos en la Universidad del Cauca a pesar de que tenemos un acercamiento importante a varios programas estadísticos no llegamos a tener un nivel de profundización en los lenguajes de programación, por ello, mi idea frente a ello nace con esta guía.
 
-**Descargando R y RStudio** - Primero accede al siguiente enlace ["Descargar R"](https://cran.r-project.org/bin/windows/base/R-4.4.2-win.exe) y ["Descargar R Studio"](https://download1.rstudio.org/electron/windows/RStudio-2024.12.1-563.exe)
+**Descargando R y RStudio** - Primero accede al siguiente enlace ["Descargar R"](https://cran.r-project.org/bin/windows/base/R-4.4.2-win.exe) y ["Descargar R Studio"](https://download1.rstudio.org/electron/windows/RStudio-2024.12.1-563.exe) <br>
+
+**Si no tienes Windows dirígete al siguiente enlace** ["Descargar R según la versión"](https://cran.r-project.org/) <br> Para descargar Rstudio <br> ["Descargar RStudio para otros SO"](https://posit.co/download/rstudio-desktop/)
+
+## Diferencias entre usar la consola y la zona de script {.smaller}
+
+La consola es uno de los apartados en donde se escribe
+
+## Ejercicios Importanción y manejo de datos {.smaller}
+
+En esta sección encontrará los descargables para el desarrollo de su práctica. Esta secicón aún se encuentra en **desarrollo** por favor tener paciencia.
+
+*Para acceder al archivo preeliminar dirígirse a este enlace* <br> [gene_datase](https://docs.google.com/spreadsheets/d/1TFy0UYho2aRQ1-IqJOrU7vN8flJxSuWY/edit?usp=sharing&ouid=117061122754780023784&rtpof=true&sd=true). <br> Además podrá acceder a una versión cambiada y adaptada para propósitos del ejercicio: <br> [gene_datase_reorganized.xlsx](https://docs.google.com/spreadsheets/d/1bad9QRspB0fHDxlHKZk3FRCcfEL5Du_5/edit?usp=sharing&ouid=117061122754780023784&rtpof=true&sd=true) <br> **Una versión sin orientación de un documento obtenido en GREIN : GEO RNA-seq Experiments Interactive Navigator** <br> *En el siguiente enlace podrá acceder a diferentes metadatos de RNA-seq según su interés, si los usa deberá citarlos* <br> Para acceder ingrese a :[*GREIN : GEO RNA-seq Experiments Interactive Navigator*](https://www.ilincs.org/apps/grein/?gse=)
+
+## Referencias
+
+[*Melbourne Bioinformatics. (2023) R for biologists GitHub*](https://melbournebioinformatics.github.io/r-intro-biologists)
+
 <br>
 
-**Si no tienes Windows dirígete al siguiente enlace**
-["Descargar R según la versión"](https://cran.r-project.org/)
-<br>
-Para descargar Rstudio
-<br>
-["Descargar RStudio para otros SO"](https://posit.co/download/rstudio-desktop/)
-
-
-## Diferencias entre usar la consola y la zona de script  {.smaller}
-
-La consola es uno de los apartados en donde se escribe 
-
+[*GREIN : GEO RNA-seq Experiments Interactive Navigator*](https://www.ilincs.org/apps/grein/?gse=)

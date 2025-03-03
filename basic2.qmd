@@ -89,3 +89,8 @@ En esta webpage puede accederse a una amplia variedad de metadatos
 ## Otras funciones para tablas
 
 ## intro
+
+## Referencias{.smaller}
+
+[*Melbourne Bioinformatics. (2023) R for biologists GitHub*](https://melbournebioinformatics.github.io/r-intro-biologists)
+
