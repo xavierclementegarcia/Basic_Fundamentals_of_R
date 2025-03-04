@@ -574,15 +574,6 @@ $Modelo_Biologico
 <h2>Ejercicio 2</h2>
 <p>Elaborar un ejemplo de cada una de las estructuras de datos vistas en la clase. Tienen el resto del día!</p>
 </section></section>
-<section>
-<section id="puedo-acceder-a-estas-presentaciones" class="title-slide slide level1 smaller center">
-<h1>¿Puedo acceder a estas presentaciones?</h1>
-
-</section>
-<section id="cómo-acceder-a-estas-presentaciones" class="slide level2 smaller">
-<h2>¿Cómo acceder a estas presentaciones?</h2>
-<p>Podrán encontrarlas en mi github page.<br> Pero no te adelantes y guarda calma. <br> Si necesitas más información no dudes en escribirme: <strong>xgarcia@unicauca.edu.co</strong></p>
-</section></section>
 <section id="muchas-gracias" class="title-slide slide level1 smaller center">
 <h1><em>Muchas gracias</em></h1>
 
@@ -803,82 +794,6 @@ $Modelo_Biologico
         ]
       });
     </script>
-    
-
-    <script>
-
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-
-      // slide changes (different for each slide format).
-
-      (function () {
-
-        // dispatch for htmlwidgets
-
-        function fireSlideEnter() {
-
-          const event = window.document.createEvent("Event");
-
-          event.initEvent("slideenter", true, true);
-
-          window.document.dispatchEvent(event);
-
-        }
-
-    
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-
-          fireSlideEnter();
-
-    
-
-          // dispatch for shiny
-
-          if (window.jQuery) {
-
-            if (previousSlide) {
-
-              window.jQuery(previousSlide).trigger("hidden");
-
-            }
-
-            if (currentSlide) {
-
-              window.jQuery(currentSlide).trigger("shown");
-
-            }
-
-          }
-
-        }
-
-    
-
-        // hookup for slidy
-
-        if (window.w3c_slidy) {
-
-          window.w3c_slidy.add_observer(function (slide_num) {
-
-            // slide_num starts at position 1
-
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-
-          });
-
-        }
-
-    
-
-      })();
-
-    </script>
-
-    
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

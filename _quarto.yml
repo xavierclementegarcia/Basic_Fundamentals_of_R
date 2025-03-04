@@ -19,6 +19,8 @@ website:
             text: Videos
       - text: Course
         menu:
+          - href: fundament_programation.qmd
+            text: ¿What's the programming logical? 
           - href: basic1.qmd
             text: What's R?
           - href: basic0.qmd
@@ -27,6 +29,10 @@ website:
             text: Data organization and tables
           - href: basic3.qmd
             text: Manage & import data
+          - href: basic4.qmd
+            text: Ggplot2 & data representation
+          - href: basic5.qmd
+            text: Statistical Analysis  Introduction With R
       - href: References.qmd
         text: References
           

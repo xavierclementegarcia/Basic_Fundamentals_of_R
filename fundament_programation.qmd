@@ -1,0 +1,153 @@
+---
+title: "¿Cómo funciona la programación?"
+subtitle: "La lógica de la programación"
+author: "Xavier Clemente García"
+format: 
+  revealjs:
+    theme: default
+    footer: '<a href="https://xavierclementegarcia.github.io/Basic_Fundamentals_of_R/" target="_blank">Fundaments Basic R</a>'
+echo: false
+---
+
+## ¿Qué es la programación? {.smaller}
+
+![](images/programacion.png){fig-align="center" width="254"}
+
+Proceso de escribir instrucciones en un lenguaje de bajo o alto nivel para que una computadora realice una tarea específica. <br> Se puede manipular datos, desarrollar apps, modelar sistemas y calcular datos.
+
+## Concepto de programación {.smaller}
+
+-   Entrada: Datos iniciales
+
+-   Procesamiento: Transformación de datos a través de operaciones
+
+-   Salida: Resultado final
+
+```{r}
+#| echo: true
+x<- 3.1416 #Entrada del dato
+y<- x *2.1 /4 *0.60 #Procesamiento 
+print(y) #Salida
+y #Salida
+```
+
+## Lenguajes de programación y paradigmas {.smaller}
+
+```{r}
+library(knitr)
+clasif<-c("Imperativos", "Declarativos", "Orientado a objetos", "Funcional")
+def<-c("Basado en instrucciones secuenciales (python)", "Especifica que se quiere hacer en lugar de como (SQL)", "Organiza el código en objetos que contienen datos y métodos (Java y Python)", "Basado en funciones matemáticas puras (Matlab)")
+paradigmas<-data.frame(clasif, def)
+paradigmas
+colnames(paradigmas)<-c("Clasificación", "Definición")
+para<- kable(paradigmas, caption = "¿Cómo se clasifica un lenguaje")
+```
+
+```{r}
+#| echo: false
+para
+```
+
+## Diferencias entre R y otros lenguajes como Python, C y Java {.smaller}
+
+```{r}
+#| echo: false
+carac<-c("Paradigma", "Uso", "Tipado", "Velocidad")
+r<-c("Funcional y estadístico", 
+     "Análisis de datos, bioestadística", "Dinámico", 
+     "Lento")
+python<-c("Multiparadigma", "Data Science e IA", "Dinámico", "Intermedio")
+c<-c("Imperativo", "Sistemas y hardware", "Estático", "Rápido")
+Java<-c("Orientado a objetos", "Aplicaciones empresariales", "Estático", "Intermedio ")
+tab_diferencias<-data.frame(carac, r, python, c, Java)
+colnames(tab_diferencias)<-c("Características", "R", "Python", "C", "Java")
+kable_dif_pro<-kable(tab_diferencias, caption = "Diferencias entre diferentes lenguajes.")
+
+```
+
+```{r}
+#| echo: false
+kable_dif_pro
+```
+
+## Ejemplos de asignación en cada lenguaje
+
+```{python}
+#| echo: true
+#En Python sería algo así. 
+
+x = 10
+hola= "Hola mundo"
+print(hola)
+```
+
+```{r}
+#| echo: false
+options(repos = c(CRAN = "https://cran.rstudio.com/"))
+```
+
+```{r}
+#| echo: true
+x<- 10
+hola<- "Hola mundo"
+saludo<- "cómo estás?"
+x  
+saludo
+hola
+```
+
+## Algoritmos y lógica de programación {.smaller}
+
+Un algoritmo es un conjunto de pasos para resolver un problema. En programación se definen como:
+
+-   Condicionales (if-else): Toma de decisiones.
+-   Bucles (for, while): Para repetir acciones.
+-   Funciones: Para modularizar el código. <br> **En R un ejemplo podría ser**
+
+```{r}
+#| echo: true
+num<- 10
+if (num %% 2 == 0) {#Se verifica si el residuo de dividir 'num' por 2 es 0
+  print("Es par")
+} else {
+  print("Es impar")
+}
+```
+
+## 
+
+Otro caso podría ser en Python:
+
+```{python}
+#| echo: true
+num = 10  # Asignamos un número
+
+if num % 2 == 0:  # Verificamos si el residuo de la división entre 2 es 0
+    print("Es par")  # Si es 0, el número es par
+else:
+    print("Es impar")  # Si no, el número es impar
+
+```
+
+## Flujo de ejecución de un programa {.smaller}
+
+El flujo de un programa sigue una secuencia lógica:
+
+-   Lectura del código de arriba hacia abajo.
+-   Ejecución de instrucciones en orden.
+-   Evaluación de estructuras condicionales y ciclos.
+-   Llamado a funciones definidas en el código.
+
+## Hola mundo {.smaller}
+
+Ahora sí, empecemos.
+
+```{r}
+#| echo: true
+print("Hola mundo")
+#Concatenaciones de ideas en R. 
+cat("Hola", "Mundo", "\n")
+
+```
+
+# Muchas gracias y Bienvenidos {.smaller}

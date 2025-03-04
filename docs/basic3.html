@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.6.40">
 
   <meta name="author" content="Xavier Clemente García">
-  <title>Basic Fundamentals of R – Importación y manejo de datos</title>
+  <title>Basic Fundamentals of R – Manipulación y manejo de datos</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -192,7 +192,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Importación y manejo de datos</h1>
+  <h1 class="title">Manipulación y manejo de datos</h1>
   <p class="subtitle">Una introducción al lenguaje de programación</p>
 
 <div class="quarto-title-authors">
@@ -222,7 +222,7 @@ Xavier Clemente García
 <pre><code>package 'palmerpenguins' successfully unpacked and MD5 sums checked
 
 The downloaded binary packages are in
-    C:\Users\garci\AppData\Local\Temp\RtmpKu4aVx\downloaded_packages</code></pre>
+    C:\Users\garci\AppData\Local\Temp\RtmpQ5Wdtr\downloaded_packages</code></pre>
 </div>
 </div>
 </section>
@@ -232,12 +232,12 @@ The downloaded binary packages are in
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">install.packages</span>(<span class="st">"palmerpenguins"</span>)</span>
 <span id="cb3-2"><a></a><span class="fu">library</span>(palmerpenguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Se puede visitar la página del creador en <a href="https://allisonhorst.github.io/palmerpenguins/index.html">Palmerpenguins</a></p>
+<p>Se puede visitar la página del creador en <a href="https://allisonhorst.github.io/palmerpenguins/index.html">Palmerpenguins</a> <br></p>
 <p><a href="https://allisonhorst.github.io/palmerpenguins/"><img data-src="images/logo.png" width="165"></a> <br> “Palmerpenguins” incluye un dataset interesante. <br> Para usar <strong>Palmerpenguins</strong> debe instalarse con las funciones de arriba</p>
 </section>
 <section id="importación-de-datos" class="slide level2 smaller">
 <h2>Importación de datos</h2>
-<p>En esta librería existe un set de datos bastante amplio. Vamos a usar <strong>Penguins</strong></p>
+<p>En esta librería existe un set de datos bastante amplio. Vamos a usar <strong>penguins</strong></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>penguins</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -260,8 +260,8 @@ The downloaded binary packages are in
 </div>
 <p>Como puedes ver la base de datos es bastante amplia e incluye 8 columnas.</p>
 </section>
-<section id="section-1" class="slide level2 smaller">
-<h2></h2>
+<section id="algunos-comandos-adicionales" class="slide level2 smaller">
+<h2>Algunos comandos adicionales</h2>
 <p>Según qué área te interese de este dataset podrás utilizarla a tu antojo. Existen algunos comandos que podrían ser de interés:</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -307,29 +307,449 @@ The downloaded binary packages are in
 </div>
 <p>De esta forma, en la siguiente diapositiva verás algunos ejemplos prácticos con <strong>penguins</strong></p>
 </section>
-<section id="section-2" class="slide level2">
+<section id="sobre-fix-head-y-tail" class="slide level2 smaller">
+<h2>Sobre fix() , head() y tail()</h2>
+<p>Fix es una forma de arreglo manual de matríces o frames. Es muy útil para cambios puntuales. <br> head() permite mostrar las primeras 6 filas de una tabla, no importa su tamaño. Por ejemplo:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">head</span>(penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 8
+  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g
+  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;
+1 Adelie  Torgersen           39.1          18.7               181        3750
+2 Adelie  Torgersen           39.5          17.4               186        3800
+3 Adelie  Torgersen           40.3          18                 195        3250
+4 Adelie  Torgersen           NA            NA                  NA          NA
+5 Adelie  Torgersen           36.7          19.3               193        3450
+6 Adelie  Torgersen           39.3          20.6               190        3650
+# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="sobre-summary-dim-y-str" class="slide level2 smaller">
+<h2>Sobre summary(), dim() y str()</h2>
+<p>Summary() es probablemente la forma automática de acercarnos a la estadística descriptiva en R. <br> Un ejemplo con summary() sería:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="co">#Tomaremos una parte de la base de datos que podamos usar para calcular: </span></span>
+<span id="cb8-2"><a></a><span class="fu">summary</span>(penguins<span class="sc">$</span>bill_depth_mm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+  13.10   15.60   17.30   17.15   18.70   21.50       2 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">summary</span>(penguins<span class="sc">$</span>flipper_length_mm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+  172.0   190.0   197.0   200.9   213.0   231.0       2 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">summary</span>(penguins<span class="sc">$</span>body_mass_g)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+   2700    3550    4050    4202    4750    6300       2 </code></pre>
+</div>
+</div>
+</section>
+<section id="section-1" class="slide level2 smaller">
 <h2></h2>
+<p>Ahora probemos con el total de la base de datos.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>      species          island    bill_length_mm  bill_depth_mm  
+ Adelie   :152   Biscoe   :168   Min.   :32.10   Min.   :13.10  
+ Chinstrap: 68   Dream    :124   1st Qu.:39.23   1st Qu.:15.60  
+ Gentoo   :124   Torgersen: 52   Median :44.45   Median :17.30  
+                                 Mean   :43.92   Mean   :17.15  
+                                 3rd Qu.:48.50   3rd Qu.:18.70  
+                                 Max.   :59.60   Max.   :21.50  
+                                 NA's   :2       NA's   :2      
+ flipper_length_mm  body_mass_g       sex           year     
+ Min.   :172.0     Min.   :2700   female:165   Min.   :2007  
+ 1st Qu.:190.0     1st Qu.:3550   male  :168   1st Qu.:2007  
+ Median :197.0     Median :4050   NA's  : 11   Median :2008  
+ Mean   :200.9     Mean   :4202                Mean   :2008  
+ 3rd Qu.:213.0     3rd Qu.:4750                3rd Qu.:2009  
+ Max.   :231.0     Max.   :6300                Max.   :2009  
+ NA's   :2         NA's   :2                                 </code></pre>
+</div>
+</div>
+<p>Haciendo una <strong>“estadística”</strong> general obtendremos lo anterior.</p>
 </section>
-<section id="exportación-de-datos" class="slide level2">
-<h2>Exportación de datos</h2>
+<section id="section-2" class="slide level2 smaller">
+<h2></h2>
+<p>Dim por otro lado nos permite visualizar la cantidad de datos almacenadas en un objeto. En este caso el objeto penguins contiene 344 datos y 8 columnas.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">dim</span>(penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 344   8</code></pre>
+</div>
+</div>
+<p>str() por otro lado entrega el tipo de dato. Es decir nos muestra la estructura en la que está compuesta.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">str</span>(penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [344 × 8] (S3: tbl_df/tbl/data.frame)
+ $ species          : Factor w/ 3 levels "Adelie","Chinstrap",..: 1 1 1 1 1 1 1 1 1 1 ...
+ $ island           : Factor w/ 3 levels "Biscoe","Dream",..: 3 3 3 3 3 3 3 3 3 3 ...
+ $ bill_length_mm   : num [1:344] 39.1 39.5 40.3 NA 36.7 39.3 38.9 39.2 34.1 42 ...
+ $ bill_depth_mm    : num [1:344] 18.7 17.4 18 NA 19.3 20.6 17.8 19.6 18.1 20.2 ...
+ $ flipper_length_mm: int [1:344] 181 186 195 NA 193 190 181 195 193 190 ...
+ $ body_mass_g      : int [1:344] 3750 3800 3250 NA 3450 3650 3625 4675 3475 4250 ...
+ $ sex              : Factor w/ 2 levels "female","male": 2 1 1 NA 1 2 1 2 NA NA ...
+ $ year             : int [1:344] 2007 2007 2007 2007 2007 2007 2007 2007 2007 2007 ...</code></pre>
+</div>
+</div>
+<p>Class() nos permite visualizar la clase de función u objeto a utilizar.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">class</span>(penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "tbl_df"     "tbl"        "data.frame"</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">class</span>(t.test)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "function"</code></pre>
+</div>
+</div>
 </section>
-<section id="introducción-al-dplyr" class="slide level2">
+<section id="introducción-al-dplyr" class="slide level2 smaller">
 <h2>Introducción al Dplyr</h2>
+<p><img data-src="images/dplyr.png" class="quarto-figure quarto-figure-center" width="152" height="98"> <br></p>
+<p>Es un paquete que permite la manipulación de datos a través de verbos claves que pueden ser útiles en el manejo de información. <br> <strong>Algunos de los comandos para manipulación de datos son:</strong> <br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>kable_dplyr</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Funciones</th>
+<th style="text-align: left;">Descripción de función</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Select</td>
+<td style="text-align: left;">Selección de columnas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">filter</td>
+<td style="text-align: left;">filtrado de filas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">mutate</td>
+<td style="text-align: left;">creación y modificación de variables</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">summarise</td>
+<td style="text-align: left;">Para Resumen de datos</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">arrange</td>
+<td style="text-align: left;">Ordenamientos de datos</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </section>
-<section id="manipulación-con-dplyr" class="slide level2">
+<section id="manipulación-con-dplyr" class="slide level2 smaller">
 <h2>Manipulación con Dplyr</h2>
+<p>Iniciemos un ejemplo. Para esto supongamos que:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="co">#Usaremos unos cuantos datos</span></span>
+<span id="cb24-2"><a></a>head_penguins<span class="ot">&lt;-</span><span class="fu">head</span>(penguins)</span>
+<span id="cb24-3"><a></a>head_penguins</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 8
+  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g
+  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;
+1 Adelie  Torgersen           39.1          18.7               181        3750
+2 Adelie  Torgersen           39.5          17.4               186        3800
+3 Adelie  Torgersen           40.3          18                 195        3250
+4 Adelie  Torgersen           NA            NA                  NA          NA
+5 Adelie  Torgersen           36.7          19.3               193        3450
+6 Adelie  Torgersen           39.3          20.6               190        3650
+# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;</code></pre>
+</div>
+</div>
 </section>
-<section id="variables-na-en-r" class="slide level2">
+<section id="uso-de-select" class="slide level2 smaller">
+<h2>Uso de Select()</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="co">#Usaremos unos cuantos datos</span></span>
+<span id="cb26-2"><a></a>penguins<span class="sc">%&gt;%</span><span class="fu">select</span>(,species,body_mass_g)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 344 × 2
+   species body_mass_g
+   &lt;fct&gt;         &lt;int&gt;
+ 1 Adelie         3750
+ 2 Adelie         3800
+ 3 Adelie         3250
+ 4 Adelie           NA
+ 5 Adelie         3450
+ 6 Adelie         3650
+ 7 Adelie         3625
+ 8 Adelie         4675
+ 9 Adelie         3475
+10 Adelie         4250
+# ℹ 334 more rows</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a><span class="co">#Así puedo seleccionar otros datos y los que necesite.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Es necesario que sepamos que los datos nunca pueden estar en los siguiente formatos para este tipo de comandos. <em>“tbl_df”, “tbl”, “data.frame”</em></p>
+</section>
+<section id="usando-filter" class="slide level2 smaller">
+<h2>Usando filter ()</h2>
+<p>Filtrar puede ser una opción interesante cuando sabemos el tipo y la información específica de datos que queremos revisar. Es especialmente útil cuando tenemos que manejar bases de datos amplias. <br> Tomaremos el siguiente ejemplo con <em>penguis</em> <br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a>penguins<span class="sc">%&gt;%</span><span class="fu">filter</span>(island <span class="sc">==</span> <span class="st">"Torgersen"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 52 × 8
+   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g
+   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;
+ 1 Adelie  Torgersen           39.1          18.7               181        3750
+ 2 Adelie  Torgersen           39.5          17.4               186        3800
+ 3 Adelie  Torgersen           40.3          18                 195        3250
+ 4 Adelie  Torgersen           NA            NA                  NA          NA
+ 5 Adelie  Torgersen           36.7          19.3               193        3450
+ 6 Adelie  Torgersen           39.3          20.6               190        3650
+ 7 Adelie  Torgersen           38.9          17.8               181        3625
+ 8 Adelie  Torgersen           39.2          19.6               195        4675
+ 9 Adelie  Torgersen           34.1          18.1               193        3475
+10 Adelie  Torgersen           42            20.2               190        4250
+# ℹ 42 more rows
+# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="uso-de-mutate" class="slide level2 smaller">
+<h2>Uso de mutate()</h2>
+<p>¿Ha tenido ese problema típico de que debe agregar nuevas columnas o modificar las existentes y ha pensado que quizás hay que subir nuevamente la tabla? <br> Justamente <strong>mutate()</strong> representa una posible solución a este tipo de problemas que puedes encontrar durante la manipulación de datos. <br> Partamos del siguiente ejemplo:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a>nueva_variable<span class="ot">&lt;-</span>penguins<span class="sc">%&gt;%</span><span class="fu">mutate</span>(<span class="at">diferencia_de_medidas =</span> penguins<span class="sc">$</span>bill_length_mm <span class="sc">/</span> penguins<span class="sc">$</span>bill_depth_mm)</span>
+<span id="cb31-2"><a></a>nueva_variable<span class="sc">%&gt;%</span><span class="fu">select</span>(diferencia_de_medidas, bill_length_mm, bill_depth_mm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 344 × 3
+   diferencia_de_medidas bill_length_mm bill_depth_mm
+                   &lt;dbl&gt;          &lt;dbl&gt;         &lt;dbl&gt;
+ 1                  2.09           39.1          18.7
+ 2                  2.27           39.5          17.4
+ 3                  2.24           40.3          18  
+ 4                 NA              NA            NA  
+ 5                  1.90           36.7          19.3
+ 6                  1.91           39.3          20.6
+ 7                  2.19           38.9          17.8
+ 8                  2              39.2          19.6
+ 9                  1.88           34.1          18.1
+10                  2.08           42            20.2
+# ℹ 334 more rows</code></pre>
+</div>
+</div>
+<p><strong>¿Qué hemos hecho aquí?</strong></p>
+</section>
+<section id="ejercicio-práctico-no.-1" class="slide level2" data-background-color="#806040">
+<h2>Ejercicio práctico No.&nbsp;1</h2>
+<p>Crear una base de datos o utilizar <em>penguins</em> o <em>penguins_raw</em> para ejemplificar algunos de los comandos vistos. <br> Tienen 10 minutos.</p>
+</section>
+<section id="uso-de-summarise" class="slide level2 smaller">
+<h2>Uso de summarise()</h2>
+<p>Permite crear un data.frame nuevo.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a><span class="co">#Creamos una variable para contener penguins</span></span>
+<span id="cb33-2"><a></a>new_penguins<span class="ot">&lt;-</span>penguins<span class="sc">%&gt;%</span><span class="fu">summarise</span>(penguins<span class="sc">$</span>island)</span>
+<span id="cb33-3"><a></a><span class="co">#Corremos la variable. </span></span>
+<span id="cb33-4"><a></a>new_penguins</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 344 × 1
+   `penguins$island`
+   &lt;fct&gt;            
+ 1 Torgersen        
+ 2 Torgersen        
+ 3 Torgersen        
+ 4 Torgersen        
+ 5 Torgersen        
+ 6 Torgersen        
+ 7 Torgersen        
+ 8 Torgersen        
+ 9 Torgersen        
+10 Torgersen        
+# ℹ 334 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="uso-de-arrange" class="slide level2 smaller">
+<h2>Uso de arrange()</h2>
+<p>La siguiente función permite ordenar creciente o decrecientemente datos de una tabla. <br> Por ejemplo, podemos realizar el siguiente ejemplo: <br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a>descending_penguins<span class="ot">&lt;-</span>penguins<span class="sc">%&gt;%</span><span class="fu">arrange</span>(<span class="fu">desc</span>(penguins<span class="sc">$</span>bill_depth_mm))</span>
+<span id="cb35-2"><a></a>descending_penguins</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 344 × 8
+   species   island   bill_length_mm bill_depth_mm flipper_length_mm body_mass_g
+   &lt;fct&gt;     &lt;fct&gt;             &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;
+ 1 Adelie    Torgers…           46            21.5               194        4200
+ 2 Adelie    Torgers…           38.6          21.2               191        3800
+ 3 Adelie    Dream              42.3          21.2               191        4150
+ 4 Adelie    Torgers…           34.6          21.1               198        4400
+ 5 Adelie    Dream              39.2          21.1               196        4150
+ 6 Adelie    Biscoe             41.3          21.1               195        4400
+ 7 Chinstrap Dream              54.2          20.8               201        4300
+ 8 Adelie    Torgers…           42.5          20.7               197        4500
+ 9 Adelie    Biscoe             39.6          20.7               191        3900
+10 Chinstrap Dream              52            20.7               210        4800
+# ℹ 334 more rows
+# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="podemos-aplicar-otras-variantes-de-lo-visto" class="slide level2 smaller">
+<h2>Podemos aplicar otras variantes de lo visto</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a><span class="co">#Aplicando un poco de lo visto, podemos tener lo siguiente: </span></span>
+<span id="cb37-2"><a></a>desc_penguins_select<span class="ot">&lt;-</span>descending_penguins<span class="sc">%&gt;%</span><span class="fu">select</span>(bill_depth_mm)</span>
+<span id="cb37-3"><a></a>desc_penguins_select</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 344 × 1
+   bill_depth_mm
+           &lt;dbl&gt;
+ 1          21.5
+ 2          21.2
+ 3          21.2
+ 4          21.1
+ 5          21.1
+ 6          21.1
+ 7          20.8
+ 8          20.7
+ 9          20.7
+10          20.7
+# ℹ 334 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="y-este-sería-nuestro-resultado-más-resumido." class="slide level2 smaller">
+<h2>Y este sería nuestro resultado más resumido.</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a><span class="co">#Para los primeros seis datos. </span></span>
+<span id="cb39-2"><a></a><span class="fu">head</span>(desc_penguins_select)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 1
+  bill_depth_mm
+          &lt;dbl&gt;
+1          21.5
+2          21.2
+3          21.2
+4          21.1
+5          21.1
+6          21.1</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a></a><span class="co">#Para los últimos 6 datos. </span></span>
+<span id="cb41-2"><a></a><span class="fu">tail</span>(desc_penguins_select)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 1
+  bill_depth_mm
+          &lt;dbl&gt;
+1          13.4
+2          13.3
+3          13.2
+4          13.1
+5          NA  
+6          NA  </code></pre>
+</div>
+</div>
+</section>
+<section id="variables-na-en-r" class="slide level2 smaller">
 <h2>Variables NA en R</h2>
+<p>Muchas veces nos encontraremos con bases de datos con valores ausentes, es decir con sus espacios, lo que puede dificultar la lectura, análisis o construcción de gráficos con dichos datos, es por ello que una forma de solucionar este tipo de problemas es con las funciones que genera NA. <br> <strong>is.na()</strong> es una de las primeras funciones del manejo de datos <strong>NA</strong> en R. Ejemplo:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a></a>penguins_NA_correccion<span class="ot">&lt;-</span> <span class="fu">is.na</span>(penguins<span class="sc">$</span>bill_length_mm)</span>
+<span id="cb43-2"><a></a><span class="fu">head</span>(penguins_NA_correccion)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE FALSE FALSE  TRUE FALSE FALSE</code></pre>
+</div>
+</div>
+<p><strong>¿Qué hemos creado aquí?</strong>Creamos una función que funciona a través de booleanos y nos permite decir si en esta columna <strong>“bill_length_mm”</strong> existen o no valores <strong>“NA”</strong>. <br> <strong>Uso de ColSums</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a></a><span class="co">#La función colsums, como dice el nombre, permite sumar las columnas para ir encontrando en este caso donde habrán valores NA. </span></span>
+<span id="cb45-2"><a></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(penguins))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>          species            island    bill_length_mm     bill_depth_mm 
+                0                 0                 2                 2 
+flipper_length_mm       body_mass_g               sex              year 
+                2                 2                11                 0 </code></pre>
+</div>
+</div>
+</section>
+<section id="section-3" class="slide level2 smaller">
+<h2></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a></a><span class="co">#Incluso podríamos filtrar más con head() o tail()</span></span>
+<span id="cb47-2"><a></a><span class="fu">head</span>(<span class="fu">colSums</span>(<span class="fu">is.na</span>(penguins)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>          species            island    bill_length_mm     bill_depth_mm 
+                0                 0                 2                 2 
+flipper_length_mm       body_mass_g 
+                2                 2 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a></a><span class="co">#Podemos ver la diferencia entre la presencia de la columna sex. </span></span>
+<span id="cb49-2"><a></a><span class="fu">tail</span>(<span class="fu">colSums</span>(<span class="fu">is.na</span>(penguins)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   bill_length_mm     bill_depth_mm flipper_length_mm       body_mass_g 
+                2                 2                 2                 2 
+              sex              year 
+               11                 0 </code></pre>
+</div>
+</div>
+</section>
+<section id="ejercicio-práctico-no.-2" class="slide level2" data-background-color="#806040">
+<h2>Ejercicio práctico No.&nbsp;2</h2>
+<p>Ahora es tu turno!. Carga una base de datos o utiliza <em>penguins</em> para probar lo aprendido. Recuerda utilizar mutate(), select(), arrange() y las demás funciones aprendidas. <br> Tienes 10 minutos.</p>
+</section>
+<section id="y-si-quiero-usar-is.na-para-ver-los-na-presentes-en-las-columnas" class="slide level2 smaller">
+<h2>¿Y si quiero usar is.na para ver los NA presentes en las columnas?</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a></a>penguins<span class="sc">%&gt;%</span><span class="fu">filter</span>(<span class="fu">is.na</span>(penguins<span class="sc">$</span>bill_length_mm))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 8
+  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g
+  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;
+1 Adelie  Torgersen             NA            NA                NA          NA
+2 Gentoo  Biscoe                NA            NA                NA          NA
+# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;</code></pre>
+</div>
+</div>
 </section>
 <section id="introducción-al-uso-de-na.omit" class="slide level2">
 <h2>Introducción al uso de na.omit()</h2>
+<p>na.omit() es precisamente el comando que podemos utilizar para obviar u omitir cierto tipo de datos no sumatorios u operables en general.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a></a><span class="co">#Compareremos un antes y un después en esta tabla a nivel general. </span></span>
+<span id="cb53-2"><a></a>penguins_limpio<span class="ot">&lt;-</span><span class="fu">na.omit</span>(penguins)</span>
+<span id="cb53-3"><a></a><span class="co">#Para mirar el número de dimensiones</span></span>
+<span id="cb53-4"><a></a><span class="fu">dim</span>(penguins_limpio) <span class="co">#También puede usarse str()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 333   8</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a></a><span class="co">#Y ahora al comparar, deberíamos observar una diferencia. </span></span>
+<span id="cb55-2"><a></a><span class="fu">dim</span>(penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 344   8</code></pre>
+</div>
+</div>
 </section>
-<section id="reemplazando-na-con-valores-específicos." class="slide level2">
-<h2>Reemplazando NA con valores específicos.</h2>
+<section>
+<section id="muchas-gracias-por-su-atención" class="title-slide slide level1 center">
+<h1>Muchas gracias por su atención</h1>
+
+</section>
+<section id="referencias" class="slide level2">
+<h2>Referencias</h2>
+<p><a href="https://allisonhorst.github.io/palmerpenguins/index.html">Palmerpenguins</a> <br> <a href="https://melbournebioinformatics.github.io/r-intro-biologists"><em>Melbourne Bioinformatics. (2023) R for biologists GitHub</em></a></p>
 
 
-</section>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

@@ -1,5 +1,5 @@
 ---
-title: "Importación y manejo de datos"
+title: "Manipulación y manejo de datos"
 subtitle: "Una introducción al lenguaje de programación"
 author: "Xavier Clemente García"
 format: 
@@ -11,7 +11,7 @@ echo: true
 
 ## Objetivo {.smaller}
 
-Aprender a subir datasets, cargar datasets, usar librerías de datasets y modificar mediante Dplyr y comandos propios de R los datos. 
+Aprender a subir datasets, cargar datasets, usar librerías de datasets y modificar mediante Dplyr y comandos propios de R los datos.
 
 ## Algunas consideraciones antes de iniciar {.smaller}
 
@@ -35,32 +35,31 @@ library(palmerpenguins)
 
 ##  {.smaller}
 
-
 ```{r}
 #| echo: true
 install.packages("palmerpenguins")
 library(palmerpenguins)
 ```
 
-Se puede visitar la página del creador en [Palmerpenguins](https://allisonhorst.github.io/palmerpenguins/index.html)
+Se puede visitar la página del creador en [Palmerpenguins](https://allisonhorst.github.io/palmerpenguins/index.html) <br>
 
-[![](images/logo.png){width="165"}](https://allisonhorst.github.io/palmerpenguins/) <br> 
-"Palmerpenguins" incluye un dataset interesante. <br> 
-Para usar **Palmerpenguins** debe instalarse con las funciones de arriba
-
+[![](images/logo.png){width="165"}](https://allisonhorst.github.io/palmerpenguins/) <br> "Palmerpenguins" incluye un dataset interesante. <br> Para usar **Palmerpenguins** debe instalarse con las funciones de arriba
 
 ## Importación de datos {.smaller}
 
-En esta librería existe un set de datos bastante amplio. Vamos a usar **Penguins**
+En esta librería existe un set de datos bastante amplio. Vamos a usar **penguins**
+
 ```{r}
 #| echo: true
 penguins
 ```
-Como puedes ver la base de datos es bastante amplia e incluye 8 columnas. 
 
-## {.smaller}
+Como puedes ver la base de datos es bastante amplia e incluye 8 columnas.
 
-Según qué área te interese de este dataset podrás utilizarla a tu antojo. Existen algunos comandos que podrían ser de interés: 
+## Algunos comandos adicionales {.smaller}
+
+Según qué área te interese de este dataset podrás utilizarla a tu antojo. Existen algunos comandos que podrían ser de interés:
+
 ```{r}
 #| echo: false
 comands<-c("fix", "head", "summary", "split", "dim", "str", "tail")
@@ -72,19 +71,251 @@ kable(structure_data)
 
 
 ```
+
 De esta forma, en la siguiente diapositiva verás algunos ejemplos prácticos con **penguins**
 
-## 
+## Sobre fix() , head() y tail() {.smaller}
 
+Fix es una forma de arreglo manual de matríces o frames. Es muy útil para cambios puntuales. <br> head() permite mostrar las primeras 6 filas de una tabla, no importa su tamaño. Por ejemplo:
 
-## Exportación de datos
+```{r}
+#| echo: true
 
-## Introducción al Dplyr
+head(penguins)
+```
 
-## Manipulación con Dplyr
+## Sobre summary(), dim() y str() {.smaller}
 
-## Variables NA en R
+Summary() es probablemente la forma automática de acercarnos a la estadística descriptiva en R. <br> Un ejemplo con summary() sería:
+
+```{r}
+#| echo: true
+#Tomaremos una parte de la base de datos que podamos usar para calcular: 
+summary(penguins$bill_depth_mm)
+```
+
+```{r}
+#| echo: true
+summary(penguins$flipper_length_mm)
+```
+
+```{r}
+#| echo: true
+summary(penguins$body_mass_g)
+```
+
+##  {.smaller}
+
+Ahora probemos con el total de la base de datos.
+
+```{r}
+#| echo: false
+#Usando el total de la base de datos
+summary(penguins)
+```
+
+Haciendo una **"estadística"** general obtendremos lo anterior.
+
+##  {.smaller}
+
+Dim por otro lado nos permite visualizar la cantidad de datos almacenadas en un objeto. En este caso el objeto penguins contiene 344 datos y 8 columnas.
+
+```{r}
+#| echo: true
+dim(penguins)
+```
+
+str() por otro lado entrega el tipo de dato. Es decir nos muestra la estructura en la que está compuesta.
+
+```{r}
+#| echo: true
+str(penguins)
+```
+
+Class() nos permite visualizar la clase de función u objeto a utilizar.
+
+```{r}
+#| echo: true
+class(penguins)
+```
+
+```{r}
+#| echo: true
+class(t.test)
+
+```
+
+## Introducción al Dplyr {.smaller}
+
+![](images/dplyr.png){fig-align="center" width="152" height="98"} <br>
+
+Es un paquete que permite la manipulación de datos a través de verbos claves que pueden ser útiles en el manejo de información. <br> **Algunos de los comandos para manipulación de datos son:** <br>
+
+```{r}
+#| echo: false
+library(tibble)
+funciones<-c("Select", "filter", "mutate", "summarise",  "arrange")
+descripción<-c("Selección de columnas", "filtrado de filas", "creación y modificación de variables", "Para Resumen de datos", "Ordenamientos de datos")
+dplyr_table<- tibble(funciones, descripción)
+colnames(dplyr_table)<-c("Funciones", "Descripción de función")
+library(knitr)
+kable_dplyr<- kable(dplyr_table)
+```
+
+```{r}
+#| echo: true
+kable_dplyr
+```
+
+## Manipulación con Dplyr {.smaller}
+
+```{r}
+#| echo: false
+library(dplyr)
+```
+
+Iniciemos un ejemplo. Para esto supongamos que:
+
+```{r}
+#| echo: true
+#Usaremos unos cuantos datos
+head_penguins<-head(penguins)
+head_penguins
+
+```
+
+## Uso de Select() {.smaller}
+
+```{r}
+#| echo: true
+#Usaremos unos cuantos datos
+penguins%>%select(,species,body_mass_g)
+#Así puedo seleccionar otros datos y los que necesite.
+```
+
+Es necesario que sepamos que los datos nunca pueden estar en los siguiente formatos para este tipo de comandos. *"tbl_df", "tbl", "data.frame"*
+
+## Usando filter () {.smaller}
+
+Filtrar puede ser una opción interesante cuando sabemos el tipo y la información específica de datos que queremos revisar. Es especialmente útil cuando tenemos que manejar bases de datos amplias. <br> Tomaremos el siguiente ejemplo con *penguis* <br>
+
+```{r}
+#| echo: true
+penguins%>%filter(island == "Torgersen")
+
+```
+
+## Uso de mutate() {.smaller}
+
+¿Ha tenido ese problema típico de que debe agregar nuevas columnas o modificar las existentes y ha pensado que quizás hay que subir nuevamente la tabla? <br> Justamente **mutate()** representa una posible solución a este tipo de problemas que puedes encontrar durante la manipulación de datos. <br> Partamos del siguiente ejemplo:
+
+```{r}
+#| echo: true
+nueva_variable<-penguins%>%mutate(diferencia_de_medidas = penguins$bill_length_mm / penguins$bill_depth_mm)
+nueva_variable%>%select(diferencia_de_medidas, bill_length_mm, bill_depth_mm)
+
+```
+
+**¿Qué hemos hecho aquí?**
+
+## Ejercicio práctico No. 1 {background-color="#806040"}
+
+Crear una base de datos o utilizar *penguins* o *penguins_raw* para ejemplificar algunos de los comandos vistos. <br> Tienen 10 minutos.
+
+## Uso de summarise() {.smaller}
+
+Permite crear un data.frame nuevo.
+
+```{r}
+#| echo: true
+#Creamos una variable para contener penguins
+new_penguins<-penguins%>%summarise(penguins$island)
+#Corremos la variable. 
+new_penguins
+```
+
+## Uso de arrange() {.smaller}
+
+La siguiente función permite ordenar creciente o decrecientemente datos de una tabla. <br> Por ejemplo, podemos realizar el siguiente ejemplo: <br>
+
+```{r}
+#| echo: true
+descending_penguins<-penguins%>%arrange(desc(penguins$bill_depth_mm))
+descending_penguins
+```
+
+## Podemos aplicar otras variantes de lo visto {.smaller}
+
+```{r}
+#Aplicando un poco de lo visto, podemos tener lo siguiente: 
+desc_penguins_select<-descending_penguins%>%select(bill_depth_mm)
+desc_penguins_select
+```
+
+## Y este sería nuestro resultado más resumido. {.smaller}
+
+```{r}
+#Para los primeros seis datos. 
+head(desc_penguins_select)
+#Para los últimos 6 datos. 
+tail(desc_penguins_select)
+```
+
+## Variables NA en R {.smaller}
+
+Muchas veces nos encontraremos con bases de datos con valores ausentes, es decir con sus espacios, lo que puede dificultar la lectura, análisis o construcción de gráficos con dichos datos, es por ello que una forma de solucionar este tipo de problemas es con las funciones que genera NA. <br> **is.na()** es una de las primeras funciones del manejo de datos **NA** en R. Ejemplo:
+
+```{r}
+#| echo: true
+penguins_NA_correccion<- is.na(penguins$bill_length_mm)
+head(penguins_NA_correccion)
+```
+
+**¿Qué hemos creado aquí?**Creamos una función que funciona a través de booleanos y nos permite decir si en esta columna **"bill_length_mm"** existen o no valores **"NA"**. <br> **Uso de ColSums**
+
+```{r}
+#| echo: true
+#La función colsums, como dice el nombre, permite sumar las columnas para ir encontrando en este caso donde habrán valores NA. 
+colSums(is.na(penguins))
+```
+## {.smaller}
+```{r}
+#Incluso podríamos filtrar más con head() o tail()
+head(colSums(is.na(penguins)))
+#Podemos ver la diferencia entre la presencia de la columna sex. 
+tail(colSums(is.na(penguins)))
+
+```
+
+## Ejercicio práctico No. 2 {background-color="#806040"}
+
+Ahora es tu turno!. Carga una base de datos o utiliza *penguins* para probar lo aprendido. Recuerda utilizar mutate(), select(), arrange() y las demás funciones aprendidas. <br> Tienes 10 minutos.
+
+## ¿Y si quiero usar is.na para ver los NA presentes en las columnas? {.smaller}
+
+```{r}
+#| echo: true
+penguins%>%filter(is.na(penguins$bill_length_mm))
+
+```
 
 ## Introducción al uso de na.omit()
 
-## Reemplazando NA con valores específicos.
+na.omit() es precisamente el comando que podemos utilizar para obviar u omitir cierto tipo de datos no sumatorios u operables en general.
+
+```{r}
+#| echo: true
+#Compareremos un antes y un después en esta tabla a nivel general. 
+penguins_limpio<-na.omit(penguins)
+#Para mirar el número de dimensiones
+dim(penguins_limpio) #También puede usarse str()
+#Y ahora al comparar, deberíamos observar una diferencia. 
+dim(penguins)
+
+```
+
+# Muchas gracias por su atención
+
+## Referencias
+
+[Palmerpenguins](https://allisonhorst.github.io/palmerpenguins/index.html) <br> [*Melbourne Bioinformatics. (2023) R for biologists GitHub*](https://melbournebioinformatics.github.io/r-intro-biologists)

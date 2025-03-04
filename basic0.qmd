@@ -257,10 +257,4 @@ colibries
 
 Elaborar un ejemplo de cada una de las estructuras de datos vistas en la clase. Tienen el resto del día!
 
-# ¿Puedo acceder a estas presentaciones? {.smaller}
-
-## ¿Cómo acceder a estas presentaciones? {.smaller}
-
-Podrán encontrarlas en mi github page.<br> Pero no te adelantes y guarda calma. <br> Si necesitas más información no dudes en escribirme: **xgarcia\@unicauca.edu.co**
-
 # *Muchas gracias* {.smaller}

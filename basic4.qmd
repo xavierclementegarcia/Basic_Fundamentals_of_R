@@ -1,0 +1,181 @@
+---
+title: "¿Cómo diablos puedo representar mis datos?"
+subtitle: "Una introducción al lenguaje de programación"
+author: "Xavier Clemente García"
+format: 
+  revealjs:
+    theme: default
+    footer: '<a href="https://xavierclementegarcia.github.io/Basic_Fundamentals_of_R/" target="_blank">Fundaments Basic R</a>'
+echo: true
+---
+
+## Objetivos
+
+Aprender a crear gráficos a través de la interfaz gráfica de R y a través del paquete ggplot2.
+
+## ¿Cómo puedo representar mis datos? {.smaller}
+
+Ya hemos visto como importar, manejar y manipular datos. Pero ahora... **¿Cómo los represento?**
+
+```{r}
+#| echo: false
+library(palmerpenguins)
+```
+
+```{r}
+#| echo: true
+boxplot(penguins, col = "darkred", main= "Medianas")
+```
+
+## 
+
+```{r}
+#| echo: true
+#Para generar un barplot debe generarse como matriz. 
+penguins_matrix<-as.matrix(penguins)
+barplot(penguins_matrix)
+
+```
+
+## 
+
+```{r}
+#| echo: true
+hist(penguins$bill_length_mm, main = "Histograma", ylab = "Frecuencia", col = "gold", xlab = "Eje x")
+```
+
+## 
+
+```{r}
+#| echo: true
+plot(penguins)
+```
+
+## Quizás se trate de embellecer... {.smaller}
+
+```{r}
+#| echo: false
+library(ggplot2)
+
+```
+
+Una de las herramientas que nos podría ayudar a embellecer nuestros trabajos son los gráficos contenidos en la biblioteca o librería **"ggplot2"**
+
+```{r}
+#| echo: false
+ggplot(penguins)+
+  geom_col(aes(x=penguins$species, y=penguins$body_mass_g, fill = penguins$species), position = "stack")+
+  labs(x = "Especies de pinguinos", y = "Masa corpórea", title = "Masa corpórea de los pinguinos")
+
+
+```
+
+## Introducción a Ggplot2 {.smaller}
+
+![](images/ggplot2.png){fig-align="center" width="300" height="184"}
+
+Es una librería que pertenece al tidyverse. Esta librería presenta un nuevo concepto sobre el **"data visualization"** y como este impacta en la presentación de los datos. Ofrece una mayor cantidad de opciones como etiquetas, escalas, temas con el fin de mejorar la legibilidad.
+
+## Grámatica de los gráficos {.smaller}
+
+El concepto clave para entender la lógica de ggplot se encuentra en el siguiente script:
+
+```{r}
+#| echo: true
+# ggplot(data) + aes(x, y) + geom_*()
+#Capas, mapeos estéticos, geoms, escalas y temas: 
+#(aes()), es la forma de mapear. 
+
+```
+
+```{r}
+#| echo: true
+ggplot(penguins)+
+  geom_col(aes(x=penguins$species, y=penguins$bill_length_mm, fill = penguins$species), position = "stack")+
+  labs(x = "Especies de pinguinos", y = "Y", title = "Ejemplo ")
+
+
+```
+
+## Ejercicio práctico No. 1 {background-color="#806040"}
+
+Genera un gráfico con lo aprendido. Podrás usar alguna de las librerías vistas en clase. Tienes 10 minutos.
+
+## Boxplots {.smaller}
+Resume la distribución de una variable numérica, mostrando los cuartiles, mediana y posibles outliers o valores atípicos. 
+```{r}
+#| echo: true
+mi_boxplot<-ggplot(penguins)+
+  geom_boxplot(mapping = aes(x=penguins$species, y=penguins$flipper_length_mm, fill= penguins$species))+
+  labs(x= "Especies de pinguinos", y= "Longitud de aleta", title = "Relación entre la longitud de la aleta y pinguinos", subtitle = "Datos reportados para pinguinos")+
+  theme_minimal()
+mi_boxplot
+```
+# A partir de ahora probaremos el dataset *"PlantGrowth"* también. {.smaller}
+
+
+## Lineplots {.smaller}
+Muestra cambios en los datos a lo largo del tiempo o en una secuencia. Puede ser util para evaluar cambios a lo largo del tiempo. 
+```{r}
+data("PlantGrowth")
+ggplot(PlantGrowth, aes(x = group, y = weight, group = group, color = group)) +
+  geom_point(size = 3) +
+  geom_line() +
+  theme_minimal() +
+  labs(title = "Peso de Plantas por Grupo", x = "Grupo", y = "Peso")
+
+
+```
+
+
+## Scatter Plot {.smaller}
+Muestra la relación entre dos variables numérica. Se utiliza para identificar correlaciones o patrones en los datos. 
+
+## Barplots {.smaller}
+Permite representar categorías con barras de diferente altura según su frecuencia o valor. 
+
+
+## Histogramas {.smaller}
+
+## Lines & points {.smaller}
+
+## Ejercicio práctico No. 2 {background-color="#806040"}
+
+Prueba a crear alguno de los gráficos que hemos visto con ambos datasets utilizados. Tienes 10 minutos. 
+
+## Polígonos {.smaller}
+Son similares a un histograma, sin embargo se diferencia en la unión de puntos de frecuencia con líneas formando un **polígono**. Puede ser util para representar la distribución espacial de varias especie por ejemplo. 
+
+```{r}
+#| echo: true
+library(ggplot2)
+library(dplyr)
+# Datos simulados de especies de escorpiones
+set.seed(42)
+scorpions <- data.frame(
+  species = rep(c("Escorpión A", "Escorpión B"), each = 10),
+  x = c(runif(10, min = 1, max = 5), runif(10, min = 4, max = 8)),
+  y = c(runif(10, min = 1, max = 5), runif(10, min = 4, max = 8))
+)
+
+# Ordenar puntos para formar un polígono convexo
+scorpions_hull <- scorpions %>%
+  group_by(species) %>%
+  slice(chull(x, y))  # Encuentra el polígono convexo
+```
+## y así quedaría nuestro polígono... {.smaller}
+```{r}
+# Graficar puntos y polígono
+ggplot() +
+  geom_polygon(data = scorpions_hull, aes(x = x, y = y, fill = species, group = species), alpha = 0.3) +
+  geom_point(data = scorpions, aes(x = x, y = y, color = species), size = 3) +
+  labs(title = "Espacio ecológico de escorpiones", x = "Eje PCA 1", y = "Eje PCA 2") +
+  theme_minimal()
+```
+
+
+# Muchas gracias {.smaller}
+
+## Referencias {.smaller}
+
+["About to ggplot 3.5.1 - CRAN (2025)](https://ggplot2.tidyverse.org/)

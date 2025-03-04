@@ -34,7 +34,7 @@ Sin embargo el código para una tabla como la anterior también podría compleme
 
 ```{r}
 #| echo: true
-especies<-c("Centruroides margaritatus", "Tityus pachyurus", "Tityus trivittatus", "centruroides gracilis", "centruroides suffusus")
+especies<-c("*Centruroides margaritatus*", "*Tityus pachyurus*", "*Tityus trivittatus*", "*centruroides gracilis*", "*Centruroides suffusus*")
 ambiente<-c("luz", "luz", "luz", "sombra", "sombra")
 Municipio<-c("Popayán", "Villa de Leyva", "Bogotá", "Argentina, Huila", "Inza")
 Departamento<-c("Cauca", "Boyacá", "Cundinamarca", "Huila", "Cauca")
@@ -75,22 +75,115 @@ kable(frame_scorpions)
 
 ## Ejercicio práctico No. 1 {background-color="#806040"}
 
-Dirígete a documentación en mi página para obtener el ejercicio.
+Dirígete a documentación en la página de este curso para obtener el ejercicio.
 
 ## Bases de datos {.smaller}
-La base de datos que encontrarás está basada en el trabajo de (cita), y la forma
-de obtención de los datos está dada por (Cita). 
+
+<br> 
+La base de datos que encontrarás está basada en el trabajo de *Maria Doyle (2019)*.  
+<br> 
+**Sobre el contexto** Es una base de datos del proyecto **GREIN**: GEO RNA-seq Experiments Interactive Navigator. En esta webpage puede accederse a una amplia variedad de metadatos.
 <br>
-**Sobre el contexto**
-Es una base de datos del proyecto **GREIN**: GEO RNA-seq Experiments Interactive Navigator. 
-En esta webpage puede accederse a una amplia variedad de metadatos 
+**Este trabajo será para realización en clase**
 
 
-## Otras funciones para tablas
+## Subiendo la base de datos {.smaller}
 
-## intro
+<br>
+Presionar "Import Dataset". En este punto hay varias opciones:
+1. Subir como .CSV
+2. Subir como .xlx
+3. Subir como .txt 
+<br>
 
-## Referencias{.smaller}
+```{r}
+#| echo: false
+options(repos = c(CRAN = "https://cran.rstudio.com/"))
+```
+ 
+ Para subir como ".xlx" debe utilizarse: 
+```{r}
+#| echo: true
+#Usar el paquete tidyverse 
+install.packages("tidyverse")
+library(tidyverse)
+#O podemos correr solo "dplyr"
+library(dplyr)
+library(readxl)
+```
+ En Rstudio quizás no sea necesario que sepas esto. 
+ **Para propósitos de nuestro plan de trabjo usaremos algunas bases de datos propias de R**
+ 
+
+## Uso de la librería mtcars e introducción al dplyr {.smaller}
+
+Cuando apliquemos la tabla... 
+<br>
+
+```{r}
+#| echo: true
+mtcars
+#Convertimos en data.frame para una lectura ideal.
+```
+## Algunos comandos que puedes usar {.smaller}
+
+```{r}
+#| echo: true
+#Para saber la estructura de los datos. Por ejemplo cuántos datos hay presentes.
+str(mtcars)
+#Nombres de las columnas. 
+colnames(mtcars)
+```
+
+## Uso de la librería tibble {.smaller}
+```{r}
+#| echo: true
+library(tibble)
+tibble_tabla<-tibble(head(mtcars))
+tibble_tabla
+```
+## Un poco sobre exploración de datos... {.smaller}
+
+```{r}
+#| echo: true
+frame_scorpions
+head(frame_scorpions)
+```
+## {.smaller}
+```{r}
+#| echo: true
+head(mtcars)
+
+```
+Estos serían dos ejemplos con head().
+
+## Filtrar datos
+
+Volviendo con "mtcars"
+```{r}
+#| echo: true
+#De la manera siguiente podemos filtrar datos según nuestro tipo de necesidad. 
+mtcars %>% filter(mtcars$carb < 10)
+```
+## Uso del comando split {.smaller}
+
+```{r}
+#| echo: true
+
+#A continuación dividiremos una tabla: 
+mtcars_split<- split(mtcars, mtcars$mpg)
+mtcars_split
+
+```
+Y así podemos cortar diferentes columnas del dataset "mtcars"
+
+## Ejercicio práctico No. 2 {background-color="#806040"}
+
+Crear una tabla o utilizar la dataset "mtcars"  y aplicar todo lo aprendido. 
+Tienen el resto del día. 
+
+## Referencias {.smaller}
 
 [*Melbourne Bioinformatics. (2023) R for biologists GitHub*](https://melbournebioinformatics.github.io/r-intro-biologists)
+
 
