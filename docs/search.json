@@ -333,7 +333,7 @@
     "href": "basic3.html#algunas-consideraciones-antes-de-iniciar",
     "title": "Manipulación y manejo de datos",
     "section": "Algunas consideraciones antes de iniciar",
-    "text": "Algunas consideraciones antes de iniciar\nPara proceder con esta clase usaremos algunos datasets obtenidos desde librerías específicas en R  Haremos uso del siguiente script para importar nuestros datasets.\n\n#Librería con datos de crecimiento de plantas en diferentes grupos. \n\ndata(\"PlantGrowth\")\n\nEste paquete se incluye en R.  En esta clase se hará manejo de bases de datos.\n\n\npackage 'palmerpenguins' successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\garci\\AppData\\Local\\Temp\\RtmpQ5Wdtr\\downloaded_packages"
+    "text": "Algunas consideraciones antes de iniciar\nPara proceder con esta clase usaremos algunos datasets obtenidos desde librerías específicas en R  Haremos uso del siguiente script para importar nuestros datasets.\n\n#Librería con datos de crecimiento de plantas en diferentes grupos. \n\ndata(\"PlantGrowth\")\n\nEste paquete se incluye en R.  En esta clase se hará manejo de bases de datos.\n\n\npackage 'palmerpenguins' successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\garci\\AppData\\Local\\Temp\\Rtmp2rFQ0o\\downloaded_packages"
   },
   {
     "objectID": "basic3.html#section",
@@ -480,7 +480,7 @@
     "href": "basic2.html#subiendo-la-base-de-datos",
     "title": "Tablas y organización de datos",
     "section": "Subiendo la base de datos",
-    "text": "Subiendo la base de datos\n Presionar “Import Dataset”. En este punto hay varias opciones: 1. Subir como .CSV 2. Subir como .xlx 3. Subir como .txt \nPara subir como “.xlx” debe utilizarse:\n\n#Usar el paquete tidyverse \ninstall.packages(\"tidyverse\")\n\npackage 'tidyverse' successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\garci\\AppData\\Local\\Temp\\RtmpgxZIJu\\downloaded_packages\n\nlibrary(tidyverse)\n#O podemos correr solo \"dplyr\"\nlibrary(dplyr)\nlibrary(readxl)\n\nEn Rstudio quizás no sea necesario que sepas esto. Para propósitos de nuestro plan de trabjo usaremos algunas bases de datos propias de R"
+    "text": "Subiendo la base de datos\n Presionar “Import Dataset”. En este punto hay varias opciones: 1. Subir como .CSV 2. Subir como .xlx 3. Subir como .txt \nPara subir como “.xlx” debe utilizarse:\n\n#Usar el paquete tidyverse \ninstall.packages(\"tidyverse\")\n\npackage 'tidyverse' successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\garci\\AppData\\Local\\Temp\\RtmpkJxXMq\\downloaded_packages\n\nlibrary(tidyverse)\n#O podemos correr solo \"dplyr\"\nlibrary(dplyr)\nlibrary(readxl)\n\nEn Rstudio quizás no sea necesario que sepas esto. Para propósitos de nuestro plan de trabjo usaremos algunas bases de datos propias de R"
   },
   {
     "objectID": "basic2.html#uso-de-la-librería-mtcars",
@@ -866,5 +866,19 @@
     "title": "¿Cómo diablos puedo representar mis datos?",
     "section": "Scatter Plot",
     "text": "Scatter Plot\nMuestra la relación entre dos variables numérica. Se utiliza para identificar correlaciones o patrones en los datos."
+  },
+  {
+    "objectID": "basic5.html#estadística-descriptiva",
+    "href": "basic5.html#estadística-descriptiva",
+    "title": "Introducción al análisis de datos con R",
+    "section": "Estadística descriptiva",
+    "text": "Estadística descriptiva"
+  },
+  {
+    "objectID": "basic5.html#análisis-bayesianos",
+    "href": "basic5.html#análisis-bayesianos",
+    "title": "Introducción al análisis de datos con R",
+    "section": "Análisis bayesianos",
+    "text": "Análisis bayesianos"
   }
 ]
