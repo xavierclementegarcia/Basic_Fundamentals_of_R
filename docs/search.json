@@ -781,14 +781,14 @@
     "href": "basic4.html#barplots",
     "title": "¿Cómo diablos puedo representar mis datos?",
     "section": "Barplots",
-    "text": "Barplots\nPermite representar categorías con barras de diferente altura según su frecuencia o valor."
+    "text": "Barplots\nPermite representar categorías con barras de diferente altura según su frecuencia o valor.\n\nggplot(penguins)+\n  geom_bar(aes(x= species, y= penguins$body_mass_g, fill = species), stat = \"identity\")"
   },
   {
     "objectID": "basic4.html#histogramas",
     "href": "basic4.html#histogramas",
     "title": "¿Cómo diablos puedo representar mis datos?",
     "section": "Histogramas",
-    "text": "Histogramas"
+    "text": "Histogramas\nLos histogramas nos permiten representar frecuencias en nuestros datos. También son una forma de aproximación estadística para evaluar la normalidad, por ejemplo.\n\nggplot(penguins)+\n  geom_histogram(aes(x= flipper_length_mm, fill = species), position = \"identity\")"
   },
   {
     "objectID": "basic4.html#lines-points",
@@ -858,14 +858,14 @@
     "href": "basic4.html#lineplots",
     "title": "¿Cómo diablos puedo representar mis datos?",
     "section": "Lineplots",
-    "text": "Lineplots\nMuestra cambios en los datos a lo largo del tiempo o en una secuencia. Puede ser util para evaluar cambios a lo largo del tiempo.\n\ndata(\"PlantGrowth\")\nggplot(PlantGrowth, aes(x = group, y = weight, group = group, color = group)) +\n  geom_point(size = 3) +\n  geom_line() +\n  theme_minimal() +\n  labs(title = \"Peso de Plantas por Grupo\", x = \"Grupo\", y = \"Peso\")"
+    "text": "Lineplots\nMuestra cambios en los datos a lo largo del tiempo o en una secuencia. Puede ser util para evaluar cambios a lo largo del tiempo.\n\nggplot(penguins, aes(x = flipper_length_mm, y = bill_depth_mm, fill = species, color = species)) +\n  geom_line() +\n  theme_minimal()"
   },
   {
     "objectID": "basic4.html#scatter-plot",
     "href": "basic4.html#scatter-plot",
     "title": "¿Cómo diablos puedo representar mis datos?",
     "section": "Scatter Plot",
-    "text": "Scatter Plot\nMuestra la relación entre dos variables numérica. Se utiliza para identificar correlaciones o patrones en los datos."
+    "text": "Scatter Plot\nMuestra la relación entre dos variables numérica. Se utiliza para identificar correlaciones o patrones en los datos.\n\nlibrary(ggplot2)\nlibrary(palmerpenguins)\nggplot(penguins)+\n  geom_point(aes(x= bill_length_mm, y= penguins$flipper_length_mm, fill = species, color= species), stat = \"identity\", position= \"identity\")"
   },
   {
     "objectID": "basic5.html#estadística-descriptiva",

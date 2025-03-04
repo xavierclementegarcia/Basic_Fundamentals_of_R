@@ -63,6 +63,7 @@ Una de las herramientas que nos podría ayudar a embellecer nuestros trabajos so
 
 ```{r}
 #| echo: false
+options(repos = c(CRAN = "https://cran.rstudio.com/"))
 ggplot(penguins)+
   geom_col(aes(x=penguins$species, y=penguins$body_mass_g, fill = penguins$species), position = "stack")+
   labs(x = "Especies de pinguinos", y = "Masa corpórea", title = "Masa corpórea de los pinguinos")
@@ -117,12 +118,10 @@ mi_boxplot
 ## Lineplots {.smaller}
 Muestra cambios en los datos a lo largo del tiempo o en una secuencia. Puede ser util para evaluar cambios a lo largo del tiempo. 
 ```{r}
-data("PlantGrowth")
-ggplot(PlantGrowth, aes(x = group, y = weight, group = group, color = group)) +
-  geom_point(size = 3) +
+#| echo: true
+ggplot(penguins, aes(x = flipper_length_mm, y = bill_depth_mm, fill = species, color = species)) +
   geom_line() +
-  theme_minimal() +
-  labs(title = "Peso de Plantas por Grupo", x = "Grupo", y = "Peso")
+  theme_minimal()
 
 
 ```
@@ -131,13 +130,34 @@ ggplot(PlantGrowth, aes(x = group, y = weight, group = group, color = group)) +
 ## Scatter Plot {.smaller}
 Muestra la relación entre dos variables numérica. Se utiliza para identificar correlaciones o patrones en los datos. 
 
+```{r}
+#| echo: true
+library(ggplot2)
+library(palmerpenguins)
+ggplot(penguins)+
+  geom_point(aes(x= bill_length_mm, y= penguins$flipper_length_mm, fill = species, color= species), stat = "identity", position= "identity")
+```
+
+
 ## Barplots {.smaller}
-Permite representar categorías con barras de diferente altura según su frecuencia o valor. 
+Permite representar categorías con barras de diferente altura según su frecuencia o valor.
+
+```{r}
+#| echo: true
+ggplot(penguins)+
+  geom_bar(aes(x= species, y= penguins$body_mass_g, fill = species), stat = "identity")
+
+```
 
 
 ## Histogramas {.smaller}
+Los histogramas nos permiten representar frecuencias en nuestros datos. También son una forma de aproximación estadística para evaluar la normalidad, por ejemplo. 
+```{r}
+#| echo: true
+ggplot(penguins)+
+  geom_histogram(aes(x= flipper_length_mm, fill = species), position = "identity")
 
-## Lines & points {.smaller}
+```
 
 ## Ejercicio práctico No. 2 {background-color="#806040"}
 

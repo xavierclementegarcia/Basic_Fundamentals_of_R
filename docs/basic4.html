@@ -293,29 +293,41 @@ Xavier Clemente García
 <h2>Lineplots</h2>
 <p>Muestra cambios en los datos a lo largo del tiempo o en una secuencia. Puede ser util para evaluar cambios a lo largo del tiempo.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">data</span>(<span class="st">"PlantGrowth"</span>)</span>
-<span id="cb8-2"><a></a><span class="fu">ggplot</span>(PlantGrowth, <span class="fu">aes</span>(<span class="at">x =</span> group, <span class="at">y =</span> weight, <span class="at">group =</span> group, <span class="at">color =</span> group)) <span class="sc">+</span></span>
-<span id="cb8-3"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb8-4"><a></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb8-5"><a></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb8-6"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Peso de Plantas por Grupo"</span>, <span class="at">x =</span> <span class="st">"Grupo"</span>, <span class="at">y =</span> <span class="st">"Peso"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> bill_depth_mm, <span class="at">fill =</span> species, <span class="at">color =</span> species)) <span class="sc">+</span></span>
+<span id="cb8-2"><a></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb8-3"><a></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="basic4_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section>
 <section id="scatter-plot" class="slide level2 smaller">
 <h2>Scatter Plot</h2>
 <p>Muestra la relación entre dos variables numérica. Se utiliza para identificar correlaciones o patrones en los datos.</p>
-</section>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb9-2"><a></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb9-3"><a></a><span class="fu">ggplot</span>(penguins)<span class="sc">+</span></span>
+<span id="cb9-4"><a></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span> bill_length_mm, <span class="at">y=</span> penguins<span class="sc">$</span>flipper_length_mm, <span class="at">fill =</span> species, <span class="at">color=</span> species), <span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">position=</span> <span class="st">"identity"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="basic4_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch"></section>
 <section id="barplots" class="slide level2 smaller">
 <h2>Barplots</h2>
 <p>Permite representar categorías con barras de diferente altura según su frecuencia o valor.</p>
-</section>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">ggplot</span>(penguins)<span class="sc">+</span></span>
+<span id="cb10-2"><a></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">x=</span> species, <span class="at">y=</span> penguins<span class="sc">$</span>body_mass_g, <span class="at">fill =</span> species), <span class="at">stat =</span> <span class="st">"identity"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="basic4_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch"></section>
 <section id="histogramas" class="slide level2 smaller">
 <h2>Histogramas</h2>
-</section>
-<section id="lines-points" class="slide level2 smaller">
-<h2>Lines &amp; points</h2>
-</section>
+<p>Los histogramas nos permiten representar frecuencias en nuestros datos. También son una forma de aproximación estadística para evaluar la normalidad, por ejemplo.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">ggplot</span>(penguins)<span class="sc">+</span></span>
+<span id="cb11-2"><a></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x=</span> flipper_length_mm, <span class="at">fill =</span> species), <span class="at">position =</span> <span class="st">"identity"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="basic4_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"></section>
 <section id="ejercicio-práctico-no.-2" class="slide level2" data-background-color="#806040">
 <h2>Ejercicio práctico No.&nbsp;2</h2>
 <p>Prueba a crear alguno de los gráficos que hemos visto con ambos datasets utilizados. Tienes 10 minutos.</p>
@@ -324,34 +336,34 @@ Xavier Clemente García
 <h2>Polígonos</h2>
 <p>Son similares a un histograma, sin embargo se diferencia en la unión de puntos de frecuencia con líneas formando un <strong>polígono</strong>. Puede ser util para representar la distribución espacial de varias especie por ejemplo.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb9-2"><a></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb9-3"><a></a><span class="co"># Datos simulados de especies de escorpiones</span></span>
-<span id="cb9-4"><a></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
-<span id="cb9-5"><a></a>scorpions <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb9-6"><a></a>  <span class="at">species =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Escorpión A"</span>, <span class="st">"Escorpión B"</span>), <span class="at">each =</span> <span class="dv">10</span>),</span>
-<span id="cb9-7"><a></a>  <span class="at">x =</span> <span class="fu">c</span>(<span class="fu">runif</span>(<span class="dv">10</span>, <span class="at">min =</span> <span class="dv">1</span>, <span class="at">max =</span> <span class="dv">5</span>), <span class="fu">runif</span>(<span class="dv">10</span>, <span class="at">min =</span> <span class="dv">4</span>, <span class="at">max =</span> <span class="dv">8</span>)),</span>
-<span id="cb9-8"><a></a>  <span class="at">y =</span> <span class="fu">c</span>(<span class="fu">runif</span>(<span class="dv">10</span>, <span class="at">min =</span> <span class="dv">1</span>, <span class="at">max =</span> <span class="dv">5</span>), <span class="fu">runif</span>(<span class="dv">10</span>, <span class="at">min =</span> <span class="dv">4</span>, <span class="at">max =</span> <span class="dv">8</span>))</span>
-<span id="cb9-9"><a></a>)</span>
-<span id="cb9-10"><a></a></span>
-<span id="cb9-11"><a></a><span class="co"># Ordenar puntos para formar un polígono convexo</span></span>
-<span id="cb9-12"><a></a>scorpions_hull <span class="ot">&lt;-</span> scorpions <span class="sc">%&gt;%</span></span>
-<span id="cb9-13"><a></a>  <span class="fu">group_by</span>(species) <span class="sc">%&gt;%</span></span>
-<span id="cb9-14"><a></a>  <span class="fu">slice</span>(<span class="fu">chull</span>(x, y))  <span class="co"># Encuentra el polígono convexo</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb12-2"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb12-3"><a></a><span class="co"># Datos simulados de especies de escorpiones</span></span>
+<span id="cb12-4"><a></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb12-5"><a></a>scorpions <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb12-6"><a></a>  <span class="at">species =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Escorpión A"</span>, <span class="st">"Escorpión B"</span>), <span class="at">each =</span> <span class="dv">10</span>),</span>
+<span id="cb12-7"><a></a>  <span class="at">x =</span> <span class="fu">c</span>(<span class="fu">runif</span>(<span class="dv">10</span>, <span class="at">min =</span> <span class="dv">1</span>, <span class="at">max =</span> <span class="dv">5</span>), <span class="fu">runif</span>(<span class="dv">10</span>, <span class="at">min =</span> <span class="dv">4</span>, <span class="at">max =</span> <span class="dv">8</span>)),</span>
+<span id="cb12-8"><a></a>  <span class="at">y =</span> <span class="fu">c</span>(<span class="fu">runif</span>(<span class="dv">10</span>, <span class="at">min =</span> <span class="dv">1</span>, <span class="at">max =</span> <span class="dv">5</span>), <span class="fu">runif</span>(<span class="dv">10</span>, <span class="at">min =</span> <span class="dv">4</span>, <span class="at">max =</span> <span class="dv">8</span>))</span>
+<span id="cb12-9"><a></a>)</span>
+<span id="cb12-10"><a></a></span>
+<span id="cb12-11"><a></a><span class="co"># Ordenar puntos para formar un polígono convexo</span></span>
+<span id="cb12-12"><a></a>scorpions_hull <span class="ot">&lt;-</span> scorpions <span class="sc">%&gt;%</span></span>
+<span id="cb12-13"><a></a>  <span class="fu">group_by</span>(species) <span class="sc">%&gt;%</span></span>
+<span id="cb12-14"><a></a>  <span class="fu">slice</span>(<span class="fu">chull</span>(x, y))  <span class="co"># Encuentra el polígono convexo</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="y-así-quedaría-nuestro-polígono" class="slide level2 smaller">
 <h2>y así quedaría nuestro polígono…</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="co"># Graficar puntos y polígono</span></span>
-<span id="cb10-2"><a></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb10-3"><a></a>  <span class="fu">geom_polygon</span>(<span class="at">data =</span> scorpions_hull, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">fill =</span> species, <span class="at">group =</span> species), <span class="at">alpha =</span> <span class="fl">0.3</span>) <span class="sc">+</span></span>
-<span id="cb10-4"><a></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> scorpions, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">color =</span> species), <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb10-5"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Espacio ecológico de escorpiones"</span>, <span class="at">x =</span> <span class="st">"Eje PCA 1"</span>, <span class="at">y =</span> <span class="st">"Eje PCA 2"</span>) <span class="sc">+</span></span>
-<span id="cb10-6"><a></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="co"># Graficar puntos y polígono</span></span>
+<span id="cb13-2"><a></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb13-3"><a></a>  <span class="fu">geom_polygon</span>(<span class="at">data =</span> scorpions_hull, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">fill =</span> species, <span class="at">group =</span> species), <span class="at">alpha =</span> <span class="fl">0.3</span>) <span class="sc">+</span></span>
+<span id="cb13-4"><a></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> scorpions, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">color =</span> species), <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb13-5"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Espacio ecológico de escorpiones"</span>, <span class="at">x =</span> <span class="st">"Eje PCA 1"</span>, <span class="at">y =</span> <span class="st">"Eje PCA 2"</span>) <span class="sc">+</span></span>
+<span id="cb13-6"><a></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="basic4_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch"></section></section>
+<img data-src="basic4_files/figure-revealjs/unnamed-chunk-16-1.png" width="960" class="r-stretch"></section></section>
 <section>
 <section id="muchas-gracias" class="title-slide slide level1 smaller center">
 <h1>Muchas gracias</h1>
