@@ -8,3 +8,7 @@ format:
     footer: '<a href="https://xavierclementegarcia.github.io/Basic_Fundamentals_of_R/" target="_blank">Fundaments Basic R</a>'
 echo: true
 ---
+
+## Estadística descriptiva {.smaller}
+
+## Análisis bayesianos {.smaller}
