@@ -194,6 +194,15 @@ ggplot() +
 ```
 
 
+## Otro ejemplo para un polígono sería
+
+```{r}
+#Por ejemplo con penguins. 
+ggplot(penguins)+
+  geom_polygon(aes(x= penguins$body_mass_g, y=penguins$flipper_length_mm, fill= species), stat = "identity", position = "identity")+
+  labs(x= "Masa cuerpo pinguinos", y= "Longitud de la aleta", title = "Relación entre la longitud ", subtitle = "Subtitulos")
+```
+
 # Muchas gracias {.smaller}
 
 ## Referencias {.smaller}

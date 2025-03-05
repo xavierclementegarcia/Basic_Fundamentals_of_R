@@ -880,5 +880,12 @@
     "title": "Introducción al análisis de datos con R",
     "section": "Análisis bayesianos",
     "text": "Análisis bayesianos"
+  },
+  {
+    "objectID": "basic4.html#otro-ejemplo-para-un-polígono-sería",
+    "href": "basic4.html#otro-ejemplo-para-un-polígono-sería",
+    "title": "¿Cómo diablos puedo representar mis datos?",
+    "section": "Otro ejemplo para un polígono sería",
+    "text": "Otro ejemplo para un polígono sería\n\n#Por ejemplo con penguins. \nggplot(penguins)+\n  geom_polygon(aes(x= penguins$body_mass_g, y=penguins$flipper_length_mm, fill= species), stat = \"identity\", position = \"identity\")+\n  labs(x= \"Masa cuerpo pinguinos\", y= \"Longitud de la aleta\", title = \"Relación entre la longitud \", subtitle = \"Subtitulos\")"
   }
 ]

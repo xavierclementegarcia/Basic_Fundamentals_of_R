@@ -363,7 +363,17 @@ Xavier Clemente García
 <span id="cb13-6"><a></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="basic4_files/figure-revealjs/unnamed-chunk-16-1.png" width="960" class="r-stretch"></section></section>
+<img data-src="basic4_files/figure-revealjs/unnamed-chunk-16-1.png" width="960" class="r-stretch"></section>
+<section id="otro-ejemplo-para-un-polígono-sería" class="slide level2">
+<h2>Otro ejemplo para un polígono sería</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="co">#Por ejemplo con penguins. </span></span>
+<span id="cb14-2"><a></a><span class="fu">ggplot</span>(penguins)<span class="sc">+</span></span>
+<span id="cb14-3"><a></a>  <span class="fu">geom_polygon</span>(<span class="fu">aes</span>(<span class="at">x=</span> penguins<span class="sc">$</span>body_mass_g, <span class="at">y=</span>penguins<span class="sc">$</span>flipper_length_mm, <span class="at">fill=</span> species), <span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">position =</span> <span class="st">"identity"</span>)<span class="sc">+</span></span>
+<span id="cb14-4"><a></a>  <span class="fu">labs</span>(<span class="at">x=</span> <span class="st">"Masa cuerpo pinguinos"</span>, <span class="at">y=</span> <span class="st">"Longitud de la aleta"</span>, <span class="at">title =</span> <span class="st">"Relación entre la longitud "</span>, <span class="at">subtitle =</span> <span class="st">"Subtitulos"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="basic4_files/figure-revealjs/unnamed-chunk-17-1.png" width="960" class="r-stretch"></section></section>
 <section>
 <section id="muchas-gracias" class="title-slide slide level1 smaller center">
 <h1>Muchas gracias</h1>
