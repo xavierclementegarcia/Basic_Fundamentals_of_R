@@ -977,6 +977,83 @@
     "href": "basic5.html#homocedasticidad",
     "title": "Introducción al análisis de datos con R",
     "section": "Homocedasticidad",
-    "text": "Homocedasticidad"
+    "text": "Homocedasticidad\nLa homocedasticidad en este caso se refiere a a la homogeneidad de varianzas. Existen 2 pruebas principales que pueden usarse para seguir con el análisis paramétrico o no paramétrico.  Debemos considerar Levene o Bartlet. \n\n\n\n\n\n\n\n\n\n\nHipótesis\nFormulación de la hipótesis\nValor P\n\n\n\n\nHipótesis nula (HO)\nNuestros datos se ajustan a la curva de normalidad\np&gt;0.05\n\n\nHipótesis alternativa (H1)\nNuestros datos NO se ajustan a la curva de normalidad\np&lt;0.05\n\n\n\n\n\nPosteriormente aplicamos las pruebas teniendo en cuenta ciertos criterios  Levene es más robusta ante diferencias de normalidad, o existan dudas. Se aplica en cualquier caso. Bartlett es más robusta al detectar variaciones en la normalidad, pero es mejor cuando hay normalidad."
+  },
+  {
+    "objectID": "basic5.html#ejercicio-práctico-no.-2",
+    "href": "basic5.html#ejercicio-práctico-no.-2",
+    "title": "Introducción al análisis de datos con R",
+    "section": "Ejercicio práctico No. 2",
+    "text": "Ejercicio práctico No. 2\nSi hemos observado la normalidad, ¿Qué prueba y bajo que criterio debemos hacerlo?"
+  },
+  {
+    "objectID": "basic5.html#aplicación-de-la-prueba",
+    "href": "basic5.html#aplicación-de-la-prueba",
+    "title": "Introducción al análisis de datos con R",
+    "section": "Aplicación de la prueba",
+    "text": "Aplicación de la prueba\nEntendiendo que nuestro valor fue 0.8915 por tanto sugiere p&gt;0.05, entonces, aplicamos Bartlett.\n\nbartlett.test(planta$weight ~ planta$group) #Prueba de Bartlett\n\n\n    Bartlett test of homogeneity of variances\n\ndata:  planta$weight by planta$group\nBartlett's K-squared = 2.8786, df = 2, p-value = 0.2371\n\nlibrary(car)\nleveneTest(planta$weight ~ planta$group)\n\nLevene's Test for Homogeneity of Variance (center = median)\n      Df F value Pr(&gt;F)\ngroup  2  1.1192 0.3412\n      27               \n\n\n¿Qué podemos concluir?"
+  },
+  {
+    "objectID": "basic5.html#pruebas-paramétricas",
+    "href": "basic5.html#pruebas-paramétricas",
+    "title": "Introducción al análisis de datos con R",
+    "section": "Pruebas Paramétricas",
+    "text": "Pruebas Paramétricas\nUna prueba paramétrica se aplica cuando el criterio de normalidad se cumple tras los supuestos.\n\n\n\n\n\n\n\n\n\nPruebas Paramétricas\nPruebas NO paramétricas\n\n\n\n\nT de Student\nPrueba de Wilcoxon - Mann Whitney U test\n\n\nANOVA de una vía\nPrueba de Kruskal-Wallis\n\n\nCorrelación de Pearson\nCorrelación de Spearman\n\n\nChi cuadrado de independencia\nPrueba de Chi-Cuadrado ´Fisher exact test"
+  },
+  {
+    "objectID": "basic5.html#t-de-student",
+    "href": "basic5.html#t-de-student",
+    "title": "Introducción al análisis de datos con R",
+    "section": "T de Student",
+    "text": "T de Student\nPodemos aplicar la prueba así.\n\nclass(PlantGrowth)\n\n[1] \"data.frame\"\n\ngrupo_planta.split &lt;- split(PlantGrowth$weight, PlantGrowth$group)\nt.test(grupo_planta.split$ctrl, grupo_planta.split$trt1)\n\n\n    Welch Two Sample t-test\n\ndata:  grupo_planta.split$ctrl and grupo_planta.split$trt1\nt = 1.1913, df = 16.524, p-value = 0.2504\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -0.2875162  1.0295162\nsample estimates:\nmean of x mean of y \n    5.032     4.661 \n\n\nNuestro valor p es 0.2504 o sea que p&gt;0.05  ¿Qué podemos inferir?"
+  },
+  {
+    "objectID": "basic5.html#anova-de-una-vía",
+    "href": "basic5.html#anova-de-una-vía",
+    "title": "Introducción al análisis de datos con R",
+    "section": "Anova de una vía",
+    "text": "Anova de una vía\nLa aplicación de ANOVA de una vía implica que tomamos en cuenta una de las colas, o sea hacemos alusión a una de las variables.\n\nanova&lt;-aov(PlantGrowth$weight ~ PlantGrowth$group)\nsummary(anova)\n\n                  Df Sum Sq Mean Sq F value Pr(&gt;F)  \nPlantGrowth$group  2  3.766  1.8832   4.846 0.0159 *\nResiduals         27 10.492  0.3886                 \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n¿Qué podemos inferir sobre nuestros resultados para la prueba paramétrica?"
+  },
+  {
+    "objectID": "basic5.html#pruebas-no-paramétricas",
+    "href": "basic5.html#pruebas-no-paramétricas",
+    "title": "Introducción al análisis de datos con R",
+    "section": "Pruebas no Paramétricas",
+    "text": "Pruebas no Paramétricas\nUna prueba NO paramétrica se aplica cuando el criterio de normalidad no se cumple tras los supuestos.  Para propósitos del ejercicio aplicaremos usaremos el mismo dataset.\n\nkruskal_wallis&lt;- kruskal.test(PlantGrowth$weight ~ PlantGrowth$group)\nkruskal_wallis\n\n\n    Kruskal-Wallis rank sum test\n\ndata:  PlantGrowth$weight by PlantGrowth$group\nKruskal-Wallis chi-squared = 7.9882, df = 2, p-value = 0.01842\n\n\n¿Qué podemos inferir?"
+  },
+  {
+    "objectID": "basic5.html#sobre-nuestros-resultados-obtenidos",
+    "href": "basic5.html#sobre-nuestros-resultados-obtenidos",
+    "title": "Introducción al análisis de datos con R",
+    "section": "Sobre nuestros resultados obtenidos",
+    "text": "Sobre nuestros resultados obtenidos\nEn caso de ser una prueba paramétrica. Tendríamos que:\n\n\n\n\n\n\n\n\n\n\nHipótesis\nFormulación de la hipótesis\nValor P\n\n\n\n\nHipótesis nula (HO)\nNo hay diferencia significativa entre los grupos\np&gt;0.05\n\n\nHipótesis alternativa (H1)\nHay diferencia significativa entre los grupos\np&lt;0.05\n\n\n\n\n\nEn caso de tener una prueba no paramétrica:\n\n\n\n\n\n\n\n\n\n\nHipótesis\nFormulación de la hipótesis\nValor P\n\n\n\n\nHipótesis nula (HO)\nNo hay diferencia significativa entre los grupos\np&gt;0.05\n\n\nHipótesis alternativa (H1)\nHay diferencia significativa entre los grupos\np&lt;0.05\n\n\n\n\n\nEntonces, ¿Qué podemos suponer?"
+  },
+  {
+    "objectID": "basic5.html#qué-podemos-concluir",
+    "href": "basic5.html#qué-podemos-concluir",
+    "title": "Introducción al análisis de datos con R",
+    "section": "¿Qué podemos concluir?",
+    "text": "¿Qué podemos concluir?\nEn el caso que sí es adecuado:  Tras la solución de t de student no hay diferencias significativas entre ambos grupos  Tras la solución de ANOVA de una vía concluímos que hay mayor variabilidad entre los grupos y que hay diferencias significativas entre ellos"
+  },
+  {
+    "objectID": "basic5.html#pruebas-poshoc-paramétricas",
+    "href": "basic5.html#pruebas-poshoc-paramétricas",
+    "title": "Introducción al análisis de datos con R",
+    "section": "Pruebas poshoc paramétricas",
+    "text": "Pruebas poshoc paramétricas\nSe pueden utilizar cuando se quiere saber la diferencia entre grupos específicos entre sí.  ¿Cuándo puede aplicarse?  Pueden aplicarse cuando se cumpla los supuestos paramétricos.  Podemos aplicar la prueba de Tukey que es una prueba paramétrica que combina todas las posibles combinaciones entre grupos para saber cuál es significativamente diferente.\n\nTukeyHSD(anova)\n\n  Tukey multiple comparisons of means\n    95% family-wise confidence level\n\nFit: aov(formula = PlantGrowth$weight ~ PlantGrowth$group)\n\n$`PlantGrowth$group`\n            diff        lwr       upr     p adj\ntrt1-ctrl -0.371 -1.0622161 0.3202161 0.3908711\ntrt2-ctrl  0.494 -0.1972161 1.1852161 0.1979960\ntrt2-trt1  0.865  0.1737839 1.5562161 0.0120064"
+  },
+  {
+    "objectID": "basic5.html#pruebas-pos-hoc-no-paramétricas",
+    "href": "basic5.html#pruebas-pos-hoc-no-paramétricas",
+    "title": "Introducción al análisis de datos con R",
+    "section": "Pruebas Pos-hoc no paramétricas",
+    "text": "Pruebas Pos-hoc no paramétricas\nUn ejemplo podría ser (Aunque en este caso no es aplicable realmente), sería la prueba de Dunn,que compara pares de grupos con ajustes para múltiples comparaciones. Es la alternativa para Kruskal-Wallis.\n\nlibrary(dunn.test)\ndunn.test(PlantGrowth$weight, PlantGrowth$group, method = \"bonferroni\")\n\n  Kruskal-Wallis rank sum test\n\ndata: x and group\nKruskal-Wallis chi-squared = 7.9882, df = 2, p-value = 0.02\n\n                           Comparison of x by group                            \n                                 (Bonferroni)                                  \nCol Mean-|\nRow Mean |       ctrl       trt1\n---------+----------------------\n    trt1 |   1.117725\n         |     0.3955\n         |\n    trt2 |  -1.689289  -2.807015\n         |     0.1367    0.0075*\n\nalpha = 0.05\nReject Ho if p &lt;= alpha/2"
+  },
+  {
+    "objectID": "basic5.html#pruebas-pos-hoc-paramétricas",
+    "href": "basic5.html#pruebas-pos-hoc-paramétricas",
+    "title": "Introducción al análisis de datos con R",
+    "section": "Pruebas Pos-hoc paramétricas",
+    "text": "Pruebas Pos-hoc paramétricas\nSe pueden utilizar cuando se quiere saber la diferencia entre grupos específicos entre sí.  ¿Cuándo puede aplicarse?  Pueden aplicarse cuando se cumpla los supuestos paramétricos.  Podemos aplicar la prueba de Tukey que es una prueba paramétrica que combina todas las posibles combinaciones entre grupos para saber cuál es significativamente diferente.\n\nTukeyHSD(anova)\n\n  Tukey multiple comparisons of means\n    95% family-wise confidence level\n\nFit: aov(formula = PlantGrowth$weight ~ PlantGrowth$group)\n\n$`PlantGrowth$group`\n            diff        lwr       upr     p adj\ntrt1-ctrl -0.371 -1.0622161 0.3202161 0.3908711\ntrt2-ctrl  0.494 -0.1972161 1.1852161 0.1979960\ntrt2-trt1  0.865  0.1737839 1.5562161 0.0120064"
   }
 ]

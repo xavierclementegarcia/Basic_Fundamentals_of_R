@@ -460,9 +460,289 @@ W = 0.98268, p-value = 0.8915</code></pre>
 </section>
 <section id="homocedasticidad" class="slide level2 smaller">
 <h2>Homocedasticidad</h2>
-
-
+<p>La homocedasticidad en este caso se refiere a a la homogeneidad de varianzas. Existen 2 pruebas principales que pueden usarse para seguir con el análisis paramétrico o no paramétrico. <br> Debemos considerar Levene o Bartlet. <br></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 60%">
+<col style="width: 8%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Hipótesis</th>
+<th style="text-align: left;">Formulación de la hipótesis</th>
+<th style="text-align: left;">Valor P</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Hipótesis nula (HO)</td>
+<td style="text-align: left;">Nuestros datos se ajustan a la curva de normalidad</td>
+<td style="text-align: left;">p&gt;0.05</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Hipótesis alternativa (H1)</td>
+<td style="text-align: left;">Nuestros datos NO se ajustan a la curva de normalidad</td>
+<td style="text-align: left;">p&lt;0.05</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><strong>Posteriormente aplicamos las pruebas teniendo en cuenta ciertos criterios</strong> <br> <em>Levene es más robusta ante diferencias de normalidad, o existan dudas. Se aplica en cualquier caso.</em> <em>Bartlett es más robusta al detectar variaciones en la normalidad, pero es mejor cuando hay normalidad.</em></p>
 </section></section>
+<section>
+<section id="según-lo-observado-qué-podemos-aplicar" class="title-slide slide level1 smaller center">
+<h1>Según lo observado, ¿Qué podemos aplicar?</h1>
+
+</section>
+<section id="ejercicio-práctico-no.-2" class="slide level2" data-background-color="aquamarine">
+<h2>Ejercicio práctico No.&nbsp;2</h2>
+<p><em>Si hemos observado la normalidad, ¿Qué prueba y bajo que criterio debemos hacerlo?</em></p>
+</section>
+<section id="aplicación-de-la-prueba" class="slide level2 smaller">
+<h2>Aplicación de la prueba</h2>
+<p>Entendiendo que nuestro valor fue 0.8915 por tanto sugiere <em>p&gt;0.05</em>, entonces, aplicamos Bartlett.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">bartlett.test</span>(planta<span class="sc">$</span>weight <span class="sc">~</span> planta<span class="sc">$</span>group) <span class="co">#Prueba de Bartlett</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Bartlett test of homogeneity of variances
+
+data:  planta$weight by planta$group
+Bartlett's K-squared = 2.8786, df = 2, p-value = 0.2371</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">library</span>(car)</span>
+<span id="cb19-2"><a></a><span class="fu">leveneTest</span>(planta<span class="sc">$</span>weight <span class="sc">~</span> planta<span class="sc">$</span>group)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Levene's Test for Homogeneity of Variance (center = median)
+      Df F value Pr(&gt;F)
+group  2  1.1192 0.3412
+      27               </code></pre>
+</div>
+</div>
+<p><strong>¿Qué podemos concluir?</strong></p>
+</section>
+<section id="pruebas-paramétricas" class="slide level2 smaller">
+<h2>Pruebas Paramétricas</h2>
+<p>Una prueba paramétrica se aplica cuando el criterio de normalidad se cumple tras los supuestos.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top">
+<colgroup>
+<col style="width: 41%">
+<col style="width: 58%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Pruebas Paramétricas</th>
+<th style="text-align: left;">Pruebas NO paramétricas</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">T de Student</td>
+<td style="text-align: left;">Prueba de Wilcoxon - Mann Whitney U test</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ANOVA de una vía</td>
+<td style="text-align: left;">Prueba de Kruskal-Wallis</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Correlación de Pearson</td>
+<td style="text-align: left;">Correlación de Spearman</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Chi cuadrado de independencia</td>
+<td style="text-align: left;">Prueba de Chi-Cuadrado ´Fisher exact test</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="t-de-student" class="slide level2 smaller">
+<h2>T de Student</h2>
+<p>Podemos aplicar la prueba así.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">class</span>(PlantGrowth)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "data.frame"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>grupo_planta.split <span class="ot">&lt;-</span> <span class="fu">split</span>(PlantGrowth<span class="sc">$</span>weight, PlantGrowth<span class="sc">$</span>group)</span>
+<span id="cb23-2"><a></a><span class="fu">t.test</span>(grupo_planta.split<span class="sc">$</span>ctrl, grupo_planta.split<span class="sc">$</span>trt1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Welch Two Sample t-test
+
+data:  grupo_planta.split$ctrl and grupo_planta.split$trt1
+t = 1.1913, df = 16.524, p-value = 0.2504
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.2875162  1.0295162
+sample estimates:
+mean of x mean of y 
+    5.032     4.661 </code></pre>
+</div>
+</div>
+<p><strong>Nuestro valor p es 0.2504</strong> o sea que <em>p&gt;0.05</em> <br> <strong>¿Qué podemos inferir?</strong></p>
+</section>
+<section id="anova-de-una-vía" class="slide level2 smaller">
+<h2>Anova de una vía</h2>
+<p>La aplicación de ANOVA de una vía implica que tomamos en cuenta una de las colas, o sea hacemos alusión a una de las variables.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>anova<span class="ot">&lt;-</span><span class="fu">aov</span>(PlantGrowth<span class="sc">$</span>weight <span class="sc">~</span> PlantGrowth<span class="sc">$</span>group)</span>
+<span id="cb25-2"><a></a><span class="fu">summary</span>(anova)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                  Df Sum Sq Mean Sq F value Pr(&gt;F)  
+PlantGrowth$group  2  3.766  1.8832   4.846 0.0159 *
+Residuals         27 10.492  0.3886                 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p><strong>¿Qué podemos inferir sobre nuestros resultados para la prueba paramétrica?</strong></p>
+</section>
+<section id="pruebas-no-paramétricas" class="slide level2 smaller">
+<h2>Pruebas no Paramétricas</h2>
+<p>Una prueba <strong>NO</strong> paramétrica se aplica cuando el criterio de normalidad no se cumple tras los supuestos. <br> Para propósitos del ejercicio aplicaremos usaremos el mismo dataset.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a>kruskal_wallis<span class="ot">&lt;-</span> <span class="fu">kruskal.test</span>(PlantGrowth<span class="sc">$</span>weight <span class="sc">~</span> PlantGrowth<span class="sc">$</span>group)</span>
+<span id="cb27-2"><a></a>kruskal_wallis</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Kruskal-Wallis rank sum test
+
+data:  PlantGrowth$weight by PlantGrowth$group
+Kruskal-Wallis chi-squared = 7.9882, df = 2, p-value = 0.01842</code></pre>
+</div>
+</div>
+<p><strong>¿Qué podemos inferir?</strong></p>
+</section>
+<section id="sobre-nuestros-resultados-obtenidos" class="slide level2 smaller">
+<h2>Sobre nuestros resultados obtenidos</h2>
+<p><strong>En caso de ser una prueba paramétrica. Tendríamos que:</strong></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 58%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Hipótesis</th>
+<th style="text-align: left;">Formulación de la hipótesis</th>
+<th style="text-align: left;">Valor P</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Hipótesis nula (HO)</td>
+<td style="text-align: left;">No hay diferencia significativa entre los grupos</td>
+<td style="text-align: left;">p&gt;0.05</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Hipótesis alternativa (H1)</td>
+<td style="text-align: left;">Hay diferencia significativa entre los grupos</td>
+<td style="text-align: left;">p&lt;0.05</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><strong>En caso de tener una prueba no paramétrica:</strong></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 58%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Hipótesis</th>
+<th style="text-align: left;">Formulación de la hipótesis</th>
+<th style="text-align: left;">Valor P</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Hipótesis nula (HO)</td>
+<td style="text-align: left;">No hay diferencia significativa entre los grupos</td>
+<td style="text-align: left;">p&gt;0.05</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Hipótesis alternativa (H1)</td>
+<td style="text-align: left;">Hay diferencia significativa entre los grupos</td>
+<td style="text-align: left;">p&lt;0.05</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><strong>Entonces, ¿Qué podemos suponer?</strong></p>
+</section>
+<section id="pruebas-pos-hoc-paramétricas" class="slide level2 smaller">
+<h2>Pruebas <em>Pos-hoc</em> paramétricas</h2>
+<p>Se pueden utilizar cuando se quiere saber la diferencia entre grupos específicos entre sí. <br> <strong>¿Cuándo puede aplicarse?</strong> <br> Pueden aplicarse cuando se cumpla los supuestos paramétricos. <br> Podemos aplicar la prueba de Tukey que es una prueba paramétrica que combina todas las posibles combinaciones entre grupos para saber cuál es significativamente diferente.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="fu">TukeyHSD</span>(anova)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = PlantGrowth$weight ~ PlantGrowth$group)
+
+$`PlantGrowth$group`
+            diff        lwr       upr     p adj
+trt1-ctrl -0.371 -1.0622161 0.3202161 0.3908711
+trt2-ctrl  0.494 -0.1972161 1.1852161 0.1979960
+trt2-trt1  0.865  0.1737839 1.5562161 0.0120064</code></pre>
+</div>
+</div>
+</section>
+<section id="pruebas-pos-hoc-no-paramétricas" class="slide level2 smaller">
+<h2>Pruebas <em>Pos-hoc</em> no paramétricas</h2>
+<p>Un ejemplo podría ser (Aunque en este caso no es aplicable realmente), sería la prueba de Dunn,que compara pares de grupos con ajustes para múltiples comparaciones. Es la alternativa para Kruskal-Wallis.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a><span class="fu">library</span>(dunn.test)</span>
+<span id="cb31-2"><a></a><span class="fu">dunn.test</span>(PlantGrowth<span class="sc">$</span>weight, PlantGrowth<span class="sc">$</span>group, <span class="at">method =</span> <span class="st">"bonferroni"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Kruskal-Wallis rank sum test
+
+data: x and group
+Kruskal-Wallis chi-squared = 7.9882, df = 2, p-value = 0.02
+
+                           Comparison of x by group                            
+                                 (Bonferroni)                                  
+Col Mean-|
+Row Mean |       ctrl       trt1
+---------+----------------------
+    trt1 |   1.117725
+         |     0.3955
+         |
+    trt2 |  -1.689289  -2.807015
+         |     0.1367    0.0075*
+
+alpha = 0.05
+Reject Ho if p &lt;= alpha/2</code></pre>
+</div>
+</div>
+</section>
+<section id="qué-podemos-concluir" class="slide level2 smaller">
+<h2>¿Qué podemos concluir?</h2>
+<p>En el caso que sí es adecuado: <br> <strong>Tras la solución de t de student no hay diferencias significativas entre ambos grupos</strong> <br> <strong>Tras la solución de ANOVA de una vía concluímos que hay mayor variabilidad entre los grupos y que hay diferencias significativas entre ellos</strong></p>
+</section></section>
+<section id="muchas-gracias" class="title-slide slide level1 smaller center">
+<h1>Muchas gracias</h1>
+
+
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

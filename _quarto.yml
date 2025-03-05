@@ -33,6 +33,8 @@ website:
             text: Ggplot2 & data representation
           - href: basic5.qmd
             text: Statistical Analysis  Introduction With R
+          - href: basic6.qmd
+            text: ¿Qué es la ciencia reproducible?
       - href: References.qmd
         text: References
           

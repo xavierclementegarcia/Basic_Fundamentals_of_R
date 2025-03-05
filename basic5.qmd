@@ -156,4 +156,156 @@ shapiro.test(planta$weight)
 
 ## Homocedasticidad {.smaller}
 
+La homocedasticidad en este caso se refiere a a la homogeneidad de varianzas. Existen 2 pruebas principales que pueden usarse para seguir con el análisis paramétrico o no paramétrico.
+<br>
+Debemos considerar Levene o Bartlet.
+<br>
+```{r}
+#| echo: false
+library(knitr)
+valor_p2<-c("p>0.05", "p<0.05")
+hp2<-c("Hipótesis nula (HO)", "Hipótesis alternativa (H1)")
+formulacion2<-c("No hay diferencia significativa entre las varianzas","Hay diferencia significativa entre las varianzas")
+hipotesis2<-data.frame(hp1, formulacion1, valor_p1)
+colnames(hipotesis2)<-c("Hipótesis", "Formulación de la hipótesis", "Valor P")
+hipo_kable2<- kable(hipotesis2, label = "Prueba de hipótesis para Homogeneidad de Varianzas")
+hipo_kable2
+```
+**Posteriormente aplicamos las pruebas teniendo en cuenta ciertos criterios**
+<br>
+*Levene es más robusta ante diferencias de normalidad, o existan dudas. Se aplica en cualquier caso.*
+*Bartlett es más robusta al detectar variaciones en la normalidad, pero es mejor cuando hay normalidad.*
+
+# Según lo observado, ¿Qué podemos aplicar? {.smaller}
+
+
+## Ejercicio práctico No. 2 {background-color="aquamarine"}
+*Si hemos observado la normalidad, ¿Qué prueba y bajo que criterio debemos hacerlo?*
+
+## Aplicación de la prueba {.smaller}
+Entendiendo que nuestro valor fue 0.8915 por tanto sugiere *p>0.05*, entonces, aplicamos Bartlett. 
+```{r}
+#| echo: true
+bartlett.test(planta$weight ~ planta$group) #Prueba de Bartlett
+library(car)
+leveneTest(planta$weight ~ planta$group)
+
+```
+**¿Qué podemos concluir?**
+
+## Pruebas Paramétricas {.smaller}
+Una prueba paramétrica se aplica cuando el criterio de normalidad se cumple tras los supuestos. 
+
+```{r}
+pruebas.parametricas<-c("T de Student", "ANOVA de una vía", "Correlación de Pearson", "Chi cuadrado de independencia")
+pruebas.no.paramétricas<-c("Prueba de Wilcoxon - Mann Whitney U test", "Prueba de Kruskal-Wallis", "Correlación de Spearman","Prueba de Chi-Cuadrado ´Fisher exact test")
+pruebas<-data.frame(pruebas.parametricas, pruebas.no.paramétricas)
+colnames(pruebas)<-c("Pruebas Paramétricas", "Pruebas NO paramétricas")
+kable_pruebas<-kable(pruebas)
+kable_pruebas
+```
+
+
+## T de Student {.smaller}
+Podemos aplicar la prueba así. 
+
+```{r}
+#| echo: true 
+class(PlantGrowth)
+grupo_planta.split <- split(PlantGrowth$weight, PlantGrowth$group)
+t.test(grupo_planta.split$ctrl, grupo_planta.split$trt1)
+```
+**Nuestro valor p es 0.2504** o sea que *p>0.05*
+<br>
+**¿Qué podemos inferir?**
+
+## Anova de una vía {.smaller}
+La aplicación de ANOVA de una vía implica que tomamos en cuenta una de las colas, o sea hacemos alusión a una de las variables. 
+```{r}
+#| echo: true 
+anova<-aov(PlantGrowth$weight ~ PlantGrowth$group)
+summary(anova)
+```
+**¿Qué podemos inferir sobre nuestros resultados para la prueba paramétrica?** 
+
+
+## Pruebas no Paramétricas {.smaller}
+Una prueba **NO** paramétrica se aplica cuando el criterio de normalidad no se cumple tras los supuestos. 
+<br>
+Para propósitos del ejercicio aplicaremos usaremos el mismo dataset. 
+```{r}
+#| echo: true 
+kruskal_wallis<- kruskal.test(PlantGrowth$weight ~ PlantGrowth$group)
+kruskal_wallis
+```
+**¿Qué podemos inferir?**
+
+## Sobre nuestros resultados obtenidos {.smaller}
+**En caso de ser una prueba paramétrica. Tendríamos que:**
+
+```{r}
+#| echo: false
+library(knitr)
+valor_p3<-c("p>0.05", "p<0.05")
+hp3<-c("Hipótesis nula (HO)", "Hipótesis alternativa (H1)")
+formulacion3<-c("No hay diferencia significativa entre los grupos","Hay diferencia significativa entre los grupos")
+hipotesis3<-data.frame(hp3, formulacion3, valor_p3)
+colnames(hipotesis3)<-c("Hipótesis", "Formulación de la hipótesis", "Valor P")
+hipo_kable3<- kable(hipotesis3, label = "Prueba de hipótesis para una prueba paramétrica")
+hipo_kable3
+```
+**En caso de tener una prueba no paramétrica:**
+```{r}
+#| echo: false
+library(knitr)
+valor_p4<-c("p>0.05", "p<0.05")
+hp4<-c("Hipótesis nula (HO)", "Hipótesis alternativa (H1)")
+formulacion4<-c("No hay diferencia significativa entre los grupos","Hay diferencia significativa entre los grupos")
+hipotesis4<-data.frame(hp4, formulacion4, valor_p4)
+colnames(hipotesis4)<-c("Hipótesis", "Formulación de la hipótesis", "Valor P")
+hipo_kable4<- kable(hipotesis4, label = "Prueba de hipótesis para una prueba NO paramétrica")
+hipo_kable4
+```
+**Entonces, ¿Qué podemos suponer?**
+
+
+## Pruebas *Pos-hoc* paramétricas {.smaller}
+Se pueden utilizar cuando se quiere saber la diferencia entre grupos específicos entre sí. 
+<br>
+**¿Cuándo puede aplicarse?**
+<br>
+Pueden aplicarse cuando se cumpla los supuestos paramétricos. 
+<br>
+Podemos aplicar la prueba de Tukey que es una prueba paramétrica que combina todas las posibles combinaciones entre grupos para saber cuál es significativamente diferente. 
+```{r}
+#| echo: true
+TukeyHSD(anova)
+
+```
+
+## Pruebas *Pos-hoc* no paramétricas {.smaller}
+
+Un ejemplo podría ser (Aunque en este caso no es aplicable realmente), sería la prueba de Dunn,que compara pares de grupos con ajustes para múltiples comparaciones. Es la alternativa para Kruskal-Wallis. 
+```{r}
+#| echo: true
+library(dunn.test)
+dunn.test(PlantGrowth$weight, PlantGrowth$group, method = "bonferroni")
+
+```
+
+
+## ¿Qué podemos concluir? {.smaller}
+En el caso que sí es adecuado: 
+<br>
+**Tras la solución de t de student no hay diferencias significativas entre ambos grupos**
+<br>
+**Tras la solución de ANOVA de una vía concluímos que hay mayor variabilidad entre los grupos y que hay diferencias significativas entre ellos**
+
+# Muchas gracias {.smaller}
+
+
+
+
+
+
 
