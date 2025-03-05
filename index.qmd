@@ -13,7 +13,6 @@ Aquí podrás encontrar a toda hora y en cualquier momento pequeños ejemplos ex
 
 En el apartado de "Course" encontrará toda la información resumida en 6 diapositivas para que puedas aplicar el tidyverse, gráficos, tablas, pruebas estadísticas comunes en Biología y además en un futuro un material para usar R Markdown.
 
-
 ## Contenido del curso {.scrollable}
 
 **Puedes acceder al contenido del curso en el apartado curso del menú**
@@ -25,7 +24,6 @@ En el apartado de "Course" encontrará toda la información resumida en 6 diapos
 -   Manipulación de datos con tidyverse
 -   Introducción a pruebas estadísticas básicas
 -   Ciencia reproducible (Introducción a R Markdown y Quarto)
-
 
 ## Zona de descarga {.smaller}
 
