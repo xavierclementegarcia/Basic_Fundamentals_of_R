@@ -6,9 +6,154 @@ format:
   revealjs:
     theme: default
     footer: '<a href="https://xavierclementegarcia.github.io/Basic_Fundamentals_of_R/" target="_blank">Fundaments Basic R</a>'
-echo: true
+echo: false
 ---
+
+## Objetivo {.smaller}
+Aprender como describir datos, formular hipótesis, validar supuestos y aplicar pruebas estadísticas en R. 
 
 ## Estadística descriptiva {.smaller}
 
-## Análisis bayesianos {.smaller}
+**Medidas de tendencia central**
+Existen varias pruebas que nos permiten describir la composición y comportamiento de nuestros datos. 
+<br>
+Vamos a clasificar medidas de tendencia central y medidas de dispersión 
+```{r}
+nombres<-c("Media", "Mediana")
+significados_mtc<-c("Se refiere al promedio de un conjunto de datos","El valor que se encuentra en la mitad de un conjunto de daots")
+mtc<-data.frame(nombres, significados_mtc)
+colnames(mtc)<-c("Estadísticos", "Definición")
+library(knitr)
+mtc_kable<- kable(mtc)
+mtc_kable
+```
+
+**Medidas de dispersión**
+
+```{r}
+dispersionames<-c("Desviación estándar", "Varianza", "Rango")
+significados_md<-c("Qué tan dispersos están los datos en un conjunto","Dispersión de los datos entorno a la media", "Diferencias entre valores máximos y mínimos en una muestra de datos")
+md<-data.frame(dispersionames, significados_md)
+colnames(md)<-c("Estadísticos", "Definición")
+library(knitr)
+md_kable<- kable(md)
+md_kable
+```
+
+# Ahora trabajaremos con dos bases de datos *PlantGrowth* y *Palmerpenguis* {.smaller}
+
+## Primeros pasos con PlantGrowth {.smaller}
+
+**Medidas de tendencia central**
+```{r}
+#| echo: true
+data("PlantGrowth")
+mean(PlantGrowth$weight)
+median(PlantGrowth$weight)
+```
+**Medidas de dispersión**
+```{r}
+#| echo: true
+sd(PlantGrowth$weight)
+var(PlantGrowth$weight)
+range(PlantGrowth$weight)
+```
+**Otra función**
+```{r}
+#| echo: true
+summary(PlantGrowth$weight)
+```
+## Distribución de los datos {.smaller}
+Antes de partir en un análisis de normalidad puede ser interesante oberservar como se distribuyen los datos. 
+<br>
+Para entender esto, habrá que partir desde un ejemplo básico.
+<br>
+```{r}
+#| echo: false
+hist(PlantGrowth$weight, xlab = "Peso de las plantas en tratamiento", ylab = "Frecuencias", main = "Un pequeño ejemplo de distribución")
+```
+**¿Cómo se entienden los datos?**
+
+## Análisis de datos {.smaller}
+Supongamos que partimos con el siguiente ejemplo. 
+```{r}
+#| echo: true
+data("PlantGrowth")
+attach(PlantGrowth)
+planta<-data.frame(PlantGrowth)
+planta
+```
+## ¿Qué podemos suponer según nuestros datos? {.smaller}
+**1. ¿Qué tipos de pruebas podríamos aplicar?**
+<br>
+**2. ¿Por qué podemos aplicar dichas pruebas?**
+<br>
+**3. ¿Cuántos grupos tenemos?**
+<br>
+**4. ¿Qué concluímos en este punto?**
+
+## Contexto de los datos {.smaller}
+Tenemos 30 datos. Se comparan 3 grupos (un control) y dos tratamientos según la variación el peso.
+<br>
+**Planteamiento del problema**
+<br>
+Variable dependiente: Peso
+<br>
+Variable independiente: Grupo 
+<br>
+**Formulación de hipótesis**
+
+## Formulación de hipótesis {.smaller}
+```{r}
+#| echo: false
+valor_p<-c("p>0.05", "p<0.05")
+hp<-c("Hipótesis nula (HO)", "Hipótesis alternativa (H1)")
+formulacion<-c("No hay diferencias significativas en el peso de las plantas en los tratamientos","Hay diferencias significativas en el peso de las plantas en al menos uno de los tratamientos")
+hipotesis<-data.frame(hp, formulacion, valor_p)
+colnames(hipotesis)<-c("Hipótesis", "Formulación de la hipótesis", "Valor P")
+hipo_kable<- kable(hipotesis)
+hipo_kable
+```
+Este será nuestro planteamiento. Lo siguiente que podríamos hacer es hacer una evaluación visual sobre qué tenemos y cómo podemos partir para llegar a una respuesta. 
+
+## Evaluación de supuestos {.smaller}
+
+Primero hagamos un histograma.
+```{r}
+library(ggplot2)
+ggplot(planta)+
+  geom_histogram(aes(x=planta$weight, fill = group), position = "identity")
+
+```
+## Esta será otra forma más simple de verlo {.smaller}
+
+```{r}
+hist(planta$weight, col = "gold", xlab = "Pesos", ylab = "Frecuencias", main = "¿Qué podemos analizar aquí? ")
+
+```
+
+## Prueba de Shapiro-Wilk {.smaller}
+La prueba de Shapiro-Wilk permite que evaluemos si existe o no normalidad en nuestros datos. 
+```{r}
+#| echo: false
+valor_p1<-c("p>0.05", "p<0.05")
+hp1<-c("Hipótesis nula (HO)", "Hipótesis alternativa (H1)")
+formulacion1<-c("Nuestros datos se ajustan a la curva de normalidad","Nuestros datos NO se ajustan a la curva de normalidad")
+hipotesis1<-data.frame(hp1, formulacion1, valor_p1)
+colnames(hipotesis1)<-c("Hipótesis", "Formulación de la hipótesis", "Valor P")
+hipo_kable1<- kable(hipotesis1, label = "Prueba de hipótesis para Shapiro-Wilk")
+hipo_kable1
+
+
+```
+**Al proceder con la función podemos tener**
+```{r}
+#| echo: true
+shapiro.test(planta$weight)
+
+```
+**Qué podemos concluir?**
+
+## Homocedasticidad {.smaller}
+
+
