@@ -7,6 +7,8 @@ theme:
 
 Hola!
 
+Bienvenido
+
 Este curso inicialmente estará hecho en español, mi lenguaje natal. La idea es que pueda ser una forma más sencilla de explicar R, sin tanto texto y sin demasiadas horas.
 
 Aquí podrás encontrar a toda hora y en cualquier momento pequeños ejemplos explicativos que pueden ayudarte en tu camino dentro de las Ciencias Biológicas con R. Buena suerte.
