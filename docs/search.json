@@ -1,416 +1,10 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Basic Fundamentals of R",
     "section": "",
-    "text": "Hola!\nBienvenido\nEste curso inicialmente estará hecho en español, mi lenguaje natal. La idea es que pueda ser una forma más sencilla de explicar R, sin tanto texto y sin demasiadas horas.\nAquí podrás encontrar a toda hora y en cualquier momento pequeños ejemplos explicativos que pueden ayudarte en tu camino dentro de las Ciencias Biológicas con R. Buena suerte.\nEn el apartado de “Course” encontrará toda la información resumida en 6 diapositivas para que puedas aplicar el tidyverse, gráficos, tablas, pruebas estadísticas comunes en Biología y además en un futuro un material para usar R Markdown."
-  },
-  {
-    "objectID": "basic1.html#qué-es-r",
-    "href": "basic1.html#qué-es-r",
-    "title": "Introducción a R",
-    "section": "¿Qué es R?",
-    "text": "¿Qué es R?\nEs un entorno y lenguaje de programación con un enfoque en el análisis estadístico.\nR es parte del sistema GNU y se distribuye bajo la licencia GNU GPL. Es un lenguaje popular dentro del Machine learning, minería de datos, econometría, biología, bioinformática e inferencia estadística."
-  },
-  {
-    "objectID": "basic1.html#conceptos-claves",
-    "href": "basic1.html#conceptos-claves",
-    "title": "Introducción a R",
-    "section": "Conceptos claves",
-    "text": "Conceptos claves\nEn esta sesión miraremos los siguientes conceptos claves:\n\n\n\n\n\nConceptos\nDefiniciones\n\n\n\n\nPlots\nDiagramas básicos que vienen con R\n\n\nBarplots\nObservar tendencia de una muestra, frecuencias, etc\n\n\nPie\nDiagramas circulares para ver proporciones\n\n\nggplot\nLibrería para gráficos estilizados"
-  },
-  {
-    "objectID": "basic1.html#aplicaciones-en-biología",
-    "href": "basic1.html#aplicaciones-en-biología",
-    "title": "Introducción a R",
-    "section": "Aplicaciones en Biología",
-    "text": "Aplicaciones en Biología\nEn Biología existen muchas aplicaciones que pueden llevarse acabo con R, por ejemplo:\n\nEstadística (Análisis de biodiversidad, comparaciones de muestra, homogeneidad de varianzas, etc)\nConteos de especies y desarrollo de mapas\nGráficas (dendogramas, clústers, diagramas)"
-  },
-  {
-    "objectID": "basic1.html#qué-tipo-de-pruebas-puedo-utilizar-en-r",
-    "href": "basic1.html#qué-tipo-de-pruebas-puedo-utilizar-en-r",
-    "title": "Introducción a R",
-    "section": "¿Qué tipo de pruebas puedo utilizar en R?",
-    "text": "¿Qué tipo de pruebas puedo utilizar en R?\nSegún el criterio son muchas. Las pruebas más utilizadas que podrías necesitar (paramétricas / no paramétricas) son:\n\n\n                 pruebas_paramétricas  pruebas_n_paramétricas\n1                        T de Student          Kruskal Wallis\n2                ANOVA 1 vía y 2 vías       U de Mann Withney\n3              Correlación de Pearson Correlación de Spearman\n4 Prueba T para muestras dependientes      Prueba de Wilcoxon\n5 Prueba para muestras independientes      Prueba de Friedman"
-  },
-  {
-    "objectID": "basic1.html",
-    "href": "basic1.html",
-    "title": "Introducción a R",
-    "section": "",
-    "text": "Es un entorno y lenguaje de programación con un enfoque en el análisis estadístico.\nR es parte del sistema GNU y se distribuye bajo la licencia GNU GPL. Es un lenguaje popular dentro del Machine learning, minería de datos, econometría, biología, bioinformática e inferencia estadística."
-  },
-  {
-    "objectID": "basic1.html#interfaz-de-r",
-    "href": "basic1.html#interfaz-de-r",
-    "title": "Introducción a R",
-    "section": "Interfaz de R",
-    "text": "Interfaz de R\n\nFigura 1. Interfaz de R Studio"
-  },
-  {
-    "objectID": "basic1.html#algunas-consideraciones",
-    "href": "basic1.html#algunas-consideraciones",
-    "title": "Introducción a R",
-    "section": "Algunas consideraciones",
-    "text": "Algunas consideraciones\n\nFigura 2. Interfaz de R Studio"
-  },
-  {
-    "objectID": "basic1.html#diferencias-entre-usar-la-consola-y-la-zona-de-script",
-    "href": "basic1.html#diferencias-entre-usar-la-consola-y-la-zona-de-script",
-    "title": "Introducción a R",
-    "section": "Diferencias entre usar la consola y la zona de script",
-    "text": "Diferencias entre usar la consola y la zona de script\nCuando usas solo “console” no podrás guardar tu script pero obtendrás un resultado rápido. Al usar la zona de script el código se quedará ahí. Es util usar console si necesitas comprobar o sacar un resultado rápido.\n\n1+1\n\n[1] 2"
-  },
-  {
-    "objectID": "basic1.html#instalación-de-paquetes",
-    "href": "basic1.html#instalación-de-paquetes",
-    "title": "Introducción a R",
-    "section": "Instalación de paquetes",
-    "text": "Instalación de paquetes\n\n# Instalar un paquete\ninstall.packages(\"tidyverse\")\n\npackage 'tidyverse' successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\garci\\AppData\\Local\\Temp\\RtmpMB8T3G\\downloaded_packages\n\n# Cargar librería\nlibrary(\"tidyverse\")\n# La librería debería estar cargada. carguemos una de las librerías. Por defecto están las siguientes: \nlibrary(ggplot2)"
-  },
-  {
-    "objectID": "basic1.html#y-si-no-conozco-la-sintaxis-del-código",
-    "href": "basic1.html#y-si-no-conozco-la-sintaxis-del-código",
-    "title": "Introducción a R",
-    "section": "Y si no conozco la sintaxis del código?",
-    "text": "Y si no conozco la sintaxis del código?\n\n#Puede surgir la necesidad de buscar la sintaxis del código, pasa frecuentemente y espero no ser el único. Sin embargo esto puede solucionarse de la siguiente manera: \n\nEjemplo:\n\n# ?install.packages\n# A tu derecha en \"help\" se abrirá la ventana con las ayudas disponibles para el comando.\n\n# ?ggplot2\n#Lo mismo ocurriría con ggplo2. \n\n¿Y si necesito algo más específico?\n\n#Con ggplot2 puede ser así: Debe anteponerse \"?\"\n# ?geom_bar\n# ?geom_point"
-  },
-  {
-    "objectID": "basic1.html#conceptos-claves-para-la-próxima-clase",
-    "href": "basic1.html#conceptos-claves-para-la-próxima-clase",
-    "title": "Introducción a R",
-    "section": "Conceptos claves para la próxima clase",
-    "text": "Conceptos claves para la próxima clase\nEn esta sesión miraremos los siguientes conceptos claves:\n\n\n\nConceptos importantes\n\n\nConceptos\nDefiniciones\n\n\n\n\nPlots\nDiagramas básicos que vienen con R\n\n\nBarplots\nObservar tendencia de una muestra, frecuencias, etc\n\n\nPie\nDiagramas circulares para ver proporciones\n\n\nggplot\nLibrería para gráficos estilizados"
-  },
-  {
-    "objectID": "basic1.html#referencias",
-    "href": "basic1.html#referencias",
-    "title": "Introducción a R",
-    "section": "Referencias",
-    "text": "Referencias\nMelbourne Bioinformatics. (2023) R for biologists GitHub"
-  },
-  {
-    "objectID": "basic2.html#qué-es-el-tidyverse",
-    "href": "basic2.html#qué-es-el-tidyverse",
-    "title": "Tablas y organización de datos",
-    "section": "¿Qué es el Tidyverse?",
-    "text": "¿Qué es el Tidyverse?\nEl paquete tidyverse es una colección de diferentes paqueterías útiles en la ciencia de datos.\n\n\n\n\n\n\n\nFigura 1. Introducción al Tidyverse. Tomado de Tidyverse.org\n\n\nEste paquete es fundamental porque entre otras cosas contiene “readr” y “ggplot2”. El primero se requiere para la lectura de tablas y bases de datos exportadas desde excel y el otro para la esquematización de gráficos."
-  },
-  {
-    "objectID": "basic2.html#creación-de-tablas",
-    "href": "basic2.html#creación-de-tablas",
-    "title": "Tablas y organización de datos",
-    "section": "¿Creación de tablas?",
-    "text": "¿Creación de tablas?\nLa creación de tablas puede ser un enfoque útil cuando necesitas esquematizar y organizar.Por ejemplo\n\n\n  nombres apellidos  carrera\n1  Xavier    García Biología\n2   Daine   Guevara Biología\n3  Alexis       Paz Biología\n4 Natalia  Quintero Biología\n\n\nSin embargo el código para una tabla como la anterior también podría complementarse cuantas veces sea necesario. Por ejemplo:\n\nespecies&lt;-c(\"*Centruroides margaritatus*\", \"*Tityus pachyurus*\", \"*Tityus trivittatus*\", \"*centruroides gracilis*\", \"*Centruroides suffusus*\")\nambiente&lt;-c(\"luz\", \"luz\", \"luz\", \"sombra\", \"sombra\")\nMunicipio&lt;-c(\"Popayán\", \"Villa de Leyva\", \"Bogotá\", \"Argentina, Huila\", \"Inza\")\nDepartamento&lt;-c(\"Cauca\", \"Boyacá\", \"Cundinamarca\", \"Huila\", \"Cauca\")\ncantidad_de_individuos&lt;-c(2,4,3,4,5)\nframe_scorpions&lt;- data.frame(especies, ambiente, Municipio, Departamento, cantidad_de_individuos)\n\nEn este punto tendremos un “data.frame” organizado según nuestras variables. Podremos añadir n variables."
-  },
-  {
-    "objectID": "basic2.html#bases-de-datos",
-    "href": "basic2.html#bases-de-datos",
-    "title": "Tablas y organización de datos",
-    "section": "Bases de datos",
-    "text": "Bases de datos\n La base de datos que encontrarás está basada en el trabajo de Maria Doyle (2019).\n Sobre el contexto Es una base de datos del proyecto GREIN: GEO RNA-seq Experiments Interactive Navigator. En esta webpage puede accederse a una amplia variedad de metadatos.  Este trabajo será para realización en clase"
-  },
-  {
-    "objectID": "basic2.html#introducción-al-data.frame",
-    "href": "basic2.html#introducción-al-data.frame",
-    "title": "Tablas y organización de datos",
-    "section": "Introducción al data.frame",
-    "text": "Introducción al data.frame"
-  },
-  {
-    "objectID": "basic2.html#otras-funciones-para-tablas",
-    "href": "basic2.html#otras-funciones-para-tablas",
-    "title": "Tablas y organización de datos",
-    "section": "Otras funciones para tablas",
-    "text": "Otras funciones para tablas"
-  },
-  {
-    "objectID": "basic2.html#intro",
-    "href": "basic2.html#intro",
-    "title": "Tablas y organización de datos",
-    "section": "intro",
-    "text": "intro"
-  },
-  {
-    "objectID": "basic2.html#section",
-    "href": "basic2.html#section",
-    "title": "Tablas y organización de datos",
-    "section": "",
-    "text": "especies\nambiente\nMunicipio\nDepartamento\ncantidad_de_individuos\n\n\n\n\nCentruroides margaritatus\nluz\nPopayán\nCauca\n2\n\n\nTityus pachyurus\nluz\nVilla de Leyva\nBoyacá\n4\n\n\nTityus trivittatus\nluz\nBogotá\nCundinamarca\n3\n\n\ncentruroides gracilis\nsombra\nArgentina, Huila\nHuila\n4\n\n\nCentruroides suffusus\nsombra\nInza\nCauca\n5\n\n\n\n\n\nHabremos obtenido nuestra tabla. Sin embargo ¿Queremos mantener esos nombres dados por las variables? NO,la respuesta es sencilla, pues no se ve bien y estético."
-  },
-  {
-    "objectID": "basic2.html#section-1",
-    "href": "basic2.html#section-1",
-    "title": "Tablas y organización de datos",
-    "section": "",
-    "text": "Para ello haremos lo siguiente:\n\ncolnames(frame_scorpions)&lt;-c(\"Especies\", \"Ambientes\",\"Municipio\", \"Departamento\", \"No. de Individuos\")\n\n¿Qué hemos hecho aquí? Hemos sustituído las leyendas de nuestras columnas. Usamos “colnames” función que permite introducir nuestra variable data.frame “frame_scorpions”. Por tanto nuestra tabla debería verse así para la siguiente diapositiva.\n\n\n\n\n\n\n\n\n\n\n\n\nEspecies\nAmbientes\nMunicipio\nDepartamento\nNo. de Individuos\n\n\n\n\nCentruroides margaritatus\nluz\nPopayán\nCauca\n2\n\n\nTityus pachyurus\nluz\nVilla de Leyva\nBoyacá\n4\n\n\nTityus trivittatus\nluz\nBogotá\nCundinamarca\n3\n\n\ncentruroides gracilis\nsombra\nArgentina, Huila\nHuila\n4\n\n\nCentruroides suffusus\nsombra\nInza\nCauca\n5"
-  },
-  {
-    "objectID": "basic2.html#section-2",
-    "href": "basic2.html#section-2",
-    "title": "Tablas y organización de datos",
-    "section": "",
-    "text": "head(mtcars)\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1\n\n\nEstos serían dos ejemplos con head()."
-  },
-  {
-    "objectID": "basic2.html#ejercicio-práctico-no.-1-.smaller",
-    "href": "basic2.html#ejercicio-práctico-no.-1-.smaller",
-    "title": "Tablas y organización de datos",
-    "section": "Ejercicio práctico No. 1 {.smaller}",
-    "text": "Ejercicio práctico No. 1 {.smaller}\nDirígete a “Documentation” en mi página y obtendrás la carpeta donde encontrarás el ejercicio propuesto. ¿No entiendes como hacerlo? Revisa mi vídeo."
-  },
-  {
-    "objectID": "basic2.html#ejercicio-práctico-no.-1-background-color806040",
-    "href": "basic2.html#ejercicio-práctico-no.-1-background-color806040",
-    "title": "Tablas y organización de datos",
-    "section": "Ejercicio práctico No. 1 {background-color=“#806040”}",
-    "text": "Ejercicio práctico No. 1 {background-color=“#806040”}\nDirígete a “Documentation” en mi página y obtendrás la carpeta donde encontrarás el ejercicio propuesto. ¿No entiendes como hacerlo? Revisa mi vídeo."
-  },
-  {
-    "objectID": "basic2.html#ejercicio-práctico-no.-1-background-color806040.smaller",
-    "href": "basic2.html#ejercicio-práctico-no.-1-background-color806040.smaller",
-    "title": "Tablas y organización de datos",
-    "section": "Ejercicio práctico No. 1 {background-color=“#806040”,.smaller}",
-    "text": "Ejercicio práctico No. 1 {background-color=“#806040”,.smaller}\nDirígete a “Documentation” en mi página y obtendrás la carpeta donde encontrarás el ejercicio propuesto. ¿No entiendes como hacerlo? Revisa mi vídeo."
-  },
-  {
-    "objectID": "basic2.html#ejercicio-práctico-no.-1-.smaller-style-background-color806040",
-    "href": "basic2.html#ejercicio-práctico-no.-1-.smaller-style-background-color806040",
-    "title": "Tablas y organización de datos",
-    "section": "Ejercicio práctico No. 1 {.smaller} {style= “background-color:#806040;”}",
-    "text": "Ejercicio práctico No. 1 {.smaller} {style= “background-color:#806040;”}\nDirígete a “Documentation” en mi página y obtendrás la carpeta donde encontrarás el ejercicio propuesto. ¿No entiendes como hacerlo? Revisa mi vídeo."
-  },
-  {
-    "objectID": "basic2.html#ejercicio-práctico-no.-1",
-    "href": "basic2.html#ejercicio-práctico-no.-1",
-    "title": "Tablas y organización de datos",
-    "section": "Ejercicio práctico No. 1",
-    "text": "Ejercicio práctico No. 1\nDirígete a documentación en la página de este curso para obtener el ejercicio."
-  },
-  {
-    "objectID": "basic0.html#section",
-    "href": "basic0.html#section",
-    "title": "Tipos, estructuras y operadores de datos",
-    "section": "",
-    "text": "Si quisieramos armar una tabla para los siguientes datos ya podríamos hacerlo debido a que hemos creado propiamente muchas listas que pueden indexarse.\n\ntabla_etno&lt;- data.frame(sp_asteraceae, ncomunes, uso_medicinal,uso_alimenticio, uso_ornamental)\n#Debo hacer un arreglo en los nombres de columnas\ncolnames(tabla_etno)&lt;-c(\"Nombre científico\", \"Nombres comúnes\", \"Uso medicinal\", \"Uso alimenticion\", \"Uso ornamental\")\n\n\n\n\n\n\n\n\n\n\n\n\n\nNombre científico\nNombres comúnes\nUso medicinal\nUso alimenticion\nUso ornamental\n\n\n\n\nHelianthus annuus\nGirasol\n3\n2\n2\n\n\nPterocaulon alopecuroides\nHierba del piojo o árnica de montaña\n4\n6\n6\n\n\nSenecio vulgaris\nSenecio común\n2\n3\n7\n\n\nArnica montana\nÁrnica\n5\n7\n8\n\n\nArtemisa vulgaris\nAjenjo o artemisa\n6\n2\n4\n\n\nCalendula officinallis\nCaléndula\n5\n8\n2\n\n\nEspeletia hartwegiana\nFrailejón\n1\n0\n0"
-  },
-  {
-    "objectID": "basic0.html#tipos-de-datos",
-    "href": "basic0.html#tipos-de-datos",
-    "title": "Tipos, estructuras y operadores de datos",
-    "section": "Tipos de datos",
-    "text": "Tipos de datos\nAl igual que en otros lenguajes de programación como python, java, perl, matlab…, en R tendremos algunas clases de datos:\n\n#Tipos de datos\nx&lt;- 5 #Numérico (int-float)\ny&lt;- \"Hola\" #Carácter (String)\nz&lt;- TRUE #Lógico (Booleano)\n\nLos tipos de dato numérico pueden ser int o float. ¿Qué signfica esto?\n\nx&lt; 5 #Entero (int)\n\n[1] FALSE\n\ny&lt;- 4.5 #Decimal o flotante (Float)\n\nExisten otros tipos de datos que deberías conocer, por ejemplo:\n\nc&lt;-3+2i \nf&lt;-factor(c(\"amarillo\", \"azul\", \"rojo\")) #Factor"
-  },
-  {
-    "objectID": "basic0.html#estructuras-de-datos",
-    "href": "basic0.html#estructuras-de-datos",
-    "title": "Tipos, estructuras y operadores de datos",
-    "section": "Estructuras de datos",
-    "text": "Estructuras de datos\n\nVectores (c())\nFactores (factor())\nMatrices (matrix())\nListas (list())\nData frames (data.frame())"
-  },
-  {
-    "objectID": "basic0.html#operadores-de-datos",
-    "href": "basic0.html#operadores-de-datos",
-    "title": "Tipos, estructuras y operadores de datos",
-    "section": "Operadores de datos",
-    "text": "Operadores de datos"
-  },
-  {
-    "objectID": "basic0.html#objetivo",
-    "href": "basic0.html#objetivo",
-    "title": "Tipos, estructuras y operadores de datos",
-    "section": "Objetivo",
-    "text": "Objetivo\nVamos a familiarizarnos con el entorno de Rstudio y la sintaxis de R."
-  },
-  {
-    "objectID": "basic0.html#asignación-de-variables",
-    "href": "basic0.html#asignación-de-variables",
-    "title": "Tipos, estructuras y operadores de datos",
-    "section": "Asignación de variables",
-    "text": "Asignación de variables\n¿Qué es una variable?  Puede definirse como un conjunto finito que almacena o implica información. Puede cambiarse, eliminarse o significar.\nEn el siguiente ejemplo verás una variable creada:\n\n1+1\n\n[1] 2\n\n\n¿Pero y si quiero que esa operación anterior sea una variable?\n\nsuma&lt;-1+1\nsuma\n\n[1] 2\n\n\nAhora tengo una variable llamada suma.  Es necesario entender que puedo asociar mis variables. Ejemplo:\n\nresta&lt;- 1-3\n#Asociar:\nresultado&lt;-suma*resta\nresultado\n\n[1] -4"
-  },
-  {
-    "objectID": "basic0.html#tip-sobre-datos",
-    "href": "basic0.html#tip-sobre-datos",
-    "title": "Tipos, estructuras y operadores de datos",
-    "section": "Tip sobre datos",
-    "text": "Tip sobre datos\n¿Qué pasa si no conozco la naturaleza de mis datos?\n\nclass(x)\n\n[1] \"numeric\"\n\nclass(f)\n\n[1] \"factor\"\n\ntypeof(c)\n\n[1] \"complex\""
-  },
-  {
-    "objectID": "basic0.html#ejercicio-1",
-    "href": "basic0.html#ejercicio-1",
-    "title": "Tipos, estructuras y operadores de datos",
-    "section": "Ejercicio 1",
-    "text": "Ejercicio 1\nEn Rstudio van a escribir varios conjuntos de variables según el tipo de dato. Tienen 5 minutos!"
-  },
-  {
-    "objectID": "basic0.html#section-1",
-    "href": "basic0.html#section-1",
-    "title": "Tipos, estructuras y operadores de datos",
-    "section": "",
-    "text": "drosophila\n\n$Nombre_Cientifico\n[1] \"*Drosophila melanogaster*\"\n\n$Ciclo_Vida_Dias\n [1]  1  2  3  4  5  6  7  8  9 10\n\n$GenesImportantes\n[1] \"white\"    \"yellow\"   \"ebony\"    \"bithorax\"\n\n$Longitud_mm\n[1] 2.5\n\n$Modelo_Biologico\n[1] TRUE\n\n\n¿Qué pasó aquí? Simplemente una sola variable “Drosophila” ahora nos puede entregar diferentes características de una especie. Cómo una pokedex."
-  },
-  {
-    "objectID": "basic0.html#vectores",
-    "href": "basic0.html#vectores",
-    "title": "Tipos, estructuras y operadores de datos",
-    "section": "Vectores",
-    "text": "Vectores\nDigamos que estás haciendo un trabajo en botánica y quieres hacer un listado de especies de Asteraceae.  ¿Qué herramienta usas?  La lista, exacto…\n\nsp_asteraceae&lt;-c(\"*Helianthus annuus*\", \"*Pterocaulon alopecuroides*\", \"*Senecio vulgaris*\", \"*Arnica montana*\", \"*Artemisa vulgaris*\", \"*Calendula officinallis*\", \"*Espeletia hartwegiana* \")\n#La lista se puede llamar bajo el mismo nombre. \nsp_asteraceae\n\n[1] \"*Helianthus annuus*\"         \"*Pterocaulon alopecuroides*\"\n[3] \"*Senecio vulgaris*\"          \"*Arnica montana*\"           \n[5] \"*Artemisa vulgaris*\"         \"*Calendula officinallis*\"   \n[7] \"*Espeletia hartwegiana* \"   \n\n\nEn este punto solo tendrás una lista, pero puedes crear varias listas y volverlas una sola tabla. Por ejemplo si es para armar datos en una tabla sobre etnobotánica, podrías hacerlo así…\n\nncomunes&lt;-c(\"Girasol\", \"Hierba del piojo o árnica de montaña\", \"Senecio común\", \"Árnica\", \"Ajenjo o artemisa\", \"Caléndula\", \"Frailejón\")\nuso_medicinal&lt;-c(3,4,2,5,6,5,1)\nuso_alimenticio&lt;-c(2,6,3,7,2,8,0)\nuso_ornamental&lt;-c(2,6,7,8,4,2,0)"
-  },
-  {
-    "objectID": "basic0.html#dataframes",
-    "href": "basic0.html#dataframes",
-    "title": "Tipos, estructuras y operadores de datos",
-    "section": "Dataframes",
-    "text": "Dataframes\nMiremos esta sintaxis para dataframes…\n\nescorpiones &lt;- data.frame(\n  Especie = c(\"Tityus fuhrmanni\", \"Centruroides margaritatus\", \"Bothriurus coriaceus\", \"Buthus occitanus\"),\n  Longitud_mm = c(45, 65, 50, 75),\n  Veneno_Toxico = c(TRUE, TRUE, FALSE, TRUE)  \n)\n\nescorpiones\n\n                    Especie Longitud_mm Veneno_Toxico\n1          Tityus fuhrmanni          45          TRUE\n2 Centruroides margaritatus          65          TRUE\n3      Bothriurus coriaceus          50         FALSE\n4          Buthus occitanus          75          TRUE"
-  },
-  {
-    "objectID": "basic0.html#listas",
-    "href": "basic0.html#listas",
-    "title": "Tipos, estructuras y operadores de datos",
-    "section": "Listas",
-    "text": "Listas\nUna lista puede almacenar distintos tipos de datos en una misma estructura\n\n# Crear una lista con información sobre Drosophila melanogaster\ndrosophila &lt;- list(\n  Nombre_Cientifico = \"*Drosophila melanogaster*\",\n  Ciclo_Vida_Dias = c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10),  # Ciclo de vida en días\n  GenesImportantes = c(\"white\", \"yellow\", \"ebony\", \"bithorax\"),\n  Longitud_mm = 2.5,\n  Modelo_Biologico = TRUE\n)"
-  },
-  {
-    "objectID": "basic0.html#operadores-aritméticos",
-    "href": "basic0.html#operadores-aritméticos",
-    "title": "Tipos, estructuras y operadores de datos",
-    "section": "Operadores aritméticos",
-    "text": "Operadores aritméticos\nEsperanza de vida de algunas especies de Asteraceae.\n\n# Tiempo de vida en años de algunas especies\nvida_helianthus &lt;- 1    # Anual\nvida_arnica &lt;- 2        # Bianual\nvida_artemisia &lt;- 3     # Perenne\n\n# Operaciones\ntotal_vida &lt;- vida_helianthus + vida_arnica + vida_artemisia  # Suma\nvida_promedio &lt;- total_vida / 3   # Promedio de longevidad\nvida_doble_arnica &lt;- vida_arnica * 2  # Multiplicación\nvida_potencia &lt;- vida_artemisia^2   # Potencia\n\n# Mostrar resultados\ntotal_vida\n\n[1] 6\n\nvida_promedio\n\n[1] 2\n\nvida_doble_arnica\n\n[1] 4\n\nvida_potencia\n\n[1] 9"
-  },
-  {
-    "objectID": "basic0.html#operadores-relacionales",
-    "href": "basic0.html#operadores-relacionales",
-    "title": "Tipos, estructuras y operadores de datos",
-    "section": "Operadores relacionales",
-    "text": "Operadores relacionales\nLongitudes en especies de escorpiones\n\n# Longitudes en cm de dos especies\nlong_pandinus &lt;- 10   # Pandinus imperator (Escorpión emperador)\nlong_tityus &lt;- 7      # Tityus pachyurus \n\n# Comparaciones\nlong_pandinus &gt; long_tityus   # ¿Pandinus es más grande?\n\n[1] TRUE\n\nlong_pandinus == long_tityus  # ¿Tienen la misma longitud?\n\n[1] FALSE\n\nlong_tityus != 10  # ¿Tityus NO mide 10 cm?\n\n[1] TRUE"
-  },
-  {
-    "objectID": "basic0.html#operadores-lógicos",
-    "href": "basic0.html#operadores-lógicos",
-    "title": "Tipos, estructuras y operadores de datos",
-    "section": "Operadores lógicos",
-    "text": "Operadores lógicos\nEste sería un ejemplo con temperatura de hábitat en Drosophila\n\n# Rango de temperatura ideal en °C\ntemp_drosophila &lt;- 25\ntemp_min &lt;- 20\ntemp_max &lt;- 30\n\n# Evaluación de condiciones\n(temp_drosophila &gt;= temp_min) & (temp_drosophila &lt;= temp_max)  # ¿Está dentro del rango?\n\n[1] TRUE\n\n(temp_drosophila &lt; temp_min) | (temp_drosophila &gt; temp_max)  # ¿Fuera del rango?\n\n[1] FALSE\n\n! (temp_drosophila == 25)  # ¿No es exactamente 25°C?\n\n[1] FALSE"
-  },
-  {
-    "objectID": "basic0.html#operadores-de-asignación",
-    "href": "basic0.html#operadores-de-asignación",
-    "title": "Tipos, estructuras y operadores de datos",
-    "section": "Operadores de asignación",
-    "text": "Operadores de asignación\nFrecuencia de polinizadores en plantas de la familia Asteraceae\n\n# Frecuencia de visitas por día\nabejas &lt;- 30\nmariposas &lt;- 12\nescarabajos = 8  # También se puede usar \"=\"\n\n# Alternativa de asignación derecha\n50 -&gt; colibries  \n\n# Mostrar variables\nabejas\n\n[1] 30\n\nmariposas\n\n[1] 12\n\nescarabajos\n\n[1] 8\n\ncolibries\n\n[1] 50"
-  },
-  {
-    "objectID": "basic0.html#ejercicio-2",
-    "href": "basic0.html#ejercicio-2",
-    "title": "Tipos, estructuras y operadores de datos",
-    "section": "Ejercicio 2",
-    "text": "Ejercicio 2\nElaborar un ejemplo de cada una de las estructuras de datos vistas en la clase. Tienen el resto del día!"
-  },
-  {
-    "objectID": "basic0.html#cómo-acceder-a-estas-presentaciones",
-    "href": "basic0.html#cómo-acceder-a-estas-presentaciones",
-    "title": "Tipos, estructuras y operadores de datos",
-    "section": "¿Cómo acceder a estas presentaciones?",
-    "text": "¿Cómo acceder a estas presentaciones?\nPodrán encontrarlas en mi github page. Pero no te adelantes y guarda calma.  Si necesitas más información no dudes en escribirme: xgarcia@unicauca.edu.co"
-  },
-  {
-    "objectID": "basic3.html#objetivo",
-    "href": "basic3.html#objetivo",
-    "title": "Manipulación y manejo de datos",
-    "section": "Objetivo",
-    "text": "Objetivo\nAprender a subir datasets, cargar datasets, usar librerías de datasets y modificar mediante Dplyr y comandos propios de R los datos."
-  },
-  {
-    "objectID": "basic3.html#algunas-consideraciones-antes-de-iniciar",
-    "href": "basic3.html#algunas-consideraciones-antes-de-iniciar",
-    "title": "Manipulación y manejo de datos",
-    "section": "Algunas consideraciones antes de iniciar",
-    "text": "Algunas consideraciones antes de iniciar\nPara proceder con esta clase usaremos algunos datasets obtenidos desde librerías específicas en R  Haremos uso del siguiente script para importar nuestros datasets.\n\n#Librería con datos de crecimiento de plantas en diferentes grupos. \n\ndata(\"PlantGrowth\")\n\nEste paquete se incluye en R.  En esta clase se hará manejo de bases de datos.\n\n\npackage 'palmerpenguins' successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\garci\\AppData\\Local\\Temp\\Rtmp2rFQ0o\\downloaded_packages"
-  },
-  {
-    "objectID": "basic3.html#section",
-    "href": "basic3.html#section",
-    "title": "Manipulación y manejo de datos",
-    "section": "",
-    "text": "install.packages(\"palmerpenguins\")\nlibrary(palmerpenguins)\n\nSe puede visitar la página del creador en Palmerpenguins \n  “Palmerpenguins” incluye un dataset interesante.  Para usar Palmerpenguins debe instalarse con las funciones de arriba"
-  },
-  {
-    "objectID": "basic3.html#importación-de-datos",
-    "href": "basic3.html#importación-de-datos",
-    "title": "Manipulación y manejo de datos",
-    "section": "Importación de datos",
-    "text": "Importación de datos\nEn esta librería existe un set de datos bastante amplio. Vamos a usar penguins\n\npenguins\n\n# A tibble: 344 × 8\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           NA            NA                  NA          NA\n 5 Adelie  Torgersen           36.7          19.3               193        3450\n 6 Adelie  Torgersen           39.3          20.6               190        3650\n 7 Adelie  Torgersen           38.9          17.8               181        3625\n 8 Adelie  Torgersen           39.2          19.6               195        4675\n 9 Adelie  Torgersen           34.1          18.1               193        3475\n10 Adelie  Torgersen           42            20.2               190        4250\n# ℹ 334 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;\n\n\nComo puedes ver la base de datos es bastante amplia e incluye 8 columnas."
-  },
-  {
-    "objectID": "basic3.html#exportación-de-datos",
-    "href": "basic3.html#exportación-de-datos",
-    "title": "Importación y manejo de datos",
-    "section": "Exportación de datos",
-    "text": "Exportación de datos"
-  },
-  {
-    "objectID": "basic3.html#introducción-al-dplyr",
-    "href": "basic3.html#introducción-al-dplyr",
-    "title": "Manipulación y manejo de datos",
-    "section": "Introducción al Dplyr",
-    "text": "Introducción al Dplyr\n \nEs un paquete que permite la manipulación de datos a través de verbos claves que pueden ser útiles en el manejo de información.  Algunos de los comandos para manipulación de datos son: \n\nkable_dplyr\n\n\n\n\nFunciones\nDescripción de función\n\n\n\n\nSelect\nSelección de columnas\n\n\nfilter\nfiltrado de filas\n\n\nmutate\ncreación y modificación de variables\n\n\nsummarise\nPara Resumen de datos\n\n\narrange\nOrdenamientos de datos"
-  },
-  {
-    "objectID": "basic3.html#manipulación-con-dplyr",
-    "href": "basic3.html#manipulación-con-dplyr",
-    "title": "Manipulación y manejo de datos",
-    "section": "Manipulación con Dplyr",
-    "text": "Manipulación con Dplyr\nIniciemos un ejemplo. Para esto supongamos que:\n\n#Usaremos unos cuantos datos\nhead_penguins&lt;-head(penguins)\nhead_penguins\n\n# A tibble: 6 × 8\n  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n1 Adelie  Torgersen           39.1          18.7               181        3750\n2 Adelie  Torgersen           39.5          17.4               186        3800\n3 Adelie  Torgersen           40.3          18                 195        3250\n4 Adelie  Torgersen           NA            NA                  NA          NA\n5 Adelie  Torgersen           36.7          19.3               193        3450\n6 Adelie  Torgersen           39.3          20.6               190        3650\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;"
-  },
-  {
-    "objectID": "basic3.html#variables-na-en-r",
-    "href": "basic3.html#variables-na-en-r",
-    "title": "Manipulación y manejo de datos",
-    "section": "Variables NA en R",
-    "text": "Variables NA en R\nMuchas veces nos encontraremos con bases de datos con valores ausentes, es decir con sus espacios, lo que puede dificultar la lectura, análisis o construcción de gráficos con dichos datos, es por ello que una forma de solucionar este tipo de problemas es con las funciones que genera NA.  is.na() es una de las primeras funciones del manejo de datos NA en R. Ejemplo:\n\npenguins_NA_correccion&lt;- is.na(penguins$bill_length_mm)\nhead(penguins_NA_correccion)\n\n[1] FALSE FALSE FALSE  TRUE FALSE FALSE\n\n\n¿Qué hemos creado aquí?Creamos una función que funciona a través de booleanos y nos permite decir si en esta columna “bill_length_mm” existen o no valores “NA”.  Uso de ColSums\n\n#La función colsums, como dice el nombre, permite sumar las columnas para ir encontrando en este caso donde habrán valores NA. \ncolSums(is.na(penguins))\n\n          species            island    bill_length_mm     bill_depth_mm \n                0                 0                 2                 2 \nflipper_length_mm       body_mass_g               sex              year \n                2                 2                11                 0"
-  },
-  {
-    "objectID": "basic3.html#introducción-al-uso-de-na.omit",
-    "href": "basic3.html#introducción-al-uso-de-na.omit",
-    "title": "Manipulación y manejo de datos",
-    "section": "Introducción al uso de na.omit()",
-    "text": "Introducción al uso de na.omit()\nna.omit() es precisamente el comando que podemos utilizar para obviar u omitir cierto tipo de datos no sumatorios u operables en general.\n\n#Compareremos un antes y un después en esta tabla a nivel general. \npenguins_limpio&lt;-na.omit(penguins)\n#Para mirar el número de dimensiones\ndim(penguins_limpio) #También puede usarse str()\n\n[1] 333   8\n\n#Y ahora al comparar, deberíamos observar una diferencia. \ndim(penguins)\n\n[1] 344   8"
-  },
-  {
-    "objectID": "basic3.html#reemplazando-na-con-valores-específicos.",
-    "href": "basic3.html#reemplazando-na-con-valores-específicos.",
-    "title": "Manipulación y manejo de datos",
-    "section": "Reemplazando NA con valores específicos.",
-    "text": "Reemplazando NA con valores específicos."
-  },
-  {
-    "objectID": "basic3.html#section-1",
-    "href": "basic3.html#section-1",
-    "title": "Manipulación y manejo de datos",
-    "section": "",
-    "text": "Ahora probemos con el total de la base de datos.\n\n\n      species          island    bill_length_mm  bill_depth_mm  \n Adelie   :152   Biscoe   :168   Min.   :32.10   Min.   :13.10  \n Chinstrap: 68   Dream    :124   1st Qu.:39.23   1st Qu.:15.60  \n Gentoo   :124   Torgersen: 52   Median :44.45   Median :17.30  \n                                 Mean   :43.92   Mean   :17.15  \n                                 3rd Qu.:48.50   3rd Qu.:18.70  \n                                 Max.   :59.60   Max.   :21.50  \n                                 NA's   :2       NA's   :2      \n flipper_length_mm  body_mass_g       sex           year     \n Min.   :172.0     Min.   :2700   female:165   Min.   :2007  \n 1st Qu.:190.0     1st Qu.:3550   male  :168   1st Qu.:2007  \n Median :197.0     Median :4050   NA's  : 11   Median :2008  \n Mean   :200.9     Mean   :4202                Mean   :2008  \n 3rd Qu.:213.0     3rd Qu.:4750                3rd Qu.:2009  \n Max.   :231.0     Max.   :6300                Max.   :2009  \n NA's   :2         NA's   :2                                 \n\n\nHaciendo una “estadística” general obtendremos lo anterior."
-  },
-  {
-    "objectID": "basic3.html",
-    "href": "basic3.html",
-    "title": "Importación y manejo de datos",
-    "section": "",
-    "text": "Aprender a subir datasets, cargar datasets, usar librerías de datasets y modificar mediante Dplyr y comandos propios de R los datos."
-  },
-  {
-    "objectID": "basic0.html",
-    "href": "basic0.html",
-    "title": "Tipos, estructuras y operadores de datos",
-    "section": "",
-    "text": "Vamos a familiarizarnos con el entorno de Rstudio y la sintaxis de R."
+    "text": "Bienvenido\nEste curso inicialmente estará hecho en español, mi lenguaje natal. La idea es que pueda ser una forma más sencilla de explicar R, sin tanto texto y sin demasiadas horas.\nAquí podrás encontrar a toda hora y en cualquier momento pequeños ejemplos explicativos que pueden ayudarte en tu camino dentro de las Ciencias Biológicas con R. Buena suerte.\nEn el apartado de “Course” encontrará toda la información resumida en 6 diapositivas para que puedas aplicar el tidyverse, gráficos, tablas, pruebas estadísticas comunes en Biología y además en un futuro un material para usar R Markdown."
   },
   {
     "objectID": "index.html#contenido-del-curso",
@@ -455,438 +49,11 @@
     "text": "Ejercicios Importanción y manejo de datos\nEn esta sección encontrará los descargables para el desarrollo de su práctica. Esta secicón aún se encuentra en desarrollo por favor tener paciencia.\nPara acceder al archivo preeliminar dirígirse a este enlace  gene_datase.  Además podrá acceder a una versión cambiada y adaptada para propósitos del ejercicio:  gene_datase_reorganized.xlsx  Una versión sin orientación de un documento obtenido en GREIN : GEO RNA-seq Experiments Interactive Navigator  En el siguiente enlace podrá acceder a diferentes metadatos de RNA-seq según su interés, si los usa deberá citarlos  Para acceder ingrese a :GREIN : GEO RNA-seq Experiments Interactive Navigator"
   },
   {
-    "objectID": "basic2.html",
-    "href": "basic2.html",
-    "title": "Tablas y organización de datos",
-    "section": "",
-    "text": "El paquete tidyverse es una colección de diferentes paqueterías útiles en la ciencia de datos.\n\n\n\n\n\n\n\nFigura 1. Introducción al Tidyverse. Tomado de Tidyverse.org\n\n\nEste paquete es fundamental porque entre otras cosas contiene “readr” y “ggplot2”. El primero se requiere para la lectura de tablas y bases de datos exportadas desde excel y el otro para la esquematización de gráficos."
-  },
-  {
     "objectID": "Documentation.html#referencias",
     "href": "Documentation.html#referencias",
     "title": "Documentation",
     "section": "Referencias",
     "text": "Referencias\nMelbourne Bioinformatics. (2023) R for biologists GitHub\n\nGREIN : GEO RNA-seq Experiments Interactive Navigator"
-  },
-  {
-    "objectID": "basic2.html#referencias",
-    "href": "basic2.html#referencias",
-    "title": "Tablas y organización de datos",
-    "section": "Referencias",
-    "text": "Referencias\nMelbourne Bioinformatics. (2023) R for biologists GitHub"
-  },
-  {
-    "objectID": "basic2.html#subiendo-la-base-de-datos",
-    "href": "basic2.html#subiendo-la-base-de-datos",
-    "title": "Tablas y organización de datos",
-    "section": "Subiendo la base de datos",
-    "text": "Subiendo la base de datos\n Presionar “Import Dataset”. En este punto hay varias opciones: 1. Subir como .CSV 2. Subir como .xlx 3. Subir como .txt \nPara subir como “.xlx” debe utilizarse:\n\n#Usar el paquete tidyverse \ninstall.packages(\"tidyverse\")\n\npackage 'tidyverse' successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\garci\\AppData\\Local\\Temp\\RtmpkJxXMq\\downloaded_packages\n\nlibrary(tidyverse)\n#O podemos correr solo \"dplyr\"\nlibrary(dplyr)\nlibrary(readxl)\n\nEn Rstudio quizás no sea necesario que sepas esto. Para propósitos de nuestro plan de trabjo usaremos algunas bases de datos propias de R"
-  },
-  {
-    "objectID": "basic2.html#uso-de-la-librería-mtcars",
-    "href": "basic2.html#uso-de-la-librería-mtcars",
-    "title": "Tablas y organización de datos",
-    "section": "Uso de la librería mtcars",
-    "text": "Uso de la librería mtcars\nCuando apliquemos la tabla… \n\nmtcars\n\n                     mpg cyl  disp  hp drat    wt  qsec vs am gear carb\nMazda RX4           21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag       21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710          22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive      21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout   18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2\nValiant             18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1\nDuster 360          14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4\nMerc 240D           24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2\nMerc 230            22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2\nMerc 280            19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4\nMerc 280C           17.8   6 167.6 123 3.92 3.440 18.90  1  0    4    4\nMerc 450SE          16.4   8 275.8 180 3.07 4.070 17.40  0  0    3    3\nMerc 450SL          17.3   8 275.8 180 3.07 3.730 17.60  0  0    3    3\nMerc 450SLC         15.2   8 275.8 180 3.07 3.780 18.00  0  0    3    3\nCadillac Fleetwood  10.4   8 472.0 205 2.93 5.250 17.98  0  0    3    4\nLincoln Continental 10.4   8 460.0 215 3.00 5.424 17.82  0  0    3    4\nChrysler Imperial   14.7   8 440.0 230 3.23 5.345 17.42  0  0    3    4\nFiat 128            32.4   4  78.7  66 4.08 2.200 19.47  1  1    4    1\nHonda Civic         30.4   4  75.7  52 4.93 1.615 18.52  1  1    4    2\nToyota Corolla      33.9   4  71.1  65 4.22 1.835 19.90  1  1    4    1\nToyota Corona       21.5   4 120.1  97 3.70 2.465 20.01  1  0    3    1\nDodge Challenger    15.5   8 318.0 150 2.76 3.520 16.87  0  0    3    2\nAMC Javelin         15.2   8 304.0 150 3.15 3.435 17.30  0  0    3    2\nCamaro Z28          13.3   8 350.0 245 3.73 3.840 15.41  0  0    3    4\nPontiac Firebird    19.2   8 400.0 175 3.08 3.845 17.05  0  0    3    2\nFiat X1-9           27.3   4  79.0  66 4.08 1.935 18.90  1  1    4    1\nPorsche 914-2       26.0   4 120.3  91 4.43 2.140 16.70  0  1    5    2\nLotus Europa        30.4   4  95.1 113 3.77 1.513 16.90  1  1    5    2\nFord Pantera L      15.8   8 351.0 264 4.22 3.170 14.50  0  1    5    4\nFerrari Dino        19.7   6 145.0 175 3.62 2.770 15.50  0  1    5    6\nMaserati Bora       15.0   8 301.0 335 3.54 3.570 14.60  0  1    5    8\nVolvo 142E          21.4   4 121.0 109 4.11 2.780 18.60  1  1    4    2\n\n#Convertimos en data.frame para una lectura ideal."
-  },
-  {
-    "objectID": "basic2.html#algunos-comandos-que-puedes-usar",
-    "href": "basic2.html#algunos-comandos-que-puedes-usar",
-    "title": "Tablas y organización de datos",
-    "section": "Algunos comandos que puedes usar",
-    "text": "Algunos comandos que puedes usar\n\n#Para saber la estructura de los datos. Por ejemplo cuántos datos hay presentes.\nstr(mtcars)\n\n'data.frame':   32 obs. of  11 variables:\n $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...\n $ cyl : num  6 6 4 6 8 6 8 4 4 6 ...\n $ disp: num  160 160 108 258 360 ...\n $ hp  : num  110 110 93 110 175 105 245 62 95 123 ...\n $ drat: num  3.9 3.9 3.85 3.08 3.15 2.76 3.21 3.69 3.92 3.92 ...\n $ wt  : num  2.62 2.88 2.32 3.21 3.44 ...\n $ qsec: num  16.5 17 18.6 19.4 17 ...\n $ vs  : num  0 0 1 1 0 1 0 1 1 1 ...\n $ am  : num  1 1 1 0 0 0 0 0 0 0 ...\n $ gear: num  4 4 4 3 3 3 3 4 4 4 ...\n $ carb: num  4 4 1 1 2 1 4 2 2 4 ...\n\n#Nombres de las columnas. \ncolnames(mtcars)\n\n [1] \"mpg\"  \"cyl\"  \"disp\" \"hp\"   \"drat\" \"wt\"   \"qsec\" \"vs\"   \"am\"   \"gear\"\n[11] \"carb\""
-  },
-  {
-    "objectID": "basic2.html#uso-de-la-librería-tibble",
-    "href": "basic2.html#uso-de-la-librería-tibble",
-    "title": "Tablas y organización de datos",
-    "section": "Uso de la librería tibble",
-    "text": "Uso de la librería tibble\n\nlibrary(tibble)\ntibble_tabla&lt;-tibble(head(mtcars))\ntibble_tabla\n\n# A tibble: 6 × 11\n    mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1  21       6   160   110  3.9   2.62  16.5     0     1     4     4\n2  21       6   160   110  3.9   2.88  17.0     0     1     4     4\n3  22.8     4   108    93  3.85  2.32  18.6     1     1     4     1\n4  21.4     6   258   110  3.08  3.22  19.4     1     0     3     1\n5  18.7     8   360   175  3.15  3.44  17.0     0     0     3     2\n6  18.1     6   225   105  2.76  3.46  20.2     1     0     3     1"
-  },
-  {
-    "objectID": "basic2.html#un-poco-sobre-exploración-de-datos",
-    "href": "basic2.html#un-poco-sobre-exploración-de-datos",
-    "title": "Tablas y organización de datos",
-    "section": "Un poco sobre exploración de datos…",
-    "text": "Un poco sobre exploración de datos…\n\nframe_scorpions\n\n                     Especies Ambientes        Municipio Departamento\n1 *Centruroides margaritatus*       luz          Popayán        Cauca\n2          *Tityus pachyurus*       luz   Villa de Leyva       Boyacá\n3        *Tityus trivittatus*       luz           Bogotá Cundinamarca\n4     *centruroides gracilis*    sombra Argentina, Huila        Huila\n5     *Centruroides suffusus*    sombra             Inza        Cauca\n  No. de Individuos\n1                 2\n2                 4\n3                 3\n4                 4\n5                 5\n\nhead(frame_scorpions)\n\n                     Especies Ambientes        Municipio Departamento\n1 *Centruroides margaritatus*       luz          Popayán        Cauca\n2          *Tityus pachyurus*       luz   Villa de Leyva       Boyacá\n3        *Tityus trivittatus*       luz           Bogotá Cundinamarca\n4     *centruroides gracilis*    sombra Argentina, Huila        Huila\n5     *Centruroides suffusus*    sombra             Inza        Cauca\n  No. de Individuos\n1                 2\n2                 4\n3                 3\n4                 4\n5                 5"
-  },
-  {
-    "objectID": "basic2.html#filtrar-datos",
-    "href": "basic2.html#filtrar-datos",
-    "title": "Tablas y organización de datos",
-    "section": "Filtrar datos",
-    "text": "Filtrar datos\nVolviendo con “mtcars”\n\n#De la manera siguiente podemos filtrar datos según nuestro tipo de necesidad. \nmtcars %&gt;% filter(mtcars$carb &lt; 10)\n\n                     mpg cyl  disp  hp drat    wt  qsec vs am gear carb\nMazda RX4           21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag       21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710          22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive      21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout   18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2\nValiant             18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1\nDuster 360          14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4\nMerc 240D           24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2\nMerc 230            22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2\nMerc 280            19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4\nMerc 280C           17.8   6 167.6 123 3.92 3.440 18.90  1  0    4    4\nMerc 450SE          16.4   8 275.8 180 3.07 4.070 17.40  0  0    3    3\nMerc 450SL          17.3   8 275.8 180 3.07 3.730 17.60  0  0    3    3\nMerc 450SLC         15.2   8 275.8 180 3.07 3.780 18.00  0  0    3    3\nCadillac Fleetwood  10.4   8 472.0 205 2.93 5.250 17.98  0  0    3    4\nLincoln Continental 10.4   8 460.0 215 3.00 5.424 17.82  0  0    3    4\nChrysler Imperial   14.7   8 440.0 230 3.23 5.345 17.42  0  0    3    4\nFiat 128            32.4   4  78.7  66 4.08 2.200 19.47  1  1    4    1\nHonda Civic         30.4   4  75.7  52 4.93 1.615 18.52  1  1    4    2\nToyota Corolla      33.9   4  71.1  65 4.22 1.835 19.90  1  1    4    1\nToyota Corona       21.5   4 120.1  97 3.70 2.465 20.01  1  0    3    1\nDodge Challenger    15.5   8 318.0 150 2.76 3.520 16.87  0  0    3    2\nAMC Javelin         15.2   8 304.0 150 3.15 3.435 17.30  0  0    3    2\nCamaro Z28          13.3   8 350.0 245 3.73 3.840 15.41  0  0    3    4\nPontiac Firebird    19.2   8 400.0 175 3.08 3.845 17.05  0  0    3    2\nFiat X1-9           27.3   4  79.0  66 4.08 1.935 18.90  1  1    4    1\nPorsche 914-2       26.0   4 120.3  91 4.43 2.140 16.70  0  1    5    2\nLotus Europa        30.4   4  95.1 113 3.77 1.513 16.90  1  1    5    2\nFord Pantera L      15.8   8 351.0 264 4.22 3.170 14.50  0  1    5    4\nFerrari Dino        19.7   6 145.0 175 3.62 2.770 15.50  0  1    5    6\nMaserati Bora       15.0   8 301.0 335 3.54 3.570 14.60  0  1    5    8\nVolvo 142E          21.4   4 121.0 109 4.11 2.780 18.60  1  1    4    2"
-  },
-  {
-    "objectID": "basic2.html#uso-del-comando-split",
-    "href": "basic2.html#uso-del-comando-split",
-    "title": "Tablas y organización de datos",
-    "section": "Uso del comando split",
-    "text": "Uso del comando split\n\n#A continuación dividiremos una tabla: \nmtcars_split&lt;- split(mtcars, mtcars$mpg)\nmtcars_split\n\n$`10.4`\n                     mpg cyl disp  hp drat    wt  qsec vs am gear carb\nCadillac Fleetwood  10.4   8  472 205 2.93 5.250 17.98  0  0    3    4\nLincoln Continental 10.4   8  460 215 3.00 5.424 17.82  0  0    3    4\n\n$`13.3`\n            mpg cyl disp  hp drat   wt  qsec vs am gear carb\nCamaro Z28 13.3   8  350 245 3.73 3.84 15.41  0  0    3    4\n\n$`14.3`\n            mpg cyl disp  hp drat   wt  qsec vs am gear carb\nDuster 360 14.3   8  360 245 3.21 3.57 15.84  0  0    3    4\n\n$`14.7`\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nChrysler Imperial 14.7   8  440 230 3.23 5.345 17.42  0  0    3    4\n\n$`15`\n              mpg cyl disp  hp drat   wt qsec vs am gear carb\nMaserati Bora  15   8  301 335 3.54 3.57 14.6  0  1    5    8\n\n$`15.2`\n             mpg cyl  disp  hp drat    wt qsec vs am gear carb\nMerc 450SLC 15.2   8 275.8 180 3.07 3.780 18.0  0  0    3    3\nAMC Javelin 15.2   8 304.0 150 3.15 3.435 17.3  0  0    3    2\n\n$`15.5`\n                  mpg cyl disp  hp drat   wt  qsec vs am gear carb\nDodge Challenger 15.5   8  318 150 2.76 3.52 16.87  0  0    3    2\n\n$`15.8`\n                mpg cyl disp  hp drat   wt qsec vs am gear carb\nFord Pantera L 15.8   8  351 264 4.22 3.17 14.5  0  1    5    4\n\n$`16.4`\n            mpg cyl  disp  hp drat   wt qsec vs am gear carb\nMerc 450SE 16.4   8 275.8 180 3.07 4.07 17.4  0  0    3    3\n\n$`17.3`\n            mpg cyl  disp  hp drat   wt qsec vs am gear carb\nMerc 450SL 17.3   8 275.8 180 3.07 3.73 17.6  0  0    3    3\n\n$`17.8`\n           mpg cyl  disp  hp drat   wt qsec vs am gear carb\nMerc 280C 17.8   6 167.6 123 3.92 3.44 18.9  1  0    4    4\n\n$`18.1`\n         mpg cyl disp  hp drat   wt  qsec vs am gear carb\nValiant 18.1   6  225 105 2.76 3.46 20.22  1  0    3    1\n\n$`18.7`\n                   mpg cyl disp  hp drat   wt  qsec vs am gear carb\nHornet Sportabout 18.7   8  360 175 3.15 3.44 17.02  0  0    3    2\n\n$`19.2`\n                  mpg cyl  disp  hp drat    wt  qsec vs am gear carb\nMerc 280         19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4\nPontiac Firebird 19.2   8 400.0 175 3.08 3.845 17.05  0  0    3    2\n\n$`19.7`\n              mpg cyl disp  hp drat   wt qsec vs am gear carb\nFerrari Dino 19.7   6  145 175 3.62 2.77 15.5  0  1    5    6\n\n$`21`\n              mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4      21   6  160 110  3.9 2.620 16.46  0  1    4    4\nMazda RX4 Wag  21   6  160 110  3.9 2.875 17.02  0  1    4    4\n\n$`21.4`\n                mpg cyl disp  hp drat    wt  qsec vs am gear carb\nHornet 4 Drive 21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nVolvo 142E     21.4   4  121 109 4.11 2.780 18.60  1  1    4    2\n\n$`21.5`\n               mpg cyl  disp hp drat    wt  qsec vs am gear carb\nToyota Corona 21.5   4 120.1 97  3.7 2.465 20.01  1  0    3    1\n\n$`22.8`\n            mpg cyl  disp hp drat   wt  qsec vs am gear carb\nDatsun 710 22.8   4 108.0 93 3.85 2.32 18.61  1  1    4    1\nMerc 230   22.8   4 140.8 95 3.92 3.15 22.90  1  0    4    2\n\n$`24.4`\n           mpg cyl  disp hp drat   wt qsec vs am gear carb\nMerc 240D 24.4   4 146.7 62 3.69 3.19   20  1  0    4    2\n\n$`26`\n              mpg cyl  disp hp drat   wt qsec vs am gear carb\nPorsche 914-2  26   4 120.3 91 4.43 2.14 16.7  0  1    5    2\n\n$`27.3`\n           mpg cyl disp hp drat    wt qsec vs am gear carb\nFiat X1-9 27.3   4   79 66 4.08 1.935 18.9  1  1    4    1\n\n$`30.4`\n              mpg cyl disp  hp drat    wt  qsec vs am gear carb\nHonda Civic  30.4   4 75.7  52 4.93 1.615 18.52  1  1    4    2\nLotus Europa 30.4   4 95.1 113 3.77 1.513 16.90  1  1    5    2\n\n$`32.4`\n          mpg cyl disp hp drat  wt  qsec vs am gear carb\nFiat 128 32.4   4 78.7 66 4.08 2.2 19.47  1  1    4    1\n\n$`33.9`\n                mpg cyl disp hp drat    wt qsec vs am gear carb\nToyota Corolla 33.9   4 71.1 65 4.22 1.835 19.9  1  1    4    1\n\n\nY así podemos cortar diferentes columnas del dataset “mtcars”"
-  },
-  {
-    "objectID": "basic2.html#ejercicio-práctico-no.-2",
-    "href": "basic2.html#ejercicio-práctico-no.-2",
-    "title": "Tablas y organización de datos",
-    "section": "Ejercicio práctico No. 2",
-    "text": "Ejercicio práctico No. 2\nCrear una tabla o utilizar la dataset “mtcars” y aplicar todo lo aprendido. Tienen el resto del día."
-  },
-  {
-    "objectID": "basic3.html#usando-filter",
-    "href": "basic3.html#usando-filter",
-    "title": "Manipulación y manejo de datos",
-    "section": "Usando filter ()",
-    "text": "Usando filter ()\nFiltrar puede ser una opción interesante cuando sabemos el tipo y la información específica de datos que queremos revisar. Es especialmente útil cuando tenemos que manejar bases de datos amplias.  Tomaremos el siguiente ejemplo con penguis \n\npenguins%&gt;%filter(island == \"Torgersen\")\n\n# A tibble: 52 × 8\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           NA            NA                  NA          NA\n 5 Adelie  Torgersen           36.7          19.3               193        3450\n 6 Adelie  Torgersen           39.3          20.6               190        3650\n 7 Adelie  Torgersen           38.9          17.8               181        3625\n 8 Adelie  Torgersen           39.2          19.6               195        4675\n 9 Adelie  Torgersen           34.1          18.1               193        3475\n10 Adelie  Torgersen           42            20.2               190        4250\n# ℹ 42 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;"
-  },
-  {
-    "objectID": "basic3.html#uso-de-mutate",
-    "href": "basic3.html#uso-de-mutate",
-    "title": "Manipulación y manejo de datos",
-    "section": "Uso de mutate()",
-    "text": "Uso de mutate()\n¿Ha tenido ese problema típico de que debe agregar nuevas columnas o modificar las existentes y ha pensado que quizás hay que subir nuevamente la tabla?  Justamente mutate() representa una posible solución a este tipo de problemas que puedes encontrar durante la manipulación de datos.  Partamos del siguiente ejemplo:\n\nnueva_variable&lt;-penguins%&gt;%mutate(diferencia_de_medidas = penguins$bill_length_mm / penguins$bill_depth_mm)\nnueva_variable%&gt;%select(diferencia_de_medidas, bill_length_mm, bill_depth_mm)\n\n# A tibble: 344 × 3\n   diferencia_de_medidas bill_length_mm bill_depth_mm\n                   &lt;dbl&gt;          &lt;dbl&gt;         &lt;dbl&gt;\n 1                  2.09           39.1          18.7\n 2                  2.27           39.5          17.4\n 3                  2.24           40.3          18  \n 4                 NA              NA            NA  \n 5                  1.90           36.7          19.3\n 6                  1.91           39.3          20.6\n 7                  2.19           38.9          17.8\n 8                  2              39.2          19.6\n 9                  1.88           34.1          18.1\n10                  2.08           42            20.2\n# ℹ 334 more rows\n\n\n¿Qué hemos hecho aquí?"
-  },
-  {
-    "objectID": "basic3.html#ejercicio-práctico-no.-1",
-    "href": "basic3.html#ejercicio-práctico-no.-1",
-    "title": "Manipulación y manejo de datos",
-    "section": "Ejercicio práctico No. 1",
-    "text": "Ejercicio práctico No. 1\nCrear una base de datos o utilizar penguins o penguins_raw para ejemplificar algunos de los comandos vistos.  Tienen 10 minutos."
-  },
-  {
-    "objectID": "basic3.html#uso-de-summarise",
-    "href": "basic3.html#uso-de-summarise",
-    "title": "Manipulación y manejo de datos",
-    "section": "Uso de summarise()",
-    "text": "Uso de summarise()\nPermite crear un data.frame nuevo.\n\n#Creamos una variable para contener penguins\nnew_penguins&lt;-penguins%&gt;%summarise(penguins$island)\n#Corremos la variable. \nnew_penguins\n\n# A tibble: 344 × 1\n   `penguins$island`\n   &lt;fct&gt;            \n 1 Torgersen        \n 2 Torgersen        \n 3 Torgersen        \n 4 Torgersen        \n 5 Torgersen        \n 6 Torgersen        \n 7 Torgersen        \n 8 Torgersen        \n 9 Torgersen        \n10 Torgersen        \n# ℹ 334 more rows"
-  },
-  {
-    "objectID": "basic3.html#qué-es-el-dplyr",
-    "href": "basic3.html#qué-es-el-dplyr",
-    "title": "Manipulación y manejo de datos",
-    "section": "¿Qué es el Dplyr?",
-    "text": "¿Qué es el Dplyr?"
-  },
-  {
-    "objectID": "basic3.html#uso-de-select",
-    "href": "basic3.html#uso-de-select",
-    "title": "Manipulación y manejo de datos",
-    "section": "Uso de Select()",
-    "text": "Uso de Select()\n\n#Usaremos unos cuantos datos\npenguins%&gt;%select(,species,body_mass_g)\n\n# A tibble: 344 × 2\n   species body_mass_g\n   &lt;fct&gt;         &lt;int&gt;\n 1 Adelie         3750\n 2 Adelie         3800\n 3 Adelie         3250\n 4 Adelie           NA\n 5 Adelie         3450\n 6 Adelie         3650\n 7 Adelie         3625\n 8 Adelie         4675\n 9 Adelie         3475\n10 Adelie         4250\n# ℹ 334 more rows\n\n#Así puedo seleccionar otros datos y los que necesite.\n\nEs necesario que sepamos que los datos nunca pueden estar en los siguiente formatos para este tipo de comandos. “tbl_df”, “tbl”, “data.frame”"
-  },
-  {
-    "objectID": "basic3.html#uso-de-arrange",
-    "href": "basic3.html#uso-de-arrange",
-    "title": "Manipulación y manejo de datos",
-    "section": "Uso de arrange()",
-    "text": "Uso de arrange()\nLa siguiente función permite ordenar creciente o decrecientemente datos de una tabla.  Por ejemplo, podemos realizar el siguiente ejemplo: \n\ndescending_penguins&lt;-penguins%&gt;%arrange(desc(penguins$bill_depth_mm))\ndescending_penguins\n\n# A tibble: 344 × 8\n   species   island   bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;     &lt;fct&gt;             &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie    Torgers…           46            21.5               194        4200\n 2 Adelie    Torgers…           38.6          21.2               191        3800\n 3 Adelie    Dream              42.3          21.2               191        4150\n 4 Adelie    Torgers…           34.6          21.1               198        4400\n 5 Adelie    Dream              39.2          21.1               196        4150\n 6 Adelie    Biscoe             41.3          21.1               195        4400\n 7 Chinstrap Dream              54.2          20.8               201        4300\n 8 Adelie    Torgers…           42.5          20.7               197        4500\n 9 Adelie    Biscoe             39.6          20.7               191        3900\n10 Chinstrap Dream              52            20.7               210        4800\n# ℹ 334 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;"
-  },
-  {
-    "objectID": "basic3.html#podemos-aplicar-otras-variantes-de-lo-visto",
-    "href": "basic3.html#podemos-aplicar-otras-variantes-de-lo-visto",
-    "title": "Manipulación y manejo de datos",
-    "section": "Podemos aplicar otras variantes de lo visto",
-    "text": "Podemos aplicar otras variantes de lo visto\n\n#Aplicando un poco de lo visto, podemos tener lo siguiente: \ndesc_penguins_select&lt;-descending_penguins%&gt;%select(bill_depth_mm)\ndesc_penguins_select\n\n# A tibble: 344 × 1\n   bill_depth_mm\n           &lt;dbl&gt;\n 1          21.5\n 2          21.2\n 3          21.2\n 4          21.1\n 5          21.1\n 6          21.1\n 7          20.8\n 8          20.7\n 9          20.7\n10          20.7\n# ℹ 334 more rows"
-  },
-  {
-    "objectID": "basic3.html#y-este-sería-nuestro-resultado-más-resumido.",
-    "href": "basic3.html#y-este-sería-nuestro-resultado-más-resumido.",
-    "title": "Manipulación y manejo de datos",
-    "section": "Y este sería nuestro resultado más resumido.",
-    "text": "Y este sería nuestro resultado más resumido.\n\n#Para los primeros seis datos. \nhead(desc_penguins_select)\n\n# A tibble: 6 × 1\n  bill_depth_mm\n          &lt;dbl&gt;\n1          21.5\n2          21.2\n3          21.2\n4          21.1\n5          21.1\n6          21.1\n\n#Para los últimos 6 datos. \ntail(desc_penguins_select)\n\n# A tibble: 6 × 1\n  bill_depth_mm\n          &lt;dbl&gt;\n1          13.4\n2          13.3\n3          13.2\n4          13.1\n5          NA  \n6          NA"
-  },
-  {
-    "objectID": "basic3.html#algunos-comandos-adicionales",
-    "href": "basic3.html#algunos-comandos-adicionales",
-    "title": "Manipulación y manejo de datos",
-    "section": "Algunos comandos adicionales",
-    "text": "Algunos comandos adicionales\nSegún qué área te interese de este dataset podrás utilizarla a tu antojo. Existen algunos comandos que podrían ser de interés:\n\n\n\n\n\nFunción\nDefinición\n\n\n\n\nfix\nModificar manualmente una secicón de los datos\n\n\nhead\nMuestra las primeras 6 filas de datos\n\n\nsummary\nGenera un resumen estadístico del set de datos\n\n\nsplit\nPuede cortar el set de datos según el orden específico\n\n\ndim\nMuestra número de filas y columnas\n\n\nstr\nDa la estructura del dataset\n\n\ntail\nMuestra las últimas filas del set de datos\n\n\n\n\n\nDe esta forma, en la siguiente diapositiva verás algunos ejemplos prácticos con penguins"
-  },
-  {
-    "objectID": "basic3.html#sobre-fix-head-y-tail",
-    "href": "basic3.html#sobre-fix-head-y-tail",
-    "title": "Manipulación y manejo de datos",
-    "section": "Sobre fix() , head() y tail()",
-    "text": "Sobre fix() , head() y tail()\nFix es una forma de arreglo manual de matríces o frames. Es muy útil para cambios puntuales.  head() permite mostrar las primeras 6 filas de una tabla, no importa su tamaño. Por ejemplo:\n\nhead(penguins)\n\n# A tibble: 6 × 8\n  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n1 Adelie  Torgersen           39.1          18.7               181        3750\n2 Adelie  Torgersen           39.5          17.4               186        3800\n3 Adelie  Torgersen           40.3          18                 195        3250\n4 Adelie  Torgersen           NA            NA                  NA          NA\n5 Adelie  Torgersen           36.7          19.3               193        3450\n6 Adelie  Torgersen           39.3          20.6               190        3650\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;"
-  },
-  {
-    "objectID": "basic3.html#sobre-summary-dim-y-str",
-    "href": "basic3.html#sobre-summary-dim-y-str",
-    "title": "Manipulación y manejo de datos",
-    "section": "Sobre summary(), dim() y str()",
-    "text": "Sobre summary(), dim() y str()\nSummary() es probablemente la forma automática de acercarnos a la estadística descriptiva en R.  Un ejemplo con summary() sería:\n\n#Tomaremos una parte de la base de datos que podamos usar para calcular: \nsummary(penguins$bill_depth_mm)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's \n  13.10   15.60   17.30   17.15   18.70   21.50       2 \n\n\n\nsummary(penguins$flipper_length_mm)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's \n  172.0   190.0   197.0   200.9   213.0   231.0       2 \n\n\n\nsummary(penguins$body_mass_g)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's \n   2700    3550    4050    4202    4750    6300       2"
-  },
-  {
-    "objectID": "basic3.html#ejercicio-práctico-no.-2",
-    "href": "basic3.html#ejercicio-práctico-no.-2",
-    "title": "Manipulación y manejo de datos",
-    "section": "Ejercicio práctico No. 2",
-    "text": "Ejercicio práctico No. 2\nAhora es tu turno!. Carga una base de datos o utiliza penguins para probar lo aprendido. Recuerda utilizar mutate(), select(), arrange() y las demás funciones aprendidas.  Tienes 10 minutos."
-  },
-  {
-    "objectID": "basic3.html#y-si-quiero-usar-is.na-para-ver-los-na-presentes-en-las-columnas",
-    "href": "basic3.html#y-si-quiero-usar-is.na-para-ver-los-na-presentes-en-las-columnas",
-    "title": "Manipulación y manejo de datos",
-    "section": "¿Y si quiero usar is.na para ver los NA presentes en las columnas?",
-    "text": "¿Y si quiero usar is.na para ver los NA presentes en las columnas?\n\npenguins%&gt;%filter(is.na(penguins$bill_length_mm))\n\n# A tibble: 2 × 8\n  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n1 Adelie  Torgersen             NA            NA                NA          NA\n2 Gentoo  Biscoe                NA            NA                NA          NA\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;"
-  },
-  {
-    "objectID": "basic3.html#referencias",
-    "href": "basic3.html#referencias",
-    "title": "Manipulación y manejo de datos",
-    "section": "Referencias",
-    "text": "Referencias\nPalmerpenguins  Melbourne Bioinformatics. (2023) R for biologists GitHub"
-  },
-  {
-    "objectID": "basic3.html#section-2",
-    "href": "basic3.html#section-2",
-    "title": "Manipulación y manejo de datos",
-    "section": "",
-    "text": "Dim por otro lado nos permite visualizar la cantidad de datos almacenadas en un objeto. En este caso el objeto penguins contiene 344 datos y 8 columnas.\n\ndim(penguins)\n\n[1] 344   8\n\n\nstr() por otro lado entrega el tipo de dato. Es decir nos muestra la estructura en la que está compuesta.\n\nstr(penguins)\n\ntibble [344 × 8] (S3: tbl_df/tbl/data.frame)\n $ species          : Factor w/ 3 levels \"Adelie\",\"Chinstrap\",..: 1 1 1 1 1 1 1 1 1 1 ...\n $ island           : Factor w/ 3 levels \"Biscoe\",\"Dream\",..: 3 3 3 3 3 3 3 3 3 3 ...\n $ bill_length_mm   : num [1:344] 39.1 39.5 40.3 NA 36.7 39.3 38.9 39.2 34.1 42 ...\n $ bill_depth_mm    : num [1:344] 18.7 17.4 18 NA 19.3 20.6 17.8 19.6 18.1 20.2 ...\n $ flipper_length_mm: int [1:344] 181 186 195 NA 193 190 181 195 193 190 ...\n $ body_mass_g      : int [1:344] 3750 3800 3250 NA 3450 3650 3625 4675 3475 4250 ...\n $ sex              : Factor w/ 2 levels \"female\",\"male\": 2 1 1 NA 1 2 1 2 NA NA ...\n $ year             : int [1:344] 2007 2007 2007 2007 2007 2007 2007 2007 2007 2007 ...\n\n\nClass() nos permite visualizar la clase de función u objeto a utilizar.\n\nclass(penguins)\n\n[1] \"tbl_df\"     \"tbl\"        \"data.frame\"\n\n\n\nclass(t.test)\n\n[1] \"function\""
-  },
-  {
-    "objectID": "basic3.html#section-3",
-    "href": "basic3.html#section-3",
-    "title": "Manipulación y manejo de datos",
-    "section": "",
-    "text": "#Incluso podríamos filtrar más con head() o tail()\nhead(colSums(is.na(penguins)))\n\n          species            island    bill_length_mm     bill_depth_mm \n                0                 0                 2                 2 \nflipper_length_mm       body_mass_g \n                2                 2 \n\n#Podemos ver la diferencia entre la presencia de la columna sex. \ntail(colSums(is.na(penguins)))\n\n   bill_length_mm     bill_depth_mm flipper_length_mm       body_mass_g \n                2                 2                 2                 2 \n              sex              year \n               11                 0"
-  },
-  {
-    "objectID": "basic2.html#uso-de-la-librería-mtcars-e-introducción-al-dplyr",
-    "href": "basic2.html#uso-de-la-librería-mtcars-e-introducción-al-dplyr",
-    "title": "Tablas y organización de datos",
-    "section": "Uso de la librería mtcars e introducción al dplyr",
-    "text": "Uso de la librería mtcars e introducción al dplyr\nCuando apliquemos la tabla… \n\nmtcars\n\n                     mpg cyl  disp  hp drat    wt  qsec vs am gear carb\nMazda RX4           21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag       21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710          22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive      21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout   18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2\nValiant             18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1\nDuster 360          14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4\nMerc 240D           24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2\nMerc 230            22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2\nMerc 280            19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4\nMerc 280C           17.8   6 167.6 123 3.92 3.440 18.90  1  0    4    4\nMerc 450SE          16.4   8 275.8 180 3.07 4.070 17.40  0  0    3    3\nMerc 450SL          17.3   8 275.8 180 3.07 3.730 17.60  0  0    3    3\nMerc 450SLC         15.2   8 275.8 180 3.07 3.780 18.00  0  0    3    3\nCadillac Fleetwood  10.4   8 472.0 205 2.93 5.250 17.98  0  0    3    4\nLincoln Continental 10.4   8 460.0 215 3.00 5.424 17.82  0  0    3    4\nChrysler Imperial   14.7   8 440.0 230 3.23 5.345 17.42  0  0    3    4\nFiat 128            32.4   4  78.7  66 4.08 2.200 19.47  1  1    4    1\nHonda Civic         30.4   4  75.7  52 4.93 1.615 18.52  1  1    4    2\nToyota Corolla      33.9   4  71.1  65 4.22 1.835 19.90  1  1    4    1\nToyota Corona       21.5   4 120.1  97 3.70 2.465 20.01  1  0    3    1\nDodge Challenger    15.5   8 318.0 150 2.76 3.520 16.87  0  0    3    2\nAMC Javelin         15.2   8 304.0 150 3.15 3.435 17.30  0  0    3    2\nCamaro Z28          13.3   8 350.0 245 3.73 3.840 15.41  0  0    3    4\nPontiac Firebird    19.2   8 400.0 175 3.08 3.845 17.05  0  0    3    2\nFiat X1-9           27.3   4  79.0  66 4.08 1.935 18.90  1  1    4    1\nPorsche 914-2       26.0   4 120.3  91 4.43 2.140 16.70  0  1    5    2\nLotus Europa        30.4   4  95.1 113 3.77 1.513 16.90  1  1    5    2\nFord Pantera L      15.8   8 351.0 264 4.22 3.170 14.50  0  1    5    4\nFerrari Dino        19.7   6 145.0 175 3.62 2.770 15.50  0  1    5    6\nMaserati Bora       15.0   8 301.0 335 3.54 3.570 14.60  0  1    5    8\nVolvo 142E          21.4   4 121.0 109 4.11 2.780 18.60  1  1    4    2\n\n#Convertimos en data.frame para una lectura ideal."
-  },
-  {
-    "objectID": "fundament_programation.html#qué-es-la-programación",
-    "href": "fundament_programation.html#qué-es-la-programación",
-    "title": "¿Cómo funciona la programación?",
-    "section": "¿Qué es la programación?",
-    "text": "¿Qué es la programación?\n\nProceso de escribir instrucciones en un lenguaje de bajo o alto nivel para que una computadora realice una tarea específica.  Se puede manipular datos, desarrollar apps, modelar sistemas y calcular datos."
-  },
-  {
-    "objectID": "fundament_programation.html#concepto-de-programación",
-    "href": "fundament_programation.html#concepto-de-programación",
-    "title": "¿Cómo funciona la programación?",
-    "section": "Concepto de programación",
-    "text": "Concepto de programación\n\nEntrada: Datos iniciales\nProcesamiento: Transformación de datos a través de operaciones\nSalida: Resultado final\n\n\nx&lt;- 3.1416 #Entrada del dato\ny&lt;- x *2.1 /4 *0.60 #Procesamiento \nprint(y) #Salida\n\n[1] 0.989604\n\ny #Salida\n\n[1] 0.989604"
-  },
-  {
-    "objectID": "fundament_programation.html#lenguajes-de-programación-y-paradigmas",
-    "href": "fundament_programation.html#lenguajes-de-programación-y-paradigmas",
-    "title": "¿Cómo funciona la programación?",
-    "section": "Lenguajes de programación y paradigmas",
-    "text": "Lenguajes de programación y paradigmas\n\n\n               clasif\n1         Imperativos\n2        Declarativos\n3 Orientado a objetos\n4           Funcional\n                                                                          def\n1                               Basado en instrucciones secuenciales (python)\n2                       Especifica que se quiere hacer en lugar de como (SQL)\n3 Organiza el código en objetos que contienen datos y métodos (Java y Python)\n4                              Basado en funciones matemáticas puras (Matlab)\n\n\n\n\n\n¿Cómo se clasifica un lenguaje\n\n\n\n\n\n\nClasificación\nDefinición\n\n\n\n\nImperativos\nBasado en instrucciones secuenciales (python)\n\n\nDeclarativos\nEspecifica que se quiere hacer en lugar de como (SQL)\n\n\nOrientado a objetos\nOrganiza el código en objetos que contienen datos y métodos (Java y Python)\n\n\nFuncional\nBasado en funciones matemáticas puras (Matlab)"
-  },
-  {
-    "objectID": "fundament_programation.html#diferencias-entre-r-y-otros-lenguajes-como-python-c-y-java",
-    "href": "fundament_programation.html#diferencias-entre-r-y-otros-lenguajes-como-python-c-y-java",
-    "title": "¿Cómo funciona la programación?",
-    "section": "Diferencias entre R y otros lenguajes como Python, C y Java",
-    "text": "Diferencias entre R y otros lenguajes como Python, C y Java\n\n\n\nDiferencias entre diferentes lenguajes.\n\n\n\n\n\n\n\n\n\nCaracterísticas\nR\nPython\nC\nJava\n\n\n\n\nParadigma\nFuncional y estadístico\nMultiparadigma\nImperativo\nOrientado a objetos\n\n\nUso\nAnálisis de datos, bioestadística\nData Science e IA\nSistemas y hardware\nAplicaciones empresariales\n\n\nTipado\nDinámico\nDinámico\nEstático\nEstático\n\n\nVelocidad\nLento\nIntermedio\nRápido\nIntermedio"
-  },
-  {
-    "objectID": "fundament_programation.html#algoritmos-y-lógica-de-programación",
-    "href": "fundament_programation.html#algoritmos-y-lógica-de-programación",
-    "title": "¿Cómo funciona la programación?",
-    "section": "Algoritmos y lógica de programación",
-    "text": "Algoritmos y lógica de programación\nUn algoritmo es un conjunto de pasos para resolver un problema. En programación se definen como:\n\nCondicionales (if-else): Toma de decisiones.\nBucles (for, while): Para repetir acciones.\nFunciones: Para modularizar el código.  En R un ejemplo podría ser\n\n\nnum&lt;- 10\nif (num %% 2 == 0) {#Se verifica si el residuo de dividir 'num' por 2 es 0\n  print(\"Es par\")\n} else {\n  print(\"Es impar\")\n}\n\n[1] \"Es par\""
-  },
-  {
-    "objectID": "fundament_programation.html#flujo-de-ejecución-de-un-programa",
-    "href": "fundament_programation.html#flujo-de-ejecución-de-un-programa",
-    "title": "¿Cómo funciona la programación?",
-    "section": "Flujo de ejecución de un programa",
-    "text": "Flujo de ejecución de un programa\nEl flujo de un programa sigue una secuencia lógica:\n\nLectura del código de arriba hacia abajo.\nEjecución de instrucciones en orden.\nEvaluación de estructuras condicionales y ciclos.\nLlamado a funciones definidas en el código."
-  },
-  {
-    "objectID": "fundament_programation.html#errores-comunes-y-depuración-de-código",
-    "href": "fundament_programation.html#errores-comunes-y-depuración-de-código",
-    "title": "¿Cómo funciona la programación?",
-    "section": "Errores comunes y depuración de código",
-    "text": "Errores comunes y depuración de código"
-  },
-  {
-    "objectID": "fundament_programation.html#hola-mundo",
-    "href": "fundament_programation.html#hola-mundo",
-    "title": "¿Cómo funciona la programación?",
-    "section": "Hola mundo",
-    "text": "Hola mundo\nAhora sí, empecemos.\n\nprint(\"Hola mundo\")\n\n[1] \"Hola mundo\"\n\n#Concatenaciones de ideas en R. \ncat(\"Hola\", \"Mundo\", \"\\n\")\n\nHola Mundo"
-  },
-  {
-    "objectID": "fundament_programation.html#ejemplos-de-asignación-en-cada-lenguaje",
-    "href": "fundament_programation.html#ejemplos-de-asignación-en-cada-lenguaje",
-    "title": "¿Cómo funciona la programación?",
-    "section": "Ejemplos de asignación en cada lenguaje",
-    "text": "Ejemplos de asignación en cada lenguaje\n\n#En Python sería algo así. \n\nx = 10\nhola= \"Hola mundo\"\nprint(hola)\n\nHola mundo\n\n\n\nx&lt;- 10\nhola&lt;- \"Hola mundo\"\nsaludo&lt;- \"cómo estás?\"\nx  \n\n[1] 10\n\nsaludo\n\n[1] \"cómo estás?\"\n\nhola\n\n[1] \"Hola mundo\""
-  },
-  {
-    "objectID": "fundament_programation.html#section",
-    "href": "fundament_programation.html#section",
-    "title": "¿Cómo funciona la programación?",
-    "section": "",
-    "text": "Otro caso podría ser en Python:\n\nnum = 10  # Asignamos un número\n\nif num % 2 == 0:  # Verificamos si el residuo de la división entre 2 es 0\n    print(\"Es par\")  # Si es 0, el número es par\nelse:\n    print(\"Es impar\")  # Si no, el número es impar\n\nEs par"
-  },
-  {
-    "objectID": "basic4.html#objetivos",
-    "href": "basic4.html#objetivos",
-    "title": "¿Cómo diablos puedo representar mis datos?",
-    "section": "Objetivos",
-    "text": "Objetivos\nAprender a crear gráficos a través de la interfaz gráfica de R y a través del paquete ggplot2."
-  },
-  {
-    "objectID": "basic4.html#cómo-puedo-representar-mis-datos",
-    "href": "basic4.html#cómo-puedo-representar-mis-datos",
-    "title": "¿Cómo diablos puedo representar mis datos?",
-    "section": "¿Cómo puedo representar mis datos?",
-    "text": "¿Cómo puedo representar mis datos?\nYa hemos visto como importar, manejar y manipular datos. Pero ahora… ¿Cómo los represento?\n\nboxplot(penguins, col = \"darkred\", main= \"Medianas\")"
-  },
-  {
-    "objectID": "basic4.html#quizás-se-trate-de-embellecer",
-    "href": "basic4.html#quizás-se-trate-de-embellecer",
-    "title": "¿Cómo diablos puedo representar mis datos?",
-    "section": "Quizás se trate de embellecer…",
-    "text": "Quizás se trate de embellecer…\nUna de las herramientas que nos podría ayudar a embellecer nuestros trabajos son los gráficos contenidos en la biblioteca o librería “ggplot2”"
-  },
-  {
-    "objectID": "basic4.html#introducción-a-ggplot2",
-    "href": "basic4.html#introducción-a-ggplot2",
-    "title": "¿Cómo diablos puedo representar mis datos?",
-    "section": "Introducción a Ggplot2",
-    "text": "Introducción a Ggplot2\n\n\n\n\n\nEs una librería que pertenece al tidyverse. Esta librería presenta un nuevo concepto sobre el “data visualization” y como este impacta en la presentación de los datos. Ofrece una mayor cantidad de opciones como etiquetas, escalas, temas con el fin de mejorar la legibilidad."
-  },
-  {
-    "objectID": "basic4.html#algunos-ejemplos",
-    "href": "basic4.html#algunos-ejemplos",
-    "title": "¿Cómo diablos puedo representar mis datos?",
-    "section": "Algunos ejemplos",
-    "text": "Algunos ejemplos"
-  },
-  {
-    "objectID": "basic4.html#ejercicio-práctico-no.-1",
-    "href": "basic4.html#ejercicio-práctico-no.-1",
-    "title": "¿Cómo diablos puedo representar mis datos?",
-    "section": "Ejercicio práctico No. 1",
-    "text": "Ejercicio práctico No. 1\nGenera un gráfico con lo aprendido. Podrás usar alguna de las librerías vistas en clase. Tienes 10 minutos."
-  },
-  {
-    "objectID": "basic4.html#boxplots",
-    "href": "basic4.html#boxplots",
-    "title": "¿Cómo diablos puedo representar mis datos?",
-    "section": "Boxplots",
-    "text": "Boxplots\nResume la distribución de una variable numérica, mostrando los cuartiles, mediana y posibles outliers o valores atípicos.\n\nmi_boxplot&lt;-ggplot(penguins)+\n  geom_boxplot(mapping = aes(x=penguins$species, y=penguins$flipper_length_mm, fill= penguins$species))+\n  labs(x= \"Especies de pinguinos\", y= \"Longitud de aleta\", title = \"Relación entre la longitud de la aleta y pinguinos\", subtitle = \"Datos reportados para pinguinos\")+\n  theme_minimal()\nmi_boxplot"
-  },
-  {
-    "objectID": "basic4.html#barplots",
-    "href": "basic4.html#barplots",
-    "title": "¿Cómo diablos puedo representar mis datos?",
-    "section": "Barplots",
-    "text": "Barplots\nPermite representar categorías con barras de diferente altura según su frecuencia o valor.\n\nggplot(penguins)+\n  geom_bar(aes(x= species, y= penguins$body_mass_g, fill = species), stat = \"identity\")"
-  },
-  {
-    "objectID": "basic4.html#histogramas",
-    "href": "basic4.html#histogramas",
-    "title": "¿Cómo diablos puedo representar mis datos?",
-    "section": "Histogramas",
-    "text": "Histogramas\nLos histogramas nos permiten representar frecuencias en nuestros datos. También son una forma de aproximación estadística para evaluar la normalidad, por ejemplo.\n\nggplot(penguins)+\n  geom_histogram(aes(x= flipper_length_mm, fill = species), position = \"identity\")"
-  },
-  {
-    "objectID": "basic4.html#lines-points",
-    "href": "basic4.html#lines-points",
-    "title": "¿Cómo diablos puedo representar mis datos?",
-    "section": "Lines & points",
-    "text": "Lines & points"
-  },
-  {
-    "objectID": "basic4.html#ejercicio-práctico-no.-2",
-    "href": "basic4.html#ejercicio-práctico-no.-2",
-    "title": "¿Cómo diablos puedo representar mis datos?",
-    "section": "Ejercicio práctico No. 2",
-    "text": "Ejercicio práctico No. 2\nPrueba a crear alguno de los gráficos que hemos visto con ambos datasets utilizados. Tienes 10 minutos."
-  },
-  {
-    "objectID": "basic4.html#polígonos",
-    "href": "basic4.html#polígonos",
-    "title": "¿Cómo diablos puedo representar mis datos?",
-    "section": "Polígonos",
-    "text": "Polígonos\nSon similares a un histograma, sin embargo se diferencia en la unión de puntos de frecuencia con líneas formando un polígono. Puede ser util para representar la distribución espacial de varias especie por ejemplo.\n\nlibrary(ggplot2)\nlibrary(dplyr)\n# Datos simulados de especies de escorpiones\nset.seed(42)\nscorpions &lt;- data.frame(\n  species = rep(c(\"Escorpión A\", \"Escorpión B\"), each = 10),\n  x = c(runif(10, min = 1, max = 5), runif(10, min = 4, max = 8)),\n  y = c(runif(10, min = 1, max = 5), runif(10, min = 4, max = 8))\n)\n\n# Ordenar puntos para formar un polígono convexo\nscorpions_hull &lt;- scorpions %&gt;%\n  group_by(species) %&gt;%\n  slice(chull(x, y))  # Encuentra el polígono convexo"
-  },
-  {
-    "objectID": "basic4.html#section",
-    "href": "basic4.html#section",
-    "title": "¿Cómo diablos puedo representar mis datos?",
-    "section": "",
-    "text": "#Para generar un barplot debe generarse como matriz. \npenguins_matrix&lt;-as.matrix(penguins)\nbarplot(penguins_matrix)"
-  },
-  {
-    "objectID": "basic4.html#section-1",
-    "href": "basic4.html#section-1",
-    "title": "¿Cómo diablos puedo representar mis datos?",
-    "section": "",
-    "text": "hist(penguins$bill_length_mm, main = \"Histograma\", ylab = \"Frecuencia\", col = \"gold\", xlab = \"Eje x\")"
-  },
-  {
-    "objectID": "basic4.html#section-2",
-    "href": "basic4.html#section-2",
-    "title": "¿Cómo diablos puedo representar mis datos?",
-    "section": "",
-    "text": "plot(penguins)"
-  },
-  {
-    "objectID": "basic4.html#grámatica-de-los-gráficos",
-    "href": "basic4.html#grámatica-de-los-gráficos",
-    "title": "¿Cómo diablos puedo representar mis datos?",
-    "section": "Grámatica de los gráficos",
-    "text": "Grámatica de los gráficos\nEl concepto clave para entender la lógica de ggplot se encuentra en el siguiente script:\n\n# ggplot(data) + aes(x, y) + geom_*()\n#Capas, mapeos estéticos, geoms, escalas y temas: \n#(aes()), es la forma de mapear. \n\n\nggplot(penguins)+\n  geom_col(aes(x=penguins$species, y=penguins$bill_length_mm, fill = penguins$species), position = \"stack\")+\n  labs(x = \"Especies de pinguinos\", y = \"Y\", title = \"Ejemplo \")"
-  },
-  {
-    "objectID": "basic4.html#referencias",
-    "href": "basic4.html#referencias",
-    "title": "¿Cómo diablos puedo representar mis datos?",
-    "section": "Referencias",
-    "text": "Referencias\n“About to ggplot 3.5.1 - CRAN (2025)"
-  },
-  {
-    "objectID": "basic4.html#y-así-quedaría-nuestro-polígono",
-    "href": "basic4.html#y-así-quedaría-nuestro-polígono",
-    "title": "¿Cómo diablos puedo representar mis datos?",
-    "section": "y así quedaría nuestro polígono…",
-    "text": "y así quedaría nuestro polígono…\n\n# Graficar puntos y polígono\nggplot() +\n  geom_polygon(data = scorpions_hull, aes(x = x, y = y, fill = species, group = species), alpha = 0.3) +\n  geom_point(data = scorpions, aes(x = x, y = y, color = species), size = 3) +\n  labs(title = \"Espacio ecológico de escorpiones\", x = \"Eje PCA 1\", y = \"Eje PCA 2\") +\n  theme_minimal()"
-  },
-  {
-    "objectID": "basic4.html#lineplots",
-    "href": "basic4.html#lineplots",
-    "title": "¿Cómo diablos puedo representar mis datos?",
-    "section": "Lineplots",
-    "text": "Lineplots\nMuestra cambios en los datos a lo largo del tiempo o en una secuencia. Puede ser util para evaluar cambios a lo largo del tiempo.\n\nggplot(penguins, aes(x = flipper_length_mm, y = bill_depth_mm, fill = species, color = species)) +\n  geom_line() +\n  theme_minimal()"
-  },
-  {
-    "objectID": "basic4.html#scatter-plot",
-    "href": "basic4.html#scatter-plot",
-    "title": "¿Cómo diablos puedo representar mis datos?",
-    "section": "Scatter Plot",
-    "text": "Scatter Plot\nMuestra la relación entre dos variables numérica. Se utiliza para identificar correlaciones o patrones en los datos.\n\nlibrary(ggplot2)\nlibrary(palmerpenguins)\nggplot(penguins)+\n  geom_point(aes(x= bill_length_mm, y= penguins$flipper_length_mm, fill = species, color= species), stat = \"identity\", position= \"identity\")"
-  },
-  {
-    "objectID": "basic5.html#estadística-descriptiva",
-    "href": "basic5.html#estadística-descriptiva",
-    "title": "Introducción al análisis de datos con R",
-    "section": "Estadística descriptiva",
-    "text": "Estadística descriptiva\nMedidas de tendencia central Existen varias pruebas que nos permiten describir la composición y comportamiento de nuestros datos.  Vamos a clasificar medidas de tendencia central y medidas de dispersión\n\n\n\n\n\n\n\n\n\nEstadísticos\nDefinición\n\n\n\n\nMedia\nSe refiere al promedio de un conjunto de datos\n\n\nMediana\nEl valor que se encuentra en la mitad de un conjunto de daots\n\n\n\n\n\nMedidas de dispersión\n\n\n\n\n\n\n\n\n\nEstadísticos\nDefinición\n\n\n\n\nDesviación estándar\nQué tan dispersos están los datos en un conjunto\n\n\nVarianza\nDispersión de los datos entorno a la media\n\n\nRango\nDiferencias entre valores máximos y mínimos en una muestra de datos"
-  },
-  {
-    "objectID": "basic5.html#análisis-bayesianos",
-    "href": "basic5.html#análisis-bayesianos",
-    "title": "Introducción al análisis de datos con R",
-    "section": "Análisis bayesianos",
-    "text": "Análisis bayesianos"
-  },
-  {
-    "objectID": "basic4.html#otro-ejemplo-para-un-polígono-sería",
-    "href": "basic4.html#otro-ejemplo-para-un-polígono-sería",
-    "title": "¿Cómo diablos puedo representar mis datos?",
-    "section": "Otro ejemplo para un polígono sería",
-    "text": "Otro ejemplo para un polígono sería\n\n#Por ejemplo con penguins. \nggplot(penguins)+\n  geom_polygon(aes(x= penguins$body_mass_g, y=penguins$flipper_length_mm, fill= species), stat = \"identity\", position = \"identity\")+\n  labs(x= \"Masa cuerpo pinguinos\", y= \"Longitud de la aleta\", title = \"Relación entre la longitud \", subtitle = \"Subtitulos\")"
   },
   {
     "objectID": "basic5.html#objetivo",
@@ -896,18 +63,11 @@
     "text": "Objetivo\nAprender como describir datos, formular hipótesis, validar supuestos y aplicar pruebas estadísticas en R."
   },
   {
-    "objectID": "basic5.html#medidas-de-tendencia-central",
-    "href": "basic5.html#medidas-de-tendencia-central",
+    "objectID": "basic5.html#estadística-descriptiva",
+    "href": "basic5.html#estadística-descriptiva",
     "title": "Introducción al análisis de datos con R",
-    "section": "Medidas de tendencia central",
-    "text": "Medidas de tendencia central\nExisten varias pruebas que nos permiten describir la composición y comportamiento de nuestros datos.  Vamos a clasificar medidas de tendencia central y medidas de dispersión\n\n\n\n\n\n\n\n\n\nEstadísticos\nDefinición\n\n\n\n\nMedia\nSe refiere al promedio de un conjunto de datos\n\n\nMediana\nEl valor que se encuentra en la mitad de un conjunto de daots"
-  },
-  {
-    "objectID": "basic5.html#medidas-de-dispersión",
-    "href": "basic5.html#medidas-de-dispersión",
-    "title": "Introducción al análisis de datos con R",
-    "section": "Medidas de dispersión",
-    "text": "Medidas de dispersión"
+    "section": "Estadística descriptiva",
+    "text": "Estadística descriptiva\nMedidas de tendencia central Existen varias pruebas que nos permiten describir la composición y comportamiento de nuestros datos.  Vamos a clasificar medidas de tendencia central y medidas de dispersión\n\n\n\n\n\n\n\n\n\nEstadísticos\nDefinición\n\n\n\n\nMedia\nSe refiere al promedio de un conjunto de datos\n\n\nMediana\nEl valor que se encuentra en la mitad de un conjunto de daots\n\n\n\n\n\nMedidas de dispersión\n\n\n\n\n\n\n\n\n\nEstadísticos\nDefinición\n\n\n\n\nDesviación estándar\nQué tan dispersos están los datos en un conjunto\n\n\nVarianza\nDispersión de los datos entorno a la media\n\n\nRango\nDiferencias entre valores máximos y mínimos en una muestra de datos"
   },
   {
     "objectID": "basic5.html#primeros-pasos-con-plantgrowth",
@@ -1029,18 +189,11 @@
     "text": "Sobre nuestros resultados obtenidos\nEn caso de ser una prueba paramétrica. Tendríamos que:\n\n\n\n\n\n\n\n\n\n\nHipótesis\nFormulación de la hipótesis\nValor P\n\n\n\n\nHipótesis nula (HO)\nNo hay diferencia significativa entre los grupos\np&gt;0.05\n\n\nHipótesis alternativa (H1)\nHay diferencia significativa entre los grupos\np&lt;0.05\n\n\n\n\n\nEn caso de tener una prueba no paramétrica:\n\n\n\n\n\n\n\n\n\n\nHipótesis\nFormulación de la hipótesis\nValor P\n\n\n\n\nHipótesis nula (HO)\nNo hay diferencia significativa entre los grupos\np&gt;0.05\n\n\nHipótesis alternativa (H1)\nHay diferencia significativa entre los grupos\np&lt;0.05\n\n\n\n\n\nEntonces, ¿Qué podemos suponer?"
   },
   {
-    "objectID": "basic5.html#qué-podemos-concluir",
-    "href": "basic5.html#qué-podemos-concluir",
+    "objectID": "basic5.html#pruebas-pos-hoc-paramétricas",
+    "href": "basic5.html#pruebas-pos-hoc-paramétricas",
     "title": "Introducción al análisis de datos con R",
-    "section": "¿Qué podemos concluir?",
-    "text": "¿Qué podemos concluir?\nEn el caso que sí es adecuado:  Tras la solución de t de student no hay diferencias significativas entre ambos grupos  Tras la solución de ANOVA de una vía concluímos que hay mayor variabilidad entre los grupos y que hay diferencias significativas entre ellos"
-  },
-  {
-    "objectID": "basic5.html#pruebas-poshoc-paramétricas",
-    "href": "basic5.html#pruebas-poshoc-paramétricas",
-    "title": "Introducción al análisis de datos con R",
-    "section": "Pruebas poshoc paramétricas",
-    "text": "Pruebas poshoc paramétricas\nSe pueden utilizar cuando se quiere saber la diferencia entre grupos específicos entre sí.  ¿Cuándo puede aplicarse?  Pueden aplicarse cuando se cumpla los supuestos paramétricos.  Podemos aplicar la prueba de Tukey que es una prueba paramétrica que combina todas las posibles combinaciones entre grupos para saber cuál es significativamente diferente.\n\nTukeyHSD(anova)\n\n  Tukey multiple comparisons of means\n    95% family-wise confidence level\n\nFit: aov(formula = PlantGrowth$weight ~ PlantGrowth$group)\n\n$`PlantGrowth$group`\n            diff        lwr       upr     p adj\ntrt1-ctrl -0.371 -1.0622161 0.3202161 0.3908711\ntrt2-ctrl  0.494 -0.1972161 1.1852161 0.1979960\ntrt2-trt1  0.865  0.1737839 1.5562161 0.0120064"
+    "section": "Pruebas Pos-hoc paramétricas",
+    "text": "Pruebas Pos-hoc paramétricas\nSe pueden utilizar cuando se quiere saber la diferencia entre grupos específicos entre sí.  ¿Cuándo puede aplicarse?  Pueden aplicarse cuando se cumpla los supuestos paramétricos.  Podemos aplicar la prueba de Tukey que es una prueba paramétrica que combina todas las posibles combinaciones entre grupos para saber cuál es significativamente diferente.\n\nTukeyHSD(anova)\n\n  Tukey multiple comparisons of means\n    95% family-wise confidence level\n\nFit: aov(formula = PlantGrowth$weight ~ PlantGrowth$group)\n\n$`PlantGrowth$group`\n            diff        lwr       upr     p adj\ntrt1-ctrl -0.371 -1.0622161 0.3202161 0.3908711\ntrt2-ctrl  0.494 -0.1972161 1.1852161 0.1979960\ntrt2-trt1  0.865  0.1737839 1.5562161 0.0120064"
   },
   {
     "objectID": "basic5.html#pruebas-pos-hoc-no-paramétricas",
@@ -1050,10 +203,682 @@
     "text": "Pruebas Pos-hoc no paramétricas\nUn ejemplo podría ser (Aunque en este caso no es aplicable realmente), sería la prueba de Dunn,que compara pares de grupos con ajustes para múltiples comparaciones. Es la alternativa para Kruskal-Wallis.\n\nlibrary(dunn.test)\ndunn.test(PlantGrowth$weight, PlantGrowth$group, method = \"bonferroni\")\n\n  Kruskal-Wallis rank sum test\n\ndata: x and group\nKruskal-Wallis chi-squared = 7.9882, df = 2, p-value = 0.02\n\n                           Comparison of x by group                            \n                                 (Bonferroni)                                  \nCol Mean-|\nRow Mean |       ctrl       trt1\n---------+----------------------\n    trt1 |   1.117725\n         |     0.3955\n         |\n    trt2 |  -1.689289  -2.807015\n         |     0.1367    0.0075*\n\nalpha = 0.05\nReject Ho if p &lt;= alpha/2"
   },
   {
-    "objectID": "basic5.html#pruebas-pos-hoc-paramétricas",
-    "href": "basic5.html#pruebas-pos-hoc-paramétricas",
+    "objectID": "basic5.html#qué-podemos-concluir",
+    "href": "basic5.html#qué-podemos-concluir",
     "title": "Introducción al análisis de datos con R",
-    "section": "Pruebas Pos-hoc paramétricas",
-    "text": "Pruebas Pos-hoc paramétricas\nSe pueden utilizar cuando se quiere saber la diferencia entre grupos específicos entre sí.  ¿Cuándo puede aplicarse?  Pueden aplicarse cuando se cumpla los supuestos paramétricos.  Podemos aplicar la prueba de Tukey que es una prueba paramétrica que combina todas las posibles combinaciones entre grupos para saber cuál es significativamente diferente.\n\nTukeyHSD(anova)\n\n  Tukey multiple comparisons of means\n    95% family-wise confidence level\n\nFit: aov(formula = PlantGrowth$weight ~ PlantGrowth$group)\n\n$`PlantGrowth$group`\n            diff        lwr       upr     p adj\ntrt1-ctrl -0.371 -1.0622161 0.3202161 0.3908711\ntrt2-ctrl  0.494 -0.1972161 1.1852161 0.1979960\ntrt2-trt1  0.865  0.1737839 1.5562161 0.0120064"
+    "section": "¿Qué podemos concluir?",
+    "text": "¿Qué podemos concluir?\nEn el caso que sí es adecuado:  Tras la solución de t de student no hay diferencias significativas entre ambos grupos  Tras la solución de ANOVA de una vía concluímos que hay mayor variabilidad entre los grupos y que hay diferencias significativas entre ellos"
+  },
+  {
+    "objectID": "basic3.html#objetivo",
+    "href": "basic3.html#objetivo",
+    "title": "Manipulación y manejo de datos",
+    "section": "Objetivo",
+    "text": "Objetivo\nAprender a subir datasets, cargar datasets, usar librerías de datasets y modificar mediante Dplyr y comandos propios de R los datos."
+  },
+  {
+    "objectID": "basic3.html#algunas-consideraciones-antes-de-iniciar",
+    "href": "basic3.html#algunas-consideraciones-antes-de-iniciar",
+    "title": "Manipulación y manejo de datos",
+    "section": "Algunas consideraciones antes de iniciar",
+    "text": "Algunas consideraciones antes de iniciar\nPara proceder con esta clase usaremos algunos datasets obtenidos desde librerías específicas en R  Haremos uso del siguiente script para importar nuestros datasets.\n\n#Librería con datos de crecimiento de plantas en diferentes grupos. \n\ndata(\"PlantGrowth\")\n\nEste paquete se incluye en R.  En esta clase se hará manejo de bases de datos.\n\n\npackage 'palmerpenguins' successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\XAVIER\\AppData\\Local\\Temp\\RtmpI3Rm4k\\downloaded_packages"
+  },
+  {
+    "objectID": "basic3.html#section",
+    "href": "basic3.html#section",
+    "title": "Manipulación y manejo de datos",
+    "section": "",
+    "text": "install.packages(\"palmerpenguins\")\nlibrary(palmerpenguins)\n\nSe puede visitar la página del creador en Palmerpenguins \n  “Palmerpenguins” incluye un dataset interesante.  Para usar Palmerpenguins debe instalarse con las funciones de arriba"
+  },
+  {
+    "objectID": "basic3.html#importación-de-datos",
+    "href": "basic3.html#importación-de-datos",
+    "title": "Manipulación y manejo de datos",
+    "section": "Importación de datos",
+    "text": "Importación de datos\nEn esta librería existe un set de datos bastante amplio. Vamos a usar penguins\n\npenguins\n\n# A tibble: 344 × 8\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           NA            NA                  NA          NA\n 5 Adelie  Torgersen           36.7          19.3               193        3450\n 6 Adelie  Torgersen           39.3          20.6               190        3650\n 7 Adelie  Torgersen           38.9          17.8               181        3625\n 8 Adelie  Torgersen           39.2          19.6               195        4675\n 9 Adelie  Torgersen           34.1          18.1               193        3475\n10 Adelie  Torgersen           42            20.2               190        4250\n# ℹ 334 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;\n\n\nComo puedes ver la base de datos es bastante amplia e incluye 8 columnas."
+  },
+  {
+    "objectID": "basic3.html#algunos-comandos-adicionales",
+    "href": "basic3.html#algunos-comandos-adicionales",
+    "title": "Manipulación y manejo de datos",
+    "section": "Algunos comandos adicionales",
+    "text": "Algunos comandos adicionales\nSegún qué área te interese de este dataset podrás utilizarla a tu antojo. Existen algunos comandos que podrían ser de interés:\n\n\n\n\n\nFunción\nDefinición\n\n\n\n\nfix\nModificar manualmente una secicón de los datos\n\n\nhead\nMuestra las primeras 6 filas de datos\n\n\nsummary\nGenera un resumen estadístico del set de datos\n\n\nsplit\nPuede cortar el set de datos según el orden específico\n\n\ndim\nMuestra número de filas y columnas\n\n\nstr\nDa la estructura del dataset\n\n\ntail\nMuestra las últimas filas del set de datos\n\n\n\n\n\nDe esta forma, en la siguiente diapositiva verás algunos ejemplos prácticos con penguins"
+  },
+  {
+    "objectID": "basic3.html#sobre-fix-head-y-tail",
+    "href": "basic3.html#sobre-fix-head-y-tail",
+    "title": "Manipulación y manejo de datos",
+    "section": "Sobre fix() , head() y tail()",
+    "text": "Sobre fix() , head() y tail()\nFix es una forma de arreglo manual de matríces o frames. Es muy útil para cambios puntuales.  head() permite mostrar las primeras 6 filas de una tabla, no importa su tamaño. Por ejemplo:\n\nhead(penguins)\n\n# A tibble: 6 × 8\n  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n1 Adelie  Torgersen           39.1          18.7               181        3750\n2 Adelie  Torgersen           39.5          17.4               186        3800\n3 Adelie  Torgersen           40.3          18                 195        3250\n4 Adelie  Torgersen           NA            NA                  NA          NA\n5 Adelie  Torgersen           36.7          19.3               193        3450\n6 Adelie  Torgersen           39.3          20.6               190        3650\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;"
+  },
+  {
+    "objectID": "basic3.html#sobre-summary-dim-y-str",
+    "href": "basic3.html#sobre-summary-dim-y-str",
+    "title": "Manipulación y manejo de datos",
+    "section": "Sobre summary(), dim() y str()",
+    "text": "Sobre summary(), dim() y str()\nSummary() es probablemente la forma automática de acercarnos a la estadística descriptiva en R.  Un ejemplo con summary() sería:\n\n#Tomaremos una parte de la base de datos que podamos usar para calcular: \nsummary(penguins$bill_depth_mm)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's \n  13.10   15.60   17.30   17.15   18.70   21.50       2 \n\n\n\nsummary(penguins$flipper_length_mm)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's \n  172.0   190.0   197.0   200.9   213.0   231.0       2 \n\n\n\nsummary(penguins$body_mass_g)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's \n   2700    3550    4050    4202    4750    6300       2"
+  },
+  {
+    "objectID": "basic3.html#section-1",
+    "href": "basic3.html#section-1",
+    "title": "Manipulación y manejo de datos",
+    "section": "",
+    "text": "Ahora probemos con el total de la base de datos.\n\n\n      species          island    bill_length_mm  bill_depth_mm  \n Adelie   :152   Biscoe   :168   Min.   :32.10   Min.   :13.10  \n Chinstrap: 68   Dream    :124   1st Qu.:39.23   1st Qu.:15.60  \n Gentoo   :124   Torgersen: 52   Median :44.45   Median :17.30  \n                                 Mean   :43.92   Mean   :17.15  \n                                 3rd Qu.:48.50   3rd Qu.:18.70  \n                                 Max.   :59.60   Max.   :21.50  \n                                 NA's   :2       NA's   :2      \n flipper_length_mm  body_mass_g       sex           year     \n Min.   :172.0     Min.   :2700   female:165   Min.   :2007  \n 1st Qu.:190.0     1st Qu.:3550   male  :168   1st Qu.:2007  \n Median :197.0     Median :4050   NA's  : 11   Median :2008  \n Mean   :200.9     Mean   :4202                Mean   :2008  \n 3rd Qu.:213.0     3rd Qu.:4750                3rd Qu.:2009  \n Max.   :231.0     Max.   :6300                Max.   :2009  \n NA's   :2         NA's   :2                                 \n\n\nHaciendo una “estadística” general obtendremos lo anterior."
+  },
+  {
+    "objectID": "basic3.html#section-2",
+    "href": "basic3.html#section-2",
+    "title": "Manipulación y manejo de datos",
+    "section": "",
+    "text": "Dim por otro lado nos permite visualizar la cantidad de datos almacenadas en un objeto. En este caso el objeto penguins contiene 344 datos y 8 columnas.\n\ndim(penguins)\n\n[1] 344   8\n\n\nstr() por otro lado entrega el tipo de dato. Es decir nos muestra la estructura en la que está compuesta.\n\nstr(penguins)\n\ntibble [344 × 8] (S3: tbl_df/tbl/data.frame)\n $ species          : Factor w/ 3 levels \"Adelie\",\"Chinstrap\",..: 1 1 1 1 1 1 1 1 1 1 ...\n $ island           : Factor w/ 3 levels \"Biscoe\",\"Dream\",..: 3 3 3 3 3 3 3 3 3 3 ...\n $ bill_length_mm   : num [1:344] 39.1 39.5 40.3 NA 36.7 39.3 38.9 39.2 34.1 42 ...\n $ bill_depth_mm    : num [1:344] 18.7 17.4 18 NA 19.3 20.6 17.8 19.6 18.1 20.2 ...\n $ flipper_length_mm: int [1:344] 181 186 195 NA 193 190 181 195 193 190 ...\n $ body_mass_g      : int [1:344] 3750 3800 3250 NA 3450 3650 3625 4675 3475 4250 ...\n $ sex              : Factor w/ 2 levels \"female\",\"male\": 2 1 1 NA 1 2 1 2 NA NA ...\n $ year             : int [1:344] 2007 2007 2007 2007 2007 2007 2007 2007 2007 2007 ...\n\n\nClass() nos permite visualizar la clase de función u objeto a utilizar.\n\nclass(penguins)\n\n[1] \"tbl_df\"     \"tbl\"        \"data.frame\"\n\n\n\nclass(t.test)\n\n[1] \"function\""
+  },
+  {
+    "objectID": "basic3.html#introducción-al-dplyr",
+    "href": "basic3.html#introducción-al-dplyr",
+    "title": "Manipulación y manejo de datos",
+    "section": "Introducción al Dplyr",
+    "text": "Introducción al Dplyr\n \nEs un paquete que permite la manipulación de datos a través de verbos claves que pueden ser útiles en el manejo de información.  Algunos de los comandos para manipulación de datos son: \n\nkable_dplyr\n\n\n\n\nFunciones\nDescripción de función\n\n\n\n\nSelect\nSelección de columnas\n\n\nfilter\nfiltrado de filas\n\n\nmutate\ncreación y modificación de variables\n\n\nsummarise\nPara Resumen de datos\n\n\narrange\nOrdenamientos de datos"
+  },
+  {
+    "objectID": "basic3.html#manipulación-con-dplyr",
+    "href": "basic3.html#manipulación-con-dplyr",
+    "title": "Manipulación y manejo de datos",
+    "section": "Manipulación con Dplyr",
+    "text": "Manipulación con Dplyr\nIniciemos un ejemplo. Para esto supongamos que:\n\n#Usaremos unos cuantos datos\nhead_penguins&lt;-head(penguins)\nhead_penguins\n\n# A tibble: 6 × 8\n  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n1 Adelie  Torgersen           39.1          18.7               181        3750\n2 Adelie  Torgersen           39.5          17.4               186        3800\n3 Adelie  Torgersen           40.3          18                 195        3250\n4 Adelie  Torgersen           NA            NA                  NA          NA\n5 Adelie  Torgersen           36.7          19.3               193        3450\n6 Adelie  Torgersen           39.3          20.6               190        3650\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;"
+  },
+  {
+    "objectID": "basic3.html#uso-de-select",
+    "href": "basic3.html#uso-de-select",
+    "title": "Manipulación y manejo de datos",
+    "section": "Uso de Select()",
+    "text": "Uso de Select()\n\n#Usaremos unos cuantos datos\npenguins%&gt;%select(,species,body_mass_g)\n\n# A tibble: 344 × 2\n   species body_mass_g\n   &lt;fct&gt;         &lt;int&gt;\n 1 Adelie         3750\n 2 Adelie         3800\n 3 Adelie         3250\n 4 Adelie           NA\n 5 Adelie         3450\n 6 Adelie         3650\n 7 Adelie         3625\n 8 Adelie         4675\n 9 Adelie         3475\n10 Adelie         4250\n# ℹ 334 more rows\n\n#Así puedo seleccionar otros datos y los que necesite.\n\nEs necesario que sepamos que los datos nunca pueden estar en los siguiente formatos para este tipo de comandos. “tbl_df”, “tbl”, “data.frame”"
+  },
+  {
+    "objectID": "basic3.html#usando-filter",
+    "href": "basic3.html#usando-filter",
+    "title": "Manipulación y manejo de datos",
+    "section": "Usando filter ()",
+    "text": "Usando filter ()\nFiltrar puede ser una opción interesante cuando sabemos el tipo y la información específica de datos que queremos revisar. Es especialmente útil cuando tenemos que manejar bases de datos amplias.  Tomaremos el siguiente ejemplo con penguis \n\npenguins%&gt;%filter(island == \"Torgersen\")\n\n# A tibble: 52 × 8\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           NA            NA                  NA          NA\n 5 Adelie  Torgersen           36.7          19.3               193        3450\n 6 Adelie  Torgersen           39.3          20.6               190        3650\n 7 Adelie  Torgersen           38.9          17.8               181        3625\n 8 Adelie  Torgersen           39.2          19.6               195        4675\n 9 Adelie  Torgersen           34.1          18.1               193        3475\n10 Adelie  Torgersen           42            20.2               190        4250\n# ℹ 42 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;"
+  },
+  {
+    "objectID": "basic3.html#uso-de-mutate",
+    "href": "basic3.html#uso-de-mutate",
+    "title": "Manipulación y manejo de datos",
+    "section": "Uso de mutate()",
+    "text": "Uso de mutate()\n¿Ha tenido ese problema típico de que debe agregar nuevas columnas o modificar las existentes y ha pensado que quizás hay que subir nuevamente la tabla?  Justamente mutate() representa una posible solución a este tipo de problemas que puedes encontrar durante la manipulación de datos.  Partamos del siguiente ejemplo:\n\nnueva_variable&lt;-penguins%&gt;%mutate(diferencia_de_medidas = penguins$bill_length_mm / penguins$bill_depth_mm)\nnueva_variable%&gt;%select(diferencia_de_medidas, bill_length_mm, bill_depth_mm)\n\n# A tibble: 344 × 3\n   diferencia_de_medidas bill_length_mm bill_depth_mm\n                   &lt;dbl&gt;          &lt;dbl&gt;         &lt;dbl&gt;\n 1                  2.09           39.1          18.7\n 2                  2.27           39.5          17.4\n 3                  2.24           40.3          18  \n 4                 NA              NA            NA  \n 5                  1.90           36.7          19.3\n 6                  1.91           39.3          20.6\n 7                  2.19           38.9          17.8\n 8                  2              39.2          19.6\n 9                  1.88           34.1          18.1\n10                  2.08           42            20.2\n# ℹ 334 more rows\n\n\n¿Qué hemos hecho aquí?"
+  },
+  {
+    "objectID": "basic3.html#ejercicio-práctico-no.-1",
+    "href": "basic3.html#ejercicio-práctico-no.-1",
+    "title": "Manipulación y manejo de datos",
+    "section": "Ejercicio práctico No. 1",
+    "text": "Ejercicio práctico No. 1\nCrear una base de datos o utilizar penguins o penguins_raw para ejemplificar algunos de los comandos vistos.  Tienen 10 minutos."
+  },
+  {
+    "objectID": "basic3.html#uso-de-summarise",
+    "href": "basic3.html#uso-de-summarise",
+    "title": "Manipulación y manejo de datos",
+    "section": "Uso de summarise()",
+    "text": "Uso de summarise()\nPermite crear un data.frame nuevo.\n\n#Creamos una variable para contener penguins\nnew_penguins&lt;-penguins%&gt;%summarise(penguins$island)\n#Corremos la variable. \nnew_penguins\n\n# A tibble: 344 × 1\n   `penguins$island`\n   &lt;fct&gt;            \n 1 Torgersen        \n 2 Torgersen        \n 3 Torgersen        \n 4 Torgersen        \n 5 Torgersen        \n 6 Torgersen        \n 7 Torgersen        \n 8 Torgersen        \n 9 Torgersen        \n10 Torgersen        \n# ℹ 334 more rows"
+  },
+  {
+    "objectID": "basic3.html#uso-de-arrange",
+    "href": "basic3.html#uso-de-arrange",
+    "title": "Manipulación y manejo de datos",
+    "section": "Uso de arrange()",
+    "text": "Uso de arrange()\nLa siguiente función permite ordenar creciente o decrecientemente datos de una tabla.  Por ejemplo, podemos realizar el siguiente ejemplo: \n\ndescending_penguins&lt;-penguins%&gt;%arrange(desc(penguins$bill_depth_mm))\ndescending_penguins\n\n# A tibble: 344 × 8\n   species   island   bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;     &lt;fct&gt;             &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie    Torgers…           46            21.5               194        4200\n 2 Adelie    Torgers…           38.6          21.2               191        3800\n 3 Adelie    Dream              42.3          21.2               191        4150\n 4 Adelie    Torgers…           34.6          21.1               198        4400\n 5 Adelie    Dream              39.2          21.1               196        4150\n 6 Adelie    Biscoe             41.3          21.1               195        4400\n 7 Chinstrap Dream              54.2          20.8               201        4300\n 8 Adelie    Torgers…           42.5          20.7               197        4500\n 9 Adelie    Biscoe             39.6          20.7               191        3900\n10 Chinstrap Dream              52            20.7               210        4800\n# ℹ 334 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;"
+  },
+  {
+    "objectID": "basic3.html#podemos-aplicar-otras-variantes-de-lo-visto",
+    "href": "basic3.html#podemos-aplicar-otras-variantes-de-lo-visto",
+    "title": "Manipulación y manejo de datos",
+    "section": "Podemos aplicar otras variantes de lo visto",
+    "text": "Podemos aplicar otras variantes de lo visto\n\n#Aplicando un poco de lo visto, podemos tener lo siguiente: \ndesc_penguins_select&lt;-descending_penguins%&gt;%select(bill_depth_mm)\ndesc_penguins_select\n\n# A tibble: 344 × 1\n   bill_depth_mm\n           &lt;dbl&gt;\n 1          21.5\n 2          21.2\n 3          21.2\n 4          21.1\n 5          21.1\n 6          21.1\n 7          20.8\n 8          20.7\n 9          20.7\n10          20.7\n# ℹ 334 more rows"
+  },
+  {
+    "objectID": "basic3.html#y-este-sería-nuestro-resultado-más-resumido.",
+    "href": "basic3.html#y-este-sería-nuestro-resultado-más-resumido.",
+    "title": "Manipulación y manejo de datos",
+    "section": "Y este sería nuestro resultado más resumido.",
+    "text": "Y este sería nuestro resultado más resumido.\n\n#Para los primeros seis datos. \nhead(desc_penguins_select)\n\n# A tibble: 6 × 1\n  bill_depth_mm\n          &lt;dbl&gt;\n1          21.5\n2          21.2\n3          21.2\n4          21.1\n5          21.1\n6          21.1\n\n#Para los últimos 6 datos. \ntail(desc_penguins_select)\n\n# A tibble: 6 × 1\n  bill_depth_mm\n          &lt;dbl&gt;\n1          13.4\n2          13.3\n3          13.2\n4          13.1\n5          NA  \n6          NA"
+  },
+  {
+    "objectID": "basic3.html#variables-na-en-r",
+    "href": "basic3.html#variables-na-en-r",
+    "title": "Manipulación y manejo de datos",
+    "section": "Variables NA en R",
+    "text": "Variables NA en R\nMuchas veces nos encontraremos con bases de datos con valores ausentes, es decir con sus espacios, lo que puede dificultar la lectura, análisis o construcción de gráficos con dichos datos, es por ello que una forma de solucionar este tipo de problemas es con las funciones que genera NA.  is.na() es una de las primeras funciones del manejo de datos NA en R. Ejemplo:\n\npenguins_NA_correccion&lt;- is.na(penguins$bill_length_mm)\nhead(penguins_NA_correccion)\n\n[1] FALSE FALSE FALSE  TRUE FALSE FALSE\n\n\n¿Qué hemos creado aquí?Creamos una función que funciona a través de booleanos y nos permite decir si en esta columna “bill_length_mm” existen o no valores “NA”.  Uso de ColSums\n\n#La función colsums, como dice el nombre, permite sumar las columnas para ir encontrando en este caso donde habrán valores NA. \ncolSums(is.na(penguins))\n\n          species            island    bill_length_mm     bill_depth_mm \n                0                 0                 2                 2 \nflipper_length_mm       body_mass_g               sex              year \n                2                 2                11                 0"
+  },
+  {
+    "objectID": "basic3.html#section-3",
+    "href": "basic3.html#section-3",
+    "title": "Manipulación y manejo de datos",
+    "section": "",
+    "text": "#Incluso podríamos filtrar más con head() o tail()\nhead(colSums(is.na(penguins)))\n\n          species            island    bill_length_mm     bill_depth_mm \n                0                 0                 2                 2 \nflipper_length_mm       body_mass_g \n                2                 2 \n\n#Podemos ver la diferencia entre la presencia de la columna sex. \ntail(colSums(is.na(penguins)))\n\n   bill_length_mm     bill_depth_mm flipper_length_mm       body_mass_g \n                2                 2                 2                 2 \n              sex              year \n               11                 0"
+  },
+  {
+    "objectID": "basic3.html#ejercicio-práctico-no.-2",
+    "href": "basic3.html#ejercicio-práctico-no.-2",
+    "title": "Manipulación y manejo de datos",
+    "section": "Ejercicio práctico No. 2",
+    "text": "Ejercicio práctico No. 2\nAhora es tu turno!. Carga una base de datos o utiliza penguins para probar lo aprendido. Recuerda utilizar mutate(), select(), arrange() y las demás funciones aprendidas.  Tienes 10 minutos."
+  },
+  {
+    "objectID": "basic3.html#y-si-quiero-usar-is.na-para-ver-los-na-presentes-en-las-columnas",
+    "href": "basic3.html#y-si-quiero-usar-is.na-para-ver-los-na-presentes-en-las-columnas",
+    "title": "Manipulación y manejo de datos",
+    "section": "¿Y si quiero usar is.na para ver los NA presentes en las columnas?",
+    "text": "¿Y si quiero usar is.na para ver los NA presentes en las columnas?\n\npenguins%&gt;%filter(is.na(penguins$bill_length_mm))\n\n# A tibble: 2 × 8\n  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n1 Adelie  Torgersen             NA            NA                NA          NA\n2 Gentoo  Biscoe                NA            NA                NA          NA\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;"
+  },
+  {
+    "objectID": "basic3.html#introducción-al-uso-de-na.omit",
+    "href": "basic3.html#introducción-al-uso-de-na.omit",
+    "title": "Manipulación y manejo de datos",
+    "section": "Introducción al uso de na.omit()",
+    "text": "Introducción al uso de na.omit()\nna.omit() es precisamente el comando que podemos utilizar para obviar u omitir cierto tipo de datos no sumatorios u operables en general.\n\n#Compareremos un antes y un después en esta tabla a nivel general. \npenguins_limpio&lt;-na.omit(penguins)\n#Para mirar el número de dimensiones\ndim(penguins_limpio) #También puede usarse str()\n\n[1] 333   8\n\n#Y ahora al comparar, deberíamos observar una diferencia. \ndim(penguins)\n\n[1] 344   8"
+  },
+  {
+    "objectID": "basic3.html#referencias",
+    "href": "basic3.html#referencias",
+    "title": "Manipulación y manejo de datos",
+    "section": "Referencias",
+    "text": "Referencias\nPalmerpenguins  Melbourne Bioinformatics. (2023) R for biologists GitHub"
+  },
+  {
+    "objectID": "basic1.html#qué-es-r",
+    "href": "basic1.html#qué-es-r",
+    "title": "Introducción a R",
+    "section": "¿Qué es R?",
+    "text": "¿Qué es R?\nEs un entorno y lenguaje de programación con un enfoque en el análisis estadístico.\nR es parte del sistema GNU y se distribuye bajo la licencia GNU GPL. Es un lenguaje popular dentro del Machine learning, minería de datos, econometría, biología, bioinformática e inferencia estadística."
+  },
+  {
+    "objectID": "basic1.html#aplicaciones-en-biología",
+    "href": "basic1.html#aplicaciones-en-biología",
+    "title": "Introducción a R",
+    "section": "Aplicaciones en Biología",
+    "text": "Aplicaciones en Biología\nEn Biología existen muchas aplicaciones que pueden llevarse acabo con R, por ejemplo:\n\nEstadística (Análisis de biodiversidad, comparaciones de muestra, homogeneidad de varianzas, etc)\nConteos de especies y desarrollo de mapas\nGráficas (dendogramas, clústers, diagramas)"
+  },
+  {
+    "objectID": "basic1.html#interfaz-de-r",
+    "href": "basic1.html#interfaz-de-r",
+    "title": "Introducción a R",
+    "section": "Interfaz de R",
+    "text": "Interfaz de R\n\nFigura 1. Interfaz de R Studio"
+  },
+  {
+    "objectID": "basic1.html#algunas-consideraciones",
+    "href": "basic1.html#algunas-consideraciones",
+    "title": "Introducción a R",
+    "section": "Algunas consideraciones",
+    "text": "Algunas consideraciones\n\nFigura 2. Interfaz de R Studio"
+  },
+  {
+    "objectID": "basic1.html#diferencias-entre-usar-la-consola-y-la-zona-de-script",
+    "href": "basic1.html#diferencias-entre-usar-la-consola-y-la-zona-de-script",
+    "title": "Introducción a R",
+    "section": "Diferencias entre usar la consola y la zona de script",
+    "text": "Diferencias entre usar la consola y la zona de script\nCuando usas solo “console” no podrás guardar tu script pero obtendrás un resultado rápido. Al usar la zona de script el código se quedará ahí. Es util usar console si necesitas comprobar o sacar un resultado rápido.\n\n1+1\n\n[1] 2"
+  },
+  {
+    "objectID": "basic1.html#instalación-de-paquetes",
+    "href": "basic1.html#instalación-de-paquetes",
+    "title": "Introducción a R",
+    "section": "Instalación de paquetes",
+    "text": "Instalación de paquetes\n\n# Instalar un paquete\ninstall.packages(\"tidyverse\")\n\npackage 'tidyverse' successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\XAVIER\\AppData\\Local\\Temp\\Rtmp0YjJYw\\downloaded_packages\n\n# Cargar librería\nlibrary(\"tidyverse\")\n# La librería debería estar cargada. carguemos una de las librerías. Por defecto están las siguientes: \nlibrary(ggplot2)"
+  },
+  {
+    "objectID": "basic1.html#y-si-no-conozco-la-sintaxis-del-código",
+    "href": "basic1.html#y-si-no-conozco-la-sintaxis-del-código",
+    "title": "Introducción a R",
+    "section": "Y si no conozco la sintaxis del código?",
+    "text": "Y si no conozco la sintaxis del código?\n\n#Puede surgir la necesidad de buscar la sintaxis del código, pasa frecuentemente y espero no ser el único. Sin embargo esto puede solucionarse de la siguiente manera: \n\nEjemplo:\n\n# ?install.packages\n# A tu derecha en \"help\" se abrirá la ventana con las ayudas disponibles para el comando.\n\n# ?ggplot2\n#Lo mismo ocurriría con ggplo2. \n\n¿Y si necesito algo más específico?\n\n#Con ggplot2 puede ser así: Debe anteponerse \"?\"\n# ?geom_bar\n# ?geom_point"
+  },
+  {
+    "objectID": "basic1.html#qué-tipo-de-pruebas-puedo-utilizar-en-r",
+    "href": "basic1.html#qué-tipo-de-pruebas-puedo-utilizar-en-r",
+    "title": "Introducción a R",
+    "section": "¿Qué tipo de pruebas puedo utilizar en R?",
+    "text": "¿Qué tipo de pruebas puedo utilizar en R?\nSegún el criterio son muchas. Las pruebas más utilizadas que podrías necesitar (paramétricas / no paramétricas) son:\n\n\n                 pruebas_paramétricas  pruebas_n_paramétricas\n1                        T de Student          Kruskal Wallis\n2                ANOVA 1 vía y 2 vías       U de Mann Withney\n3              Correlación de Pearson Correlación de Spearman\n4 Prueba T para muestras dependientes      Prueba de Wilcoxon\n5 Prueba para muestras independientes      Prueba de Friedman"
+  },
+  {
+    "objectID": "basic1.html#conceptos-claves-para-la-próxima-clase",
+    "href": "basic1.html#conceptos-claves-para-la-próxima-clase",
+    "title": "Introducción a R",
+    "section": "Conceptos claves para la próxima clase",
+    "text": "Conceptos claves para la próxima clase\nEn esta sesión miraremos los siguientes conceptos claves:\n\n\n\nConceptos importantes\n\n\nConceptos\nDefiniciones\n\n\n\n\nPlots\nDiagramas básicos que vienen con R\n\n\nBarplots\nObservar tendencia de una muestra, frecuencias, etc\n\n\nPie\nDiagramas circulares para ver proporciones\n\n\nggplot\nLibrería para gráficos estilizados"
+  },
+  {
+    "objectID": "basic1.html#referencias",
+    "href": "basic1.html#referencias",
+    "title": "Introducción a R",
+    "section": "Referencias",
+    "text": "Referencias\nMelbourne Bioinformatics. (2023) R for biologists GitHub"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "basic0.html#objetivo",
+    "href": "basic0.html#objetivo",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "Objetivo",
+    "text": "Objetivo\nVamos a familiarizarnos con el entorno de Rstudio y la sintaxis de R."
+  },
+  {
+    "objectID": "basic0.html#asignación-de-variables",
+    "href": "basic0.html#asignación-de-variables",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "Asignación de variables",
+    "text": "Asignación de variables\n¿Qué es una variable?  Puede definirse como un conjunto finito que almacena o implica información. Puede cambiarse, eliminarse o significar.\nEn el siguiente ejemplo verás una variable creada:\n\n1+1\n\n[1] 2\n\n\n¿Pero y si quiero que esa operación anterior sea una variable?\n\nsuma&lt;-1+1\nsuma\n\n[1] 2\n\n\nAhora tengo una variable llamada suma.  Es necesario entender que puedo asociar mis variables. Ejemplo:\n\nresta&lt;- 1-3\n#Asociar:\nresultado&lt;-suma*resta\nresultado\n\n[1] -4"
+  },
+  {
+    "objectID": "basic0.html#tipos-de-datos",
+    "href": "basic0.html#tipos-de-datos",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "Tipos de datos",
+    "text": "Tipos de datos\nAl igual que en otros lenguajes de programación como python, java, perl, matlab…, en R tendremos algunas clases de datos:\n\n#Tipos de datos\nx&lt;- 5 #Numérico (int-float)\ny&lt;- \"Hola\" #Carácter (String)\nz&lt;- TRUE #Lógico (Booleano)\n\nLos tipos de dato numérico pueden ser int o float. ¿Qué signfica esto?\n\nx&lt; 5 #Entero (int)\n\n[1] FALSE\n\ny&lt;- 4.5 #Decimal o flotante (Float)\n\nExisten otros tipos de datos que deberías conocer, por ejemplo:\n\nc&lt;-3+2i \nf&lt;-factor(c(\"amarillo\", \"azul\", \"rojo\")) #Factor"
+  },
+  {
+    "objectID": "basic0.html#tip-sobre-datos",
+    "href": "basic0.html#tip-sobre-datos",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "Tip sobre datos",
+    "text": "Tip sobre datos\n¿Qué pasa si no conozco la naturaleza de mis datos?\n\nclass(x)\n\n[1] \"numeric\"\n\nclass(f)\n\n[1] \"factor\"\n\ntypeof(c)\n\n[1] \"complex\""
+  },
+  {
+    "objectID": "basic0.html#ejercicio-1",
+    "href": "basic0.html#ejercicio-1",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "Ejercicio 1",
+    "text": "Ejercicio 1\nEn Rstudio van a escribir varios conjuntos de variables según el tipo de dato. Tienen 5 minutos!"
+  },
+  {
+    "objectID": "basic0.html#estructuras-de-datos",
+    "href": "basic0.html#estructuras-de-datos",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "Estructuras de datos",
+    "text": "Estructuras de datos\n\nVectores (c())\nFactores (factor())\nMatrices (matrix())\nListas (list())\nData frames (data.frame())"
+  },
+  {
+    "objectID": "basic0.html#vectores",
+    "href": "basic0.html#vectores",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "Vectores",
+    "text": "Vectores\nDigamos que estás haciendo un trabajo en botánica y quieres hacer un listado de especies de Asteraceae.  ¿Qué herramienta usas?  La lista, exacto…\n\nsp_asteraceae&lt;-c(\"*Helianthus annuus*\", \"*Pterocaulon alopecuroides*\", \"*Senecio vulgaris*\", \"*Arnica montana*\", \"*Artemisa vulgaris*\", \"*Calendula officinallis*\", \"*Espeletia hartwegiana* \")\n#La lista se puede llamar bajo el mismo nombre. \nsp_asteraceae\n\n[1] \"*Helianthus annuus*\"         \"*Pterocaulon alopecuroides*\"\n[3] \"*Senecio vulgaris*\"          \"*Arnica montana*\"           \n[5] \"*Artemisa vulgaris*\"         \"*Calendula officinallis*\"   \n[7] \"*Espeletia hartwegiana* \"   \n\n\nEn este punto solo tendrás una lista, pero puedes crear varias listas y volverlas una sola tabla. Por ejemplo si es para armar datos en una tabla sobre etnobotánica, podrías hacerlo así…\n\nncomunes&lt;-c(\"Girasol\", \"Hierba del piojo o árnica de montaña\", \"Senecio común\", \"Árnica\", \"Ajenjo o artemisa\", \"Caléndula\", \"Frailejón\")\nuso_medicinal&lt;-c(3,4,2,5,6,5,1)\nuso_alimenticio&lt;-c(2,6,3,7,2,8,0)\nuso_ornamental&lt;-c(2,6,7,8,4,2,0)"
+  },
+  {
+    "objectID": "basic0.html#section",
+    "href": "basic0.html#section",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "",
+    "text": "Si quisieramos armar una tabla para los siguientes datos ya podríamos hacerlo debido a que hemos creado propiamente muchas listas que pueden indexarse.\n\ntabla_etno&lt;- data.frame(sp_asteraceae, ncomunes, uso_medicinal,uso_alimenticio, uso_ornamental)\n#Debo hacer un arreglo en los nombres de columnas\ncolnames(tabla_etno)&lt;-c(\"Nombre científico\", \"Nombres comúnes\", \"Uso medicinal\", \"Uso alimenticion\", \"Uso ornamental\")\n\n\n\n\n\n\n\n\n\n\n\n\n\nNombre científico\nNombres comúnes\nUso medicinal\nUso alimenticion\nUso ornamental\n\n\n\n\nHelianthus annuus\nGirasol\n3\n2\n2\n\n\nPterocaulon alopecuroides\nHierba del piojo o árnica de montaña\n4\n6\n6\n\n\nSenecio vulgaris\nSenecio común\n2\n3\n7\n\n\nArnica montana\nÁrnica\n5\n7\n8\n\n\nArtemisa vulgaris\nAjenjo o artemisa\n6\n2\n4\n\n\nCalendula officinallis\nCaléndula\n5\n8\n2\n\n\nEspeletia hartwegiana\nFrailejón\n1\n0\n0"
+  },
+  {
+    "objectID": "basic0.html#dataframes",
+    "href": "basic0.html#dataframes",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "Dataframes",
+    "text": "Dataframes\nMiremos esta sintaxis para dataframes…\n\nescorpiones &lt;- data.frame(\n  Especie = c(\"Tityus fuhrmanni\", \"Centruroides margaritatus\", \"Bothriurus coriaceus\", \"Buthus occitanus\"),\n  Longitud_mm = c(45, 65, 50, 75),\n  Veneno_Toxico = c(TRUE, TRUE, FALSE, TRUE)  \n)\n\nescorpiones\n\n                    Especie Longitud_mm Veneno_Toxico\n1          Tityus fuhrmanni          45          TRUE\n2 Centruroides margaritatus          65          TRUE\n3      Bothriurus coriaceus          50         FALSE\n4          Buthus occitanus          75          TRUE"
+  },
+  {
+    "objectID": "basic0.html#listas",
+    "href": "basic0.html#listas",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "Listas",
+    "text": "Listas\nUna lista puede almacenar distintos tipos de datos en una misma estructura\n\n# Crear una lista con información sobre Drosophila melanogaster\ndrosophila &lt;- list(\n  Nombre_Cientifico = \"*Drosophila melanogaster*\",\n  Ciclo_Vida_Dias = c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10),  # Ciclo de vida en días\n  GenesImportantes = c(\"white\", \"yellow\", \"ebony\", \"bithorax\"),\n  Longitud_mm = 2.5,\n  Modelo_Biologico = TRUE\n)"
+  },
+  {
+    "objectID": "basic0.html#section-1",
+    "href": "basic0.html#section-1",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "",
+    "text": "drosophila\n\n$Nombre_Cientifico\n[1] \"*Drosophila melanogaster*\"\n\n$Ciclo_Vida_Dias\n [1]  1  2  3  4  5  6  7  8  9 10\n\n$GenesImportantes\n[1] \"white\"    \"yellow\"   \"ebony\"    \"bithorax\"\n\n$Longitud_mm\n[1] 2.5\n\n$Modelo_Biologico\n[1] TRUE\n\n\n¿Qué pasó aquí? Simplemente una sola variable “Drosophila” ahora nos puede entregar diferentes características de una especie. Cómo una pokedex."
+  },
+  {
+    "objectID": "basic0.html#operadores-aritméticos",
+    "href": "basic0.html#operadores-aritméticos",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "Operadores aritméticos",
+    "text": "Operadores aritméticos\nEsperanza de vida de algunas especies de Asteraceae.\n\n# Tiempo de vida en años de algunas especies\nvida_helianthus &lt;- 1    # Anual\nvida_arnica &lt;- 2        # Bianual\nvida_artemisia &lt;- 3     # Perenne\n\n# Operaciones\ntotal_vida &lt;- vida_helianthus + vida_arnica + vida_artemisia  # Suma\nvida_promedio &lt;- total_vida / 3   # Promedio de longevidad\nvida_doble_arnica &lt;- vida_arnica * 2  # Multiplicación\nvida_potencia &lt;- vida_artemisia^2   # Potencia\n\n# Mostrar resultados\ntotal_vida\n\n[1] 6\n\nvida_promedio\n\n[1] 2\n\nvida_doble_arnica\n\n[1] 4\n\nvida_potencia\n\n[1] 9"
+  },
+  {
+    "objectID": "basic0.html#operadores-relacionales",
+    "href": "basic0.html#operadores-relacionales",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "Operadores relacionales",
+    "text": "Operadores relacionales\nLongitudes en especies de escorpiones\n\n# Longitudes en cm de dos especies\nlong_pandinus &lt;- 10   # Pandinus imperator (Escorpión emperador)\nlong_tityus &lt;- 7      # Tityus pachyurus \n\n# Comparaciones\nlong_pandinus &gt; long_tityus   # ¿Pandinus es más grande?\n\n[1] TRUE\n\nlong_pandinus == long_tityus  # ¿Tienen la misma longitud?\n\n[1] FALSE\n\nlong_tityus != 10  # ¿Tityus NO mide 10 cm?\n\n[1] TRUE"
+  },
+  {
+    "objectID": "basic0.html#operadores-lógicos",
+    "href": "basic0.html#operadores-lógicos",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "Operadores lógicos",
+    "text": "Operadores lógicos\nEste sería un ejemplo con temperatura de hábitat en Drosophila\n\n# Rango de temperatura ideal en °C\ntemp_drosophila &lt;- 25\ntemp_min &lt;- 20\ntemp_max &lt;- 30\n\n# Evaluación de condiciones\n(temp_drosophila &gt;= temp_min) & (temp_drosophila &lt;= temp_max)  # ¿Está dentro del rango?\n\n[1] TRUE\n\n(temp_drosophila &lt; temp_min) | (temp_drosophila &gt; temp_max)  # ¿Fuera del rango?\n\n[1] FALSE\n\n! (temp_drosophila == 25)  # ¿No es exactamente 25°C?\n\n[1] FALSE"
+  },
+  {
+    "objectID": "basic0.html#operadores-de-asignación",
+    "href": "basic0.html#operadores-de-asignación",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "Operadores de asignación",
+    "text": "Operadores de asignación\nFrecuencia de polinizadores en plantas de la familia Asteraceae\n\n# Frecuencia de visitas por día\nabejas &lt;- 30\nmariposas &lt;- 12\nescarabajos = 8  # También se puede usar \"=\"\n\n# Alternativa de asignación derecha\n50 -&gt; colibries  \n\n# Mostrar variables\nabejas\n\n[1] 30\n\nmariposas\n\n[1] 12\n\nescarabajos\n\n[1] 8\n\ncolibries\n\n[1] 50"
+  },
+  {
+    "objectID": "basic0.html#ejercicio-2",
+    "href": "basic0.html#ejercicio-2",
+    "title": "Tipos, estructuras y operadores de datos",
+    "section": "Ejercicio 2",
+    "text": "Ejercicio 2\nElaborar un ejemplo de cada una de las estructuras de datos vistas en la clase. Tienen el resto del día!"
+  },
+  {
+    "objectID": "basic2.html#qué-es-el-tidyverse",
+    "href": "basic2.html#qué-es-el-tidyverse",
+    "title": "Tablas y organización de datos",
+    "section": "¿Qué es el Tidyverse?",
+    "text": "¿Qué es el Tidyverse?\nEl paquete tidyverse es una colección de diferentes paqueterías útiles en la ciencia de datos.\n\n\n\n\n\n\n\nFigura 1. Introducción al Tidyverse. Tomado de Tidyverse.org\n\n\nEste paquete es fundamental porque entre otras cosas contiene “readr” y “ggplot2”. El primero se requiere para la lectura de tablas y bases de datos exportadas desde excel y el otro para la esquematización de gráficos."
+  },
+  {
+    "objectID": "basic2.html#creación-de-tablas",
+    "href": "basic2.html#creación-de-tablas",
+    "title": "Tablas y organización de datos",
+    "section": "¿Creación de tablas?",
+    "text": "¿Creación de tablas?\nLa creación de tablas puede ser un enfoque útil cuando necesitas esquematizar y organizar.Por ejemplo\n\n\n  nombres apellidos  carrera\n1  Xavier    García Biología\n2   Daine   Guevara Biología\n3  Alexis       Paz Biología\n4 Natalia  Quintero Biología\n\n\nSin embargo el código para una tabla como la anterior también podría complementarse cuantas veces sea necesario. Por ejemplo:\n\nespecies&lt;-c(\"*Centruroides margaritatus*\", \"*Tityus pachyurus*\", \"*Tityus trivittatus*\", \"*centruroides gracilis*\", \"*Centruroides suffusus*\")\nambiente&lt;-c(\"luz\", \"luz\", \"luz\", \"sombra\", \"sombra\")\nMunicipio&lt;-c(\"Popayán\", \"Villa de Leyva\", \"Bogotá\", \"Argentina, Huila\", \"Inza\")\nDepartamento&lt;-c(\"Cauca\", \"Boyacá\", \"Cundinamarca\", \"Huila\", \"Cauca\")\ncantidad_de_individuos&lt;-c(2,4,3,4,5)\nframe_scorpions&lt;- data.frame(especies, ambiente, Municipio, Departamento, cantidad_de_individuos)\n\nEn este punto tendremos un “data.frame” organizado según nuestras variables. Podremos añadir n variables."
+  },
+  {
+    "objectID": "basic2.html#section",
+    "href": "basic2.html#section",
+    "title": "Tablas y organización de datos",
+    "section": "",
+    "text": "especies\nambiente\nMunicipio\nDepartamento\ncantidad_de_individuos\n\n\n\n\nCentruroides margaritatus\nluz\nPopayán\nCauca\n2\n\n\nTityus pachyurus\nluz\nVilla de Leyva\nBoyacá\n4\n\n\nTityus trivittatus\nluz\nBogotá\nCundinamarca\n3\n\n\ncentruroides gracilis\nsombra\nArgentina, Huila\nHuila\n4\n\n\nCentruroides suffusus\nsombra\nInza\nCauca\n5\n\n\n\n\n\nHabremos obtenido nuestra tabla. Sin embargo ¿Queremos mantener esos nombres dados por las variables? NO,la respuesta es sencilla, pues no se ve bien y estético."
+  },
+  {
+    "objectID": "basic2.html#section-1",
+    "href": "basic2.html#section-1",
+    "title": "Tablas y organización de datos",
+    "section": "",
+    "text": "Para ello haremos lo siguiente:\n\ncolnames(frame_scorpions)&lt;-c(\"Especies\", \"Ambientes\",\"Municipio\", \"Departamento\", \"No. de Individuos\")\n\n¿Qué hemos hecho aquí? Hemos sustituído las leyendas de nuestras columnas. Usamos “colnames” función que permite introducir nuestra variable data.frame “frame_scorpions”. Por tanto nuestra tabla debería verse así para la siguiente diapositiva.\n\n\n\n\n\n\n\n\n\n\n\n\nEspecies\nAmbientes\nMunicipio\nDepartamento\nNo. de Individuos\n\n\n\n\nCentruroides margaritatus\nluz\nPopayán\nCauca\n2\n\n\nTityus pachyurus\nluz\nVilla de Leyva\nBoyacá\n4\n\n\nTityus trivittatus\nluz\nBogotá\nCundinamarca\n3\n\n\ncentruroides gracilis\nsombra\nArgentina, Huila\nHuila\n4\n\n\nCentruroides suffusus\nsombra\nInza\nCauca\n5"
+  },
+  {
+    "objectID": "basic2.html#ejercicio-práctico-no.-1",
+    "href": "basic2.html#ejercicio-práctico-no.-1",
+    "title": "Tablas y organización de datos",
+    "section": "Ejercicio práctico No. 1",
+    "text": "Ejercicio práctico No. 1\nDirígete a documentación en la página de este curso para obtener el ejercicio."
+  },
+  {
+    "objectID": "basic2.html#bases-de-datos",
+    "href": "basic2.html#bases-de-datos",
+    "title": "Tablas y organización de datos",
+    "section": "Bases de datos",
+    "text": "Bases de datos\n La base de datos que encontrarás está basada en el trabajo de Maria Doyle (2019).\n Sobre el contexto Es una base de datos del proyecto GREIN: GEO RNA-seq Experiments Interactive Navigator. En esta webpage puede accederse a una amplia variedad de metadatos.  Este trabajo será para realización en clase"
+  },
+  {
+    "objectID": "basic2.html#subiendo-la-base-de-datos",
+    "href": "basic2.html#subiendo-la-base-de-datos",
+    "title": "Tablas y organización de datos",
+    "section": "Subiendo la base de datos",
+    "text": "Subiendo la base de datos\n Presionar “Import Dataset”. En este punto hay varias opciones: 1. Subir como .CSV 2. Subir como .xlx 3. Subir como .txt \nPara subir como “.xlx” debe utilizarse:\n\n#Usar el paquete tidyverse \ninstall.packages(\"tidyverse\")\n\npackage 'tidyverse' successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\XAVIER\\AppData\\Local\\Temp\\Rtmpy0BsRE\\downloaded_packages\n\nlibrary(tidyverse)\n#O podemos correr solo \"dplyr\"\nlibrary(dplyr)\nlibrary(readxl)\n\nEn Rstudio quizás no sea necesario que sepas esto. Para propósitos de nuestro plan de trabjo usaremos algunas bases de datos propias de R"
+  },
+  {
+    "objectID": "basic2.html#uso-de-la-librería-mtcars-e-introducción-al-dplyr",
+    "href": "basic2.html#uso-de-la-librería-mtcars-e-introducción-al-dplyr",
+    "title": "Tablas y organización de datos",
+    "section": "Uso de la librería mtcars e introducción al dplyr",
+    "text": "Uso de la librería mtcars e introducción al dplyr\nCuando apliquemos la tabla… \n\nmtcars\n\n                     mpg cyl  disp  hp drat    wt  qsec vs am gear carb\nMazda RX4           21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag       21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710          22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive      21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout   18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2\nValiant             18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1\nDuster 360          14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4\nMerc 240D           24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2\nMerc 230            22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2\nMerc 280            19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4\nMerc 280C           17.8   6 167.6 123 3.92 3.440 18.90  1  0    4    4\nMerc 450SE          16.4   8 275.8 180 3.07 4.070 17.40  0  0    3    3\nMerc 450SL          17.3   8 275.8 180 3.07 3.730 17.60  0  0    3    3\nMerc 450SLC         15.2   8 275.8 180 3.07 3.780 18.00  0  0    3    3\nCadillac Fleetwood  10.4   8 472.0 205 2.93 5.250 17.98  0  0    3    4\nLincoln Continental 10.4   8 460.0 215 3.00 5.424 17.82  0  0    3    4\nChrysler Imperial   14.7   8 440.0 230 3.23 5.345 17.42  0  0    3    4\nFiat 128            32.4   4  78.7  66 4.08 2.200 19.47  1  1    4    1\nHonda Civic         30.4   4  75.7  52 4.93 1.615 18.52  1  1    4    2\nToyota Corolla      33.9   4  71.1  65 4.22 1.835 19.90  1  1    4    1\nToyota Corona       21.5   4 120.1  97 3.70 2.465 20.01  1  0    3    1\nDodge Challenger    15.5   8 318.0 150 2.76 3.520 16.87  0  0    3    2\nAMC Javelin         15.2   8 304.0 150 3.15 3.435 17.30  0  0    3    2\nCamaro Z28          13.3   8 350.0 245 3.73 3.840 15.41  0  0    3    4\nPontiac Firebird    19.2   8 400.0 175 3.08 3.845 17.05  0  0    3    2\nFiat X1-9           27.3   4  79.0  66 4.08 1.935 18.90  1  1    4    1\nPorsche 914-2       26.0   4 120.3  91 4.43 2.140 16.70  0  1    5    2\nLotus Europa        30.4   4  95.1 113 3.77 1.513 16.90  1  1    5    2\nFord Pantera L      15.8   8 351.0 264 4.22 3.170 14.50  0  1    5    4\nFerrari Dino        19.7   6 145.0 175 3.62 2.770 15.50  0  1    5    6\nMaserati Bora       15.0   8 301.0 335 3.54 3.570 14.60  0  1    5    8\nVolvo 142E          21.4   4 121.0 109 4.11 2.780 18.60  1  1    4    2\n\n#Convertimos en data.frame para una lectura ideal."
+  },
+  {
+    "objectID": "basic2.html#algunos-comandos-que-puedes-usar",
+    "href": "basic2.html#algunos-comandos-que-puedes-usar",
+    "title": "Tablas y organización de datos",
+    "section": "Algunos comandos que puedes usar",
+    "text": "Algunos comandos que puedes usar\n\n#Para saber la estructura de los datos. Por ejemplo cuántos datos hay presentes.\nstr(mtcars)\n\n'data.frame':   32 obs. of  11 variables:\n $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...\n $ cyl : num  6 6 4 6 8 6 8 4 4 6 ...\n $ disp: num  160 160 108 258 360 ...\n $ hp  : num  110 110 93 110 175 105 245 62 95 123 ...\n $ drat: num  3.9 3.9 3.85 3.08 3.15 2.76 3.21 3.69 3.92 3.92 ...\n $ wt  : num  2.62 2.88 2.32 3.21 3.44 ...\n $ qsec: num  16.5 17 18.6 19.4 17 ...\n $ vs  : num  0 0 1 1 0 1 0 1 1 1 ...\n $ am  : num  1 1 1 0 0 0 0 0 0 0 ...\n $ gear: num  4 4 4 3 3 3 3 4 4 4 ...\n $ carb: num  4 4 1 1 2 1 4 2 2 4 ...\n\n#Nombres de las columnas. \ncolnames(mtcars)\n\n [1] \"mpg\"  \"cyl\"  \"disp\" \"hp\"   \"drat\" \"wt\"   \"qsec\" \"vs\"   \"am\"   \"gear\"\n[11] \"carb\""
+  },
+  {
+    "objectID": "basic2.html#uso-de-la-librería-tibble",
+    "href": "basic2.html#uso-de-la-librería-tibble",
+    "title": "Tablas y organización de datos",
+    "section": "Uso de la librería tibble",
+    "text": "Uso de la librería tibble\n\nlibrary(tibble)\ntibble_tabla&lt;-tibble(head(mtcars))\ntibble_tabla\n\n# A tibble: 6 × 11\n    mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1  21       6   160   110  3.9   2.62  16.5     0     1     4     4\n2  21       6   160   110  3.9   2.88  17.0     0     1     4     4\n3  22.8     4   108    93  3.85  2.32  18.6     1     1     4     1\n4  21.4     6   258   110  3.08  3.22  19.4     1     0     3     1\n5  18.7     8   360   175  3.15  3.44  17.0     0     0     3     2\n6  18.1     6   225   105  2.76  3.46  20.2     1     0     3     1"
+  },
+  {
+    "objectID": "basic2.html#un-poco-sobre-exploración-de-datos",
+    "href": "basic2.html#un-poco-sobre-exploración-de-datos",
+    "title": "Tablas y organización de datos",
+    "section": "Un poco sobre exploración de datos…",
+    "text": "Un poco sobre exploración de datos…\n\nframe_scorpions\n\n                     Especies Ambientes        Municipio Departamento\n1 *Centruroides margaritatus*       luz          Popayán        Cauca\n2          *Tityus pachyurus*       luz   Villa de Leyva       Boyacá\n3        *Tityus trivittatus*       luz           Bogotá Cundinamarca\n4     *centruroides gracilis*    sombra Argentina, Huila        Huila\n5     *Centruroides suffusus*    sombra             Inza        Cauca\n  No. de Individuos\n1                 2\n2                 4\n3                 3\n4                 4\n5                 5\n\nhead(frame_scorpions)\n\n                     Especies Ambientes        Municipio Departamento\n1 *Centruroides margaritatus*       luz          Popayán        Cauca\n2          *Tityus pachyurus*       luz   Villa de Leyva       Boyacá\n3        *Tityus trivittatus*       luz           Bogotá Cundinamarca\n4     *centruroides gracilis*    sombra Argentina, Huila        Huila\n5     *Centruroides suffusus*    sombra             Inza        Cauca\n  No. de Individuos\n1                 2\n2                 4\n3                 3\n4                 4\n5                 5"
+  },
+  {
+    "objectID": "basic2.html#section-2",
+    "href": "basic2.html#section-2",
+    "title": "Tablas y organización de datos",
+    "section": "",
+    "text": "head(mtcars)\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1\n\n\nEstos serían dos ejemplos con head()."
+  },
+  {
+    "objectID": "basic2.html#filtrar-datos",
+    "href": "basic2.html#filtrar-datos",
+    "title": "Tablas y organización de datos",
+    "section": "Filtrar datos",
+    "text": "Filtrar datos\nVolviendo con “mtcars”\n\n#De la manera siguiente podemos filtrar datos según nuestro tipo de necesidad. \nmtcars %&gt;% filter(mtcars$carb &lt; 10)\n\n                     mpg cyl  disp  hp drat    wt  qsec vs am gear carb\nMazda RX4           21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag       21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710          22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive      21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout   18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2\nValiant             18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1\nDuster 360          14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4\nMerc 240D           24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2\nMerc 230            22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2\nMerc 280            19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4\nMerc 280C           17.8   6 167.6 123 3.92 3.440 18.90  1  0    4    4\nMerc 450SE          16.4   8 275.8 180 3.07 4.070 17.40  0  0    3    3\nMerc 450SL          17.3   8 275.8 180 3.07 3.730 17.60  0  0    3    3\nMerc 450SLC         15.2   8 275.8 180 3.07 3.780 18.00  0  0    3    3\nCadillac Fleetwood  10.4   8 472.0 205 2.93 5.250 17.98  0  0    3    4\nLincoln Continental 10.4   8 460.0 215 3.00 5.424 17.82  0  0    3    4\nChrysler Imperial   14.7   8 440.0 230 3.23 5.345 17.42  0  0    3    4\nFiat 128            32.4   4  78.7  66 4.08 2.200 19.47  1  1    4    1\nHonda Civic         30.4   4  75.7  52 4.93 1.615 18.52  1  1    4    2\nToyota Corolla      33.9   4  71.1  65 4.22 1.835 19.90  1  1    4    1\nToyota Corona       21.5   4 120.1  97 3.70 2.465 20.01  1  0    3    1\nDodge Challenger    15.5   8 318.0 150 2.76 3.520 16.87  0  0    3    2\nAMC Javelin         15.2   8 304.0 150 3.15 3.435 17.30  0  0    3    2\nCamaro Z28          13.3   8 350.0 245 3.73 3.840 15.41  0  0    3    4\nPontiac Firebird    19.2   8 400.0 175 3.08 3.845 17.05  0  0    3    2\nFiat X1-9           27.3   4  79.0  66 4.08 1.935 18.90  1  1    4    1\nPorsche 914-2       26.0   4 120.3  91 4.43 2.140 16.70  0  1    5    2\nLotus Europa        30.4   4  95.1 113 3.77 1.513 16.90  1  1    5    2\nFord Pantera L      15.8   8 351.0 264 4.22 3.170 14.50  0  1    5    4\nFerrari Dino        19.7   6 145.0 175 3.62 2.770 15.50  0  1    5    6\nMaserati Bora       15.0   8 301.0 335 3.54 3.570 14.60  0  1    5    8\nVolvo 142E          21.4   4 121.0 109 4.11 2.780 18.60  1  1    4    2"
+  },
+  {
+    "objectID": "basic2.html#uso-del-comando-split",
+    "href": "basic2.html#uso-del-comando-split",
+    "title": "Tablas y organización de datos",
+    "section": "Uso del comando split",
+    "text": "Uso del comando split\n\n#A continuación dividiremos una tabla: \nmtcars_split&lt;- split(mtcars, mtcars$mpg)\nmtcars_split\n\n$`10.4`\n                     mpg cyl disp  hp drat    wt  qsec vs am gear carb\nCadillac Fleetwood  10.4   8  472 205 2.93 5.250 17.98  0  0    3    4\nLincoln Continental 10.4   8  460 215 3.00 5.424 17.82  0  0    3    4\n\n$`13.3`\n            mpg cyl disp  hp drat   wt  qsec vs am gear carb\nCamaro Z28 13.3   8  350 245 3.73 3.84 15.41  0  0    3    4\n\n$`14.3`\n            mpg cyl disp  hp drat   wt  qsec vs am gear carb\nDuster 360 14.3   8  360 245 3.21 3.57 15.84  0  0    3    4\n\n$`14.7`\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nChrysler Imperial 14.7   8  440 230 3.23 5.345 17.42  0  0    3    4\n\n$`15`\n              mpg cyl disp  hp drat   wt qsec vs am gear carb\nMaserati Bora  15   8  301 335 3.54 3.57 14.6  0  1    5    8\n\n$`15.2`\n             mpg cyl  disp  hp drat    wt qsec vs am gear carb\nMerc 450SLC 15.2   8 275.8 180 3.07 3.780 18.0  0  0    3    3\nAMC Javelin 15.2   8 304.0 150 3.15 3.435 17.3  0  0    3    2\n\n$`15.5`\n                  mpg cyl disp  hp drat   wt  qsec vs am gear carb\nDodge Challenger 15.5   8  318 150 2.76 3.52 16.87  0  0    3    2\n\n$`15.8`\n                mpg cyl disp  hp drat   wt qsec vs am gear carb\nFord Pantera L 15.8   8  351 264 4.22 3.17 14.5  0  1    5    4\n\n$`16.4`\n            mpg cyl  disp  hp drat   wt qsec vs am gear carb\nMerc 450SE 16.4   8 275.8 180 3.07 4.07 17.4  0  0    3    3\n\n$`17.3`\n            mpg cyl  disp  hp drat   wt qsec vs am gear carb\nMerc 450SL 17.3   8 275.8 180 3.07 3.73 17.6  0  0    3    3\n\n$`17.8`\n           mpg cyl  disp  hp drat   wt qsec vs am gear carb\nMerc 280C 17.8   6 167.6 123 3.92 3.44 18.9  1  0    4    4\n\n$`18.1`\n         mpg cyl disp  hp drat   wt  qsec vs am gear carb\nValiant 18.1   6  225 105 2.76 3.46 20.22  1  0    3    1\n\n$`18.7`\n                   mpg cyl disp  hp drat   wt  qsec vs am gear carb\nHornet Sportabout 18.7   8  360 175 3.15 3.44 17.02  0  0    3    2\n\n$`19.2`\n                  mpg cyl  disp  hp drat    wt  qsec vs am gear carb\nMerc 280         19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4\nPontiac Firebird 19.2   8 400.0 175 3.08 3.845 17.05  0  0    3    2\n\n$`19.7`\n              mpg cyl disp  hp drat   wt qsec vs am gear carb\nFerrari Dino 19.7   6  145 175 3.62 2.77 15.5  0  1    5    6\n\n$`21`\n              mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4      21   6  160 110  3.9 2.620 16.46  0  1    4    4\nMazda RX4 Wag  21   6  160 110  3.9 2.875 17.02  0  1    4    4\n\n$`21.4`\n                mpg cyl disp  hp drat    wt  qsec vs am gear carb\nHornet 4 Drive 21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nVolvo 142E     21.4   4  121 109 4.11 2.780 18.60  1  1    4    2\n\n$`21.5`\n               mpg cyl  disp hp drat    wt  qsec vs am gear carb\nToyota Corona 21.5   4 120.1 97  3.7 2.465 20.01  1  0    3    1\n\n$`22.8`\n            mpg cyl  disp hp drat   wt  qsec vs am gear carb\nDatsun 710 22.8   4 108.0 93 3.85 2.32 18.61  1  1    4    1\nMerc 230   22.8   4 140.8 95 3.92 3.15 22.90  1  0    4    2\n\n$`24.4`\n           mpg cyl  disp hp drat   wt qsec vs am gear carb\nMerc 240D 24.4   4 146.7 62 3.69 3.19   20  1  0    4    2\n\n$`26`\n              mpg cyl  disp hp drat   wt qsec vs am gear carb\nPorsche 914-2  26   4 120.3 91 4.43 2.14 16.7  0  1    5    2\n\n$`27.3`\n           mpg cyl disp hp drat    wt qsec vs am gear carb\nFiat X1-9 27.3   4   79 66 4.08 1.935 18.9  1  1    4    1\n\n$`30.4`\n              mpg cyl disp  hp drat    wt  qsec vs am gear carb\nHonda Civic  30.4   4 75.7  52 4.93 1.615 18.52  1  1    4    2\nLotus Europa 30.4   4 95.1 113 3.77 1.513 16.90  1  1    5    2\n\n$`32.4`\n          mpg cyl disp hp drat  wt  qsec vs am gear carb\nFiat 128 32.4   4 78.7 66 4.08 2.2 19.47  1  1    4    1\n\n$`33.9`\n                mpg cyl disp hp drat    wt qsec vs am gear carb\nToyota Corolla 33.9   4 71.1 65 4.22 1.835 19.9  1  1    4    1\n\n\nY así podemos cortar diferentes columnas del dataset “mtcars”"
+  },
+  {
+    "objectID": "basic2.html#ejercicio-práctico-no.-2",
+    "href": "basic2.html#ejercicio-práctico-no.-2",
+    "title": "Tablas y organización de datos",
+    "section": "Ejercicio práctico No. 2",
+    "text": "Ejercicio práctico No. 2\nCrear una tabla o utilizar la dataset “mtcars” y aplicar todo lo aprendido. Tienen el resto del día."
+  },
+  {
+    "objectID": "basic2.html#referencias",
+    "href": "basic2.html#referencias",
+    "title": "Tablas y organización de datos",
+    "section": "Referencias",
+    "text": "Referencias\nMelbourne Bioinformatics. (2023) R for biologists GitHub"
+  },
+  {
+    "objectID": "basic4.html#objetivos",
+    "href": "basic4.html#objetivos",
+    "title": "¿Cómo diablos puedo representar mis datos?",
+    "section": "Objetivos",
+    "text": "Objetivos\nAprender a crear gráficos a través de la interfaz gráfica de R y a través del paquete ggplot2."
+  },
+  {
+    "objectID": "basic4.html#cómo-puedo-representar-mis-datos",
+    "href": "basic4.html#cómo-puedo-representar-mis-datos",
+    "title": "¿Cómo diablos puedo representar mis datos?",
+    "section": "¿Cómo puedo representar mis datos?",
+    "text": "¿Cómo puedo representar mis datos?\nYa hemos visto como importar, manejar y manipular datos. Pero ahora… ¿Cómo los represento?\n\nboxplot(penguins, col = \"darkred\", main= \"Medianas\")"
+  },
+  {
+    "objectID": "basic4.html#section",
+    "href": "basic4.html#section",
+    "title": "¿Cómo diablos puedo representar mis datos?",
+    "section": "",
+    "text": "#Para generar un barplot debe generarse como matriz. \npenguins_matrix&lt;-as.matrix(penguins)\nbarplot(penguins_matrix)"
+  },
+  {
+    "objectID": "basic4.html#section-1",
+    "href": "basic4.html#section-1",
+    "title": "¿Cómo diablos puedo representar mis datos?",
+    "section": "",
+    "text": "hist(penguins$bill_length_mm, main = \"Histograma\", ylab = \"Frecuencia\", col = \"gold\", xlab = \"Eje x\")"
+  },
+  {
+    "objectID": "basic4.html#section-2",
+    "href": "basic4.html#section-2",
+    "title": "¿Cómo diablos puedo representar mis datos?",
+    "section": "",
+    "text": "plot(penguins)"
+  },
+  {
+    "objectID": "basic4.html#quizás-se-trate-de-embellecer",
+    "href": "basic4.html#quizás-se-trate-de-embellecer",
+    "title": "¿Cómo diablos puedo representar mis datos?",
+    "section": "Quizás se trate de embellecer…",
+    "text": "Quizás se trate de embellecer…\nUna de las herramientas que nos podría ayudar a embellecer nuestros trabajos son los gráficos contenidos en la biblioteca o librería “ggplot2”"
+  },
+  {
+    "objectID": "basic4.html#introducción-a-ggplot2",
+    "href": "basic4.html#introducción-a-ggplot2",
+    "title": "¿Cómo diablos puedo representar mis datos?",
+    "section": "Introducción a Ggplot2",
+    "text": "Introducción a Ggplot2\n\n\n\n\n\nEs una librería que pertenece al tidyverse. Esta librería presenta un nuevo concepto sobre el “data visualization” y como este impacta en la presentación de los datos. Ofrece una mayor cantidad de opciones como etiquetas, escalas, temas con el fin de mejorar la legibilidad."
+  },
+  {
+    "objectID": "basic4.html#grámatica-de-los-gráficos",
+    "href": "basic4.html#grámatica-de-los-gráficos",
+    "title": "¿Cómo diablos puedo representar mis datos?",
+    "section": "Grámatica de los gráficos",
+    "text": "Grámatica de los gráficos\nEl concepto clave para entender la lógica de ggplot se encuentra en el siguiente script:\n\n# ggplot(data) + aes(x, y) + geom_*()\n#Capas, mapeos estéticos, geoms, escalas y temas: \n#(aes()), es la forma de mapear. \n\n\nggplot(penguins)+\n  geom_col(aes(x=penguins$species, y=penguins$bill_length_mm, fill = penguins$species), position = \"stack\")+\n  labs(x = \"Especies de pinguinos\", y = \"Y\", title = \"Ejemplo \")"
+  },
+  {
+    "objectID": "basic4.html#ejercicio-práctico-no.-1",
+    "href": "basic4.html#ejercicio-práctico-no.-1",
+    "title": "¿Cómo diablos puedo representar mis datos?",
+    "section": "Ejercicio práctico No. 1",
+    "text": "Ejercicio práctico No. 1\nGenera un gráfico con lo aprendido. Podrás usar alguna de las librerías vistas en clase. Tienes 10 minutos."
+  },
+  {
+    "objectID": "basic4.html#boxplots",
+    "href": "basic4.html#boxplots",
+    "title": "¿Cómo diablos puedo representar mis datos?",
+    "section": "Boxplots",
+    "text": "Boxplots\nResume la distribución de una variable numérica, mostrando los cuartiles, mediana y posibles outliers o valores atípicos.\n\nmi_boxplot&lt;-ggplot(penguins)+\n  geom_boxplot(mapping = aes(x=penguins$species, y=penguins$flipper_length_mm, fill= penguins$species))+\n  labs(x= \"Especies de pinguinos\", y= \"Longitud de aleta\", title = \"Relación entre la longitud de la aleta y pinguinos\", subtitle = \"Datos reportados para pinguinos\")+\n  theme_minimal()\nmi_boxplot"
+  },
+  {
+    "objectID": "basic4.html#lineplots",
+    "href": "basic4.html#lineplots",
+    "title": "¿Cómo diablos puedo representar mis datos?",
+    "section": "Lineplots",
+    "text": "Lineplots\nMuestra cambios en los datos a lo largo del tiempo o en una secuencia. Puede ser util para evaluar cambios a lo largo del tiempo.\n\nggplot(penguins, aes(x = flipper_length_mm, y = bill_depth_mm, fill = species, color = species)) +\n  geom_line() +\n  theme_minimal()"
+  },
+  {
+    "objectID": "basic4.html#scatter-plot",
+    "href": "basic4.html#scatter-plot",
+    "title": "¿Cómo diablos puedo representar mis datos?",
+    "section": "Scatter Plot",
+    "text": "Scatter Plot\nMuestra la relación entre dos variables numérica. Se utiliza para identificar correlaciones o patrones en los datos.\n\nlibrary(ggplot2)\nlibrary(palmerpenguins)\nggplot(penguins)+\n  geom_point(aes(x= bill_length_mm, y= penguins$flipper_length_mm, fill = species, color= species), stat = \"identity\", position= \"identity\")"
+  },
+  {
+    "objectID": "basic4.html#barplots",
+    "href": "basic4.html#barplots",
+    "title": "¿Cómo diablos puedo representar mis datos?",
+    "section": "Barplots",
+    "text": "Barplots\nPermite representar categorías con barras de diferente altura según su frecuencia o valor.\n\nggplot(penguins)+\n  geom_bar(aes(x= species, y= penguins$body_mass_g, fill = species), stat = \"identity\")"
+  },
+  {
+    "objectID": "basic4.html#histogramas",
+    "href": "basic4.html#histogramas",
+    "title": "¿Cómo diablos puedo representar mis datos?",
+    "section": "Histogramas",
+    "text": "Histogramas\nLos histogramas nos permiten representar frecuencias en nuestros datos. También son una forma de aproximación estadística para evaluar la normalidad, por ejemplo.\n\nggplot(penguins)+\n  geom_histogram(aes(x= flipper_length_mm, fill = species), position = \"identity\")"
+  },
+  {
+    "objectID": "basic4.html#ejercicio-práctico-no.-2",
+    "href": "basic4.html#ejercicio-práctico-no.-2",
+    "title": "¿Cómo diablos puedo representar mis datos?",
+    "section": "Ejercicio práctico No. 2",
+    "text": "Ejercicio práctico No. 2\nPrueba a crear alguno de los gráficos que hemos visto con ambos datasets utilizados. Tienes 10 minutos."
+  },
+  {
+    "objectID": "basic4.html#polígonos",
+    "href": "basic4.html#polígonos",
+    "title": "¿Cómo diablos puedo representar mis datos?",
+    "section": "Polígonos",
+    "text": "Polígonos\nSon similares a un histograma, sin embargo se diferencia en la unión de puntos de frecuencia con líneas formando un polígono. Puede ser util para representar la distribución espacial de varias especie por ejemplo.\n\nlibrary(ggplot2)\nlibrary(dplyr)\n# Datos simulados de especies de escorpiones\nset.seed(42)\nscorpions &lt;- data.frame(\n  species = rep(c(\"Escorpión A\", \"Escorpión B\"), each = 10),\n  x = c(runif(10, min = 1, max = 5), runif(10, min = 4, max = 8)),\n  y = c(runif(10, min = 1, max = 5), runif(10, min = 4, max = 8))\n)\n\n# Ordenar puntos para formar un polígono convexo\nscorpions_hull &lt;- scorpions %&gt;%\n  group_by(species) %&gt;%\n  slice(chull(x, y))  # Encuentra el polígono convexo"
+  },
+  {
+    "objectID": "basic4.html#y-así-quedaría-nuestro-polígono",
+    "href": "basic4.html#y-así-quedaría-nuestro-polígono",
+    "title": "¿Cómo diablos puedo representar mis datos?",
+    "section": "y así quedaría nuestro polígono…",
+    "text": "y así quedaría nuestro polígono…\n\n# Graficar puntos y polígono\nggplot() +\n  geom_polygon(data = scorpions_hull, aes(x = x, y = y, fill = species, group = species), alpha = 0.3) +\n  geom_point(data = scorpions, aes(x = x, y = y, color = species), size = 3) +\n  labs(title = \"Espacio ecológico de escorpiones\", x = \"Eje PCA 1\", y = \"Eje PCA 2\") +\n  theme_minimal()"
+  },
+  {
+    "objectID": "basic4.html#otro-ejemplo-para-un-polígono-sería",
+    "href": "basic4.html#otro-ejemplo-para-un-polígono-sería",
+    "title": "¿Cómo diablos puedo representar mis datos?",
+    "section": "Otro ejemplo para un polígono sería",
+    "text": "Otro ejemplo para un polígono sería\n\n#Por ejemplo con penguins. \nggplot(penguins)+\n  geom_polygon(aes(x= penguins$body_mass_g, y=penguins$flipper_length_mm, fill= species), stat = \"identity\", position = \"identity\")+\n  labs(x= \"Masa cuerpo pinguinos\", y= \"Longitud de la aleta\", title = \"Relación entre la longitud \", subtitle = \"Subtitulos\")"
+  },
+  {
+    "objectID": "basic4.html#referencias",
+    "href": "basic4.html#referencias",
+    "title": "¿Cómo diablos puedo representar mis datos?",
+    "section": "Referencias",
+    "text": "Referencias\n“About to ggplot 3.5.1 - CRAN (2025)"
+  },
+  {
+    "objectID": "fundament_programation.html#qué-es-la-programación",
+    "href": "fundament_programation.html#qué-es-la-programación",
+    "title": "¿Cómo funciona la programación?",
+    "section": "¿Qué es la programación?",
+    "text": "¿Qué es la programación?\n\nProceso de escribir instrucciones en un lenguaje de bajo o alto nivel para que una computadora realice una tarea específica.  Se puede manipular datos, desarrollar apps, modelar sistemas y calcular datos."
+  },
+  {
+    "objectID": "fundament_programation.html#concepto-de-programación",
+    "href": "fundament_programation.html#concepto-de-programación",
+    "title": "¿Cómo funciona la programación?",
+    "section": "Concepto de programación",
+    "text": "Concepto de programación\n\nEntrada: Datos iniciales\nProcesamiento: Transformación de datos a través de operaciones\nSalida: Resultado final\n\n\nx&lt;- 3.1416 #Entrada del dato\ny&lt;- x *2.1 /4 *0.60 #Procesamiento \nprint(y) #Salida\n\n[1] 0.989604\n\ny #Salida\n\n[1] 0.989604"
+  },
+  {
+    "objectID": "fundament_programation.html#lenguajes-de-programación-y-paradigmas",
+    "href": "fundament_programation.html#lenguajes-de-programación-y-paradigmas",
+    "title": "¿Cómo funciona la programación?",
+    "section": "Lenguajes de programación y paradigmas",
+    "text": "Lenguajes de programación y paradigmas\n\n\n               clasif\n1         Imperativos\n2        Declarativos\n3 Orientado a objetos\n4           Funcional\n                                                                          def\n1                               Basado en instrucciones secuenciales (python)\n2                       Especifica que se quiere hacer en lugar de como (SQL)\n3 Organiza el código en objetos que contienen datos y métodos (Java y Python)\n4                              Basado en funciones matemáticas puras (Matlab)\n\n\n\n\n\n¿Cómo se clasifica un lenguaje\n\n\n\n\n\n\nClasificación\nDefinición\n\n\n\n\nImperativos\nBasado en instrucciones secuenciales (python)\n\n\nDeclarativos\nEspecifica que se quiere hacer en lugar de como (SQL)\n\n\nOrientado a objetos\nOrganiza el código en objetos que contienen datos y métodos (Java y Python)\n\n\nFuncional\nBasado en funciones matemáticas puras (Matlab)"
+  },
+  {
+    "objectID": "fundament_programation.html#diferencias-entre-r-y-otros-lenguajes-como-python-c-y-java",
+    "href": "fundament_programation.html#diferencias-entre-r-y-otros-lenguajes-como-python-c-y-java",
+    "title": "¿Cómo funciona la programación?",
+    "section": "Diferencias entre R y otros lenguajes como Python, C y Java",
+    "text": "Diferencias entre R y otros lenguajes como Python, C y Java\n\n\n\nDiferencias entre diferentes lenguajes.\n\n\n\n\n\n\n\n\n\nCaracterísticas\nR\nPython\nC\nJava\n\n\n\n\nParadigma\nFuncional y estadístico\nMultiparadigma\nImperativo\nOrientado a objetos\n\n\nUso\nAnálisis de datos, bioestadística\nData Science e IA\nSistemas y hardware\nAplicaciones empresariales\n\n\nTipado\nDinámico\nDinámico\nEstático\nEstático\n\n\nVelocidad\nLento\nIntermedio\nRápido\nIntermedio"
+  },
+  {
+    "objectID": "fundament_programation.html#ejemplos-de-asignación-en-cada-lenguaje",
+    "href": "fundament_programation.html#ejemplos-de-asignación-en-cada-lenguaje",
+    "title": "¿Cómo funciona la programación?",
+    "section": "Ejemplos de asignación en cada lenguaje",
+    "text": "Ejemplos de asignación en cada lenguaje\n\n#En Python sería algo así. \n\nx = 10\nhola= \"Hola mundo\"\nprint(hola)\n\nHola mundo\n\n\n\nx&lt;- 10\nhola&lt;- \"Hola mundo\"\nsaludo&lt;- \"cómo estás?\"\nx  \n\n[1] 10\n\nsaludo\n\n[1] \"cómo estás?\"\n\nhola\n\n[1] \"Hola mundo\""
+  },
+  {
+    "objectID": "fundament_programation.html#algoritmos-y-lógica-de-programación",
+    "href": "fundament_programation.html#algoritmos-y-lógica-de-programación",
+    "title": "¿Cómo funciona la programación?",
+    "section": "Algoritmos y lógica de programación",
+    "text": "Algoritmos y lógica de programación\nUn algoritmo es un conjunto de pasos para resolver un problema. En programación se definen como:\n\nCondicionales (if-else): Toma de decisiones.\nBucles (for, while): Para repetir acciones.\nFunciones: Para modularizar el código.  En R un ejemplo podría ser\n\n\nnum&lt;- 10\nif (num %% 2 == 0) {#Se verifica si el residuo de dividir 'num' por 2 es 0\n  print(\"Es par\")\n} else {\n  print(\"Es impar\")\n}\n\n[1] \"Es par\""
+  },
+  {
+    "objectID": "fundament_programation.html#section",
+    "href": "fundament_programation.html#section",
+    "title": "¿Cómo funciona la programación?",
+    "section": "",
+    "text": "Otro caso podría ser en Python:\n\nnum = 10  # Asignamos un número\n\nif num % 2 == 0:  # Verificamos si el residuo de la división entre 2 es 0\n    print(\"Es par\")  # Si es 0, el número es par\nelse:\n    print(\"Es impar\")  # Si no, el número es impar\n\nEs par"
+  },
+  {
+    "objectID": "fundament_programation.html#flujo-de-ejecución-de-un-programa",
+    "href": "fundament_programation.html#flujo-de-ejecución-de-un-programa",
+    "title": "¿Cómo funciona la programación?",
+    "section": "Flujo de ejecución de un programa",
+    "text": "Flujo de ejecución de un programa\nEl flujo de un programa sigue una secuencia lógica:\n\nLectura del código de arriba hacia abajo.\nEjecución de instrucciones en orden.\nEvaluación de estructuras condicionales y ciclos.\nLlamado a funciones definidas en el código."
+  },
+  {
+    "objectID": "fundament_programation.html#hola-mundo",
+    "href": "fundament_programation.html#hola-mundo",
+    "title": "¿Cómo funciona la programación?",
+    "section": "Hola mundo",
+    "text": "Hola mundo\nAhora sí, empecemos.\n\nprint(\"Hola mundo\")\n\n[1] \"Hola mundo\"\n\n#Concatenaciones de ideas en R. \ncat(\"Hola\", \"Mundo\", \"\\n\")\n\nHola Mundo"
   }
 ]

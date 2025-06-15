@@ -5,8 +5,6 @@ theme:
   dark: darkly
 ---
 
-Hola!
-
 Bienvenido
 
 Este curso inicialmente estará hecho en español, mi lenguaje natal. La idea es que pueda ser una forma más sencilla de explicar R, sin tanto texto y sin demasiadas horas.
