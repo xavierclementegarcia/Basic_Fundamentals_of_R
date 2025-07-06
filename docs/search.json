@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Basic Fundamentals of R",
     "section": "",
-    "text": "Bienvenido\nEste curso inicialmente estará hecho en español, mi lenguaje natal. La idea es que pueda ser una forma más sencilla de explicar R, sin tanto texto y sin demasiadas horas.\nAquí podrás encontrar a toda hora y en cualquier momento pequeños ejemplos explicativos que pueden ayudarte en tu camino dentro de las Ciencias Biológicas con R. Buena suerte.\nEn el apartado de “Course” encontrará toda la información resumida en 6 diapositivas para que puedas aplicar el tidyverse, gráficos, tablas, pruebas estadísticas comunes en Biología y además en un futuro un material para usar R Markdown."
+    "text": "Bienvenido.\nEste curso inicialmente estará hecho en español, mi lenguaje natal. La idea es que pueda ser una forma más sencilla de explicar R, sin tanto texto y sin demasiadas horas.\nAquí podrás encontrar a toda hora y en cualquier momento pequeños ejemplos explicativos que pueden ayudarte en tu camino dentro de las Ciencias Biológicas con R. Buena suerte.\nEn el apartado de “Course” encontrará toda la información resumida en 6 diapositivas para que puedas aplicar el tidyverse, gráficos, tablas, pruebas estadísticas comunes en Biología y además en un futuro un material para usar R Markdown."
   },
   {
     "objectID": "index.html#contenido-del-curso",
@@ -221,7 +221,7 @@
     "href": "basic3.html#algunas-consideraciones-antes-de-iniciar",
     "title": "Manipulación y manejo de datos",
     "section": "Algunas consideraciones antes de iniciar",
-    "text": "Algunas consideraciones antes de iniciar\nPara proceder con esta clase usaremos algunos datasets obtenidos desde librerías específicas en R  Haremos uso del siguiente script para importar nuestros datasets.\n\n#Librería con datos de crecimiento de plantas en diferentes grupos. \n\ndata(\"PlantGrowth\")\n\nEste paquete se incluye en R.  En esta clase se hará manejo de bases de datos.\n\n\npackage 'palmerpenguins' successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\XAVIER\\AppData\\Local\\Temp\\RtmpCqWD6t\\downloaded_packages"
+    "text": "Algunas consideraciones antes de iniciar\nPara proceder con esta clase usaremos algunos datasets obtenidos desde librerías específicas en R  Haremos uso del siguiente script para importar nuestros datasets.\n\n#Librería con datos de crecimiento de plantas en diferentes grupos. \n\ndata(\"PlantGrowth\")\n\nEste paquete se incluye en R.  En esta clase se hará manejo de bases de datos.\n\n\npackage 'palmerpenguins' successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\Xavier\\AppData\\Local\\Temp\\RtmpkNsy5P\\downloaded_packages"
   },
   {
     "objectID": "basic3.html#section",
@@ -424,7 +424,7 @@
     "href": "basic1.html#instalación-de-paquetes",
     "title": "Introducción a R",
     "section": "Instalación de paquetes",
-    "text": "Instalación de paquetes\n\n# Instalar un paquete\ninstall.packages(\"tidyverse\")\n\npackage 'tidyverse' successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\XAVIER\\AppData\\Local\\Temp\\RtmpsxcPfz\\downloaded_packages\n\n# Cargar librería\nlibrary(\"tidyverse\")\n# La librería debería estar cargada. carguemos una de las librerías. Por defecto están las siguientes: \nlibrary(ggplot2)"
+    "text": "Instalación de paquetes\n\n# Instalar un paquete\ninstall.packages(\"tidyverse\")\n\npackage 'tidyverse' successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\Xavier\\AppData\\Local\\Temp\\RtmpiAMdbB\\downloaded_packages\n\n# Cargar librería\nlibrary(\"tidyverse\")\n# La librería debería estar cargada. carguemos una de las librerías. Por defecto están las siguientes: \nlibrary(ggplot2)"
   },
   {
     "objectID": "basic1.html#y-si-no-conozco-la-sintaxis-del-código",
@@ -620,7 +620,7 @@
     "href": "basic2.html#subiendo-la-base-de-datos",
     "title": "Tablas y organización de datos",
     "section": "Subiendo la base de datos",
-    "text": "Subiendo la base de datos\n Presionar “Import Dataset”. En este punto hay varias opciones: 1. Subir como .CSV 2. Subir como .xlx 3. Subir como .txt \nPara subir como “.xlx” debe utilizarse:\n\n#Usar el paquete tidyverse \ninstall.packages(\"tidyverse\")\n\npackage 'tidyverse' successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\XAVIER\\AppData\\Local\\Temp\\RtmpuSZxoQ\\downloaded_packages\n\nlibrary(tidyverse)\n#O podemos correr solo \"dplyr\"\nlibrary(dplyr)\nlibrary(readxl)\n\nEn Rstudio quizás no sea necesario que sepas esto. Para propósitos de nuestro plan de trabjo usaremos algunas bases de datos propias de R"
+    "text": "Subiendo la base de datos\n Presionar “Import Dataset”. En este punto hay varias opciones: 1. Subir como .CSV 2. Subir como .xlx 3. Subir como .txt \nPara subir como “.xlx” debe utilizarse:\n\n#Usar el paquete tidyverse \ninstall.packages(\"tidyverse\")\n\npackage 'tidyverse' successfully unpacked and MD5 sums checked\n\nThe downloaded binary packages are in\n    C:\\Users\\Xavier\\AppData\\Local\\Temp\\RtmpSSKf6F\\downloaded_packages\n\nlibrary(tidyverse)\n#O podemos correr solo \"dplyr\"\nlibrary(dplyr)\nlibrary(readxl)\n\nEn Rstudio quizás no sea necesario que sepas esto. Para propósitos de nuestro plan de trabjo usaremos algunas bases de datos propias de R"
   },
   {
     "objectID": "basic2.html#uso-de-la-librería-mtcars-e-introducción-al-dplyr",
